@@ -10,24 +10,25 @@ An independent radio program. Show content, playlists, one sheets, website asset
 
 ### KSER
 
-Volunteer work for [KSER 90.7 FM](https://www.kser.org). Files live under [`shows/kser/`](shows/kser/).
+Projects for [KSER 90.7 FM](https://www.kser.org) and its non-profit — website work, volunteering, logistics, board work, and more. Files live under [`stations/kser/`](stations/kser/).
 
 ### KEXP
 
-Volunteer work for [KEXP 90.3 FM](https://www.kexp.org). Files live under [`shows/kexp/`](shows/kexp/).
+Projects for [KEXP 90.3 FM](https://www.kexp.org) and its non-profit — website work, volunteering, logistics, board work, and more. Files live under [`stations/kexp/`](stations/kexp/).
 
 ## Repository Layout
 
 ```
 far-pointer-radio/
 ├── shows/
-│   ├── convergence-zone/   # Convergence Zone show materials
-│   │   ├── playlists/      # Episode playlists (Spinitron exports, CSV, etc.)
-│   │   ├── one-sheets/     # Artist/episode one sheets
-│   │   ├── website/        # WordPress theme overrides, assets, copy
-│   │   └── docs/           # Show notes, rundowns, SOPs
-│   ├── kser/               # KSER volunteer materials
-│   └── kexp/               # KEXP volunteer materials
+│   └── convergence-zone/   # Convergence Zone show materials
+│       ├── playlists/      # Episode playlists (Spinitron exports, CSV, etc.)
+│       ├── one-sheets/     # Artist/episode one sheets
+│       ├── website/        # WordPress theme overrides, assets, copy
+│       └── docs/           # Show notes, rundowns, SOPs
+├── stations/
+│   ├── kser/               # KSER station projects (website, volunteering, board, etc.)
+│   └── kexp/               # KEXP station projects (website, volunteering, board, etc.)
 ├── tools/                  # Custom scripts and forked utilities
 │   ├── python/             # Python scripts and packages
 │   └── powershell/         # PowerShell scripts and modules

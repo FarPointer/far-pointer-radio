@@ -21,21 +21,25 @@ Projects for [KEXP 90.3 FM](https://www.kexp.org) and its non-profit — website
 ```
 far-pointer-radio/
 ├── shows/
-│   └── convergence-zone/   # Convergence Zone show materials
-│       ├── playlists/      # Episode playlists (Spinitron exports, CSV, etc.)
-│       ├── one-sheets/     # Artist/episode one sheets
-│       ├── website/        # WordPress theme overrides, assets, copy
-│       └── docs/           # Show notes, rundowns, SOPs
+│   └── convergence-zone/       # Convergence Zone show materials
+│       ├── playlists/          # Episode playlists (Spinitron exports, CSV, etc.)
+│       ├── website/            # WordPress theme overrides, assets, copy
+│       ├── images/             # Show images (logos, banners, photos)
+│       └── docs/               # Show notes, rundowns, SOPs
+│           └── press-kit/      # One sheets, bios, press materials
+│               └── images/     # Images for press kit materials
 ├── stations/
-│   ├── kser/               # KSER station projects (website, volunteering, board, etc.)
-│   └── kexp/               # KEXP station projects (website, volunteering, board, etc.)
-├── tools/                  # Custom scripts and forked utilities
-│   ├── python/             # Python scripts and packages
-│   └── powershell/         # PowerShell scripts and modules
-├── config/                 # Tool and service configuration
-│   ├── spinitron/          # Spinitron API config and templates
-│   └── vscode/             # Shared VS Code workspace settings
-└── docs/                   # Project-wide documentation
+│   ├── kser/                   # KSER station projects (website, volunteering, board, etc.)
+│   │   └── images/             # KSER images
+│   └── kexp/                   # KEXP station projects (website, volunteering, board, etc.)
+│       └── images/             # KEXP images
+├── tools/                      # Custom scripts and forked utilities
+│   ├── python/                 # Python scripts and packages
+│   └── powershell/             # PowerShell scripts and modules
+├── config/                     # Tool and service configuration
+│   ├── spinitron/              # Spinitron API config and templates
+│   └── vscode/                 # Shared VS Code workspace settings
+└── docs/                       # Project-wide documentation
 ```
 
 ## Tools & Platforms

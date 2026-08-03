@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convergence Zone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #edf0f3;   /* cool mist — light but not warm */
+  --bg-dark:  #2b3547;   /* deep slate for footer band */
+  --text:     #1c2535;   /* deep navy — warm enough to not feel harsh */
+  --text-2:   #4e5a6e;   /* mid slate */
+  --text-3:   #8a95a3;   /* muted */
+  --accent:   #4a7f8e;   /* Pacific teal */
+  --rule:     rgba(28, 37, 53, 0.12);
+  --f-serif:  'Playfair Display', Georgia, serif;
+  --f-sans:   'Source Sans 3', system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--f-sans);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ─── HEADER ─── */
+header {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-name {
+  font-family: var(--f-serif);
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.site-tagline {
+  font-size: 0.88rem;
+  color: var(--text-3);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+nav a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--accent); }
+
+/* ─── HERO PHOTO ─── */
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+    160deg,
+    #8faab8 0%,
+    #6b8fa3 20%,
+    #4e7282 40%,
+    #3a5a6e 60%,
+    #2b3f52 80%,
+    #1e2d3d 100%
+  );
+}
+
+/* Placeholder for your photograph */
+.hero-photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.35);
+  font-family: var(--f-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-photo-placeholder svg {
+  opacity: 0.3;
+  margin-bottom: 0.25rem;
+}
+
+/* Subtle atmospheric mist overlay */
+.hero-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(237, 240, 243, 0.18) 100%
+  );
+  pointer-events: none;
+}
+
+/* ─── SHOW INFO ─── */
+.show-info {
+  text-align: center;
+  padding: 3.5rem 2rem 3rem;
+  border-bottom: 1px solid var(--rule);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.show-info h2 {
+  font-family: var(--f-serif);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.show-info p {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  margin-bottom: 1rem;
+}
+
+.broadcast-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.broadcast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.broadcast-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.broadcast-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ─── SECTION ─── */
+.section {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+}
+
+.section + .section {
+  border-top: 1px solid var(--rule);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-family: var(--f-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.section-header a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-header a:hover { text-decoration: underline; }
+
+/* ─── CONTENT GRID ─── */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 860px) {
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .grid-3 { grid-template-columns: 1fr; }
+}
+
+/* ─── PLAYLIST CARD ─── */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.card:hover .card-title { color: var(--accent); }
+
+.card-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.card-title {
+  font-family: var(--f-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+.card-date {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  margin-top: 0.25rem;
+}
+
+/* Card with image (interviews/blog) */
+.card-img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #6b8fa3, #3a5a6e);
+  position: relative;
+}
+
+.card-img-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.25);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ─── SUBMIT BAND ─── */
+.submit-band {
+  background: var(--bg-dark);
+  color: white;
+  text-align: center;
+  padding: 3.5rem 2rem;
+}
+
+.submit-band h3 {
+  font-family: var(--f-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+.submit-band p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1.75rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: white;
+  color: var(--bg-dark);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--bg-dark);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 3rem 2rem;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.82rem;
+}
+
+.footer-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 660px) {
+  .footer-inner { grid-template-columns: 1fr; }
+}
+
+.footer-brand .site-name-sm {
+  font-family: var(--f-serif);
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.footer-brand p {
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  transition: color 0.2s;
+}
+
+.footer-social a:hover { color: rgba(255,255,255,0.75); }
+
+.footer-col h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1rem;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-col li { margin-bottom: 0.6rem; }
+
+.footer-col a {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: rgba(255,255,255,0.8); }
+
+.footer-bottom {
+  max-width: 1160px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ─── MOCKUP NOTE ─── */
+.mockup-note {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background: var(--bg-dark);
+  color: rgba(255,255,255,0.55);
+  font-size: 0.72rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--accent);
+  max-width: 240px;
+  line-height: 1.6;
+  z-index: 100;
+}
+
+.mockup-note strong {
+  display: block;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="site-name">Convergence Zone</div>
+  <div class="site-tagline">Musical Atmospheres · Pacific Northwest &amp; Beyond</div>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Playlists</a>
+    <a href="#">Interviews</a>
+    <a href="#">Reviews</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<!-- ═══ HERO PHOTO ═══ -->
+<div class="hero-photo">
+  <div class="hero-photo-placeholder">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+      <polyline points="21 15 16 10 5 21"/>
+    </svg>
+    Your photograph goes here
+  </div>
+</div>
+
+<!-- ═══ SHOW INFO ═══ -->
+<div style="border-bottom: 1px solid var(--rule);">
+  <div class="show-info">
+    <h2>A weekly journey through ambient, atmospheric,<br>and space music.</h2>
+    <p>Exploring new voices from the Pacific Northwest alongside the contemporary and legendary music that inspires them.</p>
+    <div class="broadcast-info">
+      <div class="broadcast-item">
+        <span class="broadcast-label">On Air</span>
+        <span class="broadcast-value">90.7 KSER · 89.9 KXIR</span>
+      </div>
+      <div class="broadcast-item">
+        <span class="broadcast-label">When</span>
+        <span class="broadcast-value">Tuesdays, 8:30 PM PT</span>
+      </div>
+      <div class="broadcast-item">
+        <span class="broadcast-label">Stream</span>
+        <span class="broadcast-value">kser.org · TuneIn</span>
+      </div>
+      <div class="broadcast-item">
+        <span class="broadcast-label">Archive</span>
+        <span class="broadcast-value">Mixcloud</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ RECENT PLAYLISTS ═══ -->
+<div class="section">
+  <div class="section-header">
+    <h2>Recent Playlists</h2>
+    <a href="#">View all 65 episodes →</a>
+  </div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-label">Ep. 065 · March 25</div>
+      <div class="card-title">Fog Over Still Water</div>
+      <div class="card-subtitle">Hello Meteor, Monolyth &amp; Cobalt, Omni Gardens, Loscil, Stars of the Lid</div>
+      <div class="card-date">Jim Causey &amp; MichaelG · <a href="#" style="color:var(--accent);">Listen on Mixcloud</a></div>
+    </div>
+    <div class="card">
+      <div class="card-label">Ep. 064 · March 18</div>
+      <div class="card-title">Into the Understory</div>
+      <div class="card-subtitle">Nest, Steve Roach, Thom Brennan, Forrest Fang, Robert Rich</div>
+      <div class="card-date">Jim Causey &amp; MichaelG · <a href="#" style="color:var(--accent);">Listen on Mixcloud</a></div>
+    </div>
+    <div class="card">
+      <div class="card-label">Ep. 063 · March 11</div>
+      <div class="card-title">Coastal Drift</div>
+      <div class="card-subtitle">Hammock, William Basinski, Grouper, Eluvium, Brian Eno</div>
+      <div class="card-date">Jim Causey &amp; MichaelG · <a href="#" style="color:var(--accent);">Listen on Mixcloud</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ INTERVIEWS & FEATURES ═══ -->
+<div class="section">
+  <div class="section-header">
+    <h2>Interviews &amp; Features</h2>
+    <a href="#">All interviews →</a>
+  </div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-img">
+        <div class="card-img-placeholder">Photo</div>
+      </div>
+      <div class="card-label">Interview · September 2023</div>
+      <div class="card-title">David Arkenstone</div>
+      <div class="card-subtitle">Five-time Grammy winner on his new album, the creative process, and writing for film.</div>
+      <div class="card-date">Jim Causey</div>
+    </div>
+    <div class="card">
+      <div class="card-img" style="background: linear-gradient(135deg, #5a7a8a, #2d4a5e);">
+        <div class="card-img-placeholder">Photo</div>
+      </div>
+      <div class="card-label">Interview · 2023</div>
+      <div class="card-title">Forrest Fang</div>
+      <div class="card-subtitle">Decades of ambient and chamber music, the erhu, and the Pacific Rim soundscape.</div>
+      <div class="card-date">Jim Causey &amp; MichaelG</div>
+    </div>
+    <div class="card">
+      <div class="card-img" style="background: linear-gradient(135deg, #3d6070, #1e3545);">
+        <div class="card-img-placeholder">Photo</div>
+      </div>
+      <div class="card-label">Best Of · 2023</div>
+      <div class="card-title">Our Favorite Albums of 2023</div>
+      <div class="card-subtitle">Jim and MichaelG look back at the year's most essential ambient and atmospheric releases.</div>
+      <div class="card-date">Jim Causey &amp; MichaelG</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SUBMIT BAND ═══ -->
+<div class="submit-band">
+  <h3>Making music in the Pacific Northwest?</h3>
+  <p>We're always listening. Submit your work for consideration on a future episode.</p>
+  <a href="#" class="btn">Submit Your Music</a>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="site-name-sm">Convergence Zone</span>
+      <p>A weekly journey through ambient, atmospheric, and space music on 90.7 KSER-FM in Everett and 89.9 KXIR-FM in Freeland, WA. Hosted by Jim Causey and MichaelG.</p>
+      <div class="footer-social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+        <a href="#">Mixcloud</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Content</h4>
+      <ul>
+        <li><a href="#">Show Playlists</a></li>
+        <li><a href="#">Interviews</a></li>
+        <li><a href="#">Music Reviews</a></li>
+        <li><a href="#">Specials</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Show</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Submit Music</a></li>
+        <li><a href="#">kser.org</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Convergence Zone · A production of KSER Community Radio</span>
+    <span>90.7 KSER-FM Everett · 89.9 KXIR-FM Freeland</span>
+  </div>
+</footer>
+
+<!-- Mockup note -->
+<div class="mockup-note">
+  <strong>Mockup v2</strong>
+  Blue-grey placeholder where your photo goes. Font: Playfair Display + Source Sans. All content is sample data.
+</div>
+
+</body>
+</html>

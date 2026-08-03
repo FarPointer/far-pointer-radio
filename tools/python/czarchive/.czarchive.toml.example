@@ -1,0 +1,17 @@
+# Copy to ~/.czarchive.toml and fill in. Never commit the real file.
+#
+# Note: czarchive writes this file itself — it creates a default here on first
+# run, and `czarchive auth` writes the Mixcloud access token back into it.
+
+station = "KSER"
+show_name = "Convergence Zone"
+output_dir = "~/shows"
+
+# Mixcloud (required for upload)
+# Register an app at https://www.mixcloud.com/developers/ to get the id/secret.
+mixcloud_client_id = ""
+mixcloud_client_secret = ""
+mixcloud_access_token = ""   # populated by `czarchive auth`
+
+# Spinitron API key (optional — leave blank to use scraping)
+spinitron_api_key = ""

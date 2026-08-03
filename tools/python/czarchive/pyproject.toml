@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "czarchive"
+version = "0.1.0"
+description = "Archive tool for Convergence Zone on KSER 90.7"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.0",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "python-dateutil>=2.9",
+]
+
+[project.scripts]
+czarchive = "czarchive.cli:cli"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/czarchive"]

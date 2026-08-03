@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convergence Zone — Musical Atmospheres</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+
+/* ─── RESET & ROOT ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #080b12;
+  --bg-raised:    #0c1018;
+  --bg-card:      rgba(14, 18, 28, 0.85);
+  --bg-card-s:    #0e121c;
+  --accent:       #7cc4c0;
+  --accent-dim:   rgba(124, 196, 192, 0.10);
+  --violet:       #8f88be;
+  --gold:         #c4a97e;
+  --text:         #ddd9d2;
+  --text-2:       #7a8098;
+  --text-3:       #3e4358;
+  --border:       rgba(124, 196, 192, 0.11);
+  --border-s:     rgba(255, 255, 255, 0.045);
+  --f-display:    'Cormorant Garamond', Georgia, serif;
+  --f-body:       'Inter', system-ui, sans-serif;
+  --f-mono:       'Space Mono', 'Courier New', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── ATMOSPHERIC BACKGROUND ─── */
+.atmo {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.atmo-teal {
+  position: absolute;
+  top: -15%;
+  left: -8%;
+  width: 55%;
+  height: 75%;
+  background: radial-gradient(ellipse at center, rgba(80, 160, 170, 0.055) 0%, transparent 68%);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+}
+.atmo-violet {
+  position: absolute;
+  bottom: -20%;
+  right: -8%;
+  width: 50%;
+  height: 70%;
+  background: radial-gradient(ellipse at center, rgba(100, 80, 160, 0.045) 0%, transparent 68%);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+.atmo-mid {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(ellipse at center, rgba(60, 100, 130, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Subtle grain overlay */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* ─── PAGE WRAPPER ─── */
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── NAVIGATION ─── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 3rem;
+  border-bottom: 1px solid var(--border-s);
+  background: rgba(8, 11, 18, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  gap: 2rem;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex-shrink: 0;
+}
+.nav-logo .wordmark {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1;
+}
+.nav-logo .submark {
+  font-family: var(--f-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+nav ul a {
+  text-decoration: none;
+  color: var(--text-2);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+nav ul a:hover { color: var(--accent); }
+
+.nav-cta {
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.25rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.22s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-cta:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ─── HERO ─── */
+.hero {
+  padding: 8rem 3rem 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--f-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+.hero h1 {
+  font-family: var(--f-display);
+  font-size: clamp(3.8rem, 8.5vw, 7.5rem);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--text-2);
+}
+
+.hero-desc {
+  max-width: 500px;
+  font-size: 1rem;
+  color: var(--text-2);
+  line-height: 1.85;
+  margin-bottom: 3.5rem;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.meta-label {
+  font-family: var(--f-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  color: var(--text-3);
+  text-transform: uppercase;
+}
+.meta-value {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* ─── DIVIDER ─── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-s);
+}
+
+/* ─── SECTION WRAPPER ─── */
+.section {
+  padding: 5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+.section-label {
+  font-family: var(--f-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.section-title {
+  font-family: var(--f-display);
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.1;
+}
+.view-all {
+  font-family: var(--f-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.view-all:hover { color: var(--accent); }
+
+/* ─── BUTTON ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--f-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.72rem 1.5rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover { background: var(--accent); color: var(--bg); }
+.btn-ghost {
+  border-color: var(--border-s);
+  color: var(--text-2);
+}
+.btn-ghost:hover {
+  border-color: var(--text-2);
+  background: transparent;
+  color: var(--text);
+}
+
+/* ─── LATEST EPISODE CARD ─── */
+.episode-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+}
+
+.ep-main {
+  padding: 3rem;
+  border-right: 1px solid var(--border);
+}
+.ep-tracks {
+  padding: 3rem;
+}
+
+.ep-num {
+  font-family: var(--f-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.ep-title {
+  font-family: var(--f-display);
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+.ep-host {
+  font-family: var(--f-mono);
+  font-size: 0.6rem;
+  color: var(--text-2);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+.ep-desc {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.85;
+  margin-bottom: 2.2rem;
+}
+.ep-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tracks-label {
+  font-family: var(--f-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  color: var(--text-3);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.tracklist {
+  list-style: none;
+}
+.track {
+  display: grid;
+  grid-template-columns: 1.8rem 1fr auto;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border-s);
+  align-items: center;
+}
+.track:last-child { border-bottom: none; }
+.track-n {
+  font-family: var(--f-mono);
+  font-size: 0.52rem;
+  color: var(--text-3);
+  text-align: right;
+}
+.track-info { display: flex; flex-direction: column; gap: 0.12rem; }
+.track-artist { font-size: 0.85rem; color: var(--text); font-weight: 400; }
+.track-song {
+  font-family: var(--f-display);
+  font-size: 0.85rem;
+  color: var(--text-2);
+  font-style: italic;
+}
+.track-album {
+  font-family: var(--f-mono);
+  font-size: 0.57rem;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* ─── PLAYLIST GRID ─── */
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--border-s);
+  border: 1px solid var(--border-s);
+  gap: 1px;
+}
+
+.pl-card {
+  background: var(--bg-card-s);
+  padding: 2rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: background 0.22s;
+  position: relative;
+  overflow: hidden;
+}
+.pl-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.pl-card:hover { background: var(--bg-card); }
+.pl-card:hover::after { transform: scaleX(1); }
+
+.pl-ep {
+  font-family: var(--f-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.pl-title {
+  font-family: var(--f-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.25;
+}
+.pl-artists {
+  font-size: 0.76rem;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+.pl-date {
+  font-family: var(--f-mono);
+  font-size: 0.56rem;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* ─── INTERVIEWS ─── */
+.interview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.int-card {
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(6px);
+  transition: border-color 0.25s;
+}
+.int-card:hover { border-color: rgba(124, 196, 192, 0.35); }
+
+.int-type {
+  font-family: var(--f-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  color: var(--violet);
+  text-transform: uppercase;
+}
+.int-name {
+  font-family: var(--f-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.15;
+}
+.int-excerpt {
+  font-size: 0.85rem;
+  color: var(--text-2);
+  line-height: 1.85;
+  flex: 1;
+}
+.int-meta {
+  font-family: var(--f-mono);
+  font-size: 0.56rem;
+  color: var(--text-3);
+  letter-spacing: 0.06em;
+}
+
+/* ─── SUBMIT BAND ─── */
+.submit-band {
+  background: var(--bg-card-s);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 5rem 3rem;
+}
+.submit-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.submit-text p {
+  font-family: var(--f-display);
+  font-size: 2.1rem;
+  font-weight: 300;
+  color: var(--text);
+  max-width: 520px;
+  line-height: 1.35;
+  margin-bottom: 0.65rem;
+}
+.submit-text small {
+  font-size: 0.82rem;
+  color: var(--text-2);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 5rem 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.foot-brand .wordmark {
+  font-family: var(--f-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1rem;
+  display: block;
+}
+.foot-brand p {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  line-height: 1.75;
+  max-width: 280px;
+  margin-bottom: 1.5rem;
+}
+.foot-social {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.social-link {
+  font-family: var(--f-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  text-decoration: none;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border-s);
+  transition: all 0.2s;
+}
+.social-link:hover { color: var(--accent); border-color: var(--border); }
+
+.foot-col h4 {
+  font-family: var(--f-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1.25rem;
+}
+.foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+.foot-col a {
+  font-size: 0.84rem;
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.foot-col a:hover { color: var(--text); }
+
+.foot-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.75rem 3rem;
+  border-top: 1px solid var(--border-s);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.foot-bottom p {
+  font-family: var(--f-mono);
+  font-size: 0.54rem;
+  color: var(--text-3);
+  letter-spacing: 0.06em;
+}
+.kser-badge {
+  font-family: var(--f-mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.12em;
+  color: var(--text-3);
+  border: 1px solid var(--border-s);
+  padding: 0.35rem 0.85rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.kser-badge:hover { color: var(--text-2); border-color: var(--border); }
+
+/* ─── DESIGN NOTES (visible only in mockup) ─── */
+.design-note {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(12, 16, 24, 0.95);
+  border: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  font-family: var(--f-mono);
+  font-size: 0.55rem;
+  color: var(--text-2);
+  letter-spacing: 0.06em;
+  z-index: 500;
+  line-height: 1.8;
+  max-width: 260px;
+  backdrop-filter: blur(8px);
+}
+.design-note strong {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Atmospheric layers -->
+<div class="atmo">
+  <div class="atmo-teal"></div>
+  <div class="atmo-violet"></div>
+  <div class="atmo-mid"></div>
+</div>
+<div class="grain"></div>
+
+<div class="page">
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav>
+    <div class="nav-logo">
+      <span class="wordmark">Convergence Zone</span>
+      <span class="submark">▸ 90.7 KSER · Tuesdays 8:30 PM PT</span>
+    </div>
+    <ul>
+      <li><a href="#">Playlists</a></li>
+      <li><a href="#">Interviews</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="#" class="nav-cta">Listen Live ↗</a>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="eyebrow">Musical atmospheres · Pacific Northwest and beyond</div>
+    <h1>Where sounds<br><em>converge.</em></h1>
+    <p class="hero-desc">
+      A weekly journey through ambient, atmospheric, and space music —
+      exploring new voices from the Pacific Northwest alongside
+      the contemporary and legendary music that inspires them.
+    </p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Airs on</span>
+        <span class="meta-value">90.7 KSER · 89.9 KXIR</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">When</span>
+        <span class="meta-value">Tuesdays, 8:30 PM PT</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Stream</span>
+        <span class="meta-value">kser.org · TuneIn</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Archives</span>
+        <span class="meta-value">Mixcloud</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ LATEST EPISODE ═══ -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Now playing</div>
+        <h2 class="section-title">Latest Episode</h2>
+      </div>
+      <a href="#" class="view-all">All playlists →</a>
+    </div>
+
+    <div class="episode-feature">
+      <div class="ep-main">
+        <div class="ep-num">Episode 065 · March 25, 2025</div>
+        <h3 class="ep-title">Fog Over Still Water</h3>
+        <div class="ep-host">Hosted by Jim Causey &amp; MichaelG</div>
+        <p class="ep-desc">
+          This week we drift through textures both vast and intimate —
+          new work from Monolyth &amp; Cobalt alongside Oregon-born soundscapes,
+          and a deep pull from the Projekt Records archive.
+        </p>
+        <div class="ep-actions">
+          <a href="#" class="btn">▸&nbsp;&nbsp;Listen on Mixcloud</a>
+          <a href="#" class="btn btn-ghost">Full Playlist</a>
+        </div>
+      </div>
+      <div class="ep-tracks">
+        <div class="tracks-label">Featured tracks</div>
+        <ul class="tracklist">
+          <li class="track">
+            <span class="track-n">01</span>
+            <div class="track-info">
+              <span class="track-artist">Hello Meteor</span>
+              <span class="track-song">Signals from the Interior</span>
+            </div>
+            <span class="track-album">Cascades</span>
+          </li>
+          <li class="track">
+            <span class="track-n">02</span>
+            <div class="track-info">
+              <span class="track-artist">Monolyth &amp; Cobalt</span>
+              <span class="track-song">L'heure du berger</span>
+            </div>
+            <span class="track-album">Rhizomes</span>
+          </li>
+          <li class="track">
+            <span class="track-n">03</span>
+            <div class="track-info">
+              <span class="track-artist">Omni Gardens</span>
+              <span class="track-song">Slow Convergence</span>
+            </div>
+            <span class="track-album">Watershed</span>
+          </li>
+          <li class="track">
+            <span class="track-n">04</span>
+            <div class="track-info">
+              <span class="track-artist">Loscil</span>
+              <span class="track-song">Dub Narcotic</span>
+            </div>
+            <span class="track-album">Submers</span>
+          </li>
+          <li class="track">
+            <span class="track-n">05</span>
+            <div class="track-info">
+              <span class="track-artist">Stars of the Lid</span>
+              <span class="track-song">Even If You're Never Awake</span>
+            </div>
+            <span class="track-album">And Their Refinement…</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══ RECENT PLAYLISTS ═══ -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Archive</div>
+        <h2 class="section-title">Recent Playlists</h2>
+      </div>
+      <a href="#" class="view-all">View all 65 episodes →</a>
+    </div>
+
+    <div class="playlist-grid">
+      <a href="#" class="pl-card">
+        <div class="pl-ep">Ep. 064</div>
+        <div class="pl-title">Into the Understory</div>
+        <div class="pl-artists">Nest, Steve Roach, Thom Brennan, Forrest Fang</div>
+        <div class="pl-date">March 18, 2025</div>
+      </a>
+      <a href="#" class="pl-card">
+        <div class="pl-ep">Ep. 063</div>
+        <div class="pl-title">Coastal Drift</div>
+        <div class="pl-artists">Hammock, William Basinski, Grouper, Eluvium</div>
+        <div class="pl-date">March 11, 2025</div>
+      </a>
+      <a href="#" class="pl-card">
+        <div class="pl-ep">Ep. 062</div>
+        <div class="pl-title">High Pressure System</div>
+        <div class="pl-artists">Gas, Brian Eno, Nils Frahm, Max Richter</div>
+        <div class="pl-date">March 4, 2025</div>
+      </a>
+      <a href="#" class="pl-card">
+        <div class="pl-ep">Ep. 061</div>
+        <div class="pl-title">Specials: Best of Winter</div>
+        <div class="pl-artists">Curator's selection · Jim Causey</div>
+        <div class="pl-date">Feb 25, 2025</div>
+      </a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══ INTERVIEWS ═══ -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <div class="section-label">In conversation</div>
+        <h2 class="section-title">Artist Interviews</h2>
+      </div>
+      <a href="#" class="view-all">All interviews →</a>
+    </div>
+
+    <div class="interview-grid">
+      <a href="#" class="int-card">
+        <div class="int-type">Interview · September 2023</div>
+        <div class="int-name">David Arkenstone</div>
+        <p class="int-excerpt">
+          Five-time Grammy winner David Arkenstone on the creative process behind
+          his new album, the evolution of new age music, and what it means to write
+          for both film and the open ear.
+        </p>
+        <div class="int-meta">Part 2 of 2 · Jim Causey</div>
+      </a>
+      <a href="#" class="int-card">
+        <div class="int-type">Interview · 2023</div>
+        <div class="int-name">Forrest Fang</div>
+        <p class="int-excerpt">
+          Bay Area composer Forrest Fang on decades of work spanning ambient and
+          chamber music, the role of the erhu in his compositions, and his
+          deep connection to the Pacific Rim soundscape.
+        </p>
+        <div class="int-meta">Jim Causey &amp; MichaelG</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══ SUBMIT MUSIC ═══ -->
+  <div class="submit-band">
+    <div class="submit-inner">
+      <div class="submit-text">
+        <p>Making atmospheric music in the Pacific Northwest?</p>
+        <small>We're always listening. Send us your work for consideration on a future episode.</small>
+      </div>
+      <a href="#" class="btn">Submit Your Music →</a>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="foot-brand">
+      <span class="wordmark">Convergence Zone</span>
+      <p>
+        A weekly journey through ambient, atmospheric, and space music
+        on 90.7 KSER-FM in Everett and 89.9 KXIR-FM in Freeland, WA.
+        Hosted by Jim Causey and MichaelG.
+      </p>
+      <div class="foot-social">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">YouTube</a>
+        <a href="#" class="social-link">Mixcloud</a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Content</h4>
+      <ul>
+        <li><a href="#">Show Playlists</a></li>
+        <li><a href="#">Interviews</a></li>
+        <li><a href="#">Music Reviews</a></li>
+        <li><a href="#">Specials</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Show</h4>
+      <ul>
+        <li><a href="#">About the Show</a></li>
+        <li><a href="#">Jim &amp; MichaelG</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Submit Music</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Listen</h4>
+      <ul>
+        <li><a href="#">kser.org Stream</a></li>
+        <li><a href="#">TuneIn</a></li>
+        <li><a href="#">Mixcloud Archive</a></li>
+        <li><a href="#">Smart Speakers</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="foot-bottom">
+    <p>© 2025 Convergence Zone · A production of KSER Community Radio</p>
+    <a href="#" class="kser-badge">90.7 KSER-FM ↗</a>
+  </div>
+
+</div><!-- /page -->
+
+<!-- Mockup design notes -->
+<div class="design-note">
+  <strong>Design Mockup</strong>
+  Fonts: Cormorant Garamond (headings) + Inter (body) + Space Mono (labels)<br>
+  Colors: Deep navy bg · Mist teal accent · Dusk violet · Off-white text<br>
+  Content is placeholder — real episode data will populate from CMS.
+</div>
+
+</body>
+</html>

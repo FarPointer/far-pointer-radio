@@ -18,6 +18,9 @@ secrets/
 *.pfx
 api_keys.txt
 credentials.json
+.czarchive.toml
+!**/.czarchive.toml.example
+cookie.txt
 
 # -----------------------------------------------------------------------------
 # Python

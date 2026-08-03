@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:kser.org)",
+      "WebFetch(domain:www.kser.org)",
+      "WebFetch(domain:convergencezone.fm)",
+      "WebFetch(domain:spinitron.com)",
+      "WebFetch(domain:forum.spinitron.com)",
+      "WebFetch(domain:ark3.spinitron.com)",
+      "WebFetch(domain:spinitron.github.io)",
+      "WebFetch(domain:www.mixcloud.com)",
+      "WebFetch(domain:api.mixcloud.com)",
+      "WebFetch(domain:help.mixcloud.com)",
+      "WebFetch(domain:aiomixcloud.readthedocs.io)",
+      "WebFetch(domain:creek.org)",
+      "WebFetch(domain:docs.creek.org)",
+      "WebFetch(domain:publicapi.dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gist.github.com)",
+      "Bash(uv sync:*)",
+      "Bash(uv run:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}

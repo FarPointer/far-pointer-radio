@@ -1,0 +1,215 @@
+# =============================================================================
+# far-pointer-radio .gitignore
+# Covers: Python, PowerShell, VS Code, macOS, Windows, Linux,
+#         Node/npm, WordPress, audio tools, and secrets
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Secrets & credentials — never commit these
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+secrets/
+*.secret
+*.pem
+*.key
+*.p12
+*.pfx
+api_keys.txt
+credentials.json
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+.Python
+env/
+venv/
+.venv/
+ENV/
+.virtualenv/
+pip-wheel-metadata/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+*.log
+*.pot
+*.mo
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# -----------------------------------------------------------------------------
+# PowerShell
+# -----------------------------------------------------------------------------
+*.ps1xml
+# PowerShell module build output
+Release/
+*.nupkg
+
+# -----------------------------------------------------------------------------
+# Node / npm (for any JS tooling)
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# -----------------------------------------------------------------------------
+# VS Code
+# -----------------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+!far-pointer-radio.code-workspace
+.history/
+
+# -----------------------------------------------------------------------------
+# macOS
+# -----------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+.DocumentRevisions-V100
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+# Final Cut Pro render files
+*.fcpbundle/Render Files/
+
+# -----------------------------------------------------------------------------
+# Windows
+# -----------------------------------------------------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# -----------------------------------------------------------------------------
+# Linux
+# -----------------------------------------------------------------------------
+*~
+.nfs*
+.fuse_hidden*
+.directory
+.Trash-*/
+
+# -----------------------------------------------------------------------------
+# Audio / DAW project files (large binary assets — store elsewhere)
+# -----------------------------------------------------------------------------
+# Reaper
+*.RPP-bak
+*.reapeaks
+
+# Audacity
+*.aup3-shm
+*.aup3-wal
+*.aup3-journal
+
+# Adobe Audition session files are usually committed; exclude peak/cache files
+*.pkf
+*.sfk
+
+# GarageBand / Logic cache
+*.band/Media/
+*.logicx/Autosave\ Information/
+*.logicx/Alternatives/001\ \(Autosaved\)/
+
+# Generic large audio intermediates
+*.tmp.wav
+*.tmp.aif
+*.tmp.mp3
+Freeze\ Files/
+Render/
+
+# Logitech G-Hub profiles (machine-specific)
+ghub_backup.json
+
+# -----------------------------------------------------------------------------
+# WordPress
+# -----------------------------------------------------------------------------
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+sitemap.xml
+sitemap.xml.gz
+
+# -----------------------------------------------------------------------------
+# Excel / Office temporary files
+# -----------------------------------------------------------------------------
+~$*.xlsx
+~$*.xls
+~$*.docx
+~$*.doc
+~$*.pptx
+~$*.ppt
+*.tmp
+
+# -----------------------------------------------------------------------------
+# Miscellaneous
+# -----------------------------------------------------------------------------
+*.bak
+*.orig
+*.swp
+*.swo
+.idea/
+*.iml
+.project
+.classpath

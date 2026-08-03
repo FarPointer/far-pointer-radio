@@ -1,0 +1,49 @@
+# Cross-platform line endings
+* text=auto
+
+# Force LF for scripts and text files
+*.sh    text eol=lf
+*.py    text eol=lf
+*.ps1   text eol=crlf
+*.psm1  text eol=crlf
+*.psd1  text eol=crlf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.csv   text eol=lf
+*.json  text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.toml  text eol=lf
+*.cfg   text eol=lf
+*.ini   text eol=lf
+*.xml   text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.ts    text eol=lf
+
+# Binary files — no line ending conversion
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+*.tar   binary
+*.gz    binary
+*.wav   binary
+*.mp3   binary
+*.mp4   binary
+*.aiff  binary
+*.aif   binary
+*.flac  binary
+*.ogg   binary
+*.m4a   binary
+*.mov   binary
+*.aup3  binary
+*.rpp   text eol=lf
+*.xlsx  binary
+*.xls   binary
+*.docx  binary
+*.doc   binary

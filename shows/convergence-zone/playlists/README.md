@@ -7,6 +7,7 @@ Episode playlists for Convergence Zone.
 | Directory | Contents |
 |---|---|
 | `sources/` | Raw, unedited playlist material as it came out of each upstream system |
+| `analysis/` | Working files from reconciling `sources/` against what Spinitron logged |
 
 ## Playlist Format
 

@@ -7,6 +7,8 @@
 | Directory | Contents |
 |---|---|
 | `playlists/` | Episode playlists — Spinitron exports, CSV, and hand-edited files |
+| `playlists/sources/` | Raw upstream playlist material (OneNote exports, MichaelG's workbooks, Spinitron exports) |
+| `playlists/analysis/` | Spinitron reconciliation worksheets — missing spins, removal candidates |
 | `website/` | WordPress theme overrides, custom CSS, copy, and assets |
 | `images/` | General show images (logos, banners, photos) |
 | `docs/` | Show notes, rundowns, standard operating procedures |

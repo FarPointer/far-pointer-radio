@@ -32,6 +32,32 @@ HEADER_LINE_RE = re.compile(
     re.I,
 )
 
+# The note's own title, e.g. "Convergence Zone.012 - May 30 2023" or "Episode 065".
+# OneNote exports it as the first body line, so it is header, not copy -- but it is short
+# and so was previously read as scratch, which stopped extraction before it began. That
+# single miss accounted for most of the notes that yielded no description at all.
+TITLE_LINE_RE = re.compile(
+    r"\A(?:convergence\s*zone|episode)\b[\s.\-–—#]*\d*\s*[-–—]?\s*"
+    r"(?:[A-Za-z]+\s+\d{1,2},?\s*\d{0,4}|\d{1,2}[./]\d{1,2}[./]\d{2,4})?\s*\Z",
+    re.I,
+)
+
+# Checkbox and bullet markers OneNote leaves inline ("- [ ] This week ...").
+BULLET_RE = re.compile(r"\A(?:-\s*\[[ xX]?\]|[-*•]|\d+[.)])\s+")
+
+# The on-air sign-off. Real published text, but it is the same three lines every week and
+# the air time already lives in structured fields, so it is trimmed from the tail of a
+# description rather than repeated across 60 records.
+BOILERPLATE_RE = re.compile(
+    r"kser\.org|tunein|smart speaker|90\.7|89\.9|\bKSER\b|\bKXIR\b|"
+    r"independent public radio|links? in bio|archive links|internet radio|"
+    # "Convergence Zone airs / arrives / returns Tuesday at 10:30pm PDT" -- the verb
+    # varies week to week, so match the shape (show, day, clock time) rather than a word.
+    r"convergence zone\b[^\n]{0,60}\b\d{1,2}:?\d{0,2}\s*[ap]\.?m\.?|"
+    r"\bairs\b[^\n]{0,40}\b\d{1,2}:?\d{0,2}\s*[ap]\.?m\.?",
+    re.I,
+)
+
 # A line that reads as show-prep rather than promo copy.
 URL_RE = re.compile(r"https?://|\bbandcamp\.com|\bwww\.", re.I)
 MIC_RE = re.compile(r"\A\\?\[?\s*mic\s*break", re.I)
@@ -60,7 +86,7 @@ def _plain_text(raw: str) -> str:
 
 def _is_scratch(line: str) -> bool:
     """True if this line reads as working notes rather than publishable copy."""
-    s = line.strip()
+    s = BULLET_RE.sub("", line.strip())
     if not s:
         return False
     if URL_RE.search(s) or MIC_RE.match(s):
@@ -74,6 +100,17 @@ def _is_scratch(line: str) -> bool:
     return False
 
 
+def _trim_boilerplate(kept):
+    """Drop the trailing run of station sign-off lines.
+
+    Only from the tail, and only whole lines -- a blurb that *opens* by naming the station
+    ("KSER's Fall Membership Drive converges with...") is editorial content and stays.
+    """
+    while kept and BOILERPLATE_RE.search(kept[-1]):
+        kept.pop()
+    return kept
+
+
 def extract(raw: str):
     """Returns (candidate, rejected, score).
 
@@ -83,13 +120,18 @@ def extract(raw: str):
     body = _plain_text(raw)
     lines = [ln.strip() for ln in body.split("\n")]
 
+    # Skip the note's header block: blank lines, the exported title, and the created
+    # date/time stamp, in whatever order they appear. Bounded so a note that is nothing
+    # but headers cannot consume the whole file looking for copy.
     i = 0
-    while i < len(lines) and (not lines[i] or HEADER_LINE_RE.match(lines[i])):
+    while i < len(lines) and i < 8 and (
+            not lines[i] or HEADER_LINE_RE.match(lines[i])
+            or TITLE_LINE_RE.match(lines[i])):
         i += 1
 
     kept = []
     while i < len(lines):
-        line = lines[i]
+        line = BULLET_RE.sub("", lines[i])
         if not line:
             i += 1
             if kept and i < len(lines) and lines[i] and _is_scratch(lines[i]):
@@ -100,18 +142,39 @@ def extract(raw: str):
         kept.append(line)
         i += 1
 
-    candidate = "\n\n".join(kept).strip()
+    # Fallback: some notes open with a one-line teaser or a stray prep line, which stops
+    # the leading run before it starts. Rather than lose the blurb entirely, take the
+    # longest consecutive run of publishable lines anywhere in the note. Only when the
+    # leading run produced nothing -- when it did, it is the more trustworthy of the two.
+    if len("\n\n".join(kept).strip()) < MIN_CHARS:
+        best, run = [], []
+        for line in [BULLET_RE.sub("", ln) for ln in lines]:
+            if line and not _is_scratch(line):
+                run.append(line)
+                continue
+            if len(run) > len(best):
+                best = run
+            run = []
+        kept = run if len(run) > len(best) else best
+        i = len(lines)
+
+    full = "\n\n".join(kept).strip()
+    candidate = "\n\n".join(_trim_boilerplate(list(kept))).strip()
     rejected = "\n".join(ln for ln in lines[i:] if ln).strip()
 
     if len(candidate) < MIN_CHARS:
         return None, rejected, 0.0
 
+    # Scored on the untrimmed text. Naming the station and the air time is the strongest
+    # evidence a paragraph is real promo copy rather than prep -- so scoring the trimmed
+    # version would penalise every note for the boilerplate we just removed, which is
+    # exactly backwards.
     score = 0.0
-    if POSITIVE_RE.search(candidate):
+    if POSITIVE_RE.search(full):
         score += 0.5
-    if re.search(r"kser|kxir|streaming|8:?30|10:?30", candidate, re.I):
+    if re.search(r"kser|kxir|streaming|8:?30|10:?30", full, re.I):
         score += 0.25
-    if candidate.count(".") >= 2:
+    if full.count(".") >= 2:
         score += 0.25
     return candidate, rejected, round(score, 2)
 

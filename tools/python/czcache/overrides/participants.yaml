@@ -16,3 +16,50 @@
 #       coverage: partial
 #     - name: MichaelG
 #       coverage: partial
+
+# ---------------------------------------------------------------------------
+# Reviewed 2026-08-05 against reports/attribution.md.
+
+# MichaelG kept alternating through July 2026 but stopped producing workbooks after
+# 2026-06-23, so the workbook rule silently handed his weeks to Jim. Confirmed by Jim.
+# Nothing in any source records this -- without these two entries the archive shows
+# five consecutive Jim weeks, and the every-other-week pattern looks like it ended a
+# month before it did.
+2026-07-07:
+  - name: MichaelG
+    coverage: full
+2026-07-21:
+  - name: MichaelG
+    coverage: full
+
+# Fund drive. MichaelG hosted; Jim was on as a guest, which is why both of Jim's
+# Spinitron personas appear mid-show and why the persona switch here produced the
+# duplicate Fotoform and Beach Vacation spins. Jim is "partial" per the field's
+# definition (a guest joining part of the show) -- revise to full if he was on air
+# for the whole two hours.
+2025-10-14:
+  - name: MichaelG
+    coverage: full
+  - name: Jim Causey
+    coverage: partial
+
+# ---------------------------------------------------------------------------
+# Found while reviewing the descriptions, not the attribution report -- the promo copy
+# names people no structured source records. Worth knowing that the blurbs are a real
+# attribution source in their own right for the guest-host cases.
+
+# "Join me and my friend and co-host Michael G" -- the 2025 Fall Fund Drive ARP special.
+# Jim's show and Jim's programming; Michael joined him on air for part of the drive.
+2025-10-21:
+  - name: Jim Causey
+    coverage: full
+  - name: MichaelG
+    coverage: partial
+
+# "I'll be joined in the booth by David Haldeman, host of Dead Electric!" -- in for the
+# whole show. He has no Spinitron persona of his own, so dj_id stays null.
+2024-10-15:
+  - name: Jim Causey
+    coverage: full
+  - name: David Haldeman
+    coverage: full

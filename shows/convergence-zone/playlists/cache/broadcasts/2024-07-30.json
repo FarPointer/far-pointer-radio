@@ -25,7 +25,8 @@
   "repeat_of_source": null,
   "repeat_of_confidence": null,
   "sources": [
-    "spinitron"
+    "spinitron",
+    "onenote"
   ],
   "spins": [
     {

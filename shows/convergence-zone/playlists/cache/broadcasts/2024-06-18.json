@@ -21,9 +21,9 @@
     "173567"
   ],
   "spinitron_playlist_ids": [],
-  "first_broadcast_id": null,
-  "repeat_of_source": null,
-  "repeat_of_confidence": null,
+  "first_broadcast_id": "2024-06-11T22:30:00-0700",
+  "repeat_of_source": "inferred",
+  "repeat_of_confidence": 0.4545,
   "sources": [
     "spinitron",
     "onenote"

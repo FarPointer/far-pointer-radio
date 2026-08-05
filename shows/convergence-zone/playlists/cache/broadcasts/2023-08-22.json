@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "This week’s Convergence Zone airs on the last day of Leo — with so much stunning new music on the way\n\nGorgeous fresh works from Pure Bathing Culture, David Arkenstone, Pabellón Sintético, Hyperion V, Erwilian, Kim Oxlund, and Brass Clouds\n\nSounds for late summer from Mt Fog, Caterina Barbieri, Hello Meteor, Bruce Mitchell, and sunset virtual",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -26,7 +26,8 @@
   "repeat_of_confidence": null,
   "sources": [
     "spinitron",
-    "wordpress"
+    "wordpress",
+    "onenote"
   ],
   "spins": [
     {

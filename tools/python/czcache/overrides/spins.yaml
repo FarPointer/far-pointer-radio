@@ -13,4 +13,35 @@
 #     artist: "yu-more"
 #     song: "Deep Mindset"
 
-merge_duplicates: []
+merge_duplicates:
+  # Reviewed 2026-08-05, all six flagged same-persona duplicates. The three below are
+  # adjacent spins one to two minutes apart -- a re-log, usually to fix a title or attach
+  # a note. The other three were kept as two spins: 2025-08-19, 2025-02-11 and 2024-02-20
+  # each play the track at the top and at the close of the night, and MichaelG's workbook
+  # labels the 2025-08-19 closer "(OUTRO)" in his own hand.
+
+  # seq 21 and 22, 60s apart. The first is titled "Deep Mindset (Original Mix)" and
+  # carries the artist note; the second is a bare re-log of the same track.
+  - broadcast: "2026-03-17T20:30:00-0700"
+    artist: "yu-more"
+    song: "Deep Mindset"
+
+  # seq 2 and 3, 125s apart. The second adds the Tractor Tavern release-party note.
+  - broadcast: "2025-05-20T20:30:00-0700"
+    artist: "Fotoform"
+    song: "Skimming the Surface"
+
+  # seq 7 and 8, 97s apart, identical in every field.
+  #
+  # DISSENTING EVIDENCE, decided against by Jim on 2026-08-05: the published
+  # convergencezone.fm playlist for Episode 053 "Total Eclipse 2024" independently lists
+  # Eclipse twice, at offsets 30:36 and 32:13 -- the same 97-second gap. Two sources
+  # therefore record two plays. Jim's call is that this is one play double-logged in both,
+  # so the merge stands. Revisit against the Mixcloud audio if it ever matters.
+  #
+  # Side effect: with the Spinitron pair merged, the set list's second Eclipse entry has
+  # no logged counterpart and surfaces as a `planned` spin on this broadcast. The airing
+  # is still visible in the cache, just as a plan rather than a log.
+  - broadcast: "2024-04-16T22:30:00-0700"
+    artist: "Suzanne Ciani"
+    song: "Eclipse"

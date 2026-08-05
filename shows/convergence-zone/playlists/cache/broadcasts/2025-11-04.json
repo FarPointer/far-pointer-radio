@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "This week, I've got new music from regional artists like Mount Maxwell, Meltt, and a Hello Meteor remix of a new track by MOLTENO. We'll also celebrate upcoming concerts by Visible Cloaks, Patricia Wolf, Mt. Fog, Fotoform, and Nuovo Testamento, as well as recent shows from artists like Other and Night Heron.",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -25,7 +25,8 @@
   "repeat_of_source": null,
   "repeat_of_confidence": null,
   "sources": [
-    "spinitron"
+    "spinitron",
+    "onenote"
   ],
   "spins": [
     {

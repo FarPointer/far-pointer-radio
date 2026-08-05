@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "This week on Convergence Zone - edging towards longer days with new music from LEATHERS, Garden of Magic, Leslee Smucker, Steve Roach, Erik Wöllo, Jill Haley, and Deborah Martin\n\nGreat regional releases by Patricia Wolf, Panabrite, Echo of the Low Light, Omni Gardens, and more",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -26,7 +26,8 @@
   "repeat_of_confidence": null,
   "sources": [
     "spinitron",
-    "wordpress"
+    "wordpress",
+    "onenote"
   ],
   "spins": [
     {

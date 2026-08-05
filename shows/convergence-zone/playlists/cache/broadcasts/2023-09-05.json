@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "This week; I’ll be hosting Convergence Zone LIVE from the KSER studio for the first time! Thank you to all the listeners and artists who have supported the show so far, I hope you’ll join me tomorrow night while I set the controls for the heart of the Convergence Zone -\n\nI’ll premiere another gorgeous track by David Arkenstone from his upcoming album “Winterlūde”; this one’s called “Darkening Skies”, a timely song for the rapidly shortening days in the PNW. I’ll also have some details about my upcoming interview with David ahead of his live tour!\n\nAlso - new music from amazing regional artists like Pure Bathing Culture, Mount Maxwell, Brass Clouds, Hello Meteor, Hotel Pools, and Versing; I’ll also have some lovely new music from Steve Roach, Forrest Fang, Hyperion V, SUSS, and Pabellón Sintético, along with a recent award-winning song by Craig Padilla and Marvin Allen\n\nAnd my usual blend of classics and surprises, sprinkled in with the sound of my heart pounding its way out of my chest over a live mic!",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -26,7 +26,8 @@
   "repeat_of_confidence": null,
   "sources": [
     "spinitron",
-    "wordpress"
+    "wordpress",
+    "onenote"
   ],
   "spins": [
     {

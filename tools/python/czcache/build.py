@@ -7,6 +7,7 @@ even though it has no workbook of its own, and classification depends on knowing
 """
 import collections
 import datetime as dt
+import json
 import sys
 
 import yaml
@@ -18,7 +19,7 @@ import load_spinitron
 import load_workbooks
 import merge
 import repeats
-from paths import CACHE, OVERRIDES, REPORTS
+from paths import CACHE, OVERRIDES, PUBLICATION_LINKS, REPORTS
 
 
 def load_overrides():
@@ -42,11 +43,16 @@ def load_overrides():
         return {(k.isoformat() if isinstance(k, dt.date) else str(k)): v
                 for k, v in data.items()}
 
+    publication_links = {}
+    if PUBLICATION_LINKS.exists():
+        publication_links = json.loads(PUBLICATION_LINKS.read_text(encoding="utf-8"))
+
     return {
         "descriptions": by_date("descriptions.yaml"),
         "participants": by_date("participants.yaml"),
         "repeats": read("repeats.yaml", {}) or {},
         "spins": read("spins.yaml", {}) or {},
+        "publication_links": publication_links,
     }
 
 

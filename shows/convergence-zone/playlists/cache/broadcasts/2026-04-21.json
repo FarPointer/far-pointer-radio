@@ -21,7 +21,10 @@
     "173567",
     "174269"
   ],
-  "spinitron_playlist_ids": [],
+  "spinitron_playlist_ids": [
+    "22315149",
+    "22315151"
+  ],
   "first_broadcast_id": null,
   "repeat_of_source": null,
   "repeat_of_confidence": null,

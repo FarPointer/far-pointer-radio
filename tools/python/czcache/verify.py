@@ -74,6 +74,21 @@ def main():
     check("2 conservation: every spin id unique",
           len({s["id"] for s in spins}) == len(spins),
           f"{len(spins)} spins, {len({s['id'] for s in spins})} distinct ids")
+    playlist_ids = [pid for b in bcs for pid in b["spinitron_playlist_ids"]]
+    multiple = [b for b in bcs if len(b["spinitron_playlist_ids"]) > 1]
+    multiple_dates = {b["id"][:10] for b in multiple}
+    expected_multiple_dates = {
+        "2025-07-01", "2025-09-09", "2025-10-14",
+        "2025-10-21", "2026-03-10", "2026-04-21",
+    }
+    check("2 conservation: every broadcast has a Spinitron playlist ID",
+          all(b["spinitron_playlist_ids"] for b in bcs))
+    check("2 conservation: six persona-switch broadcasts have two playlist IDs",
+          multiple_dates == expected_multiple_dates and len(playlist_ids) == 170,
+          f"dates={sorted(multiple_dates)}, {len(playlist_ids)} IDs")
+    check("2 conservation: every Spinitron playlist ID belongs to one broadcast",
+          len(set(playlist_ids)) == len(playlist_ids),
+          f"{len(playlist_ids)} IDs, {len(set(playlist_ids))} distinct")
 
     # 3 -----------------------------------------------------------------
     b1014 = next((b for b in bcs if b["id"].startswith("2025-10-14")), None)

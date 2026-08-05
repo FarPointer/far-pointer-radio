@@ -28,5 +28,9 @@ sync.
 - `local` is three-state. `null` means *not yet assessed*, which is not the same as
   `false`. `local_basis` records why a spin counts as local (`artist`, `label`, `dj_flag`).
 - `dj_ids` records which Spinitron login was used, **not who hosted**. Use `participants`.
+- `spinitron_playlist_ids` comes from the public Spinitron show-history snapshot. Most
+  broadcasts have one; six persona-switch broadcasts have two.
 - `description_status` distinguishes human-approved copy from an unreviewed extraction.
   Treat `"proposed"` as a draft — it has not been read by a person.
+- `mixcloud_url` is intentionally nullable. A page can be published without an embed and
+  updated later after the recording URL is added to `../publication-links.json`.

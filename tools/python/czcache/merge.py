@@ -289,6 +289,13 @@ def build_broadcast(bid, broadcast, klass, workbook, setlist, prose, ov, report)
         title=broadcast["title"],
         scheduled_duration_minutes=broadcast["scheduled_duration_minutes"],
         dj_ids=broadcast["dj_ids"],
+        spinitron_playlist_ids=broadcast["spinitron_playlist_ids"],
+        mixcloud_url=(ov["publication_links"].get(broadcast["date"]) or {}).get(
+            "mixcloud_url"
+        ),
+        webpage_url=(ov["publication_links"].get(broadcast["date"]) or {}).get(
+            "webpage_url"
+        ),
         first_broadcast_id=broadcast.get("first_broadcast_id"),
         repeat_of_source=broadcast.get("repeat_of_source"),
         repeat_of_confidence=broadcast.get("repeat_of_confidence"),

@@ -49,11 +49,10 @@ interface Broadcast {
                                   // than one entry where the persona switched
                                   // mid-show. Empty array when unknown.
 
-  spinitron_playlist_ids: string[];  // best-effort only — not guaranteed to be
-                                      // populated; not usable as a primary key. More
-                                      // than one entry where a mid-show persona switch
-                                      // split a single broadcast across two Spinitron
-                                      // playlist records that were merged here.
+  spinitron_playlist_ids: string[];  // public Spinitron playlist IDs. Normally one;
+                                      // six persona-switch broadcasts have two records
+                                      // with the same start datetime, merged here into
+                                      // one real-world broadcast. Not a primary key.
 
   first_broadcast_id: string | null;     // null if this IS the original airing;
                                           // otherwise the id of the ORIGINAL airing —

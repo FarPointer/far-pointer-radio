@@ -104,13 +104,29 @@ MERGE_FIELDS = ("release", "isrc", "upc", "label", "song_note",
                 "duration_seconds", "released_date", "released_precision")
 
 
-def merge_persona_duplicates(spins, broadcast_id):
+def _forced_keys(forced, broadcast_id):
+    """Normalised (artist, song) keys a human has told us to merge on this broadcast."""
+    out = set()
+    for entry in forced or []:
+        bid = str(entry.get("broadcast") or "")
+        if bid and bid != broadcast_id and bid != broadcast_id[:10]:
+            continue
+        out.add((norm(entry.get("artist") or ""),
+                 norm(entry.get("song") or "", drop_paren=True)))
+
+
+def merge_persona_duplicates(spins, broadcast_id, forced=None):
     """Collapse cross-persona double-logs. Returns (spins, merges, flagged).
 
     `merges` describes what was combined; `flagged` lists duplicate pairs that were
     deliberately left alone -- same-persona duplicates, which are either a genuine
     repeat play within the show or a double-log only a human can adjudicate.
+
+    `forced` carries that human's answer, from overrides/spins.yaml: pairs listed there
+    merge even though they are same-persona. The reverse case needs no switch -- leaving
+    a duplicate alone is already the default.
     """
+    forced_keys = _forced_keys(forced, broadcast_id)
     groups = {}
     for s in spins:
         groups.setdefault(_key(s), []).append(s)
@@ -123,8 +139,14 @@ def merge_persona_duplicates(spins, broadcast_id):
         gap = _gap_seconds(rows[0], rows[-1])
         personas = {r["dj_id"] for r in rows}
 
-        mergeable = (len(rows) == 2 and len(personas) == 2
-                     and gap is not None and gap <= DUP_WINDOW_SECONDS)
+        # An override matches on the normalised artist and song, so it survives the title
+        # drift that usually accompanies a re-log ("Deep Mindset (Original Mix)").
+        forced_here = len(rows) == 2 and any(
+            (norm(rows[0]["artist"]), norm(s)) in forced_keys
+            for s in (rows[0]["song"], rows[1]["song"]))
+
+        mergeable = forced_here or (len(rows) == 2 and len(personas) == 2
+                                    and gap is not None and gap <= DUP_WINDOW_SECONDS)
         if not mergeable:
             flagged.append({
                 "broadcast_id": broadcast_id, "key": key,
@@ -150,12 +172,13 @@ def merge_persona_duplicates(spins, broadcast_id):
         merges.append({
             "broadcast_id": broadcast_id, "artist": keep["artist"], "song": keep["song"],
             "gap_seconds": gap, "dj_ids": sorted(personas), "conflicts": conflicts,
+            "forced": forced_here,
         })
 
     return [s for s in spins if id(s) not in drop], merges, flagged
 
 
-def load():
+def load(forced_merges=None):
     """Returns (broadcasts, merges, flagged).
 
     `broadcasts` maps broadcast id -> dict with the Spinitron-derived fields and a
@@ -201,7 +224,8 @@ def load():
     all_merges, all_flagged = [], []
     for b in broadcasts.values():
         b["raw_spins"].sort(key=_sort_key)
-        b["raw_spins"], merges, flagged = merge_persona_duplicates(b["raw_spins"], b["id"])
+        b["raw_spins"], merges, flagged = merge_persona_duplicates(
+            b["raw_spins"], b["id"], forced_merges)
         b["dj_ids"] = sorted(x for x in b["dj_ids"] if x)
         b["dj_names"] = sorted({DJ_NAMES.get(d, d) for d in b["dj_ids"]})
         all_merges += merges

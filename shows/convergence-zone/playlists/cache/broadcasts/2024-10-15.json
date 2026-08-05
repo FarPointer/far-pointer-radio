@@ -9,11 +9,16 @@
       "name": "Jim Causey",
       "dj_id": "173567",
       "coverage": "full"
+    },
+    {
+      "name": "David Haldeman",
+      "dj_id": null,
+      "coverage": "full"
     }
   ],
   "is_prerecorded": false,
-  "description": "This week on Convergence Zone, brand new music from Cruel Diagonals, Stefan Smulovich, Snowdrops, Artfonica, Rodrigo Passananti, and The Cure\n\nAnniversary re-releases of Deborah Martin & Cheryl Gallagher's \"Tibet\"; Steve Roach's \"Dreamtime Return\"; and James Bernard's \"Atmospheres\"\n\nFeaturing music from upcoming concerts by Lane Lines and Mt Fog\n\nAnd I'll be joined in the booth by David Haldeman, host of Dead Electric!\n\nConvergence Zone arrives tonight at 10:30pm PT on 90.7 KSER, 89.9 KXIR, streaming around the world at kser.org",
-  "description_status": "proposed",
+  "description": "This week on Convergence Zone, brand new music from Cruel Diagonals, Stefan Smulovich, Snowdrops, Artfonica, Rodrigo Passananti, and The Cure\n\nAnniversary re-releases of Deborah Martin & Cheryl Gallagher's \"Tibet\"; Steve Roach's \"Dreamtime Return\"; and James Bernard's \"Atmospheres\"\n\nFeaturing music from upcoming concerts by Lane Lines and Mt. Fog\n\nAnd I'll be joined in the booth by David Haldeman, host of Dead Electric!",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,

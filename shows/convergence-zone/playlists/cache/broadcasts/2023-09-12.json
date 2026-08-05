@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "I’m quite stoked about so many great life shows coming up this autumn and winter — with atmospheric music from regional artists and touring legends\n\nDavid Arkenstone joined me for an interview about his discography; his PNW tour that begins in Monroe, WA on Friday Sep 22; and his new album “Winterlüde” - I’ll share excerpts from our conversation AND an EXCLUSIVE debut of a song from the album before it comes out Wednesday!\n\nI’ve got music from bands that have shows coming up soon — Locsil and Lawrence English; Lane Lines; Eydís Evenson; and the latest incarnation of Tangerine Dream\n\nBrand new music from the Gemstones IV compilation on the Cyclical Dreams label\n\nRegional gems from Mt Fog, Deborah Martin & Jill Haley, NAVVI, and Moon Duo\n\nAnd a long-lost 1982 song by Steve Roach!",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -25,7 +25,8 @@
   "repeat_of_source": null,
   "repeat_of_confidence": null,
   "sources": [
-    "spinitron"
+    "spinitron",
+    "onenote"
   ],
   "spins": [
     {

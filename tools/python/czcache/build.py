@@ -30,18 +30,31 @@ def load_overrides():
         data = yaml.safe_load(path.read_text(encoding="utf-8"))
         return default if data is None else data
 
+    def by_date(name):
+        """Normalise keys to ISO strings.
+
+        The files are documented as keyed by air date, and `2026-07-07:` is the obvious
+        way to write that -- but YAML resolves an unquoted ISO date to a datetime.date,
+        so every lookup against a string id missed and the override silently did nothing.
+        Accept both forms rather than making correctness depend on remembering quotes.
+        """
+        data = read(name, {})
+        return {(k.isoformat() if isinstance(k, dt.date) else str(k)): v
+                for k, v in data.items()}
+
     return {
-        "descriptions": read("descriptions.yaml", {}),
-        "participants": read("participants.yaml", {}),
+        "descriptions": by_date("descriptions.yaml"),
+        "participants": by_date("participants.yaml"),
         "repeats": read("repeats.yaml", {}) or {},
-        "spins": read("spins.yaml", {}),
+        "spins": read("spins.yaml", {}) or {},
     }
 
 
 def main():
     ov = load_overrides()
 
-    broadcasts, merges, flagged = load_spinitron.load()
+    broadcasts, merges, flagged = load_spinitron.load(
+        (ov["spins"] or {}).get("merge_duplicates") or [])
     workbooks = load_workbooks.load()
     setlists = load_setlists.load()
 

@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "Last week, I experienced the total solar eclipse - this week I return to the Convergence Zone with new music from SUSS, and I’m also premiering new music from Michael Whelan's upcoming album \"Watercolor Sky\", along with a special limited release by Lisa Bella Donna, \"Total Eclipse\" - and a new release from BC artist Nova Pon and New World Ensemble\n\nMore music for the eclipse from regional artists like Bart Hawkins, Dreamstate Logic, and from legendary figures like Mark Banning, Steve Roach, and Suzanne Ciani\n\nRecent releases from Rudy Adrian, Transponder, Mathias Grassow & Heikki Lindgren, Avi C. Engel, and much more",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -26,7 +26,8 @@
   "repeat_of_confidence": null,
   "sources": [
     "spinitron",
-    "wordpress"
+    "wordpress",
+    "onenote"
   ],
   "spins": [
     {
@@ -239,22 +240,22 @@
       ]
     },
     {
-      "id": "sp_98d5d257e2c6501b",
+      "id": "sp_45ebce3d3aa8eaec",
       "broadcast_id": "2024-04-16T22:30:00-0700",
-      "evidence": "logged",
+      "evidence": "planned",
       "sequence": 8,
-      "logged_at": "2024-04-16T23:02:13-0700",
+      "logged_at": null,
       "offset_seconds": 1933,
       "artist": "Suzanne Ciani",
       "artist_key": null,
       "song": "Eclipse",
-      "release": "Silver Ship",
-      "isrc": "USHM90599070",
-      "upc": "0799547701029",
-      "duration_seconds": 232,
-      "released_date": "2005",
-      "released_precision": "year",
-      "label": "Seventh Wave",
+      "release": null,
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": null,
+      "released_precision": null,
+      "label": null,
       "local": null,
       "local_basis": [],
       "artist_origin_raw": null,
@@ -263,7 +264,6 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
-        "spinitron",
         "wordpress"
       ]
     },

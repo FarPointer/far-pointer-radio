@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "Convergence Zone returns tonight with a selection of atmospheric music from the PNW and beyond - including some tracks from many of my favorite albums of 2024, including Mt. Fog, EarthtoneSkytone, Afrocop, INTERVALES, somesurprises, Domenica Diavoleria - and new music from Japanese Breakfast, Echo of the Low Light, and Select Level",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -25,7 +25,8 @@
   "repeat_of_source": null,
   "repeat_of_confidence": null,
   "sources": [
-    "spinitron"
+    "spinitron",
+    "onenote"
   ],
   "spins": [
     {

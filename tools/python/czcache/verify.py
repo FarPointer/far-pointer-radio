@@ -15,7 +15,9 @@ import re
 import subprocess
 import sys
 
-from paths import BROADCASTS, INDEX, MICHAELG_DIR, REPO, SPINS_CSV
+import yaml
+
+from paths import BROADCASTS, INDEX, MICHAELG_DIR, OVERRIDES, REPO, SPINS_CSV
 
 FAILURES = []
 
@@ -53,9 +55,16 @@ def main():
         rows = list(csv.DictReader(fh))
     logged = [s for s in spins if "spinitron" in s["sources"]]
     check("2 conservation: 164 broadcast files", len(bcs) == 164, f"found {len(bcs)}")
+    # 7 cross-persona pairs merge automatically; each reviewed entry in spins.yaml merges
+    # one more. Derived rather than hardcoded so an approved decision does not read as a
+    # regression -- but still exact, so an unexplained loss of rows does.
+    forced = len((yaml.safe_load((OVERRIDES / "spins.yaml").read_text(encoding="utf-8"))
+                  or {}).get("merge_duplicates") or [])
+    expected = len(rows) - 7 - forced
     check("2 conservation: Spinitron rows accounted for",
-          len(logged) == len(rows) - 7,
-          f"{len(rows)} rows - 7 merged = {len(rows) - 7}; cache has {len(logged)}")
+          len(logged) == expected,
+          f"{len(rows)} rows - 7 persona merges - {forced} reviewed = {expected}; "
+          f"cache has {len(logged)}")
     classes = collections.Counter(json.loads(INDEX.read_text())[i]["class"]
                                  for i in range(len(bcs)))
     check("2 conservation: class split 31/70/63",
@@ -122,8 +131,13 @@ def main():
 
     # 6 -----------------------------------------------------------------
     reps = [b for b in bcs if b["first_broadcast_id"]]
-    check("6 repeats: 31 broadcasts carry a first_broadcast_id", len(reps) == 31,
-          f"found {len(reps)}")
+    # 31 from detection alone; overrides/repeats.yaml can add more. The floor is the
+    # assertion -- detection silently finding fewer than it did at design time is the
+    # regression worth catching.
+    rep_ov = yaml.safe_load((OVERRIDES / "repeats.yaml").read_text(encoding="utf-8")) or {}
+    check("6 repeats: at least 31 broadcasts carry a first_broadcast_id", len(reps) >= 31,
+          f"found {len(reps)} ({len(rep_ov.get('forced') or [])} forced, "
+          f"{len(rep_ov.get('suppressed') or [])} suppressed by override)")
     check("6 repeats: no chains (every original is itself an original)",
           all(by_id[b["first_broadcast_id"]]["first_broadcast_id"] is None for b in reps),
           str([b["id"][:10] for b in reps
@@ -174,8 +188,27 @@ def main():
 
     # 9 -----------------------------------------------------------------
     approved = [b for b in bcs if b["description_status"] == "approved"]
-    check("9 review gate: nothing approved with an empty overrides file",
-          not approved, f"{len(approved)} approved")
+    # The gate is that "approved" comes from the overrides file and nowhere else -- one
+    # approved broadcast per non-`skip` entry, exactly. An empty file must yield zero,
+    # which is the same assertion, so this replaces the original empty-file check rather
+    # than relaxing it.
+    desc_ov = yaml.safe_load(
+        (OVERRIDES / "descriptions.yaml").read_text(encoding="utf-8")) or {}
+    entries = {(k.isoformat() if hasattr(k, "isoformat") else str(k))
+               for k, v in desc_ov.items() if v != "skip"}
+    got = {b["id"][:10] for b in approved}
+    check("9 review gate: approved set equals the overrides file exactly",
+          got == entries,
+          f"{len(entries)} entries, {len(approved)} approved; "
+          f"only in cache={sorted(got - entries)[:5]} "
+          f"only in file={sorted(entries - got)[:5]}")
+    # Repeats copy their original's content fields. A description approved once must not
+    # silently become an approved description for a later airing nobody reviewed.
+    check("9 review gate: no repeat inherited an approval it has no entry for",
+          not [b for b in approved
+               if b["first_broadcast_id"] and b["id"][:10] not in entries],
+          str([b["id"][:10] for b in approved
+               if b["first_broadcast_id"] and b["id"][:10] not in entries]))
     check("9 review gate: every non-null description has a status",
           all((b["description"] is None) == (b["description_status"] is None)
               for b in bcs))

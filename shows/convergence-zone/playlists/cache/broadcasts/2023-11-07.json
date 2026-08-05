@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "This week on Convergence Zone: as the long nights deepen, we find a wealth of new music with connections to our region - by Vancouver trio V Vecker Ensemble, Omni Gardens, AeTopus, Daryl Groetsch, Leeni, Erwilian, Soft Release, Pure Bathing Culture, and the global radio premiere of \"Latent Images and Distant Dreams\" by Seattle's Dreamstate Logic\n\nI'll also have another excerpt from my interview with Terminus Void's J. Ronald Smith, along with more music from his new album APEIRON, and also something from his recent collaboration with Mina on her album \"Lost and Remembered\"\n\nMore new music from Winterwood, Bahia Mansa, and TALsounds - and more of our tribute to Norm Chambers",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -25,7 +25,8 @@
   "repeat_of_source": null,
   "repeat_of_confidence": null,
   "sources": [
-    "spinitron"
+    "spinitron",
+    "onenote"
   ],
   "spins": [
     {

@@ -12,5 +12,17 @@
 # suppressed:
 #   - ["2024-01-30T22:30:00-0800", "2024-12-24T22:30:00-0800"]
 
-forced: []
+# Reviewed 2026-08-05 against the 0.40-0.95 band in reports/repeats.md. The 0.60
+# threshold was left as-is: nothing in the data falls between 0.47 and 0.63, so the exact
+# cut point is not load-bearing. 2025-04-22 as a rerun of 2025-04-08 only two weeks later
+# was queried and confirmed -- its 0.71 understates the match, because several apparent
+# differences are spelling variants of one artist (wanubale / wnbl_, [arsonist] /
+# {arsonist}).
+
+forced:
+  # Confirmed by Jim: part of the same replay, not a distinct episode. It scores about
+  # 0.46 against both 2024-06-11 and that episode's 2024-12-10 rerun -- well under the
+  # threshold, so nothing except direct knowledge could have recovered this one.
+  - ["2024-06-11T22:30:00-0700", "2024-06-18T22:30:00-0700"]
+
 suppressed: []

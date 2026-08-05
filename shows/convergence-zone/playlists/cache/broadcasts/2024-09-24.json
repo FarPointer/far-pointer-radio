@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "This week, Convergence Zone bridges the gap between humans and machines with new music by Kristen Roos, a composition by John Supko (thanks to [Maggie Molloy](https://classicalking.org/host/maggie-molloy), host of KING-FM's “Second Inversion”, for recommending this piece!) - and brand new releases from Hair and Space Museum and Craig Padilla & Zero Ohms\n\nI’ve also got a new live performance by Funsize Renegade and classics from Norm Chambers and Pulse Emitter",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -25,7 +25,8 @@
   "repeat_of_source": null,
   "repeat_of_confidence": null,
   "sources": [
-    "spinitron"
+    "spinitron",
+    "onenote"
   ],
   "spins": [
     {

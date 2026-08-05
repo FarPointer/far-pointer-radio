@@ -224,3 +224,6 @@ tools/python/czaudit/site_html/
 tools/python/czaudit/*_episodes.json
 tools/python/czaudit/*.xlsx
 tools/python/czaudit/__pycache__/
+
+# czcache reports — derived, regenerated on every build
+tools/python/czcache/reports/

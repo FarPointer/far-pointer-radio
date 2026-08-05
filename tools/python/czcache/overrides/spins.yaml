@@ -1,0 +1,16 @@
+# Manual spin-level decisions.
+#
+# The build merges duplicate spins only when they are a cross-persona double-log (the
+# same track logged seconds apart under both of Jim's Spinitron personas at show start).
+# Same-persona duplicates are left alone and reported, because a wide gap is usually a
+# genuine repeat play within the two-hour show and a short one may be a double-log --
+# a distinction only a human can make.
+#
+# See the "Duplicate spins left alone" table in reports/discrepancies.md.
+#
+# merge_duplicates:
+#   - broadcast: "2026-03-17T20:30:00-0700"
+#     artist: "yu-more"
+#     song: "Deep Mindset"
+
+merge_duplicates: []

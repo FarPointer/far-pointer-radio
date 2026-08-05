@@ -1,0 +1,14 @@
+# Approved broadcast descriptions, keyed by air date (YYYY-MM-DD) or full broadcast id.
+#
+# The build extracts candidate descriptions from the OneNote prose, but that prose mixes
+# genuine promo copy with scratch ideas and open questions. An extracted candidate is
+# published as `description_status: "proposed"` and is NOT trustworthy. Text entered here
+# becomes `"approved"`.
+#
+# Review reports/descriptions-review.md, then either paste the corrected text here or
+# write `skip` to suppress the description for that broadcast entirely.
+#
+# Example:
+#   2024-08-06: |
+#     This week on Convergence Zone I'll premiere new space music from Seattle.
+#   2023-10-17: skip

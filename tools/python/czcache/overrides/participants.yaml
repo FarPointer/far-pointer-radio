@@ -1,0 +1,18 @@
+# Host attribution, keyed by air date (YYYY-MM-DD) or full broadcast id.
+#
+# This is the authority. `dj_ids` records which Spinitron login was used, not who hosted:
+# both "Jim Causey" personas (173567, 174269) are Jim's, and 26 of MichaelG's 28 episodes
+# were logged under Jim's original account. The build infers MichaelG from the presence
+# of one of his workbooks; anything that rule gets wrong belongs here.
+#
+# coverage: "full" (hosted the whole show) or "partial" (a guest joining part of it).
+#
+# Example:
+#   2026-06-23:
+#     - name: MichaelG
+#       coverage: full
+#   2025-10-14:
+#     - name: Jim Causey
+#       coverage: partial
+#     - name: MichaelG
+#       coverage: partial

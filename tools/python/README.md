@@ -8,6 +8,7 @@ Python scripts and packages for radio production.
 |---|---|---|
 | `czarchive/` | Archives Convergence Zone episodes — Spinitron playlist → Ark stream capture → Mixcloud upload | Python 3.11+, `uv`, `ffmpeg` |
 | `czaudit/` | Reconciles Convergence Zone set lists (OneNote notes, convergencezone.fm playlists) against Spinitron and writes the audit workbook | Python 3.11+, `uv` |
+| `czcache/` | Builds the canonical playlist cache at `shows/convergence-zone/playlists/cache/` from every playlist source | Python 3.11+, `uv` |
 
 ## Conventions
 

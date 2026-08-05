@@ -1,0 +1,16 @@
+# Manual corrections to repeat detection.
+#
+# Repeats are found by track overlap at a 0.60 threshold. That works because unrelated
+# consecutive weeks overlap around 0.00-0.08 while real replays land at 0.60-1.00, but a
+# repeat with a substantially revised track list can fall below the line, and two
+# themed shows drawing on the same small catalogue can rise above it.
+#
+# Review the 0.40-0.95 band in reports/repeats.md. Pairs are full broadcast ids.
+#
+# forced:
+#   - ["2024-03-12T22:30:00-0700", "2025-03-25T20:30:00-0700"]
+# suppressed:
+#   - ["2024-01-30T22:30:00-0800", "2024-12-24T22:30:00-0800"]
+
+forced: []
+suppressed: []

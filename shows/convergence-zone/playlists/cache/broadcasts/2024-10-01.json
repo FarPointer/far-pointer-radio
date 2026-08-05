@@ -1,0 +1,630 @@
+{
+  "id": "2024-10-01T22:30:00-0700",
+  "air_datetime": "2024-10-01T22:30:00-0700",
+  "show_name": "Convergence Zone",
+  "episode_number": null,
+  "title": null,
+  "participants": [
+    {
+      "name": "Jim Causey",
+      "dj_id": "173567",
+      "coverage": "full"
+    }
+  ],
+  "is_prerecorded": false,
+  "description": null,
+  "description_status": null,
+  "mixcloud_url": null,
+  "webpage_url": null,
+  "scheduled_duration_minutes": 120,
+  "dj_ids": [
+    "173567"
+  ],
+  "spinitron_playlist_ids": [],
+  "first_broadcast_id": null,
+  "repeat_of_source": null,
+  "repeat_of_confidence": null,
+  "sources": [
+    "spinitron"
+  ],
+  "spins": [
+    {
+      "id": "sp_27c63a3a21c32bb3",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 1,
+      "logged_at": "2024-10-01T22:28:40-0700",
+      "offset_seconds": null,
+      "artist": "Emancipator",
+      "artist_key": null,
+      "song": "Cherry Blossom",
+      "release": "Cherry Blossom",
+      "isrc": "DEUE22456431",
+      "upc": "4066004701264",
+      "duration_seconds": 181,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": "Loci Records",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_2ae82dce6e569341",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 2,
+      "logged_at": "2024-10-01T22:31:42-0700",
+      "offset_seconds": null,
+      "artist": "Hotel Pools",
+      "artist_key": null,
+      "song": "Faded",
+      "release": "Faded",
+      "isrc": "QZRP52220076",
+      "upc": "0197273279971",
+      "duration_seconds": 199,
+      "released_date": "2022",
+      "released_precision": "year",
+      "label": "Wild Nature",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_9ac2c42ebc793607",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 3,
+      "logged_at": "2024-10-01T22:35:02-0700",
+      "offset_seconds": null,
+      "artist": "Hello Meteor",
+      "artist_key": null,
+      "song": "Contraband Movement",
+      "release": "Premium Grey Market",
+      "isrc": "QZWFH2425342",
+      "upc": "0198886492504",
+      "duration_seconds": 281,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": "DISTROKID",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_d5ed8ea860035444",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 4,
+      "logged_at": "2024-10-01T22:39:20-0700",
+      "offset_seconds": null,
+      "artist": "BT",
+      "artist_key": null,
+      "song": "Kintsugi",
+      "release": "Metaversal",
+      "isrc": "NLE712100818",
+      "upc": "8718525242691",
+      "duration_seconds": 340,
+      "released_date": "2021",
+      "released_precision": "year",
+      "label": "Black Hole Recordings",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_67e6f8ae7fa8a06d",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 5,
+      "logged_at": "2024-10-01T22:44:16-0700",
+      "offset_seconds": null,
+      "artist": "FM Attack",
+      "artist_key": null,
+      "song": "Sleepless Nights",
+      "release": "Dreamatic",
+      "isrc": "CA1HD0900033",
+      "upc": "5054283661897",
+      "duration_seconds": 408,
+      "released_date": "2018",
+      "released_precision": "year",
+      "label": "Starfield Music",
+      "local": null,
+      "local_basis": [],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_64200d685a5b7218",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 6,
+      "logged_at": "2024-10-01T22:51:25-0700",
+      "offset_seconds": null,
+      "artist": "Kaitlyn Aurelia Smith & Joe Goddard",
+      "artist_key": null,
+      "song": "Neptunes",
+      "release": "Neptunes - EP",
+      "isrc": "GBCEL2400337",
+      "upc": "0192152091484",
+      "duration_seconds": 330,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": "Smugglers Way",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_e547c931ccfe0451",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 7,
+      "logged_at": "2024-10-01T22:56:52-0700",
+      "offset_seconds": null,
+      "artist": "somesurprises",
+      "artist_key": null,
+      "song": "Untitled",
+      "release": "Perseids",
+      "isrc": "USCGH2471455",
+      "upc": "0198500093735",
+      "duration_seconds": 125,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": "Doom Trip Records",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_cca5382935e53779",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 8,
+      "logged_at": "2024-10-01T22:58:50-0700",
+      "offset_seconds": null,
+      "artist": "Mt Fog",
+      "artist_key": null,
+      "song": "Cosmic Things",
+      "release": "ultraviolet heart machine",
+      "isrc": "QZTB72442518",
+      "upc": "0198662471372",
+      "duration_seconds": 213,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": "Save the Forest for the Trees",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_05f9dd783b75990e",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 9,
+      "logged_at": "2024-10-01T23:02:23-0700",
+      "offset_seconds": null,
+      "artist": "Chromatics",
+      "artist_key": null,
+      "song": "Cherry (Instrumental)",
+      "release": "Cherry (Deluxe)",
+      "isrc": "QMMMF1300025",
+      "upc": "843357102955",
+      "duration_seconds": 272,
+      "released_date": "2017",
+      "released_precision": "year",
+      "label": "Italians Do It Better",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_53cc3e662f37e52a",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 10,
+      "logged_at": "2024-10-01T23:06:53-0700",
+      "offset_seconds": null,
+      "artist": "Kristen Roos",
+      "artist_key": null,
+      "song": "AEX",
+      "release": "Universal Synthesizer Interface Vol I",
+      "isrc": "CA0WS2315805",
+      "upc": "0634457147225",
+      "duration_seconds": 320,
+      "released_date": "2023",
+      "released_precision": "year",
+      "label": "We Are Busy Bodies",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_705948b5a0a390f2",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 11,
+      "logged_at": "2024-10-01T23:12:14-0700",
+      "offset_seconds": null,
+      "artist": "Corey Holms",
+      "artist_key": null,
+      "song": "Dangers of Escalation",
+      "release": "The Veneer Fades",
+      "isrc": "QZDA71866565",
+      "upc": "840090909780",
+      "duration_seconds": 357,
+      "released_date": "2018",
+      "released_precision": "year",
+      "label": "For all I care…",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_a82ad0e42ade883a",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 12,
+      "logged_at": "2024-10-01T23:18:11-0700",
+      "offset_seconds": null,
+      "artist": "Timothy Fife",
+      "artist_key": null,
+      "song": "Clear Off",
+      "release": "Clear Off",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": 603,
+      "released_date": "2023",
+      "released_precision": "year",
+      "label": "SFI Recordings",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_6f247ff670538fbd",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 13,
+      "logged_at": "2024-10-01T23:27:59-0700",
+      "offset_seconds": null,
+      "artist": "Panabrite",
+      "artist_key": null,
+      "song": "Xenon District",
+      "release": "Xenon District",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": 632,
+      "released_date": "2013",
+      "released_precision": "year",
+      "label": "Panabrite",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_6b67aaf295311c87",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 14,
+      "logged_at": "2024-10-01T23:38:31-0700",
+      "offset_seconds": null,
+      "artist": "Melondruie",
+      "artist_key": null,
+      "song": "scarlet waves crashing down (excerpt)",
+      "release": "a storm is coming",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": 513,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": null,
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_f52776630ae2944d",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 15,
+      "logged_at": "2024-10-01T23:45:54-0700",
+      "offset_seconds": null,
+      "artist": "Thom Brennan",
+      "artist_key": null,
+      "song": "Othadiegra Pt. 2",
+      "release": "Othadiegra",
+      "isrc": "uscgj2461339",
+      "upc": "0198500329964",
+      "duration_seconds": 450,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": "Thom Brennan",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_884dc027a6d7a2e0",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 16,
+      "logged_at": "2024-10-01T23:53:24-0700",
+      "offset_seconds": null,
+      "artist": "Intervales",
+      "artist_key": null,
+      "song": "Filglas",
+      "release": "The Tribe",
+      "isrc": "QZHN41995991",
+      "upc": "194676470349",
+      "duration_seconds": 327,
+      "released_date": "2019",
+      "released_precision": "year",
+      "label": "1463123 Records DK",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_eae165d58b92ab73",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 17,
+      "logged_at": "2024-10-01T23:58:57-0700",
+      "offset_seconds": null,
+      "artist": "Terminus Void",
+      "artist_key": null,
+      "song": "Beyond Static Tolerance",
+      "release": "Interstellar",
+      "isrc": "QZTDY2100004",
+      "upc": "0692531180650",
+      "duration_seconds": 468,
+      "released_date": "2021",
+      "released_precision": "year",
+      "label": "Terminus Void",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_95a8993938cf9db2",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 18,
+      "logged_at": "2024-10-02T00:06:16-0700",
+      "offset_seconds": null,
+      "artist": "missing scenes",
+      "artist_key": null,
+      "song": "on the wind",
+      "release": "sturgeon moon/beaver moon",
+      "isrc": "QZHNC2306786",
+      "upc": "0197745121296",
+      "duration_seconds": 557,
+      "released_date": "2023",
+      "released_precision": "year",
+      "label": "DISTROKID",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_db1f30b09571d202",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 19,
+      "logged_at": "2024-10-02T00:15:33-0700",
+      "offset_seconds": null,
+      "artist": "Andy Sells & Noel Brass Jr",
+      "artist_key": null,
+      "song": "Further Latitude",
+      "release": "Further Latitude",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": 237,
+      "released_date": "2020",
+      "released_precision": "year",
+      "label": null,
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_426c2c208bae5042",
+      "broadcast_id": "2024-10-01T22:30:00-0700",
+      "evidence": "logged",
+      "sequence": 20,
+      "logged_at": "2024-10-02T00:19:30-0700",
+      "offset_seconds": null,
+      "artist": "Dreamstate Logic",
+      "artist_key": null,
+      "song": "A Perfect Reflection",
+      "release": "Cosmic Legacy",
+      "isrc": "QZPLR2417853",
+      "upc": null,
+      "duration_seconds": 477,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": "Dreamstate Logic",
+      "local": true,
+      "local_basis": [
+        "dj_flag"
+      ],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    }
+  ]
+}

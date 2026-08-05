@@ -1,0 +1,641 @@
+{
+  "id": "2025-10-14T20:30:00-0700",
+  "air_datetime": "2025-10-14T20:30:00-0700",
+  "show_name": "Convergence Zone",
+  "episode_number": null,
+  "title": null,
+  "participants": [
+    {
+      "name": "MichaelG",
+      "dj_id": "189849",
+      "coverage": "full"
+    }
+  ],
+  "is_prerecorded": false,
+  "description": null,
+  "description_status": null,
+  "mixcloud_url": null,
+  "webpage_url": null,
+  "scheduled_duration_minutes": 120,
+  "dj_ids": [
+    "173567",
+    "174269"
+  ],
+  "spinitron_playlist_ids": [],
+  "first_broadcast_id": null,
+  "repeat_of_source": null,
+  "repeat_of_confidence": null,
+  "sources": [
+    "spinitron",
+    "michaelg"
+  ],
+  "spins": [
+    {
+      "id": "sp_e05c82033618fa4e",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 1,
+      "logged_at": "2025-10-14T20:27:00-0700",
+      "offset_seconds": null,
+      "artist": "bloococoon",
+      "artist_key": null,
+      "song": "Blossom Like a Rose",
+      "release": "N/A (Single)",
+      "isrc": "QZZEM2300001",
+      "upc": null,
+      "duration_seconds": 227,
+      "released_date": "2024-06",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_2a0ce5840b4fb71c",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 2,
+      "logged_at": "2025-10-14T20:31:30-0700",
+      "offset_seconds": null,
+      "artist": "Beach Vacation",
+      "artist_key": null,
+      "song": "Weighted Down",
+      "release": "Let Go (EP)",
+      "isrc": "QZS7J2488584",
+      "upc": "0797885472618",
+      "duration_seconds": 194,
+      "released_date": "2024-11",
+      "released_precision": "month",
+      "label": "Dayderam Records",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_2149625141687100",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 3,
+      "logged_at": "2025-10-14T20:34:37-0700",
+      "offset_seconds": null,
+      "artist": "Fotoform",
+      "artist_key": null,
+      "song": "Digging Trenches",
+      "release": "Horizons",
+      "isrc": "QZK6N2163566",
+      "upc": "0196322599848",
+      "duration_seconds": 267,
+      "released_date": "2021-10",
+      "released_precision": "month",
+      "label": "Dismal Nitch",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_7e4f399c0785af14",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 4,
+      "logged_at": "2025-10-14T20:46:23-0700",
+      "offset_seconds": null,
+      "artist": "Laryssa Okada",
+      "artist_key": null,
+      "song": "Call Me When You Get Home",
+      "release": "Stutter",
+      "isrc": "USL4Q2533641",
+      "upc": "0199800401879",
+      "duration_seconds": 220,
+      "released_date": "2025-09",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_3e865d4c481ee408",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 5,
+      "logged_at": "2025-10-14T20:49:48-0700",
+      "offset_seconds": null,
+      "artist": "Dvwnpour",
+      "artist_key": null,
+      "song": "Coastline",
+      "release": "New Skies",
+      "isrc": "QZNWV2366427",
+      "upc": "0197954736502",
+      "duration_seconds": 433,
+      "released_date": "2023-08",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_9094ef2868210fa4",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 6,
+      "logged_at": "2025-10-14T21:02:05-0700",
+      "offset_seconds": null,
+      "artist": "Quaad",
+      "artist_key": null,
+      "song": "The Magic Box",
+      "release": "HVS08",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": 410,
+      "released_date": "2025-08",
+      "released_precision": "month",
+      "label": "Heavy Sounds",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_8026b2f8200575eb",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 7,
+      "logged_at": "2025-10-14T21:08:55-0700",
+      "offset_seconds": null,
+      "artist": "Manatee Commune (Grant Eadie)",
+      "artist_key": null,
+      "song": "Faulted",
+      "release": "Simultaneity",
+      "isrc": "USGC62001206",
+      "upc": "0674276680053",
+      "duration_seconds": 396,
+      "released_date": "2024-07",
+      "released_precision": "month",
+      "label": "Bastard Jazz Recordings",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_c387ed2715076098",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 8,
+      "logged_at": "2025-10-14T21:19:26-0700",
+      "offset_seconds": null,
+      "artist": "Wolftron",
+      "artist_key": null,
+      "song": "The Deep",
+      "release": "Dead After Dark",
+      "isrc": "QT3F32572294",
+      "upc": "0199740009388",
+      "duration_seconds": 299,
+      "released_date": "2025-10",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_3978020eefb008d2",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 9,
+      "logged_at": "2025-10-14T21:24:05-0700",
+      "offset_seconds": null,
+      "artist": "Lusine (Jeff McIlwain)",
+      "artist_key": null,
+      "song": "Crowded Room",
+      "release": "A Certain Distance",
+      "isrc": "US2J70908710",
+      "upc": "0804297908731",
+      "duration_seconds": 324,
+      "released_date": "2009",
+      "released_precision": "year",
+      "label": "Ghostly International",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_bf0222b50be7064e",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 10,
+      "logged_at": "2025-10-14T21:30:01-0700",
+      "offset_seconds": null,
+      "artist": "LIGHTSPEAR",
+      "artist_key": null,
+      "song": "Traffic",
+      "release": "Motor",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": 296,
+      "released_date": "2023-08",
+      "released_precision": "month",
+      "label": "Dream Records",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_3843f7dee2bd77a9",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 11,
+      "logged_at": "2025-10-14T21:38:12-0700",
+      "offset_seconds": null,
+      "artist": "Lemolo (Megan Grandall)",
+      "artist_key": null,
+      "song": "High Tide",
+      "release": "Swansea",
+      "isrc": "US9CJ1900002",
+      "upc": "0194616627277",
+      "duration_seconds": 258,
+      "released_date": "2019-10",
+      "released_precision": "month",
+      "label": "Lemolo Music",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_1483ecbf16a121ef",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 12,
+      "logged_at": "2025-10-14T21:42:31-0700",
+      "offset_seconds": null,
+      "artist": "Lane Lines",
+      "artist_key": null,
+      "song": "Like to Look Sad",
+      "release": "Lucid Dreaming",
+      "isrc": "QZTAX2218090",
+      "upc": "0197272393302",
+      "duration_seconds": 231,
+      "released_date": "2023-09",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_7d85647a46e9fd44",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 13,
+      "logged_at": "2025-10-14T21:46:16-0700",
+      "offset_seconds": null,
+      "artist": "Tomo Nakayama",
+      "artist_key": null,
+      "song": "Get To Know You",
+      "release": "Melonday",
+      "isrc": "TCAEP2026073",
+      "upc": null,
+      "duration_seconds": 233,
+      "released_date": "2020",
+      "released_precision": "year",
+      "label": "Porchlight Records",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_5cd371588bf5f51f",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 14,
+      "logged_at": "2025-10-14T21:55:31-0700",
+      "offset_seconds": null,
+      "artist": "Midnight High",
+      "artist_key": null,
+      "song": "Avenue",
+      "release": "Swimming Lessons",
+      "isrc": "QZDA42363979",
+      "upc": "0197547345395",
+      "duration_seconds": 268,
+      "released_date": "2023-08",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_3e93fca5f3326109",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 15,
+      "logged_at": "2025-10-14T22:00:50-0700",
+      "offset_seconds": null,
+      "artist": "The Groovy Nobody (Sam Larson)",
+      "artist_key": null,
+      "song": "Elevated",
+      "release": "Reflections of a Lost Year",
+      "isrc": "USCGH2212412",
+      "upc": "0198002849458",
+      "duration_seconds": 221,
+      "released_date": "2022-01",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Snoqualmie",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_b612052d3842210a",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 16,
+      "logged_at": "2025-10-14T22:04:26-0700",
+      "offset_seconds": null,
+      "artist": "Somesurprises",
+      "artist_key": null,
+      "song": "Be Reasonable",
+      "release": "Perseids",
+      "isrc": "uscgh2471448",
+      "upc": "0198500093575",
+      "duration_seconds": 390,
+      "released_date": "2024-04",
+      "released_precision": "month",
+      "label": "Doom Trip Records",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_061a8d817562da6a",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 17,
+      "logged_at": "2025-10-14T22:13:50-0700",
+      "offset_seconds": null,
+      "artist": "Jeremy Blake",
+      "artist_key": null,
+      "song": "Fushigi (Japanese for Mysterious)",
+      "release": "Superstructures",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": 310,
+      "released_date": "2025-10",
+      "released_precision": "month",
+      "label": "Red Means Recording",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_7b55e6d12706652b",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 18,
+      "logged_at": "2025-10-14T22:19:04-0700",
+      "offset_seconds": null,
+      "artist": "Avian Invasion",
+      "artist_key": null,
+      "song": "Woven Crystal",
+      "release": "N/A Single",
+      "isrc": "GX53U2637777",
+      "upc": "5063807395705",
+      "duration_seconds": 314,
+      "released_date": "2025-10",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist",
+        "dj_flag"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_0855eb9aa73e29bd",
+      "broadcast_id": "2025-10-14T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 19,
+      "logged_at": "2025-10-14T22:27:01-0700",
+      "offset_seconds": null,
+      "artist": "Aaron Cherof",
+      "artist_key": null,
+      "song": "Mean Machine",
+      "release": "Cobolt Core (Original Soundtrack)",
+      "isrc": "QZZ8A2338830",
+      "upc": "0197999238054",
+      "duration_seconds": 294,
+      "released_date": "2023-11",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist"
+      ],
+      "artist_origin_raw": "Seattle",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    }
+  ]
+}

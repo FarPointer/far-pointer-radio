@@ -147,8 +147,16 @@ called during review; nothing was rewritten and no new copy was authored:
   sitting further down the note. Both trailing paragraphs removed. Also fixed
   `Convergency Zone` and `from through 1970s`.
 
-The other 129 broadcasts have no approved description. That is not an oversight:
-their notes either carry no promo copy or none the extractor could isolate.
+The other 129 broadcasts have no approved description.
+
+> **Correction, 2026-08-06.** That was written as "not an oversight: their notes
+> either carry no promo copy or none the extractor could isolate". Partly wrong.
+> Seven of the 129 do have promo copy, held back by two bugs in `load_prose.py`
+> rather than by any absence of material — the confidence score required two full
+> stops, which the house style rarely uses, and a note whose filename date matched
+> no broadcast was attached to a neighbouring one by creation date. Both are fixed;
+> five candidates are now `proposed` and awaiting review, and two broadcasts that
+> were showing a neighbour's copy now show their own. See section 7.
 
 ## 4. Why review this way
 
@@ -175,6 +183,14 @@ descriptions {'approved': 35, None: 129}
 byte-identical, which is the property that makes the cache reviewable in a PR at
 all.
 
+> **Correction, 2026-08-06.** Determinism was *not* included. Check 1 compared the
+> cache against what was committed, which catches a forgotten rebuild but says
+> nothing about whether two builds agree. The byte-identical second run was real
+> but was confirmed by hand, not by the check that appeared to confirm it. Check 1
+> now builds twice into temporary directories and compares, with the
+> committed-cache comparison kept as a separate, honestly-named check. The
+> description count is also now `{'approved': 35, None: 124, 'proposed': 5}`.
+
 ## 6. Not done here
 
 - **`schema-rationale.md` is current** as of the cache-build PR and was not
@@ -186,3 +202,48 @@ all.
   episodes upstream is a separate decision.
 - **Write-back** to WordPress and Spinitron, and publishing the playlists not yet
   on the site — tracked separately; see `playlist-publishing-plan.md`.
+
+## 7. Follow-up audit, 2026-08-06
+
+A second pass over the scripts and the generated cache, after the override PRs
+merged. The overrides themselves held up; what did not was the machinery meant to
+prove they had taken effect.
+
+**The pattern worth remembering.** Four of the findings are the same shape: an
+override, or a check, that appeared to be doing something and was not. A forced
+merge whose title had since drifted matched nothing and was not merged *or*
+flagged. `participants.yaml` and `repeats.yaml` had no gate proving their entries
+reached the cache. A "Potential fix" commit deleted a `return` from `_forced_keys`
+and only a build crash caught it. And check 1 was named for a property it did not
+test. A silently inert override is worse than a missing one, because the file
+reads as though the decision was applied.
+
+Everything in this section is now asserted by `verify.py`, so the same class of
+failure fails the build rather than passing quietly.
+
+| Fixed | |
+|---|---|
+| Duplicate key ignored parenthetical suffixes | A forced merge of "Deep Mindset" could not match a row re-logged as "Deep Mindset (Original Mix)". Zero effect on today's data (13 groups before, 13 after); it changes behaviour only for future re-logs, and in the safe direction — a wider key produces more *flagged* pairs for a human, not more silent merges. |
+| Unmatched forced merges were silent | A `merge_duplicates` entry matching nothing now fails the build by name. |
+| Check 1 was not a determinism check | Now builds twice into temp directories and compares; `build.py` gained `--out` and `--quiet` to make that possible. |
+| No gate on `participants.yaml` or `repeats.yaml` | Check 10 asserts every entry is realized verbatim, every `suppressed` pair is absent, and every `merge_duplicates` entry merged its specific pair. An empty or `[]` participants entry is rejected rather than falling through to inference. |
+| Class split hardcoded | `31/70/63` is now derived, since a forced repeat of a workbook episode promotes the repeat to class A. |
+| Two `load_prose.py` bugs | See the correction in section 3. |
+
+**Open questions, carried forward.** None of these changes the cache; all are
+recorded where the decision lives rather than here.
+
+- **2024-04-16 Ciani "Eclipse"** — the merge was justified in `spins.yaml` as
+  "identical in every field". The two rows differ in seven, including duration
+  (0:55 vs 3:52), release, label, year, ISRC and UPC. They look like two different
+  recordings, and the merge discards the second one's metadata. The decision to
+  merge stands by Jim's call; the stated evidence for it has been corrected.
+- **2026-03-17 yu-more "Deep Mindset"** — a merge keeps the earliest row, but here
+  the later row carries a release, ISRC and UPC the kept row lacks. If the re-log
+  existed to add them, the wrong row survives.
+- **2025-10-14** — Jim's `coverage: partial` on MichaelG's fund-drive show is still
+  an open question in `participants.yaml`.
+- **Five proposed descriptions** — genuine copy, but 2023-06-13 and 2024-09-03 are
+  truncated mid-sentence in the source notes and 2023-06-27 has an unbalanced
+  quote. They stay `proposed`, which never reaches the site, until someone edits
+  them.

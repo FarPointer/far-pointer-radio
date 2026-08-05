@@ -8,6 +8,12 @@
 #
 # See the "Duplicate spins left alone" table in reports/discrepancies.md.
 #
+# WHICH ROW SURVIVES: a merge keeps the earliest row and discards the rest, so any
+# field the later row alone carries is lost. That is usually right, because the later
+# row is usually the bare re-log. It is backwards when the later row is a correction --
+# see the yu-more entry below, where the merge discards a release, ISRC and UPC that
+# the kept row does not have. Check what the later row carries before adding an entry.
+#
 # merge_duplicates:
 #   - broadcast: "2026-03-17T20:30:00-0700"
 #     artist: "yu-more"
@@ -22,6 +28,11 @@ merge_duplicates:
 
   # seq 21 and 22, 60s apart. The first is titled "Deep Mindset (Original Mix)" and
   # carries the artist note; the second is a bare re-log of the same track.
+  #
+  # OPEN QUESTION: the second row is not bare. It carries the release "Deep Mindset -
+  # Single" with its own ISRC and UPC, none of which the kept first row has, so the
+  # merge drops them. If the re-log was entered to attach that release, the wrong row
+  # survives. Worth a look next time this file is edited.
   - broadcast: "2026-03-17T20:30:00-0700"
     artist: "yu-more"
     song: "Deep Mindset"
@@ -31,13 +42,34 @@ merge_duplicates:
     artist: "Fotoform"
     song: "Skimming the Surface"
 
-  # seq 7 and 8, 97s apart, identical in every field.
+  # seq 7 and 8, 97s apart. Same artist, same song title, and nothing else.
+  #
+  # CORRECTION, 2026-08-06: this entry previously read "identical in every field". It
+  # is not, in either Spinitron export. Seven fields differ:
+  #
+  #   23:00:36  Eclipse  0:55  Logo Presentation Reel 1985 (Instrumentals)/Octabred
+  #                           Finders Keepers Records  2013  GBRNP0701170  5060099504990
+  #   23:02:13  Eclipse  3:52  Silver Ship
+  #                           Seventh Wave  2005  USHM90599070  0799547701029
+  #
+  # These are two different recordings of a track called "Eclipse" -- a 55-second cue
+  # from a 1985 logo reel, and a 3:52 piece from Silver Ship. discrepancies.md reports
+  # the six conflicting fields. The merge keeps the earlier row, so the Silver Ship
+  # metadata is discarded entirely.
+  #
+  # The decision below was taken on the stated premise that the rows were identical.
+  # That premise was wrong, so the decision rests on nothing and is left standing only
+  # because Jim chose on 2026-08-06 to leave the merge alone pending the audio. This is
+  # the one entry in this file where the evidence points the other way.
   #
   # DISSENTING EVIDENCE, decided against by Jim on 2026-08-05: the published
   # convergencezone.fm playlist for Episode 053 "Total Eclipse 2024" independently lists
   # Eclipse twice, at offsets 30:36 and 32:13 -- the same 97-second gap. Two sources
   # therefore record two plays. Jim's call is that this is one play double-logged in both,
   # so the merge stands. Revisit against the Mixcloud audio if it ever matters.
+  #
+  # A 55-second cue followed by a 3:52 piece also fits the gap: 0:55 of audio plus a
+  # mic break is about 97 seconds.
   #
   # Side effect: with the Spinitron pair merged, the set list's second Eclipse entry has
   # no logged counterpart and surfaces as a `planned` spin on this broadcast. The airing

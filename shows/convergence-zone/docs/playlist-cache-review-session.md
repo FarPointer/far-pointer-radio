@@ -185,4 +185,4 @@ all.
   via `participants`. Whether to retroactively re-attribute MichaelG's 26
   episodes upstream is a separate decision.
 - **Write-back** to WordPress and Spinitron, and publishing the playlists not yet
-  on the site — tracked separately; see `playlist-automation-session-summary.md`.
+  on the site — tracked separately; see `playlist-publishing-plan.md`.

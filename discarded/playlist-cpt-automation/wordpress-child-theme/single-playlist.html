@@ -1,0 +1,41 @@
+<!-- Discarded prototype — do not install as an active template. -->
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+
+<!-- wp:post-title {"level":1} /-->
+
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group">
+<!-- wp:post-date /-->
+
+<!-- wp:post-terms {"term":"host","prefix":"Hosted by "} /-->
+</div>
+<!-- /wp:group -->
+
+<!-- Bound to cz_description (post meta). Only populated by the publisher
+     script when Broadcast.description_status == "approved" — left blank
+     otherwise, so an unreviewed draft never appears on the live page. -->
+<!-- wp:paragraph {"metadata":{"name":"cz-description","bindings":{"content":{"source":"core/post-meta","args":{"key":"cz_description"}}}}} -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- The tracklist table and the Mixcloud embed are NOT block-bound — core's
+     Block Bindings API has no bindable target for a table's rows or an
+     embed block's URL. The publisher script writes both directly into
+     post_content instead; this block renders whatever it wrote. -->
+<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"metadata":{"name":"cz-spinitron-button","bindings":{"url":{"source":"core/post-meta","args":{"key":"cz_spinitron_playlist_url"}}}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Full playlist on Spinitron ↗</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -5,9 +5,11 @@
 Order matters: repeats are found first, because a repeat of a MichaelG episode is class A
 even though it has no workbook of its own, and classification depends on knowing that.
 """
+import argparse
 import collections
 import datetime as dt
 import json
+import pathlib
 import sys
 
 import yaml
@@ -56,7 +58,7 @@ def load_overrides():
     }
 
 
-def main():
+def main(cache_root=None, quiet=False):
     ov = load_overrides()
 
     broadcasts, merges, flagged = load_spinitron.load(
@@ -125,7 +127,7 @@ def main():
     attribution_rows = [{"dj_ids": k[0], "has_workbook": k[1], "broadcasts": n}
                         for k, n in sorted(tab.items())]
 
-    index = emit.write_cache(out)
+    index = emit.write_cache(out, root=cache_root)
 
     counts = collections.Counter(classes.values())
     spins = sum(len(b["spins"]) for b in out.values())
@@ -180,20 +182,25 @@ basis counts: {dict(basis)}
 - `descriptions-review.md` — proposed descriptions and rejected remainders
 """
 
-    emit.write_reports({
-        "report": report, "merges": merges, "flagged": flagged,
-        "clusters": clusters, "scored": scored, "broadcasts_raw": broadcasts,
-        "attribution_rows": attribution_rows, "attribution_exceptions": exceptions,
-        "description_review": sorted(description_review, key=lambda d: d["date"]),
-        "summary": summary,
-    })
+    # Reports describe the build, not the cache, so a throwaway determinism build has no
+    # business rewriting them -- and the summary carries a timestamp, which would make
+    # any two builds differ by construction.
+    if cache_root is None:
+        emit.write_reports({
+            "report": report, "merges": merges, "flagged": flagged,
+            "clusters": clusters, "scored": scored, "broadcasts_raw": broadcasts,
+            "attribution_rows": attribution_rows, "attribution_exceptions": exceptions,
+            "description_review": sorted(description_review, key=lambda d: d["date"]),
+            "summary": summary,
+        })
 
-    print(f"broadcasts {len(out)}   spins {spins}   "
-          f"A/B/C {counts['A']}/{counts['B']}/{counts['C']}")
-    print(f"evidence {dict(evidence)}")
-    print(f"descriptions {dict(desc)}")
-    print(f"cache   -> {CACHE}")
-    print(f"reports -> {REPORTS}")
+    if not quiet:
+        print(f"broadcasts {len(out)}   spins {spins}   "
+              f"A/B/C {counts['A']}/{counts['B']}/{counts['C']}")
+        print(f"evidence {dict(evidence)}")
+        print(f"descriptions {dict(desc)}")
+        print(f"cache   -> {cache_root or CACHE}")
+        print(f"reports -> {REPORTS}")
     return 0
 
 
@@ -202,4 +209,10 @@ def report_len(report, key):
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--out", metavar="DIR", type=pathlib.Path,
+                    help="write the cache here instead of playlists/cache/, and skip "
+                         "the reports. Used by verify.py to build twice and compare.")
+    ap.add_argument("--quiet", action="store_true")
+    args = ap.parse_args()
+    sys.exit(main(cache_root=args.out, quiet=args.quiet))

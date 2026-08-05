@@ -15,11 +15,20 @@ import shutil
 from paths import BROADCASTS, CACHE, INDEX, REPORTS
 
 
-def write_cache(broadcasts):
-    """Replace playlists/cache/ wholesale, so a removed broadcast cannot linger."""
-    if BROADCASTS.exists():
-        shutil.rmtree(BROADCASTS)
-    BROADCASTS.mkdir(parents=True, exist_ok=True)
+def write_cache(broadcasts, root=None):
+    """Replace playlists/cache/ wholesale, so a removed broadcast cannot linger.
+
+    `root` redirects the whole cache elsewhere, which is what lets verify.py build twice
+    into throwaway directories and compare -- a real determinism check, rather than a
+    diff of the working tree against whatever happens to be committed.
+    """
+    cache = CACHE if root is None else root
+    broadcasts_dir = cache / "broadcasts"
+    index_path = cache / "index.json"
+
+    if broadcasts_dir.exists():
+        shutil.rmtree(broadcasts_dir)
+    broadcasts_dir.mkdir(parents=True, exist_ok=True)
 
     index = []
     for bid in sorted(broadcasts):
@@ -28,7 +37,7 @@ def write_cache(broadcasts):
         # in the index, where it helps a reader see which merge produced a record, and
         # not in the broadcast file, which should match schema.ts exactly.
         klass = bc.pop("_class", None)
-        (BROADCASTS / f"{bid[:10]}.json").write_text(
+        (broadcasts_dir / f"{bid[:10]}.json").write_text(
             json.dumps(bc, indent=2, ensure_ascii=False, sort_keys=False) + "\n",
             encoding="utf-8")
         index.append({
@@ -42,9 +51,9 @@ def write_cache(broadcasts):
             "description_status": bc["description_status"],
         })
 
-    CACHE.mkdir(parents=True, exist_ok=True)
-    INDEX.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n",
-                     encoding="utf-8")
+    cache.mkdir(parents=True, exist_ok=True)
+    index_path.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n",
+                          encoding="utf-8")
     return index
 
 

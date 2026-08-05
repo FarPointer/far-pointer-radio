@@ -11,13 +11,19 @@ source file changing underneath the build shows up here rather than silently.
 import collections
 import csv
 import json
+import pathlib
 import re
 import subprocess
 import sys
+import tempfile
 
 import yaml
 
-from paths import BROADCASTS, INDEX, MICHAELG_DIR, OVERRIDES, REPO, SPINS_CSV
+import build
+from paths import BROADCASTS, CZAUDIT, INDEX, MICHAELG_DIR, OVERRIDES, REPO, SPINS_CSV
+
+sys.path.insert(0, str(CZAUDIT))
+from matching import norm  # noqa: E402
 
 FAILURES = []
 
@@ -39,16 +45,36 @@ def main():
     spins = [s for b in bcs for s in b["spins"]]
 
     # 1 -----------------------------------------------------------------
-    r = subprocess.run(["git", "diff", "--stat", "--", "shows/convergence-zone/playlists/cache/"],
-                       cwd=REPO, capture_output=True, text=True)
+    # Two separate assertions that the old single check conflated.
+    #
+    # Determinism is a property of the build: same sources in, same bytes out. Testing it
+    # by diffing the working tree against git only ever answered "is the committed cache
+    # current?", which is a different question -- it cannot detect nondeterminism before
+    # the cache is first committed, and it reports a false regression during any
+    # legitimate in-flight change. So build twice into throwaway directories and compare.
+    with tempfile.TemporaryDirectory() as tmp:
+        a, b = pathlib.Path(tmp) / "a", pathlib.Path(tmp) / "b"
+        build.main(cache_root=a, quiet=True)
+        build.main(cache_root=b, quiet=True)
+        differing = sorted(
+            p.name for p in sorted((a / "broadcasts").glob("*.json"))
+            if p.read_bytes() != (b / "broadcasts" / p.name).read_bytes())
+        same_index = (a / "index.json").read_bytes() == (b / "index.json").read_bytes()
+        check("1 determinism: two builds produce identical bytes",
+              not differing and same_index,
+              f"{len(differing)} broadcast file(s) differ: {differing[:5]}"
+              if differing else "index.json differs")
+
     tracked = subprocess.run(["git", "ls-files", "shows/convergence-zone/playlists/cache/"],
                              cwd=REPO, capture_output=True, text=True).stdout.strip()
+    r = subprocess.run(["git", "diff", "--stat", "--", "shows/convergence-zone/playlists/cache/"],
+                       cwd=REPO, capture_output=True, text=True)
     if not tracked:
-        check("1 determinism (cache not yet committed; rerun after first commit)", True,
-              "nothing tracked yet, so there is no baseline to diff against")
+        check("1 committed cache is current (nothing tracked yet)", True,
+              "no baseline to diff against")
     else:
-        check("1 determinism: rebuild produces no diff", r.stdout.strip() == "",
-              r.stdout.strip()[:400])
+        check("1 committed cache is current: rebuild produces no diff",
+              r.stdout.strip() == "", r.stdout.strip()[:400])
 
     # 2 -----------------------------------------------------------------
     with open(SPINS_CSV, encoding="utf-8-sig") as fh:
@@ -67,8 +93,22 @@ def main():
           f"cache has {len(logged)}")
     classes = collections.Counter(json.loads(INDEX.read_text())[i]["class"]
                                  for i in range(len(bcs)))
-    check("2 conservation: class split 31/70/63",
-          (classes["A"], classes["B"], classes["C"]) == (31, 70, 63), str(dict(classes)))
+    # 31/70/63 at design time, but the split is override-sensitive: a forced repeat of a
+    # MichaelG episode promotes that airing to class A, because a repeat inherits its
+    # original's canonical source. Hardcoding the numbers would make an approved decision
+    # read as a regression -- the same trap checks 2, 6 and 9 already avoid elsewhere.
+    a_from_workbook = {re.search(r"(\d{4})\.(\d{2})\.(\d{2})", p.name).expand(r"\1-\2-\3")
+                       for p in MICHAELG_DIR.glob("*.xlsx")}
+    a_from_repeat = {b["id"][:10] for b in bcs
+                     if b["first_broadcast_id"]
+                     and b["first_broadcast_id"][:10] in a_from_workbook}
+    expected_a = len(a_from_workbook | a_from_repeat)
+    check("2 conservation: class A equals workbooks plus repeats of one",
+          classes["A"] == expected_a,
+          f"{len(a_from_workbook)} workbooks + {len(a_from_repeat - a_from_workbook)} "
+          f"repeats = {expected_a}; cache has {classes['A']}")
+    check("2 conservation: every broadcast lands in exactly one class",
+          sum(classes.values()) == len(bcs), str(dict(classes)))
     check("2 conservation: id equals air_datetime verbatim",
           all(b["id"] == b["air_datetime"] for b in bcs))
     check("2 conservation: every spin id unique",
@@ -218,7 +258,9 @@ def main():
           f"only in cache={sorted(got - entries)[:5]} "
           f"only in file={sorted(entries - got)[:5]}")
     # Repeats copy their original's content fields. A description approved once must not
-    # silently become an approved description for a later airing nobody reviewed.
+    # silently become an approved description for a later airing nobody reviewed. This
+    # is implied by the set equality above, but stated separately because it is the
+    # specific leak the gate exists to stop, and the two could drift apart.
     check("9 review gate: no repeat inherited an approval it has no entry for",
           not [b for b in approved
                if b["first_broadcast_id"] and b["id"][:10] not in entries],
@@ -227,6 +269,77 @@ def main():
     check("9 review gate: every non-null description has a status",
           all((b["description"] is None) == (b["description_status"] is None)
               for b in bcs))
+
+    # 10 ----------------------------------------------------------------
+    # The same gate as check 9, for the three override files that did not have one.
+    #
+    # `descriptions.yaml` and `spins.yaml` were both parsed and silently ignored for the
+    # whole life of the build, and the checks in place could not tell "the gate holds"
+    # from "the gate is not wired up" -- because the files were empty, both look alike.
+    # An override file with no assertion behind it is exactly that situation waiting to
+    # recur, so each of these derives what the cache must look like from the file itself.
+    def by_date(name):
+        data = yaml.safe_load((OVERRIDES / name).read_text(encoding="utf-8")) or {}
+        return {(k.isoformat() if hasattr(k, "isoformat") else str(k)): v
+                for k, v in data.items()}
+
+    part_ov = by_date("participants.yaml")
+    empty_entries = [d for d, v in part_ov.items() if not v]
+    check("10 participants gate: no entry is empty",
+          not empty_entries,
+          f"{empty_entries} would silently fall back to workbook inference")
+    wrong = []
+    for date, want in part_ov.items():
+        if not want:
+            continue
+        b = next((x for x in bcs if x["id"][:10] == date), None)
+        if b is None:
+            wrong.append(f"{date}: no such broadcast")
+            continue
+        got_p = [(p["name"], p["coverage"]) for p in b["participants"]]
+        want_p = [(p["name"], p.get("coverage", "full")) for p in want]
+        if got_p != want_p:
+            wrong.append(f"{date}: want {want_p}, got {got_p}")
+    check("10 participants gate: every entry appears verbatim in the cache",
+          not wrong, "; ".join(wrong[:3]))
+
+    rep_pairs = yaml.safe_load(
+        (OVERRIDES / "repeats.yaml").read_text(encoding="utf-8")) or {}
+    linked = {(b["first_broadcast_id"], b["id"]) for b in bcs if b["first_broadcast_id"]}
+    missing_forced = [p for p in (rep_pairs.get("forced") or [])
+                      if tuple(sorted(p)) not in
+                      {tuple(sorted(x)) for x in linked}]
+    check("10 repeats gate: every forced pair is linked in the cache",
+          not missing_forced, str(missing_forced[:3]))
+    # Suppression is the direction that cannot be confirmed by counting, because a
+    # suppressed pair leaves no trace anywhere. Assert the absence directly.
+    live_suppressed = [p for p in (rep_pairs.get("suppressed") or [])
+                       if tuple(sorted(p)) in {tuple(sorted(x)) for x in linked}]
+    check("10 repeats gate: no suppressed pair survived",
+          not live_suppressed, str(live_suppressed[:3]))
+
+    # The count assertion in check 2 passes as long as the totals add up, which they
+    # would even if an override merged some other pair entirely. Name the specific spin.
+    spins_ov = yaml.safe_load(
+        (OVERRIDES / "spins.yaml").read_text(encoding="utf-8")) or {}
+    unmerged = []
+    for entry in spins_ov.get("merge_duplicates") or []:
+        date = str(entry.get("broadcast") or "")[:10]
+        b = next((x for x in bcs if x["id"][:10] == date), None)
+        if b is None:
+            unmerged.append(f"{date}: no such broadcast")
+            continue
+        want_song = norm(entry.get("song") or "", drop_paren=True)
+        hits = [s for s in b["spins"]
+                if norm(s["artist"]) == norm(entry.get("artist") or "")
+                and norm(s["song"], drop_paren=True) == want_song
+                and "spinitron" in s["sources"]]
+        if len(hits) != 1:
+            unmerged.append(
+                f"{date} {entry.get('artist')} - {entry.get('song')}: "
+                f"{len(hits)} logged spins, expected 1")
+    check("10 spins gate: every merge_duplicates entry left exactly one logged spin",
+          not unmerged, "; ".join(unmerged[:3]))
 
     print()
     if FAILURES:

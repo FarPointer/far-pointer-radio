@@ -113,6 +113,7 @@ def _forced_keys(forced, broadcast_id):
             continue
         out.add((norm(entry.get("artist") or ""),
                  norm(entry.get("song") or "", drop_paren=True)))
+    return out
 
 
 def merge_persona_duplicates(spins, broadcast_id, forced=None):
@@ -141,8 +142,11 @@ def merge_persona_duplicates(spins, broadcast_id, forced=None):
 
         # An override matches on the normalised artist and song, so it survives the title
         # drift that usually accompanies a re-log ("Deep Mindset (Original Mix)").
+        # drop_paren has to be applied to BOTH sides: _forced_keys strips the parenthetical
+        # from the override's bare title, so stripping it here too is what actually makes
+        # the drifted title match. On one side only it is a no-op.
         forced_here = len(rows) == 2 and any(
-            (norm(rows[0]["artist"]), norm(s)) in forced_keys
+            (norm(rows[0]["artist"]), norm(s, drop_paren=True)) in forced_keys
             for s in (rows[0]["song"], rows[1]["song"]))
 
         mergeable = forced_here or (len(rows) == 2 and len(personas) == 2

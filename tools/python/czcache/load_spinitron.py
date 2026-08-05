@@ -111,8 +111,8 @@ def _forced_keys(forced, broadcast_id):
         bid = str(entry.get("broadcast") or "")
         if bid and bid != broadcast_id and bid != broadcast_id[:10]:
             continue
-        out.add((norm(entry.get("artist") or ""), norm(entry.get("song") or "")))
-    return out
+        out.add((norm(entry.get("artist") or ""),
+                 norm(entry.get("song") or "", drop_paren=True)))
 
 
 def merge_persona_duplicates(spins, broadcast_id, forced=None):

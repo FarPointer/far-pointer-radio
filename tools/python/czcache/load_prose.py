@@ -148,16 +148,21 @@ def extract(raw: str):
     # leading run produced nothing -- when it did, it is the more trustworthy of the two.
     if len("\n\n".join(kept).strip()) < MIN_CHARS:
         best, run = [], []
-        for line in [BULLET_RE.sub("", ln) for ln in lines]:
+        best_end = len(lines)
+        for idx, raw in enumerate(lines):
+            line = BULLET_RE.sub("", raw)
             if line and not _is_scratch(line):
                 run.append(line)
                 continue
             if len(run) > len(best):
                 best = run
+                best_end = idx
             run = []
-        kept = run if len(run) > len(best) else best
-        i = len(lines)
-
+        if len(run) > len(best):
+            best = run
+            best_end = len(lines)
+        kept = best
+        i = best_end
     full = "\n\n".join(kept).strip()
     candidate = "\n\n".join(_trim_boilerplate(list(kept))).strip()
     rejected = "\n".join(ln for ln in lines[i:] if ln).strip()

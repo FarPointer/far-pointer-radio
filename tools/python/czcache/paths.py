@@ -21,6 +21,8 @@ SPINITRON_PLAYLISTS = SOURCES / "spinitron" / "convergence-zone-playlists.json"
 MICHAELG_DIR = SOURCES / "michaelg"
 CZFM_DIR = SOURCES / "convergencezone.fm"
 ONENOTE_DIR = SOURCES / "farpointer-onenote"
+INSTAGRAM_DIR = SOURCES / "instagram"
+INSTAGRAM_PROMOS = INSTAGRAM_DIR / "promos.json"
 
 CACHE = SHOW / "playlists/cache"
 BROADCASTS = CACHE / "broadcasts"

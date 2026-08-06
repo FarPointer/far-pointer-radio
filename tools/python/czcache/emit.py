@@ -190,16 +190,21 @@ rather than a phantom.
     desc_rows = ctx["description_review"]
     body = ["""# Description review
 
-Proposed broadcast descriptions extracted from the OneNote prose, with the text that was
-rejected shown alongside so a wrong cut is visible rather than silent.
+Proposed broadcast descriptions extracted from OneNote prose and Instagram captions, with
+the text that was rejected shown alongside so a wrong cut is visible rather than silent.
 
 Nothing here is published as-is. To approve, copy the text into
 `overrides/descriptions.yaml` keyed by date; write `skip` to suppress the broadcast
 entirely. On the next build an override becomes `description_status: "approved"`.
 """]
     for d in desc_rows:
-        body.append(f"\n## {d['date']}  (score {d['score']}, {d['status'] or 'not used'})")
+        src = d.get("source", "unknown")
+        body.append(
+            f"\n## {d['date']}  [{src}]  (score {d['score']}, {d['status'] or 'not used'})"
+        )
         body.append(f"\n_source: `{d['file']}`_\n")
+        if d.get("permalink"):
+            body.append(f"_permalink: {d['permalink']}_\n")
         body.append("**Proposed:**\n")
         body.append("> " + (d["candidate"] or "_(none -- nothing looked like promo copy)_")
                     .replace("\n", "\n> "))

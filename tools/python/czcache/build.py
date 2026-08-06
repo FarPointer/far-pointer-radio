@@ -15,6 +15,7 @@ import sys
 import yaml
 
 import emit
+import load_instagram
 import load_prose
 import load_setlists
 import load_spinitron
@@ -58,6 +59,33 @@ def load_overrides():
     }
 
 
+def choose_prose_candidates(onenote, instagram):
+    """Pick one candidate per date; keep all for review output.
+
+    Highest score wins, with OneNote winning ties for continuity with historical builds.
+    """
+    by_date = collections.defaultdict(list)
+    for date, p in (onenote or {}).items():
+        q = dict(p)
+        q["source"] = "onenote"
+        by_date[date].append(q)
+    for date, p in (instagram or {}).items():
+        q = dict(p)
+        q["source"] = "instagram"
+        by_date[date].append(q)
+
+    chosen = {}
+    for date, candidates in by_date.items():
+        with_text = [p for p in candidates if p.get("candidate")]
+        if not with_text:
+            continue
+        chosen[date] = max(
+            with_text,
+            key=lambda p: (p.get("score", 0), 1 if p.get("source") == "onenote" else 0),
+        )
+    return chosen, by_date
+
+
 def main(cache_root=None, quiet=False):
     ov = load_overrides()
 
@@ -75,7 +103,10 @@ def main(cache_root=None, quiet=False):
 
     bindings = load_setlists.bind(setlists, broadcasts)
     classes = merge.classify(broadcasts, workbooks, bindings, clusters)
-    prose = load_prose.load({b["date"] for b in broadcasts.values()})
+    broadcast_dates = {b["date"] for b in broadcasts.values()}
+    prose_onenote = load_prose.load(broadcast_dates)
+    prose_instagram = load_instagram.load(broadcast_dates)
+    prose, prose_review = choose_prose_candidates(prose_onenote, prose_instagram)
 
     # For a repeat of a MichaelG episode, the canonical track list is the ORIGINAL's
     # workbook -- the repeat has none of its own.
@@ -102,11 +133,23 @@ def main(cache_root=None, quiet=False):
         )
         bc["_class"] = klass
         out[bid] = bc
-        if p and (p["candidate"] or p["rejected"]):
+        for entry in prose_review.get(b["date"], []):
+            if not (entry.get("candidate") or entry.get("rejected")):
+                continue
+            status = "not used"
+            if bc["description_status"] == "approved":
+                status = "approved override"
+            elif p is entry and bc["description_status"] == "proposed":
+                status = "proposed"
             description_review.append({
-                "date": b["date"], "file": p["file"], "score": p["score"],
-                "candidate": p["candidate"], "rejected": p["rejected"],
-                "status": bc["description_status"],
+                "date": b["date"],
+                "source": entry.get("source", "unknown"),
+                "file": entry.get("file", ""),
+                "score": entry.get("score", 0.0),
+                "candidate": entry.get("candidate"),
+                "rejected": entry.get("rejected"),
+                "permalink": entry.get("permalink", ""),
+                "status": status,
             })
 
     # --- attribution cross-tab -------------------------------------------------

@@ -151,12 +151,12 @@ The other 129 broadcasts have no approved description.
 
 > **Correction, 2026-08-06.** That was written as "not an oversight: their notes
 > either carry no promo copy or none the extractor could isolate". Partly wrong.
-> Seven of the 129 do have promo copy, held back by two bugs in `load_prose.py`
-> rather than by any absence of material — the confidence score required two full
-> stops, which the house style rarely uses, and a note whose filename date matched
-> no broadcast was attached to a neighbouring one by creation date. Both are fixed;
-> five candidates are now `proposed` and awaiting review, and two broadcasts that
-> were showing a neighbour's copy now show their own. See section 7.
+> Seven of the 129 did have promo copy, held back by bugs in `load_prose.py` rather
+> than by any absence of material — the confidence score required two full stops,
+> which the house style rarely uses, and a note whose filename date matched no
+> broadcast was attached to a neighbouring one by creation date. Both are fixed.
+> Five of those descriptions are now approved, and two broadcasts that were showing
+> a neighbour's copy now show their own. See section 7.
 
 ## 4. Why review this way
 
@@ -189,7 +189,9 @@ all.
 > but was confirmed by hand, not by the check that appeared to confirm it. Check 1
 > now builds twice into temporary directories and compares, with the
 > committed-cache comparison kept as a separate, honestly-named check. The
-> description count is also now `{'approved': 35, None: 124, 'proposed': 5}`.
+> description count is also now `{'approved': 40, None: 124}`, and the evidence
+> split `{'planned': 310, 'logged': 3431}` — one Eclipse moved from planned to
+> logged when the 2024-04-16 merge was undone.
 
 ## 6. Not done here
 
@@ -228,22 +230,45 @@ failure fails the build rather than passing quietly.
 | Check 1 was not a determinism check | Now builds twice into temp directories and compares; `build.py` gained `--out` and `--quiet` to make that possible. |
 | No gate on `participants.yaml` or `repeats.yaml` | Check 10 asserts every entry is realized verbatim, every `suppressed` pair is absent, and every `merge_duplicates` entry merged its specific pair. An empty or `[]` participants entry is rejected rather than falling through to inference. |
 | Class split hardcoded | `31/70/63` is now derived, since a forced repeat of a workbook episode promotes the repeat to class A. |
-| Two `load_prose.py` bugs | See the correction in section 3. |
+| Four `load_prose.py` bugs | Two in scoring and note mapping (section 3), and two more found by reading the notes: a sentence that soft-wrapped onto a short line was judged scratch on its own word count, which threw away the rest of the note behind it; and a seven-word closing line was dropped for being one word under the threshold. |
 
-**Open questions, carried forward.** None of these changes the cache; all are
-recorded where the decision lives rather than here.
+**Corrections to the overrides themselves**, decided with Jim on 2026-08-06. Each
+of these reverses or replaces a decision recorded during the first review.
 
-- **2024-04-16 Ciani "Eclipse"** — the merge was justified in `spins.yaml` as
-  "identical in every field". The two rows differ in seven, including duration
-  (0:55 vs 3:52), release, label, year, ISRC and UPC. They look like two different
-  recordings, and the merge discards the second one's metadata. The decision to
-  merge stands by Jim's call; the stated evidence for it has been corrected.
-- **2026-03-17 yu-more "Deep Mindset"** — a merge keeps the earliest row, but here
-  the later row carries a release, ISRC and UPC the kept row lacks. If the re-log
-  existed to add them, the wrong row survives.
-- **2025-10-14** — Jim's `coverage: partial` on MichaelG's fund-drive show is still
-  an open question in `participants.yaml`.
-- **Five proposed descriptions** — genuine copy, but 2023-06-13 and 2024-09-03 are
-  truncated mid-sentence in the source notes and 2023-06-27 has an unbalanced
-  quote. They stay `proposed`, which never reaches the site, until someone edits
-  them.
+- **2024-04-16 Ciani "Eclipse" — unmerged.** The merge was justified as "identical
+  in every field"; the rows differ in seven. They are two different recordings:
+  Almay "Eclipse", a 55-second advertising cue and track 5 of *Logo Presentation
+  Reels 1985/Octabred* on Finders Keepers, and "Eclipse", track 5 of *Silver Ship*
+  (Seventh Wave, 2005), listed everywhere at 3:52 — matching the log exactly. Two
+  deliberate plays on an eclipse-themed night. The 97-second gap is the short cue
+  plus a mic break. Unmerging also resolves the set list's second Eclipse from
+  `planned` to `logged`, which is independent confirmation.
+- **2024-06-18 — no longer a repeat.** Recorded as "part of the same replay, not a
+  distinct episode". In fact Episode 058 was recorded as a full two hours for that
+  date, only its *second* hour aired, and the first hour was held back and used on
+  2024-08-20 — where the workbook says so outright. The eleven artists named in the
+  Ep.058 promo copy split cleanly along that seam, four on 06-18 and seven on
+  08-20. Recorded as a distinct broadcast, which is the version a listener can
+  follow.
+- **Both fund-drive nights are two hosts at `full`.** 2025-10-14 is MichaelG's show
+  with Jim on air throughout running the board; 2025-10-21 is the mirror. `coverage`
+  answers how much of the show someone was on, not whose show it is, so the list is
+  now ordered primary host first and that convention is documented.
+- **Five descriptions approved**, the ones the scoring and mapping bugs had been
+  suppressing. Three needed a hand: a sentence that trails off mid-word in the note,
+  an unclosed quotation, and the Ep.058 copy trimmed to what actually aired.
+
+**Tried and reverted.** Preferring the "better documented" row in a merge, rather
+than the earliest, sounds obviously right and is not: more populated fields does not
+mean better values. It swapped a correct UPC for one missing its leading zero, an
+album title for a single title, and a duration by a second. The existing rule —
+keep the earliest row, lift anything it left blank from the other, report the rest
+as a conflict — already captures what a re-log adds without letting it overwrite.
+
+**Open questions, closed.** Every question this audit raised now has an answer
+recorded where the decision lives. What remains is one factual note rather than a
+question: on **2026-03-17** yu-more's "Deep Mindset" is logged twice a minute apart
+naming two releases — the *Play Of Color Blue Sound Palette Vol.2* compilation and
+the *Deep Mindset* single — with an ISRC and UPC each and durations of 5:29 and
+5:30. That is one recording issued twice, not two pieces, so the merge stands and
+the release conflict is reported in `discrepancies.md`.

@@ -100,6 +100,24 @@ def _is_scratch(line: str) -> bool:
     return False
 
 
+def _is_short_only(line: str) -> bool:
+    """True if the only thing wrong with this line is that it is too short.
+
+    Used to tell a wrapped sentence from a genuine prep line: a continuation is short
+    but otherwise reads as prose, whereas a track listing stays scratch however it wraps.
+    """
+    s = BULLET_RE.sub("", line.strip())
+    if not s:
+        return False
+    if URL_RE.search(s) or MIC_RE.match(s):
+        return False
+    if s.endswith(":") or s.endswith("?"):
+        return False
+    if TRACKLINE_RE.match(s) or LISTLINE_RE.match(s):
+        return False
+    return len(s.split()) < MIN_WORDS
+
+
 def _trim_boilerplate(kept):
     """Drop the trailing run of station sign-off lines.
 
@@ -130,16 +148,28 @@ def extract(raw: str):
         i += 1
 
     kept = []
+    wrapped = False  # previous line was consumed with no blank line after it
     while i < len(lines):
         line = BULLET_RE.sub("", lines[i])
         if not line:
             i += 1
+            wrapped = False
             if kept and i < len(lines) and lines[i] and _is_scratch(lines[i]):
                 break
+            continue
+        # A short line directly under another line is a sentence that wrapped, not a
+        # new one. OneNote exports "and Dirk Serries &\nTrösta" that way, and judging
+        # "Trösta" on its own word count calls it scratch and throws away the rest of
+        # the note behind it. Only the word-count rule is forgiven -- a track listing
+        # or a URL is still scratch wherever it appears.
+        if wrapped and kept and _is_short_only(line):
+            kept[-1] = f"{kept[-1]} {line}"
+            i += 1
             continue
         if _is_scratch(line):
             break
         kept.append(line)
+        wrapped = True
         i += 1
 
     # Fallback: some notes open with a one-line teaser or a stray prep line, which stops

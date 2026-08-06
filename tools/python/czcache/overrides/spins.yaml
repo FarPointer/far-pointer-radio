@@ -8,11 +8,16 @@
 #
 # See the "Duplicate spins left alone" table in reports/discrepancies.md.
 #
-# WHICH ROW SURVIVES: a merge keeps the earliest row and discards the rest, so any
-# field the later row alone carries is lost. That is usually right, because the later
-# row is usually the bare re-log. It is backwards when the later row is a correction --
-# see the yu-more entry below, where the merge discards a release, ISRC and UPC that
-# the kept row does not have. Check what the later row carries before adding an entry.
+# WHICH ROW SURVIVES: a merge keeps the earliest row, and lifts into it any field that
+# row left blank -- so a re-log entered to attach a release or an ISRC contributes it
+# without overwriting values the earlier row already had. Where both rows fill a field
+# and disagree, the conflict is reported in discrepancies.md rather than resolved
+# silently. Check that table before adding an entry here.
+#
+# Preferring the "better documented" row instead was tried on 2026-08-06 and reverted:
+# more populated fields does not mean better values. It swapped a correct UPC for one
+# missing its leading zero on 2025-09-09, an album title for a single title on
+# 2026-03-10, and a duration by a second on 2025-05-20.
 #
 # merge_duplicates:
 #   - broadcast: "2026-03-17T20:30:00-0700"
@@ -20,19 +25,20 @@
 #     song: "Deep Mindset"
 
 merge_duplicates:
-  # Reviewed 2026-08-05, all six flagged same-persona duplicates. The three below are
+  # Reviewed 2026-08-05, all six flagged same-persona duplicates. The two below are
   # adjacent spins one to two minutes apart -- a re-log, usually to fix a title or attach
-  # a note. The other three were kept as two spins: 2025-08-19, 2025-02-11 and 2024-02-20
-  # each play the track at the top and at the close of the night, and MichaelG's workbook
-  # labels the 2025-08-19 closer "(OUTRO)" in his own hand.
+  # a note. Four were kept as two spins: 2025-08-19, 2025-02-11 and 2024-02-20 each play
+  # the track at the top and at the close of the night, and MichaelG's workbook labels
+  # the 2025-08-19 closer "(OUTRO)" in his own hand. The fourth, 2024-04-16, was merged
+  # here until 2026-08-06 and is now left alone -- see the note at the end of the file.
 
   # seq 21 and 22, 60s apart. The first is titled "Deep Mindset (Original Mix)" and
-  # carries the artist note; the second is a bare re-log of the same track.
+  # carries the artist note; the second is a re-log of the same track.
   #
-  # OPEN QUESTION: the second row is not bare. It carries the release "Deep Mindset -
-  # Single" with its own ISRC and UPC, none of which the kept first row has, so the
-  # merge drops them. If the re-log was entered to attach that release, the wrong row
-  # survives. Worth a look next time this file is edited.
+  # The two rows name different releases -- "Play Of Color Blue Sound Palette Vol.2
+  # Side B" and "Deep Mindset - Single" -- with an ISRC and UPC each, and durations of
+  # 5:29 and 5:30. One recording issued on a compilation and as a single, not two
+  # different pieces. The release conflict is reported in discrepancies.md.
   - broadcast: "2026-03-17T20:30:00-0700"
     artist: "yu-more"
     song: "Deep Mindset"
@@ -42,38 +48,27 @@ merge_duplicates:
     artist: "Fotoform"
     song: "Skimming the Surface"
 
-  # seq 7 and 8, 97s apart. Same artist, same song title, and nothing else.
+  # seq 7 and 8, 97s apart. NOT merged -- see below.
   #
-  # CORRECTION, 2026-08-06: this entry previously read "identical in every field". It
-  # is not, in either Spinitron export. Seven fields differ:
+  # 2026-08-06: this entry used to merge the pair, on the stated grounds that the rows
+  # were "identical in every field". They are not, in either export. Seven fields differ:
   #
   #   23:00:36  Eclipse  0:55  Logo Presentation Reel 1985 (Instrumentals)/Octabred
   #                           Finders Keepers Records  2013  GBRNP0701170  5060099504990
   #   23:02:13  Eclipse  3:52  Silver Ship
   #                           Seventh Wave  2005  USHM90599070  0799547701029
   #
-  # These are two different recordings of a track called "Eclipse" -- a 55-second cue
-  # from a 1985 logo reel, and a 3:52 piece from Silver Ship. discrepancies.md reports
-  # the six conflicting fields. The merge keeps the earlier row, so the Silver Ship
-  # metadata is discarded entirely.
+  # Confirmed by Jim and by the releases themselves. The first is Almay "Eclipse", a
+  # 55-second advertising cue and track 5 of Ciani's "Logo Presentation Reels 1985 /
+  # Octabred" on Finders Keepers -- a portfolio of her commercial logo work. The second
+  # is "Eclipse", track 5 of "Silver Ship" (Seventh Wave, 2005), listed everywhere at
+  # 3:52, which matches the logged duration exactly.
   #
-  # The decision below was taken on the stated premise that the rows were identical.
-  # That premise was wrong, so the decision rests on nothing and is left standing only
-  # because Jim chose on 2026-08-06 to leave the merge alone pending the audio. This is
-  # the one entry in this file where the evidence points the other way.
+  # Two different recordings that share a title, played deliberately on an eclipse-themed
+  # night: the short logo cue, then the full piece. The 97-second gap is the 55-second
+  # cue plus a mic break. The published convergencezone.fm playlist for Episode 053
+  # independently lists Eclipse twice, at 30:36 and 32:13 -- the same gap.
   #
-  # DISSENTING EVIDENCE, decided against by Jim on 2026-08-05: the published
-  # convergencezone.fm playlist for Episode 053 "Total Eclipse 2024" independently lists
-  # Eclipse twice, at offsets 30:36 and 32:13 -- the same 97-second gap. Two sources
-  # therefore record two plays. Jim's call is that this is one play double-logged in both,
-  # so the merge stands. Revisit against the Mixcloud audio if it ever matters.
-  #
-  # A 55-second cue followed by a 3:52 piece also fits the gap: 0:55 of audio plus a
-  # mic break is about 97 seconds.
-  #
-  # Side effect: with the Spinitron pair merged, the set list's second Eclipse entry has
-  # no logged counterpart and surfaces as a `planned` spin on this broadcast. The airing
-  # is still visible in the cache, just as a plan rather than a log.
-  - broadcast: "2024-04-16T22:30:00-0700"
-    artist: "Suzanne Ciani"
-    song: "Eclipse"
+  # Merging them discarded the Silver Ship metadata outright, so the entry is removed.
+  # Keeping both is also what makes the set list's second Eclipse resolve to a logged
+  # spin rather than surfacing as `planned`.

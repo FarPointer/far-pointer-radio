@@ -213,7 +213,13 @@ def merge_persona_duplicates(spins, broadcast_id, forced=None, applied=None):
             })
             continue
 
-        keep, other = rows[0], rows[1]        # keep the earlier logged_at
+        # Keep the earliest row: it sets the running order, and on a genuine double-log
+        # it is the row whose values the rest of the archive already agrees with. The
+        # loop below still lifts anything the earlier row left blank, so a re-log entered
+        # to attach a release or an ISRC contributes it without also overwriting good
+        # values with its own. Where both rows fill a field and disagree, that is a real
+        # conflict and is reported rather than resolved.
+        keep, other = rows[0], rows[1]
         conflicts = []
         for f in MERGE_FIELDS:
             if not keep.get(f) and other.get(f):

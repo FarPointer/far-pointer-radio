@@ -1,9 +1,9 @@
 # Approved broadcast descriptions, keyed by air date (YYYY-MM-DD) or full broadcast id.
 #
-# The build extracts candidate descriptions from the OneNote prose, but that prose mixes
-# genuine promo copy with scratch ideas and open questions. An extracted candidate is
-# published as `description_status: "proposed"` and is NOT trustworthy. Text entered here
-# becomes `"approved"`.
+# The build extracts candidate descriptions from OneNote prose and Instagram captions.
+# Both sources mix genuine promo copy with scratch/promotional boilerplate, so an
+# extracted candidate is published as `description_status: "proposed"` and is NOT
+# trustworthy. Text entered here becomes `"approved"`.
 #
 # Review reports/descriptions-review.md, then either paste the corrected text here or
 # write `skip` to suppress the description for that broadcast entirely.
@@ -23,8 +23,9 @@
 #   * one bad cut on 2025-10-21, where the extractor swept in the station sign-off and
 #     an unrelated obituary paragraph from further down the note
 #
-# The other 129 broadcasts have no approved description. That is not an oversight: their
-# notes either carry no promo copy or none the extractor could isolate.
+# The other 124 broadcasts have no approved description, and that is now a real
+# statement rather than an assumption: the two extractor bugs that were suppressing
+# copy have been fixed, so what is left genuinely has no promo copy to find.
 
 2023-05-30: |
   This week on Convergence Zone, I’m excited to play new music I’m loving from artists like Yaeji, Eydís Evenson, Deborah Martin & Jill Haley, Bluetech, Siren and the Sea — and debuting a single from the upcoming self-titled debut LP by The Conspiracy Tapes
@@ -284,3 +285,56 @@
 
 2025-11-04: |
   This week, I've got new music from regional artists like Mount Maxwell, Meltt, and a Hello Meteor remix of a new track by MOLTENO. We'll also celebrate upcoming concerts by Visible Cloaks, Patricia Wolf, Mt. Fog, Fotoform, and Nuovo Testamento, as well as recent shows from artists like Other and Night Heron.
+
+# ---------------------------------------------------------------------------
+# Reviewed 2026-08-06 by Jim. Five candidates the extractor had been holding back:
+# three because the confidence score counted full stops the house style does not use,
+# and two more that were reachable only after the note-to-broadcast mapping was fixed.
+#
+# As above, these are the extractor's candidates with the corrections Jim called, and
+# nothing else. Three needed a hand:
+#
+#   * 2023-06-13 trails off mid-word in the note ("and a classic f"). Completed as
+#     "a classic from Boards of Canada" -- that night's lo-fi set ran Four Tet into
+#     Boards of Canada's "Aquarius", which is the record the sentence was reaching for.
+#     Its closing line was also restored; the extractor had dropped it for being seven
+#     words long, one under the scratch threshold.
+#   * 2023-06-27 opens a quotation it never closes. Closed after "damp and lovely".
+#   * 2024-06-18 was written for Episode 058 as a full two hours, but only its second
+#     hour aired that night. Trimmed to the four artists that actually played; the
+#     other seven aired on 2024-08-20, where the held-back first hour was used.
+
+2023-06-13: |
+  This week on Convergence Zone: tons of new music from PNW artists and labels, as well as debuts and exclusives from around the world
+
+  New local ambient from Nathan Kawanishi, ann annie, Deborah Martin and Jill Haley, and Hello Meteor
+
+  Brand new lo-fi from Four Tet, and a classic from Boards of Canada
+
+  New synthwave from FM Attack, Meltt, and Ladytron
+
+  Local space music from AeTopus and Marc Barreca
+
+  And an exclusive track from Steve Roach!
+
+2023-06-27: |
+  Summer arrived officially this week, and after a brief delay, the weather shifted from “damp and lovely” to “sunny and perfect”. These are days for oceans and shorelines, Pride and dancing, and nighttime drives with warm skylines
+
+  On Convergence Zone this week, new local music from Plural Not Possessive and Neighborhood Libraries
+
+2023-08-08: |
+  Going deep into Leo season for the twentieth episode of Convergence Zone
+
+  Premiering the upcoming live album by PNW new-age ensemble Erwilian, along with classics by Doug Cameron and Robert Almblade with Carolyn Cruso, and Lisa Bella Donna
+
+2024-06-18: |
+  Tuesday on Convergence Zone, we chase summer vibes with new regional music from Sandcastles, along with new music by Purple Decades and Sverre Knut Johansen
+
+  I've also got more regional flavor from Domenica Diavoleria
+
+2024-09-03: |
+  This week on Convergence Zone, music for upcoming live shows by Mt. Fog, somesurprises, Patricia Wolf, Tiny Vipers, Amulets, Laurel Halo, Flore Laurentienne, and Alessandro Cortini
+
+  New music by David Arkenstone, Isostatic, Ausklang, Time Being, and Dirk Serries & Trösta
+
+  We'll also celebrate the upcoming vinyl re-master of Steve Roach's 1988 magnum opus "Dreamtime Return"

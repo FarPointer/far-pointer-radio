@@ -3,6 +3,8 @@
 **Prepared:** June 20, 2026
 **Purpose:** Reference document capturing analysis, decisions, and open questions from initial planning conversations. Intended to be portable into another chat, design session, or handed to a collaborator.
 
+> **Status (August 2026):** This document captures an earlier planning exploration that is currently on hold. The WordPress site at convergencezone.fm is actively maintained and being improved rather than replaced. This brief is retained for historical context and is not an active plan.
+
 ---
 
 ## 1. Background

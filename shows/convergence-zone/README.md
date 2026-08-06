@@ -9,7 +9,7 @@
 | `playlists/` | Episode playlists — Spinitron exports, CSV, and hand-edited files |
 | `playlists/sources/` | Raw upstream playlist material (OneNote exports, MichaelG's workbooks, Spinitron exports) |
 | `playlists/analysis/` | Spinitron reconciliation worksheets — missing spins, removal candidates |
-| `website/` | WordPress theme overrides, custom CSS, copy, and assets |
+| `website/` | Design mockups from an earlier (paused) rebuild exploration; see `docs/website-rebuild-brief.md` |
 | `images/` | General show images (logos, banners, photos) |
 | `docs/` | Show notes, rundowns, standard operating procedures |
 | `docs/press-kit/` | One sheets, bios, and other press materials |

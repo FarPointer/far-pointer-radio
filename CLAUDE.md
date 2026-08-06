@@ -10,7 +10,7 @@ A monorepo for radio show production, tooling, and related content. See `README.
 
 A weekly ambient, atmospheric, and space music program airing Tuesday nights at 8:30 PM PT on **90.7 KSER-FM** (Everett, WA) and **89.9 KXIR-FM** (Freeland, WA), streaming at kser.org and on TuneIn. Hosted by Jim Causey and MichaelG. The show spotlights Pacific Northwest artists alongside the contemporary and legendary musicians who inspire them.
 
-Site: [convergencezone.fm](https://convergencezone.fm) — currently WordPress, hosted through Porkbun. A rebuild is in planning; see `shows/convergence-zone/docs/website-rebuild-brief.md` for the analysis, decisions, and open questions.
+Site: [convergencezone.fm](https://convergencezone.fm) — WordPress, hosted through Porkbun. The site is actively maintained and being improved. An earlier rebuild exploration is archived at `shows/convergence-zone/docs/website-rebuild-brief.md`.
 
 ### Website design tokens
 

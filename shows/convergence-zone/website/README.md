@@ -1,7 +1,8 @@
 # Website
 
-Assets and static design references for
-[convergencezone.fm](https://convergencezone.fm).
+Assets and static design references from an earlier (paused) rebuild exploration for
+[convergencezone.fm](https://convergencezone.fm). The WordPress site is actively maintained;
+these mockups are preserved for reference. See `../docs/website-rebuild-brief.md` for context.
 
 ## Contents
 

@@ -12,8 +12,8 @@
     }
   ],
   "is_prerecorded": false,
-  "description": null,
-  "description_status": null,
+  "description": "Tuesday on Convergence Zone, we chase summer vibes with new regional music from Sandcastles, along with new music by Purple Decades and Sverre Knut Johansen\n\nI've also got more regional flavor from Domenica Diavoleria",
+  "description_status": "approved",
   "mixcloud_url": null,
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
@@ -23,9 +23,9 @@
   "spinitron_playlist_ids": [
     "19126081"
   ],
-  "first_broadcast_id": "2024-06-11T22:30:00-0700",
-  "repeat_of_source": "inferred",
-  "repeat_of_confidence": 0.4545,
+  "first_broadcast_id": null,
+  "repeat_of_source": null,
+  "repeat_of_confidence": null,
   "sources": [
     "spinitron",
     "onenote"

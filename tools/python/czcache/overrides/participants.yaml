@@ -5,17 +5,21 @@
 # were logged under Jim's original account. The build infers MichaelG from the presence
 # of one of his workbooks; anything that rule gets wrong belongs here.
 #
-# coverage: "full" (hosted the whole show) or "partial" (a guest joining part of it).
+# coverage: "full" (on air for the whole show) or "partial" (joining part of it).
+#
+# Order matters: list the primary host first. Coverage says how much of the show someone
+# was on, which is a different question from whose show it is -- both fund-drive nights
+# are two hosts at "full", distinguished only by who is named first.
 #
 # Example:
 #   2026-06-23:
 #     - name: MichaelG
 #       coverage: full
 #   2025-10-14:
-#     - name: Jim Causey
-#       coverage: partial
 #     - name: MichaelG
-#       coverage: partial
+#       coverage: full
+#     - name: Jim Causey
+#       coverage: full
 
 # ---------------------------------------------------------------------------
 # Reviewed 2026-08-05 against reports/attribution.md.
@@ -32,16 +36,15 @@
   - name: MichaelG
     coverage: full
 
-# Fund drive. MichaelG hosted; Jim was on as a guest, which is why both of Jim's
-# Spinitron personas appear mid-show and why the persona switch here produced the
-# duplicate Fotoform and Beach Vacation spins. Jim is "partial" per the field's
-# definition (a guest joining part of the show) -- revise to full if he was on air
-# for the whole two hours.
+# Fund drive. MichaelG's show -- his programming and his song selection -- with Jim on
+# air alongside him for the whole two hours, pitching and running the board. Both are
+# hosts and both are `full`; MichaelG is listed first because the list is ordered
+# primary host first (see the header).
 2025-10-14:
   - name: MichaelG
     coverage: full
   - name: Jim Causey
-    coverage: partial
+    coverage: full
 
 # ---------------------------------------------------------------------------
 # Found while reviewing the descriptions, not the attribution report -- the promo copy
@@ -49,12 +52,13 @@
 # attribution source in their own right for the guest-host cases.
 
 # "Join me and my friend and co-host Michael G" -- the 2025 Fall Fund Drive ARP special.
-# Jim's show and Jim's programming; Michael joined him on air for part of the drive.
+# Jim's show and Jim's programming; Michael was on air with him for the whole drive.
+# The mirror of 2025-10-14: two hosts at "full", primary first.
 2025-10-21:
   - name: Jim Causey
     coverage: full
   - name: MichaelG
-    coverage: partial
+    coverage: full
 
 # "I'll be joined in the booth by David Haldeman, host of Dead Electric!" -- in for the
 # whole show. He has no Spinitron persona of his own, so dj_id stays null.

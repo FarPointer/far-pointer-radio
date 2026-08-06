@@ -100,6 +100,24 @@ def _is_scratch(line: str) -> bool:
     return False
 
 
+def _is_short_only(line: str) -> bool:
+    """True if the only thing wrong with this line is that it is too short.
+
+    Used to tell a wrapped sentence from a genuine prep line: a continuation is short
+    but otherwise reads as prose, whereas a track listing stays scratch however it wraps.
+    """
+    s = BULLET_RE.sub("", line.strip())
+    if not s:
+        return False
+    if URL_RE.search(s) or MIC_RE.match(s):
+        return False
+    if s.endswith(":") or s.endswith("?"):
+        return False
+    if TRACKLINE_RE.match(s) or LISTLINE_RE.match(s):
+        return False
+    return len(s.split()) < MIN_WORDS
+
+
 def _trim_boilerplate(kept):
     """Drop the trailing run of station sign-off lines.
 
@@ -130,16 +148,28 @@ def extract(raw: str):
         i += 1
 
     kept = []
+    wrapped = False  # previous line was consumed with no blank line after it
     while i < len(lines):
         line = BULLET_RE.sub("", lines[i])
         if not line:
             i += 1
+            wrapped = False
             if kept and i < len(lines) and lines[i] and _is_scratch(lines[i]):
                 break
+            continue
+        # A short line directly under another line is a sentence that wrapped, not a
+        # new one. OneNote exports "and Dirk Serries &\nTrösta" that way, and judging
+        # "Trösta" on its own word count calls it scratch and throws away the rest of
+        # the note behind it. Only the word-count rule is forgiven -- a track listing
+        # or a URL is still scratch wherever it appears.
+        if wrapped and kept and _is_short_only(line):
+            kept[-1] = f"{kept[-1]} {line}"
+            i += 1
             continue
         if _is_scratch(line):
             break
         kept.append(line)
+        wrapped = True
         i += 1
 
     # Fallback: some notes open with a one-line teaser or a stray prep line, which stops
@@ -179,7 +209,13 @@ def extract(raw: str):
         score += 0.5
     if re.search(r"kser|kxir|streaming|8:?30|10:?30", full, re.I):
         score += 0.25
-    if full.count(".") >= 2:
+    # "Is this substantive prose rather than a stray line of prep?" Counting periods was
+    # a bad proxy for that, because the house style separates clauses with line breaks
+    # and often ends none of them with a full stop -- so genuine blurbs that open "This
+    # week on Convergence Zone: tons of new music from PNW artists and labels" scored
+    # below the gate and were never offered for review. Paragraph breaks carry the same
+    # signal in this writing and are counted alongside.
+    if full.count(".") >= 2 or full.count("\n\n") >= 1:
         score += 0.25
     return candidate, rejected, round(score, 2)
 
@@ -228,9 +264,17 @@ def _created(raw: str):
 def load(broadcast_dates):
     """Map each prose note to a broadcast date. Returns {date: {...}}.
 
-    Resolution order: a filename date that *is* a broadcast date wins. Otherwise the note
-    is attached to the first broadcast on or after its creation date, within a week --
-    prep notes are written in the days before air.
+    Resolution order: a filename date that *is* a broadcast date wins. Failing that, a
+    filename date one day off, or right but for the year, is a typo and is repaired --
+    prep notes get named for the day they were written, and one 2023 note is named
+    "08.15.2013". Only a note whose filename carries no date at all falls back to the
+    creation date.
+
+    That last restriction matters. The note for the June 20 2024 Summer Solstice special
+    -- an overnight edition with no broadcast of its own in the archive -- was otherwise
+    picked up by the creation-date rule and used to describe the May 28 broadcast, three
+    weeks earlier. A filename date is a statement about which show the note is for, so a
+    date that matches nothing is a reason to leave the note alone, not to guess.
     """
     valid = set(broadcast_dates)
     ordered = sorted(valid)
@@ -239,11 +283,31 @@ def load(broadcast_dates):
     for path in sorted(ONENOTE_DIR.rglob("*.md")):
         raw = path.read_text(encoding="utf-8")
         target = None
-        for cand in _dates_from_name(path.name):
+        named = _dates_from_name(path.name)
+        for cand in named:
             if cand.isoformat() in valid:
                 target = cand.isoformat()
                 break
         if target is None:
+            years = {dt.date.fromisoformat(d).year for d in ordered}
+            for cand in named:
+                near = [d for d in ordered
+                        if abs((dt.date.fromisoformat(d) - cand).days) <= 1]
+                if len(near) == 1:
+                    target = near[0]
+                    break
+                # Repair the year only when the filename's year has no broadcasts at
+                # all, which is what makes it a typo rather than a date. "08.15.2013"
+                # is obviously 2023; "06.20.2024" is a real day in a real season that
+                # simply had no broadcast, and must not be dragged to 2023-06-20.
+                if cand.year in years:
+                    continue
+                repaired = [d for d in ordered
+                            if dt.date.fromisoformat(d).replace(year=cand.year) == cand]
+                if len(repaired) == 1:
+                    target = repaired[0]
+                    break
+        if target is None and not named:
             created = _created(raw)
             if created:
                 nxt = [d for d in ordered if 0 <= (dt.date.fromisoformat(d) - created).days <= 7]

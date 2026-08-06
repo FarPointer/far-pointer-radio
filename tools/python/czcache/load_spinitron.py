@@ -115,7 +115,20 @@ def _sort_key(s):
 
 
 def _key(s):
-    return f"{norm(s['artist'])}|{norm(s['song'])}"
+    """Grouping key for duplicate detection.
+
+    `drop_paren` matters here and not only in the forced-override comparison. Grouping
+    runs first, so a re-log that drifted the title ("Deep Mindset (Original Mix)" vs
+    "Deep Mindset") lands in two singleton groups and is skipped before any override or
+    duplicate rule is consulted -- silently, and without even being flagged. Normalising
+    the same way on both sides is what makes the drifted pair visible at all.
+
+    Widening the key cannot silently merge more: an automatic merge additionally
+    requires two personas and a gap inside DUP_WINDOW_SECONDS, so anything this newly
+    groups is either named by an override or reported as flagged for a human. Measured
+    across the whole archive it changes nothing today -- 13 duplicate groups either way.
+    """
+    return f"{norm(s['artist'])}|{norm(s['song'], drop_paren=True)}"
 
 
 def _gap_seconds(a, b):
@@ -133,18 +146,23 @@ MERGE_FIELDS = ("release", "isrc", "upc", "label", "song_note",
 
 
 def _forced_keys(forced, broadcast_id):
-    """Normalised (artist, song) keys a human has told us to merge on this broadcast."""
-    out = set()
-    for entry in forced or []:
+    """Normalised (artist, song) keys a human has told us to merge on this broadcast.
+
+    Maps each key to the indices of the overrides that produced it, so the caller can
+    tell which entries actually fired and which named a pair that does not exist.
+    """
+    out = {}
+    for i, entry in enumerate(forced or []):
         bid = str(entry.get("broadcast") or "")
         if bid and bid != broadcast_id and bid != broadcast_id[:10]:
             continue
-        out.add((norm(entry.get("artist") or ""),
-                 norm(entry.get("song") or "", drop_paren=True)))
+        key = (norm(entry.get("artist") or ""),
+               norm(entry.get("song") or "", drop_paren=True))
+        out.setdefault(key, set()).add(i)
     return out
 
 
-def merge_persona_duplicates(spins, broadcast_id, forced=None):
+def merge_persona_duplicates(spins, broadcast_id, forced=None, applied=None):
     """Collapse cross-persona double-logs. Returns (spins, merges, flagged).
 
     `merges` describes what was combined; `flagged` lists duplicate pairs that were
@@ -154,6 +172,10 @@ def merge_persona_duplicates(spins, broadcast_id, forced=None):
     `forced` carries that human's answer, from overrides/spins.yaml: pairs listed there
     merge even though they are same-persona. The reverse case needs no switch -- leaving
     a duplicate alone is already the default.
+
+    `applied` is an optional set the caller passes in to collect the indices of the
+    overrides that actually fired, so an entry naming a pair that does not exist can be
+    reported instead of doing nothing.
     """
     forced_keys = _forced_keys(forced, broadcast_id)
     groups = {}
@@ -168,14 +190,14 @@ def merge_persona_duplicates(spins, broadcast_id, forced=None):
         gap = _gap_seconds(rows[0], rows[-1])
         personas = {r["dj_id"] for r in rows}
 
-        # An override matches on the normalised artist and song, so it survives the title
-        # drift that usually accompanies a re-log ("Deep Mindset (Original Mix)").
-        # drop_paren has to be applied to BOTH sides: _forced_keys strips the parenthetical
-        # from the override's bare title, so stripping it here too is what actually makes
-        # the drifted title match. On one side only it is a no-op.
-        forced_here = len(rows) == 2 and any(
-            (norm(rows[0]["artist"]), norm(s, drop_paren=True)) in forced_keys
-            for s in (rows[0]["song"], rows[1]["song"]))
+        # Both sides are normalised the same way, including drop_paren, so an override
+        # written against the plain title still matches a re-log that drifted it.
+        forced_hits = set()
+        if len(rows) == 2:
+            for s in (rows[0]["song"], rows[1]["song"]):
+                forced_hits |= forced_keys.get(
+                    (norm(rows[0]["artist"]), norm(s, drop_paren=True)), set())
+        forced_here = bool(forced_hits)
 
         mergeable = forced_here or (len(rows) == 2 and len(personas) == 2
                                     and gap is not None and gap <= DUP_WINDOW_SECONDS)
@@ -191,7 +213,13 @@ def merge_persona_duplicates(spins, broadcast_id, forced=None):
             })
             continue
 
-        keep, other = rows[0], rows[1]        # keep the earlier logged_at
+        # Keep the earliest row: it sets the running order, and on a genuine double-log
+        # it is the row whose values the rest of the archive already agrees with. The
+        # loop below still lifts anything the earlier row left blank, so a re-log entered
+        # to attach a release or an ISRC contributes it without also overwriting good
+        # values with its own. Where both rows fill a field and disagree, that is a real
+        # conflict and is reported rather than resolved.
+        keep, other = rows[0], rows[1]
         conflicts = []
         for f in MERGE_FIELDS:
             if not keep.get(f) and other.get(f):
@@ -201,6 +229,8 @@ def merge_persona_duplicates(spins, broadcast_id, forced=None):
         keep["local_flag"] = keep["local_flag"] or other["local_flag"]
         keep["request"] = keep["request"] or other["request"]
         drop.add(id(other))
+        if applied is not None:
+            applied |= forced_hits
         merges.append({
             "broadcast_id": broadcast_id, "artist": keep["artist"], "song": keep["song"],
             "gap_seconds": gap, "dj_ids": sorted(personas), "conflicts": conflicts,
@@ -267,14 +297,31 @@ def load(forced_merges=None):
         )
 
     all_merges, all_flagged = [], []
+    applied = set()
     for b in broadcasts.values():
         b["raw_spins"].sort(key=_sort_key)
         b["raw_spins"], merges, flagged = merge_persona_duplicates(
-            b["raw_spins"], b["id"], forced_merges)
+            b["raw_spins"], b["id"], forced_merges, applied)
         b["dj_ids"] = sorted(x for x in b["dj_ids"] if x)
         b["dj_names"] = sorted({DJ_NAMES.get(d, d) for d in b["dj_ids"]})
         all_merges += merges
         all_flagged += flagged
+
+    # An override that matches nothing is the failure this whole review exists to
+    # prevent: it reads as a decision that was made and is in fact doing nothing. The
+    # spins file is small and hand-written, so a miss is a typo, not a data condition.
+    unmatched = [e for i, e in enumerate(forced_merges or []) if i not in applied]
+    if unmatched:
+        lines = "\n".join(
+            f"  - {e.get('broadcast', '?')}  {e.get('artist', '?')} - {e.get('song', '?')}"
+            for e in unmatched)
+        raise SystemExit(
+            f"overrides/spins.yaml: {len(unmatched)} merge_duplicates entr"
+            f"{'y' if len(unmatched) == 1 else 'ies'} matched no duplicate pair:\n"
+            f"{lines}\n"
+            "Check the broadcast id/date and the artist and song against the "
+            "'Duplicate spins left alone' table in reports/discrepancies.md."
+        )
 
     return broadcasts, all_merges, all_flagged
 

@@ -20,7 +20,9 @@
   "dj_ids": [
     "173567"
   ],
-  "spinitron_playlist_ids": [],
+  "spinitron_playlist_ids": [
+    "22243586"
+  ],
   "first_broadcast_id": "2024-04-09T22:30:00-0700",
   "repeat_of_source": "inferred",
   "repeat_of_confidence": 0.875,

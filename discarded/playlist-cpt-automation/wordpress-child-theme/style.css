@@ -1,0 +1,12 @@
+/*
+Status: Discarded prototype — do not activate.
+Theme Name: Convergence Zone (Twenty Twenty-Five Child)
+Template: twentytwentyfive
+Version: 0.1.0
+Description: Child theme of Twenty Twenty-Five adding a single-playlist
+  template for the `playlist` custom post type registered by the CZ
+  Playlists plugin. Keeping this in a child theme (rather than editing
+  Twenty Twenty-Five directly, or relying on a Site-Editor-only template)
+  means a Twenty Twenty-Five core update can't silently wipe it.
+Author: Far Pointer Radio
+*/

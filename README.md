@@ -39,7 +39,8 @@ far-pointer-radio/
 ├── config/                     # Tool and service configuration
 │   ├── spinitron/              # Spinitron API config and templates
 │   └── vscode/                 # Shared VS Code workspace settings
-└── docs/                       # Project-wide documentation
+├── docs/                       # Project-wide documentation
+└── discarded/                  # Superseded prototypes retained for context, not use
 ```
 
 ## Tools & Platforms

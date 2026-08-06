@@ -1,0 +1,860 @@
+{
+  "show_url": "https://spinitron.com/KSER/show/260646/Convergence-Zone",
+  "playlists": [
+    {
+      "id": "17439020",
+      "start": "2023-05-30T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17439020/Convergence-Zone"
+    },
+    {
+      "id": "17467714",
+      "start": "2023-06-06T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17467714/Convergence-Zone"
+    },
+    {
+      "id": "17496445",
+      "start": "2023-06-13T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17496445/Convergence-Zone"
+    },
+    {
+      "id": "17524481",
+      "start": "2023-06-20T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17524481/Convergence-Zone"
+    },
+    {
+      "id": "17552493",
+      "start": "2023-06-27T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17552493/Convergence-Zone"
+    },
+    {
+      "id": "17580454",
+      "start": "2023-07-04T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17580454/Convergence-Zone"
+    },
+    {
+      "id": "17609287",
+      "start": "2023-07-11T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17609287/Convergence-Zone"
+    },
+    {
+      "id": "17638356",
+      "start": "2023-07-18T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17638356/Convergence-Zone"
+    },
+    {
+      "id": "17667196",
+      "start": "2023-07-25T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17667196/Convergence-Zone"
+    },
+    {
+      "id": "17695919",
+      "start": "2023-08-01T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17695919/Convergence-Zone"
+    },
+    {
+      "id": "17724718",
+      "start": "2023-08-08T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17724718/Convergence-Zone"
+    },
+    {
+      "id": "17753435",
+      "start": "2023-08-15T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17753435/Convergence-Zone"
+    },
+    {
+      "id": "17781763",
+      "start": "2023-08-22T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17781763/Convergence-Zone"
+    },
+    {
+      "id": "17810469",
+      "start": "2023-08-29T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17810469/Convergence-Zone"
+    },
+    {
+      "id": "17839809",
+      "start": "2023-09-05T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17839809/Convergence-Zone"
+    },
+    {
+      "id": "17870063",
+      "start": "2023-09-12T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17870063/Convergence-Zone"
+    },
+    {
+      "id": "17900731",
+      "start": "2023-09-19T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17900731/Convergence-Zone"
+    },
+    {
+      "id": "17931587",
+      "start": "2023-09-26T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17931587/Convergence-Zone"
+    },
+    {
+      "id": "17962946",
+      "start": "2023-10-03T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17962946/Convergence-Zone"
+    },
+    {
+      "id": "17994395",
+      "start": "2023-10-10T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/17994395/Convergence-Zone"
+    },
+    {
+      "id": "18025553",
+      "start": "2023-10-17T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18025553/Convergence-Zone"
+    },
+    {
+      "id": "18057061",
+      "start": "2023-10-24T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18057061/Convergence-Zone"
+    },
+    {
+      "id": "18088458",
+      "start": "2023-10-31T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18088458/Convergence-Zone"
+    },
+    {
+      "id": "18120218",
+      "start": "2023-11-07T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18120218/Convergence-Zone"
+    },
+    {
+      "id": "18151921",
+      "start": "2023-11-14T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18151921/Convergence-Zone"
+    },
+    {
+      "id": "18183059",
+      "start": "2023-11-21T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18183059/Convergence-Zone"
+    },
+    {
+      "id": "18213229",
+      "start": "2023-11-28T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18213229/Convergence-Zone"
+    },
+    {
+      "id": "18244545",
+      "start": "2023-12-05T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18244545/Convergence-Zone"
+    },
+    {
+      "id": "18275071",
+      "start": "2023-12-12T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18275071/Convergence-Zone"
+    },
+    {
+      "id": "18305166",
+      "start": "2023-12-19T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18305166/Convergence-Zone"
+    },
+    {
+      "id": "18334228",
+      "start": "2023-12-26T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18334228/Convergence-Zone"
+    },
+    {
+      "id": "18363611",
+      "start": "2024-01-02T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18363611/Convergence-Zone"
+    },
+    {
+      "id": "18393687",
+      "start": "2024-01-09T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18393687/Convergence-Zone"
+    },
+    {
+      "id": "18424033",
+      "start": "2024-01-16T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18424033/Convergence-Zone"
+    },
+    {
+      "id": "18454994",
+      "start": "2024-01-23T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18454994/Convergence-Zone"
+    },
+    {
+      "id": "18486515",
+      "start": "2024-01-30T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18486515/Convergence-Zone"
+    },
+    {
+      "id": "18518643",
+      "start": "2024-02-06T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18518643/Convergence-Zone"
+    },
+    {
+      "id": "18551081",
+      "start": "2024-02-13T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18551081/Convergence-Zone"
+    },
+    {
+      "id": "18583283",
+      "start": "2024-02-20T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18583283/Convergence-Zone"
+    },
+    {
+      "id": "18615561",
+      "start": "2024-02-27T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18615561/Convergence-Zone"
+    },
+    {
+      "id": "18647965",
+      "start": "2024-03-05T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/18647965/Convergence-Zone"
+    },
+    {
+      "id": "18679622",
+      "start": "2024-03-12T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18679622/Convergence-Zone"
+    },
+    {
+      "id": "18711181",
+      "start": "2024-03-19T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18711181/Convergence-Zone"
+    },
+    {
+      "id": "18743187",
+      "start": "2024-03-26T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18743187/Convergence-Zone"
+    },
+    {
+      "id": "18775571",
+      "start": "2024-04-02T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18775571/Convergence-Zone"
+    },
+    {
+      "id": "18808172",
+      "start": "2024-04-09T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18808172/Convergence-Zone"
+    },
+    {
+      "id": "18841176",
+      "start": "2024-04-16T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18841176/Convergence-Zone-Ep-053"
+    },
+    {
+      "id": "18874261",
+      "start": "2024-04-23T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18874261/Convergence-Zone-Ep-054"
+    },
+    {
+      "id": "18907034",
+      "start": "2024-04-30T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18907034/Convergence-Zone"
+    },
+    {
+      "id": "18939199",
+      "start": "2024-05-07T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18939199/Convergence-Zone"
+    },
+    {
+      "id": "18970898",
+      "start": "2024-05-14T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/18970898/Convergence-Zone"
+    },
+    {
+      "id": "19002065",
+      "start": "2024-05-21T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19002065/Convergence-Zone-Ep-55"
+    },
+    {
+      "id": "19032843",
+      "start": "2024-05-28T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19032843/Convergence-Zone-Ep-56"
+    },
+    {
+      "id": "19063813",
+      "start": "2024-06-04T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19063813/Convergence-Zone"
+    },
+    {
+      "id": "19094827",
+      "start": "2024-06-11T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19094827/Convergence-Zone"
+    },
+    {
+      "id": "19126081",
+      "start": "2024-06-18T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19126081/Convergence-Zone"
+    },
+    {
+      "id": "19157318",
+      "start": "2024-06-25T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19157318/Convergence-Zone"
+    },
+    {
+      "id": "19188433",
+      "start": "2024-07-02T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19188433/Convergence-Zone"
+    },
+    {
+      "id": "19219099",
+      "start": "2024-07-09T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19219099/Convergence-Zone"
+    },
+    {
+      "id": "19250038",
+      "start": "2024-07-16T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19250038/Convergence-Zone"
+    },
+    {
+      "id": "19280631",
+      "start": "2024-07-23T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19280631/Convergence-Zone"
+    },
+    {
+      "id": "19311559",
+      "start": "2024-07-30T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19311559/Convergence-Zone"
+    },
+    {
+      "id": "19342474",
+      "start": "2024-08-06T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19342474/Convergence-Zone"
+    },
+    {
+      "id": "19373708",
+      "start": "2024-08-13T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19373708/Convergence-Zone"
+    },
+    {
+      "id": "19404981",
+      "start": "2024-08-20T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19404981/Convergence-Zone"
+    },
+    {
+      "id": "19436326",
+      "start": "2024-08-27T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19436326/Convergence-Zone"
+    },
+    {
+      "id": "19467415",
+      "start": "2024-09-03T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19467415/Convergence-Zone"
+    },
+    {
+      "id": "19498978",
+      "start": "2024-09-10T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19498978/Convergence-Zone"
+    },
+    {
+      "id": "19530850",
+      "start": "2024-09-17T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19530850/Convergence-Zone"
+    },
+    {
+      "id": "19563036",
+      "start": "2024-09-24T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19563036/Convergence-Zone"
+    },
+    {
+      "id": "19595126",
+      "start": "2024-10-01T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19595126/Convergence-Zone"
+    },
+    {
+      "id": "19627407",
+      "start": "2024-10-08T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19627407/Convergence-Zone"
+    },
+    {
+      "id": "19659600",
+      "start": "2024-10-15T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19659600/Convergence-Zone"
+    },
+    {
+      "id": "19692074",
+      "start": "2024-10-22T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19692074/Convergence-Zone"
+    },
+    {
+      "id": "19724915",
+      "start": "2024-10-29T22:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/19724915/Convergence-Zone"
+    },
+    {
+      "id": "19757927",
+      "start": "2024-11-05T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/19757927/Convergence-Zone"
+    },
+    {
+      "id": "19790776",
+      "start": "2024-11-12T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/19790776/Convergence-Zone"
+    },
+    {
+      "id": "19856487",
+      "start": "2024-11-26T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/19856487/Convergence-Zone"
+    },
+    {
+      "id": "19888685",
+      "start": "2024-12-03T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/19888685/Convergence-Zone"
+    },
+    {
+      "id": "19921669",
+      "start": "2024-12-10T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/19921669/Convergence-Zone"
+    },
+    {
+      "id": "19953887",
+      "start": "2024-12-17T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/19953887/Convergence-Zone"
+    },
+    {
+      "id": "19985159",
+      "start": "2024-12-24T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/19985159/Convergence-Zone"
+    },
+    {
+      "id": "20016019",
+      "start": "2024-12-31T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20016019/Convergence-Zone"
+    },
+    {
+      "id": "20047533",
+      "start": "2025-01-07T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20047533/Convergence-Zone"
+    },
+    {
+      "id": "20079695",
+      "start": "2025-01-14T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20079695/Convergence-Zone"
+    },
+    {
+      "id": "20111896",
+      "start": "2025-01-21T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20111896/Convergence-Zone"
+    },
+    {
+      "id": "20144799",
+      "start": "2025-01-28T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20144799/Convergence-Zone"
+    },
+    {
+      "id": "20178183",
+      "start": "2025-02-04T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20178183/Convergence-Zone"
+    },
+    {
+      "id": "20212279",
+      "start": "2025-02-11T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20212279/Convergence-Zone"
+    },
+    {
+      "id": "20246506",
+      "start": "2025-02-18T22:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20246506/Convergence-Zone"
+    },
+    {
+      "id": "20314893",
+      "start": "2025-03-04T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/20314893/Convergence-Zone"
+    },
+    {
+      "id": "20348614",
+      "start": "2025-03-11T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20348614/Convergence-Zone"
+    },
+    {
+      "id": "20381891",
+      "start": "2025-03-18T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20381891/Convergence-Zone"
+    },
+    {
+      "id": "20415191",
+      "start": "2025-03-25T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20415191/Convergence-Zone"
+    },
+    {
+      "id": "20448952",
+      "start": "2025-04-01T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20448952/Convergence-Zone"
+    },
+    {
+      "id": "20482689",
+      "start": "2025-04-08T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20482689/Convergence-Zone"
+    },
+    {
+      "id": "20516899",
+      "start": "2025-04-15T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20516899/Convergence-Zone"
+    },
+    {
+      "id": "20550818",
+      "start": "2025-04-22T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20550818/Convergence-Zone"
+    },
+    {
+      "id": "20584718",
+      "start": "2025-04-29T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20584718/Convergence-Zone"
+    },
+    {
+      "id": "20618061",
+      "start": "2025-05-06T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20618061/Convergence-Zone"
+    },
+    {
+      "id": "20651145",
+      "start": "2025-05-13T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20651145/Convergence-Zone"
+    },
+    {
+      "id": "20683448",
+      "start": "2025-05-20T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20683448/Convergence-Zone"
+    },
+    {
+      "id": "20715924",
+      "start": "2025-05-27T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20715924/Convergence-Zone"
+    },
+    {
+      "id": "20748304",
+      "start": "2025-06-03T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20748304/Convergence-Zone"
+    },
+    {
+      "id": "20780696",
+      "start": "2025-06-10T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20780696/Convergence-Zone"
+    },
+    {
+      "id": "20813150",
+      "start": "2025-06-17T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20813150/Convergence-Zone"
+    },
+    {
+      "id": "20845466",
+      "start": "2025-06-24T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20845466/Convergence-Zone"
+    },
+    {
+      "id": "20877764",
+      "start": "2025-07-01T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20877764/Convergence-Zone"
+    },
+    {
+      "id": "20877767",
+      "start": "2025-07-01T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20877767/Convergence-Zone"
+    },
+    {
+      "id": "20910042",
+      "start": "2025-07-08T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20910042/Convergence-Zone"
+    },
+    {
+      "id": "20942466",
+      "start": "2025-07-15T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20942466/Convergence-Zone"
+    },
+    {
+      "id": "20975151",
+      "start": "2025-07-22T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/20975151/Convergence-Zone"
+    },
+    {
+      "id": "21007758",
+      "start": "2025-07-29T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21007758/Convergence-Zone"
+    },
+    {
+      "id": "21040584",
+      "start": "2025-08-05T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21040584/Convergence-Zone"
+    },
+    {
+      "id": "21068600",
+      "start": "2025-08-12T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21068600/Convergence-Zone"
+    },
+    {
+      "id": "21105892",
+      "start": "2025-08-19T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21105892/Convergence-Zone"
+    },
+    {
+      "id": "21138855",
+      "start": "2025-08-26T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21138855/Convergence-Zone"
+    },
+    {
+      "id": "21171867",
+      "start": "2025-09-02T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21171867/Convergence-Zone"
+    },
+    {
+      "id": "21205395",
+      "start": "2025-09-09T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21205395/Convergence-Zone"
+    },
+    {
+      "id": "21205399",
+      "start": "2025-09-09T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21205399/Convergence-Zone"
+    },
+    {
+      "id": "21239296",
+      "start": "2025-09-16T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21239296/Convergence-Zone"
+    },
+    {
+      "id": "21272947",
+      "start": "2025-09-23T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21272947/Convergence-Zone"
+    },
+    {
+      "id": "21307180",
+      "start": "2025-09-30T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21307180/Convergence-Zone"
+    },
+    {
+      "id": "21341810",
+      "start": "2025-10-07T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21341810/Convergence-Zone"
+    },
+    {
+      "id": "21376299",
+      "start": "2025-10-14T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21376299/Convergence-Zone"
+    },
+    {
+      "id": "21376304",
+      "start": "2025-10-14T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21376304/Convergence-Zone"
+    },
+    {
+      "id": "21410876",
+      "start": "2025-10-21T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21410876/Convergence-Zone"
+    },
+    {
+      "id": "21410881",
+      "start": "2025-10-21T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21410881/Convergence-Zone"
+    },
+    {
+      "id": "21445608",
+      "start": "2025-10-28T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/21445608/Convergence-Zone"
+    },
+    {
+      "id": "21480389",
+      "start": "2025-11-04T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21480389/Convergence-Zone"
+    },
+    {
+      "id": "21515390",
+      "start": "2025-11-11T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21515390/Convergence-Zone"
+    },
+    {
+      "id": "21550322",
+      "start": "2025-11-18T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21550322/Convergence-Zone"
+    },
+    {
+      "id": "21584810",
+      "start": "2025-11-25T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21584810/Convergence-Zone"
+    },
+    {
+      "id": "21618722",
+      "start": "2025-12-02T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21618722/Convergence-Zone"
+    },
+    {
+      "id": "21653469",
+      "start": "2025-12-09T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21653469/Convergence-Zone"
+    },
+    {
+      "id": "21687886",
+      "start": "2025-12-16T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21687886/Convergence-Zone"
+    },
+    {
+      "id": "21721309",
+      "start": "2025-12-23T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21721309/Convergence-Zone"
+    },
+    {
+      "id": "21754565",
+      "start": "2025-12-30T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21754565/Convergence-Zone"
+    },
+    {
+      "id": "21788165",
+      "start": "2026-01-06T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21788165/Convergence-Zone"
+    },
+    {
+      "id": "21821811",
+      "start": "2026-01-13T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21821811/Convergence-Zone"
+    },
+    {
+      "id": "21856037",
+      "start": "2026-01-20T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21856037/Convergence-Zone"
+    },
+    {
+      "id": "21890051",
+      "start": "2026-01-27T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21890051/Convergence-Zone"
+    },
+    {
+      "id": "21925437",
+      "start": "2026-02-03T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21925437/Convergence-Zone"
+    },
+    {
+      "id": "21960866",
+      "start": "2026-02-10T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21960866/Convergence-Zone"
+    },
+    {
+      "id": "21996504",
+      "start": "2026-02-17T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/21996504/Convergence-Zone"
+    },
+    {
+      "id": "22031938",
+      "start": "2026-02-24T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/22031938/Convergence-Zone"
+    },
+    {
+      "id": "22067263",
+      "start": "2026-03-03T20:30:00-0800",
+      "url": "https://spinitron.com/KSER/pl/22067263/Convergence-Zone"
+    },
+    {
+      "id": "22102165",
+      "start": "2026-03-10T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22102165/Convergence-Zone"
+    },
+    {
+      "id": "22102169",
+      "start": "2026-03-10T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22102169/Convergence-Zone"
+    },
+    {
+      "id": "22137035",
+      "start": "2026-03-17T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22137035/Convergence-Zone"
+    },
+    {
+      "id": "22172387",
+      "start": "2026-03-24T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22172387/Convergence-Zone"
+    },
+    {
+      "id": "22208040",
+      "start": "2026-03-31T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22208040/Convergence-Zone"
+    },
+    {
+      "id": "22243586",
+      "start": "2026-04-07T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22243586/Convergence-Zone"
+    },
+    {
+      "id": "22279312",
+      "start": "2026-04-14T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22279312/Convergence-Zone"
+    },
+    {
+      "id": "22315149",
+      "start": "2026-04-21T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22315149/Convergence-Zone"
+    },
+    {
+      "id": "22315151",
+      "start": "2026-04-21T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22315151/Convergence-Zone"
+    },
+    {
+      "id": "22350772",
+      "start": "2026-04-28T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22350772/Convergence-Zone"
+    },
+    {
+      "id": "22385917",
+      "start": "2026-05-05T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22385917/Convergence-Zone"
+    },
+    {
+      "id": "22420423",
+      "start": "2026-05-12T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22420423/Convergence-Zone"
+    },
+    {
+      "id": "22454652",
+      "start": "2026-05-19T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22454652/Convergence-Zone"
+    },
+    {
+      "id": "22488467",
+      "start": "2026-05-26T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22488467/Convergence-Zone"
+    },
+    {
+      "id": "22522117",
+      "start": "2026-06-02T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22522117/Convergence-Zone-06-02-2026"
+    },
+    {
+      "id": "22555858",
+      "start": "2026-06-09T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22555858/Convergence-Zone"
+    },
+    {
+      "id": "22589600",
+      "start": "2026-06-16T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22589600/Convergence-Zone"
+    },
+    {
+      "id": "22623301",
+      "start": "2026-06-23T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22623301/Convergence-Zone"
+    },
+    {
+      "id": "22656749",
+      "start": "2026-06-30T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22656749/Convergence-Zone"
+    },
+    {
+      "id": "22689851",
+      "start": "2026-07-07T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22689851/Convergence-Zone"
+    },
+    {
+      "id": "22723024",
+      "start": "2026-07-14T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22723024/Convergence-Zone"
+    },
+    {
+      "id": "22756660",
+      "start": "2026-07-21T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22756660/Convergence-Zone"
+    },
+    {
+      "id": "22789702",
+      "start": "2026-07-28T20:30:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22789702/Convergence-Zone"
+    },
+    {
+      "id": "22822902",
+      "start": "2026-08-04T20:00:00-0700",
+      "url": "https://spinitron.com/KSER/pl/22822902/Convergence-Zone"
+    }
+  ]
+}

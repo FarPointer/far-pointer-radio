@@ -1,0 +1,124 @@
+{
+    "_archived": true,
+    "key": "group_cz_playlist",
+    "title": "Playlist Details",
+    "fields": [
+        {
+            "key": "field_cz_air_datetime",
+            "label": "Air Date/Time",
+            "name": "cz_air_datetime",
+            "type": "date_time_picker",
+            "instructions": "ISO 8601 air datetime, from Broadcast.air_datetime in the playlist cache. Informational — the WordPress post_date is what actually drives display via core/post-date.",
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d\\TH:i:sO"
+        },
+        {
+            "key": "field_cz_episode_number",
+            "label": "Episode Number",
+            "name": "cz_episode_number",
+            "type": "number",
+            "instructions": "From Broadcast.episode_number. Often blank — rarely present in Spinitron-only broadcasts."
+        },
+        {
+            "key": "field_cz_hosts",
+            "label": "Hosts",
+            "name": "cz_hosts",
+            "type": "repeater",
+            "instructions": "From Broadcast.participants[]. The publisher script also assigns the `host` taxonomy from this same list for archive pages.",
+            "layout": "table",
+            "button_label": "Add Host",
+            "sub_fields": [
+                {
+                    "key": "field_cz_host_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_cz_host_coverage",
+                    "label": "Coverage",
+                    "name": "coverage",
+                    "type": "select",
+                    "choices": {
+                        "full": "Full show",
+                        "partial": "Partial (guest segment)"
+                    },
+                    "default_value": "full"
+                }
+            ]
+        },
+        {
+            "key": "field_cz_description",
+            "label": "Description",
+            "name": "cz_description",
+            "type": "textarea",
+            "instructions": "From Broadcast.description. The publisher script only writes this when description_status is \"approved\" — see cz_description_status below.",
+            "rows": 4
+        },
+        {
+            "key": "field_cz_description_status",
+            "label": "Description Status",
+            "name": "cz_description_status",
+            "type": "select",
+            "instructions": "Mirrors Broadcast.description_status. \"proposed\" text has not been reviewed by a human and should not be published as-is.",
+            "choices": {
+                "approved": "Approved",
+                "proposed": "Proposed (unreviewed — do not publish verbatim)"
+            }
+        },
+        {
+            "key": "field_cz_tracklist",
+            "label": "Tracklist",
+            "name": "cz_tracklist",
+            "type": "repeater",
+            "instructions": "From Broadcast.spins[], ordered by sequence. Kept here for querying/future use; the publicly displayed tracklist table is rendered into post_content by the publisher script, not read from this field at display time.",
+            "layout": "table",
+            "button_label": "Add Spin",
+            "sub_fields": [
+                { "key": "field_cz_spin_sequence", "label": "#", "name": "sequence", "type": "number" },
+                { "key": "field_cz_spin_artist", "label": "Artist", "name": "artist", "type": "text" },
+                { "key": "field_cz_spin_song", "label": "Song", "name": "song", "type": "text" },
+                { "key": "field_cz_spin_release", "label": "Release", "name": "release", "type": "text" },
+                {
+                    "key": "field_cz_spin_note",
+                    "label": "Note",
+                    "name": "note",
+                    "type": "text",
+                    "instructions": "From spin.publish_note — never song_note, which may contain internal-only remarks."
+                }
+            ]
+        },
+        {
+            "key": "field_cz_mixcloud_url",
+            "label": "Mixcloud URL",
+            "name": "cz_mixcloud_url",
+            "type": "url",
+            "instructions": "From Broadcast.mixcloud_url. Null until czarchive uploads the episode — expect this to be filled in on a later re-publish, not the first one."
+        },
+        {
+            "key": "field_cz_spinitron_playlist_url",
+            "label": "Spinitron Playlist URL",
+            "name": "cz_spinitron_playlist_url",
+            "type": "url",
+            "instructions": "Built by the publisher script from Broadcast.spinitron_playlist_ids[0] as https://spinitron.com/KSER/pl/{id}/... — falls back to the station history page when spinitron_playlist_ids is empty (it's best-effort, not guaranteed)."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "playlist"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "show_in_rest": 1,
+    "description": "Structured fields for a Convergence Zone episode, mirroring shows/convergence-zone/playlists/schema.ts. Populated automatically by tools/python/czpublish; editable here for manual corrections."
+}

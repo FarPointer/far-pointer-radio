@@ -16,6 +16,7 @@ SOURCES = SHOW / "playlists/sources"
 # distinguish the two personas that both display as "Jim Causey". Kept in the repo as an
 # archived export; nothing here reads it.
 SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-5-19-8-4-26-for-KSER.csv"
+SPINITRON_PLAYLISTS = SOURCES / "spinitron" / "convergence-zone-playlists.json"
 
 MICHAELG_DIR = SOURCES / "michaelg"
 CZFM_DIR = SOURCES / "convergencezone.fm"
@@ -24,6 +25,7 @@ ONENOTE_DIR = SOURCES / "farpointer-onenote"
 CACHE = SHOW / "playlists/cache"
 BROADCASTS = CACHE / "broadcasts"
 INDEX = CACHE / "index.json"
+PUBLICATION_LINKS = SHOW / "playlists/publication-links.json"
 
 REPORTS = HERE / "reports"
 OVERRIDES = HERE / "overrides"

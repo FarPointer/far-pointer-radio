@@ -16,10 +16,11 @@ lacks -- so they are merged field by field rather than deduplicated by dropping 
 """
 import csv
 import datetime as dt
+import json
 import re
 import sys
 
-from paths import CZAUDIT, DJ_NAMES, SHOW_NAME, SPINS_CSV
+from paths import CZAUDIT, DJ_NAMES, SHOW_NAME, SPINITRON_PLAYLISTS, SPINS_CSV
 
 sys.path.insert(0, str(CZAUDIT))
 from matching import norm  # noqa: E402
@@ -38,6 +39,33 @@ EXPECTED_COLUMNS = [
 # widest observed is 110s; 180 leaves headroom without reaching the 3,542s+ gaps that
 # are genuine repeat plays within a two-hour show.
 DUP_WINDOW_SECONDS = 180
+
+
+def load_playlist_ids():
+    """Return public Spinitron playlist IDs keyed by playlist start datetime.
+
+    The spins CSV does not include Playlist ID. `fetch_spinitron_playlists.py`
+    snapshots the public Convergence Zone show history, whose playlist links do.
+    Persona switches create two playlist records with the same start datetime,
+    which is why the value is an array rather than a scalar.
+    """
+    if not SPINITRON_PLAYLISTS.exists():
+        raise SystemExit(
+            f"{SPINITRON_PLAYLISTS} is missing. Run "
+            "`python fetch_spinitron_playlists.py` before building the cache."
+        )
+
+    data = json.loads(SPINITRON_PLAYLISTS.read_text(encoding="utf-8"))
+    by_start = {}
+    for item in data.get("playlists", []):
+        start = str(item.get("start") or "")
+        playlist_id = str(item.get("id") or "")
+        if not start or not playlist_id:
+            raise SystemExit(
+                f"{SPINITRON_PLAYLISTS.name} contains a playlist without id/start: {item}"
+            )
+        by_start.setdefault(start, []).append(playlist_id)
+    return {start: sorted(set(ids), key=int) for start, ids in by_start.items()}
 
 
 def parse_duration(v):
@@ -201,6 +229,7 @@ def load(forced_merges=None):
             )
         rows = list(reader)
 
+    playlist_ids = load_playlist_ids()
     broadcasts = {}
     for r in rows:
         bid = (r.get("Playlist Date-time") or "").strip()
@@ -213,6 +242,7 @@ def load(forced_merges=None):
             "show_name": SHOW_NAME,
             "title": None,
             "dj_ids": set(),
+            "spinitron_playlist_ids": playlist_ids.get(bid, []),
             "scheduled_duration_minutes": None,
             "raw_spins": [],
         })
@@ -224,6 +254,17 @@ def load(forced_merges=None):
         if dur.isdigit():
             b["scheduled_duration_minutes"] = int(dur)
         b["raw_spins"].append(_row_spin(r))
+
+    missing_playlist_ids = [
+        b["id"] for b in broadcasts.values() if not b["spinitron_playlist_ids"]
+    ]
+    if missing_playlist_ids:
+        dates = ", ".join(bid[:10] for bid in missing_playlist_ids[:10])
+        raise SystemExit(
+            f"{SPINITRON_PLAYLISTS.name} has no playlist ID for "
+            f"{len(missing_playlist_ids)} broadcast(s): {dates}. "
+            "Refresh it with `python fetch_spinitron_playlists.py`."
+        )
 
     all_merges, all_flagged = [], []
     for b in broadcasts.values():

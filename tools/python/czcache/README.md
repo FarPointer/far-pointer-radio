@@ -27,6 +27,7 @@ what a source actually contains.
 |---|---|
 | `paths.py` | Filesystem locations and the persona/host constants |
 | `model.py` | Broadcast and Spin constructors — the one place field order and the null convention are enforced |
+| `fetch_spinitron_playlists.py` | Snapshots playlist IDs and URLs from the public Convergence Zone show-history page; no API key required |
 | `load_spinitron.py` | The Spinitron export → broadcast skeletons and logged spins; merges cross-persona duplicate spins |
 | `repeats.py` | Archive-wide overlap clustering → `first_broadcast_id` |
 | `load_workbooks.py` | MichaelG's 28 `.xlsx` workbooks across five header layouts |
@@ -93,3 +94,53 @@ Read `Spins-search-results-12-5-19-8-4-26-for-KSER.csv`, not the older
 `Spinssearchresults84208326forKSER.csv`. Both cover the same 3,282 spins, but only the
 newer one has `DJ ID`, `Playlist Date-time`, and `Playlist Duration`. The loader asserts
 its expected columns, so a re-export in the old format fails loudly.
+
+## Spinitron playlist IDs
+
+The spins export has no Playlist ID column. Refresh the checked-in public-index snapshot
+before a cache build when new broadcasts have aired:
+
+```sh
+uv run --with beautifulsoup4 --with lxml python fetch_spinitron_playlists.py
+```
+
+The script follows pagination from
+`https://spinitron.com/KSER/show/260646/Convergence-Zone` and writes
+`shows/convergence-zone/playlists/sources/spinitron/convergence-zone-playlists.json`.
+`load_spinitron.py` joins it to the spins export by the full playlist start datetime and
+fails loudly if any cached broadcast is missing an ID. Six persona-switch broadcasts
+correctly carry two IDs.
+
+If Spinitron changes the public page, the official fallback is its v2 API. Log in and
+open **Admin → Automation & API** to obtain the station API key, then page through:
+
+```text
+GET https://spinitron.com/api/playlists?show_id=260646&count=200&page=1
+```
+
+The only required fields are playlist `id` and `start`. Keep the key outside the repo.
+If an API key is unavailable and a manual export is necessary, export/search
+**playlists**, not spins, and retain a playlist URL (whose `/pl/NUMBER/` segment is the
+ID) plus the playlist start datetime. Another spin-search export cannot solve this: its
+available columns do not contain Playlist ID.
+
+## Publication links
+
+`shows/convergence-zone/playlists/publication-links.json` is the durable bridge to
+external publication state. It is keyed by air date:
+
+```json
+{
+  "2026-07-28": {
+    "wordpress_post_id": 123,
+    "webpage_url": "https://convergencezone.fm/2026/07/convergence-zone-2026-07-28/",
+    "mixcloud_url": null
+  }
+}
+```
+
+`webpage_url` and `mixcloud_url` flow into the cache. `wordpress_post_id` is retained for
+the publishing script's idempotent updates but is not part of `schema.ts`. Missing or
+null Mixcloud URLs are expected: the WordPress page simply omits the embed until a
+recording becomes available. Adding the URL later, rebuilding the cache, and updating
+the post backfills the embed without changing the post identity or URL.

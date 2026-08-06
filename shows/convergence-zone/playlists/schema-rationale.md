@@ -127,6 +127,12 @@ provenance deferred below.
 
 ## Primary key: derived from air_datetime, not Spinitron's playlist ID
 
+**Update (2026-08-05):** the access finding below is superseded. Playlist IDs
+are available without an API key from the public Convergence Zone show-history
+page. `czcache/fetch_spinitron_playlists.py` snapshots that paginated index into
+`sources/spinitron/convergence-zone-playlists.json`. The identity argument
+remains valid because six real broadcasts map to two Spinitron playlist records.
+
 `spinitron_playlist_id` was the original candidate for primary key, since it's
 Spinitron's own unique identifier for a broadcast. Two problems ruled it out:
 
@@ -140,19 +146,24 @@ Spinitron's own unique identifier for a broadcast. Two problems ruled it out:
    would make the archive's identity depend on how Spinitron happened to record
    a session, rather than on when the show aired.
 
-   **Mechanism, corrected against the export:** the switch does *not* produce
-   two playlist records. All 164 dates map to exactly one playlist, and the
-   smallest playlist holds 7 spins — there are no auto-started stubs to
-   discard. What it produces is **duplicate spins inside a single playlist**:
-   the same track logged twice, 2–110 seconds apart, once under each DJ ID,
-   always at or near show start. The six broadcasts are 2025-07-01,
-   2025-09-09, 2025-10-14 (twice), 2025-10-21, 2026-03-10, and 2026-04-21 —
-   seven pairs in total.
+   **Mechanism, corrected against the public playlist index:** each switch
+   produces **two playlist records with the same start datetime**, one per
+   persona. The spin-search export omits Playlist ID, so it flattens both
+   records together under the same `Playlist Date-time`; this made the two
+   records look like one playlist until the public index was joined back in.
+   The six broadcasts are 2025-07-01, 2025-09-09, 2025-10-14, 2025-10-21,
+   2026-03-10, and 2026-04-21.
 
-   The pattern is detectable from spin data alone and needs no API access, but
-   only from an export that carries `DJ ID`. The older export had `DJ Name`
-   only, where both of Jim's personas render as the identical string "Jim
-   Causey", making the switch invisible.
+   The duplicate playlist records also produce duplicate spins in the merged
+   export: the same track logged twice, 2–110 seconds apart, once under each DJ
+   ID, always at or near show start. There are seven duplicate-spin pairs
+   because 2025-10-14 contains two affected tracks.
+
+   The duplicate-spin pattern is detectable from spin data alone, but the fact
+   that it came from two playlist records is not: that requires the public
+   playlist index (or the Spinitron API). The older export had `DJ Name` only,
+   where both of Jim's personas render as the identical string "Jim Causey",
+   making even the persona switch invisible.
 
    The paired rows are **not** redundant — they disagree on `UPC`, `Local`,
    `Song note`, `Release`, `Released`, and `Duration`, with one side usually
@@ -178,8 +189,8 @@ DST handling to get wrong. All 164 broadcasts resolve to a unique value.
 `dj_ids` is an array rather than a single value, because the mid-show persona
 switches described above genuinely produce two logins for one real broadcast —
 a singular field could not represent a case the data is already known to
-contain. `spinitron_playlist_ids` is an array for symmetry and future safety
-rather than observed need; every broadcast in the current data has exactly one.
+contain. `spinitron_playlist_ids` is also necessarily an array: 158 broadcasts
+have one playlist ID and the six persona-switch broadcasts have two.
 
 ## `Spin.id` is opaque, because `sequence` is mutable
 

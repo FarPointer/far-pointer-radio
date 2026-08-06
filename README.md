@@ -23,7 +23,7 @@ far-pointer-radio/
 ├── shows/
 │   └── convergence-zone/       # Convergence Zone show materials
 │       ├── playlists/          # Episode playlists (Spinitron exports, CSV, etc.)
-│       ├── website/            # WordPress theme overrides, assets, copy
+│       ├── website/            # Design mockups from an earlier (paused) rebuild exploration
 │       ├── images/             # Show images (logos, banners, photos)
 │       └── docs/               # Show notes, rundowns, SOPs
 │           └── press-kit/      # One sheets, bios, press materials

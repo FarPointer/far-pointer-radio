@@ -14,7 +14,12 @@ One command, no arguments, from anywhere:
 ```sh
 uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml python build.py
 uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml python verify.py
+uv run --with openpyxl python enrich_missing_spins.py
 ```
+
+The third command backfills import-ready `Release` (year), `Local`, `Duration`, and
+`Label` columns in `shows/convergence-zone/playlists/analysis/cz-missing-spins.xlsx`
+and refreshes `cz-removal-candidates.csv` from the `Remove or replace` sheet.
 
 Rebuilds are idempotent — a run that changes nothing produces a zero-line diff, which is
 what makes the cache reviewable in a pull request. Every loader also runs standalone

@@ -8,11 +8,23 @@ themselves — expect them to be superseded once the corrections are applied.
 
 | File | Contents |
 |---|---|
-| `cz-missing-spins.xlsx` | Two-sheet reconciliation workbook covering MichaelG's episodes |
+| `cz-missing-spins.xlsx` | Two-sheet reconciliation workbook covering every MichaelG episode |
 | `cz-removal-candidates.csv` | Flat export of the removal-candidate sheet, for diffing and scripting |
 | `cz-playlist-spinitron-audit.xlsx` | Published/prep set lists vs Spinitron, for the 68 broadcasts where both exist |
 
 ## cz-missing-spins.xlsx
+
+Generated — do not hand-edit. `czcache/build_missing_spins.py` writes both sheets and
+`czcache/enrich_missing_spins.py` fills the metadata columns and the CSV export. Every
+date with a workbook in `../sources/michaelg/` is re-audited on each run, against the
+Spinitron export `czcache/paths.py` points at, so a new workbook or a fresh export is
+picked up without editing either script.
+
+Suggested times are interpolated across the log gap a run of missing tracks falls into,
+where the gap is bounded by the *matched* spins on either side in workbook order. An
+unmatched spin does not bound a gap: it is itself under review, and often turns out to be
+one of the missing tracks logged under the wrong artist — which is what the amber hints
+name.
 
 | Sheet | Contents |
 |---|---|

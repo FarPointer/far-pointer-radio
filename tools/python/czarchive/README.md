@@ -38,6 +38,12 @@ uv run czarchive run                   # download then upload in one step
 
 Downloads land in `output_dir` (default `~/shows`).
 
+## Docs
+
+| Document | Summary |
+|---|---|
+| [`docs/spinitron-ecosystem-research.md`](docs/spinitron-ecosystem-research.md) | Survey of Spinitron GitHub utilities, comparison with czarchive, and prioritized fix list |
+
 ## Notes
 
 - The Spinitron API key is optional — without it, playlist data is scraped instead.

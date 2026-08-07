@@ -29,7 +29,7 @@ SOURCES = (Path(__file__).resolve().parents[3]
            / "shows/convergence-zone/playlists/sources")
 # See scrape_site.py -- both read the export czcache builds from, so the audit workbook
 # and the cache are never reconciling different files.
-SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-5-19-8-4-26-for-KSER.csv"
+SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-8-19-8-7-26-for-KSER.csv"
 EPISODES_JSON = HERE / "onenote_episodes.json"
 SITE_JSON = HERE / "site_episodes.json"
 OUT_XLSX = HERE / "cz-playlist-spinitron-audit.xlsx"

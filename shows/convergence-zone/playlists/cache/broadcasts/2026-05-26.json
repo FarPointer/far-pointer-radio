@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_3b29dc9e5607cb1d",
+      "id": "sp_2491d7dafa0e88a2",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2026-05-26T20:30:00-0700",
       "offset_seconds": null,
       "artist": "Nouveau Arcade",
       "artist_key": null,
@@ -44,13 +44,14 @@
       "release": "Die Happy!",
       "isrc": null,
       "upc": null,
-      "duration_seconds": null,
+      "duration_seconds": 177,
       "released_date": "2026-04-10",
       "released_precision": "day",
       "label": "Ninety9Lives",
       "local": true,
       "local_basis": [
-        "artist"
+        "artist",
+        "dj_flag"
       ],
       "artist_origin_raw": "Seattle, WA",
       "label_origin_raw": null,
@@ -58,15 +59,16 @@
       "song_note": null,
       "publish_note": "K-7 and Len X are Nouveau Arcade, a Seattle-based electronic duo building at the intersection of synthwave, cyberpunk, alternative rock, industrial, goth, and new romantic. Before this project, they spent nearly two decades on stages most bands never reach. Nouveau Arcade is what happens when they stop answering to anyone else.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_0c381696586afbe5",
+      "id": "sp_07082e8a3ea230c8",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
       "sequence": 2,
-      "logged_at": null,
+      "logged_at": "2026-05-26T20:36:00-0700",
       "offset_seconds": null,
       "artist": "Carpenter Brut",
       "artist_key": null,
@@ -86,15 +88,16 @@
       "song_note": null,
       "publish_note": "Franck Hueso,[1][2] better known by his stage name Carpenter Brut, is a French darksynth musician from Poitiers, France.[3] He first released three EPs, EP I (2012), EP II (2013) and EP III (2015), which were later released together as his debut album Trilogy (2015). He has since released four additional studio albums, Leather Teeth (2018), Blood Machines OST (2020), Leather Terror (2022), and Leather Temple (2026) along with one live album, CarpenterBrutLive (2017). He has also contributed original music to a variety of soundtracks, both for film and video games. Carpenter Brut claims his relative anonymity is a deliberate artistic choice in order to place more importance on the music itself, rather than the identity of the musician behind it.[4] He started writing music as Carpenter Brut with the intention of mixing sounds from horror films, metal, rock, and electronic music.[4] In live performances, Carpenter Brut is joined on stage by guitarist Adrien Grousset and drummer Florent Marcadet, both from the French metal band Hacride.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_ba0f31175dddd992",
+      "id": "sp_05545f1d6f6007f7",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
       "sequence": 3,
-      "logged_at": null,
+      "logged_at": "2026-05-26T20:39:00-0700",
       "offset_seconds": null,
       "artist": "Lullabies From A Gemini",
       "artist_key": null,
@@ -116,6 +119,7 @@
       "song_note": null,
       "publish_note": "No Info",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -475,11 +479,11 @@
       ]
     },
     {
-      "id": "sp_5fdbf488723057b5",
+      "id": "sp_b65bac3b88fe5222",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
       "sequence": 16,
-      "logged_at": null,
+      "logged_at": "2026-05-26T21:38:00-0700",
       "offset_seconds": null,
       "artist": "Sirendia",
       "artist_key": null,
@@ -501,6 +505,7 @@
       "song_note": null,
       "publish_note": "Sirendia is a Seatle-based trip hop duo. Producer and multi-instrumentalist Jacob Savishinsky and vocalist Isobel Avian mix thick beats and dreamy soundscapes with bottomless layers of ethereal vocal harmonies to create chill but compelling vibes.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -511,13 +516,41 @@
       "sequence": 17,
       "logged_at": "2026-05-26T21:41:37-0700",
       "offset_seconds": null,
+      "artist": "BT",
+      "artist_key": null,
+      "song": "The Uncanny Valley",
+      "release": "Metaversal",
+      "isrc": "NLE712100824",
+      "upc": "8718525242691",
+      "duration_seconds": 398,
+      "released_date": "2021",
+      "released_precision": "year",
+      "label": "Black Hole Recordings",
+      "local": null,
+      "local_basis": [],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
+      ]
+    },
+    {
+      "id": "sp_ede96726b1e36049",
+      "broadcast_id": "2026-05-26T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 18,
+      "logged_at": "2026-05-26T21:43:00-0700",
+      "offset_seconds": null,
       "artist": "BT (Brian Wayne Transeau)",
       "artist_key": null,
       "song": "The Uncanny Valley (Night Mode)",
       "release": "Metaversal (Night Mode)",
-      "isrc": "NLE712100824",
-      "upc": "8718525242691",
-      "duration_seconds": 398,
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
       "released_date": "2026-05-15",
       "released_precision": "day",
       "label": "Black Hole Recordings",
@@ -536,11 +569,11 @@
       ]
     },
     {
-      "id": "sp_10cd692c0e054b29",
+      "id": "sp_2014e5082c4a061a",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 18,
-      "logged_at": null,
+      "sequence": 19,
+      "logged_at": "2026-05-26T21:48:00-0700",
       "offset_seconds": null,
       "artist": "RandomPerson21",
       "artist_key": null,
@@ -562,15 +595,16 @@
       "song_note": null,
       "publish_note": "Just some music I make for fun. Everything here is free to download and you can use it however you want.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_b0f4eb0dd6c5ffb8",
+      "id": "sp_50963f056672c517",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 19,
-      "logged_at": null,
+      "sequence": 20,
+      "logged_at": "2026-05-26T21:54:00-0700",
       "offset_seconds": null,
       "artist": "Wetman (Remix by Meridian)",
       "artist_key": null,
@@ -592,6 +626,7 @@
       "song_note": null,
       "publish_note": "HVS is stoked to have Wetman back for the second time on the label! This is part one of a two part series showcasing original tunes from Wetman and remixes of those tunes, so stay locked for the next one soon! Dan had initially sent me two original tracks of his along with the two remixes of “Inside” from Etch & Meridian. We both agreed it would be cool to spread out the tracks into a series since there were already two remixes of the same tune, so Laramie and I whipped up a third mix and here we are! As most of you know, Dan and I both started Vivid way back in 2017 so it's really really awesome to still be releasing tunes from him almost 10 years later! Dan has since gone back down to Cali while I'm stuck up here in Seattle, but we still collaborate as often as we can. His original mix is so damn creative and probably the wildest mix of the bunch. Excellently sourced samples per usual from him, most of which I didn't know, but Meridian is actually the one that tipped me on the Harold Budd sample! I first heard BC badman Meridian's EP on Disrupt Records when it came out a couple years back, and was floored with his tunes! I was really excited to have a mix from him for this. And his mix really delivers IMO. With some seriously precision cuts/choppage and a really excellent balance of light and dark in the mix. It's very cool having a (sort of) local producer on the label as well!",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -599,7 +634,7 @@
       "id": "sp_d3cb8b1933fec92d",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 20,
+      "sequence": 21,
       "logged_at": "2026-05-26T21:59:07-0700",
       "offset_seconds": null,
       "artist": "Pink Floyd",
@@ -625,11 +660,11 @@
       ]
     },
     {
-      "id": "sp_9c649098ead2e5c5",
+      "id": "sp_e3d36fe01603564c",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 21,
-      "logged_at": null,
+      "sequence": 22,
+      "logged_at": "2026-05-26T22:04:00-0700",
       "offset_seconds": null,
       "artist": "Shearwater",
       "artist_key": null,
@@ -649,6 +684,7 @@
       "song_note": null,
       "publish_note": "The New World is also a risk that paid off. After years of working with record labels, Shearwater chose to crowdfund the album and release it themselves, letting them assemble it across four years of traveling, fieldwork, and collaboration. (It was recorded in London, Berlin, New York, and the band’s Texas headquarters, with Duszynski as chief engineer and additional production by Leo Abrahams; it was mixed in Los Angeles by Danny Reisch.) Meiburg’s field recordings are woven throughout, stretching the record’s geographic range even further; there are German church bells and blackbirds, Tasmanian rivers and forest ravens, coyotes in the California mountains. At the end of our call, I can’t help asking how the science and music bleed into each other. “I used to worry about keeping those worlds separate,” Meiburg replies. “But now it all feels like one big project.”",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -656,7 +692,7 @@
       "id": "sp_d778f5ae8f443992",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 22,
+      "sequence": 23,
       "logged_at": "2026-05-26T22:10:18-0700",
       "offset_seconds": null,
       "artist": "God Is An Astronaut",
@@ -685,7 +721,7 @@
       "id": "sp_37b2a3c01f96837c",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 23,
+      "sequence": 24,
       "logged_at": "2026-05-26T22:16:20-0700",
       "offset_seconds": null,
       "artist": "Chronotope Project",
@@ -716,7 +752,7 @@
       "id": "sp_e970d790e31643e4",
       "broadcast_id": "2026-05-26T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 24,
+      "sequence": 25,
       "logged_at": "2026-05-26T22:20:54-0700",
       "offset_seconds": null,
       "artist": "Max Stephens (with Sam Morrison)",

@@ -25,10 +25,11 @@ established by eye before it is added to `extract.SPECS`.
 .venv/bin/python dump_tables.py <file.md> --rows 5   # one file, more rows
 ```
 
-"the Spinitron CSV" means `Spins-search-results-12-5-19-8-4-26-for-KSER.csv` — the same
+"the Spinitron CSV" means `Spins-search-results-12-8-19-8-7-26-for-KSER.csv` — the same
 export `czcache` builds the cache from, so the audit and the cache are never reconciling
-different files. The older `Spinssearchresults84208326forKSER.csv` is kept as an archived
-export and is no longer read.
+different files. Earlier exports are kept as archives and are no longer read; when a
+newer one lands, change the path in `build_audit.py`, `scrape_site.py`, and
+`czcache/paths.py` together.
 
 The JSON files are intermediate and land beside the scripts; only the CSVs and the
 workbook belong in the repo, so `site_html/`, the JSONs, and the scripts' own copy of the

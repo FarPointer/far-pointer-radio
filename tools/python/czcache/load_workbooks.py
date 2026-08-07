@@ -139,7 +139,7 @@ def parse_file(path):
     title_cell = next((_text(c) for r in rows[:hi] for c in r if _text(c)), None)
 
     tracks = []
-    for row in rows[hi + 1:]:
+    for row_offset, row in enumerate(rows[hi + 1:], hi + 2):
         def get(field, first_line=False):
             i = colmap.get(field)
             if i is None or i >= len(row):
@@ -153,10 +153,15 @@ def parse_file(path):
         released, precision = parse_released(get("released"))
         tracks.append({
             "seq": len(tracks) + 1,          # row position; "Order" is not a number
+            # The 1-based row this came from, so an audit finding can be pointed back at
+            # the cell a human has to edit. Not part of the cache -- make_spin takes
+            # explicit keyword arguments, so nothing here reaches the datastore.
+            "sheet_row": row_offset,
             "artist": artist,
             "song": song,
             "release": get("release"),
             "label": get("label"),
+            "released_raw": get("released"),
             "released_date": released,
             "released_precision": precision,
             "origin": get("origin"),

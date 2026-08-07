@@ -29,7 +29,9 @@ SOURCES = (Path(__file__).resolve().parents[3]
            / "shows/convergence-zone/playlists/sources")
 # See scrape_site.py -- both read the export czcache builds from, so the audit workbook
 # and the cache are never reconciling different files.
-SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-5-19-8-4-26-for-KSER.csv"
+SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-8-19-8-7-26-for-KSER.csv"
+ONENOTE_DIR = SOURCES / "farpointer-onenote"
+CZFM_DIR = SOURCES / "convergencezone.fm"
 EPISODES_JSON = HERE / "onenote_episodes.json"
 SITE_JSON = HERE / "site_episodes.json"
 OUT_XLSX = HERE / "cz-playlist-spinitron-audit.xlsx"
@@ -460,6 +462,29 @@ def main():
         fills=extra_fills, wrap_cols={"Assessment", "Episode verdict", "Song"},
     )
 
+    # Every count on this sheet is measured now, from the same objects the workbook was
+    # built from. Writing them down would guarantee they go stale the next time a source
+    # is re-exported -- which is exactly what the sheet is meant to describe.
+    all_spins = [s for ss in spins_by_date.values() for s in ss]
+    spin_dates = sorted(spins_by_date)
+    span = (f"{spin_dates[0].isoformat()} to {spin_dates[-1].isoformat()}"
+            if spin_dates else "no spins in the export")
+    onenote_files = len(list(ONENOTE_DIR.rglob("*.md")))
+    onenote_with_tracks = sum(1 for r in reference.values()
+                              if r["source"] == "OneNote prep note")
+    site_broadcasts = sum(1 for r in reference.values()
+                          if r["source"] != "OneNote prep note")
+    archived_playlists = len(list(CZFM_DIR.glob("*.csv")))
+    if site_broadcasts:
+        site_note = (f"{site_broadcasts} broadcasts bound to one of the "
+                     f"{archived_playlists} archived convergencezone.fm playlists; the "
+                     f"rest of those playlists never matched a Spinitron broadcast, "
+                     f"having aired before Spinitron logging began.")
+    else:
+        site_note = (f"The site scrape did not run, so none of the "
+                     f"{archived_playlists} archived convergencezone.fm playlists were "
+                     f"used - every audited broadcast fell back to its OneNote note.")
+
     method_rows = [
         ["What this compares", "Spinitron's as-aired log against the best available "
                                "account of what each show was meant to contain."],
@@ -501,17 +526,15 @@ def main():
                                      "to copy into Spinitron - but not uniformly: the "
                                      "site spells 'Erwillian' where the note has the "
                                      "correct 'Erwilian'."],
-        ["Spinitron export", f"{SPINS_CSV.name} - 3,282 spins across 164 playlists, "
-                             f"2023-05-30 to 2026-07-28."],
-        ["Broadcasts audited", f"{len(summary)} of 164 Spinitron playlists - the ones "
-                               f"with a matching set list. The rest have neither a "
-                               f"published playlist nor a usable prep note."],
-        ["Not auditable", "67 of 83 OneNote files are promo blurbs with no track "
-                          "listing. 39 of 66 site posts are promo prose with no "
-                          "playlist table. Four published playlists never matched any "
-                          "Spinitron broadcast (episodes 003, 009, 010, 011): they "
-                          "aired before Spinitron logging began on 2023-05-30 and were "
-                          "never replayed."],
+        ["Spinitron export", f"{SPINS_CSV.name} - {len(all_spins):,} spins across "
+                             f"{len(spins_by_date)} broadcast dates, {span}."],
+        ["Broadcasts audited", f"{len(summary)} of {len(spins_by_date)} Spinitron "
+                               f"broadcast dates - the ones with a matching set list. "
+                               f"The rest have neither a published playlist nor a "
+                               f"usable prep note."],
+        ["Not auditable", f"{onenote_files - onenote_with_tracks} of {onenote_files} "
+                          f"OneNote files are promo blurbs with no track listing. "
+                          + site_note],
         ["Direction of trust", "Spinitron is the as-aired log; the reference is a plan "
                                "written beforehand. A reference entry with no spin is a "
                                "candidate omission. A spin with no reference entry is "

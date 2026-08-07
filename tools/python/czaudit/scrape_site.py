@@ -31,9 +31,9 @@ SITEMAP = HTML_DIR / "sitemap-posts.xml"
 OUT_JSON = HERE / "site_episodes.json"
 SOURCES = Path(__file__).resolve().parents[3] / "shows/convergence-zone/playlists/sources"
 # The same export czcache builds from, so the audit and the cache can never disagree
-# about what Spinitron says. The older Spinssearchresults84208326forKSER.csv holds the
-# identical 3,282 spins but lacks DJ ID and Playlist Date-time.
-SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-5-19-8-4-26-for-KSER.csv"
+# about what Spinitron says. The archived Spinssearchresults84208326forKSER.csv lacks
+# DJ ID and Playlist Date-time, and stops earlier.
+SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-8-19-8-7-26-for-KSER.csv"
 OUT_CSV_DIR = SOURCES / "convergencezone.fm"
 
 ALIASES = {

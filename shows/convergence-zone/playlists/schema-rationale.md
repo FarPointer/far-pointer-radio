@@ -27,11 +27,12 @@ that were originally measured by hand are now enforced by its `verify.py`.
 | OneNote notes | ~40 notes for 2023, ~31 for 2024, plus 2025 files | Near-complete set-list coverage across three years, and the **only** set-list source for Jul 2024 – Apr 2025. Carries the on-air promo blurb (feeds `description`), release dates, geographic origin, artist death dates, Bandcamp links | Prose and set list mixed in one freeform document; no timestamps; a plan, not proof of airing |
 | Email / ad hoc | Occasional | Documented repeat airings | Unstructured |
 
-Two Spinitron exports are archived. Ingest reads
-`Spins-search-results-12-5-19-8-4-26-for-KSER.csv`; the older
-`Spinssearchresults84208326forKSER.csv` covers the identical 3,282 spins but
-lacks `DJ ID`, `Playlist Date-time`, and `Playlist Duration`, and several
-findings below are invisible without them.
+Three Spinitron exports are archived. Ingest reads the newest,
+`Spins-search-results-12-8-19-8-7-26-for-KSER.csv`; the oldest,
+`Spinssearchresults84208326forKSER.csv`, lacks `DJ ID`, `Playlist Date-time`,
+and `Playlist Duration`, and several findings below are invisible without them.
+Counts quoted in this document were measured against the export current when it
+was written and are not re-derived when a newer one lands.
 
 ## Two entities, not three
 
@@ -271,7 +272,7 @@ archive (139 broadcasts), and 174269 is a second account of his, first seen
 189849 ("Michael G."), appears on exactly one broadcast. Storing the raw ID
 keeps that distinction rather than collapsing it into an ambiguous name.
 
-The current export — `Spins-search-results-12-5-19-8-4-26-for-KSER.csv` —
+The current export — `Spins-search-results-12-8-19-8-7-26-for-KSER.csv` —
 carries a `DJ ID` column, so `dj_ids` **is** derivable from the CSV. (The older
 `Spinssearchresults84208326forKSER.csv` had `DJ Name` only, where both of Jim's
 personas render as the identical string, which is why several of the findings

@@ -14,12 +14,18 @@ One command, no arguments, from anywhere:
 ```sh
 uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml python build.py
 uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml python verify.py
+uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml \
+    python build_missing_spins.py
 uv run --with openpyxl python enrich_missing_spins.py
 ```
 
-The third command backfills import-ready `Release` (year), `Local`, `Duration`, and
-`Label` columns in `shows/convergence-zone/playlists/analysis/cz-missing-spins.xlsx`
-and refreshes `cz-removal-candidates.csv` from the `Remove or replace` sheet.
+The last two commands own
+`shows/convergence-zone/playlists/analysis/cz-missing-spins.xlsx`, and run in that order.
+`build_missing_spins.py` re-audits **every** date that has a MichaelG workbook — adding a
+workbook or re-exporting the Spinitron search is enough to bring a new episode in, since
+no list of episodes is written down anywhere. `enrich_missing_spins.py` then backfills the
+import-ready `Release` (year), `Local`, `Duration`, and `Label` columns and refreshes
+`cz-removal-candidates.csv` from the `Remove or replace` sheet.
 
 Rebuilds are idempotent — a run that changes nothing produces a zero-line diff, which is
 what makes the cache reviewable in a pull request. Every loader also runs standalone
@@ -35,7 +41,7 @@ what a source actually contains.
 | `fetch_spinitron_playlists.py` | Snapshots playlist IDs and URLs from the public Convergence Zone show-history page; no API key required |
 | `load_spinitron.py` | The Spinitron export → broadcast skeletons and logged spins; merges cross-persona duplicate spins |
 | `repeats.py` | Archive-wide overlap clustering → `first_broadcast_id` |
-| `load_workbooks.py` | MichaelG's 28 `.xlsx` workbooks across five header layouts |
+| `load_workbooks.py` | MichaelG's `.xlsx` workbooks across five header layouts |
 | `load_setlists.py` | convergencezone.fm CSVs and OneNote tables, bound to broadcasts by content |
 | `load_prose.py` | OneNote prose → candidate broadcast descriptions |
 | `fetch_instagram_promos.py` | Reuse-first Instagram caption ingest (`instaloader`, Graph API, or JSON dump) → `sources/instagram/promos.json` |
@@ -45,6 +51,8 @@ what a source actually contains.
 | `emit.py` | Writes `cache/` and `reports/` |
 | `build.py` | Entry point |
 | `verify.py` | Asserts the invariants the build guarantees; exits non-zero on failure |
+| `build_missing_spins.py` | Workbooks vs Spinitron → the two sheets of `cz-missing-spins.xlsx` |
+| `enrich_missing_spins.py` | Fills that workbook's import-ready metadata columns and the CSV export |
 
 ## The three classes
 
@@ -97,10 +105,14 @@ whenever a source does). Never blocking: the cache is always complete.
 
 ## Source of truth for spins
 
-Read `Spins-search-results-12-5-19-8-4-26-for-KSER.csv`, not the older
-`Spinssearchresults84208326forKSER.csv`. Both cover the same 3,282 spins, but only the
-newer one has `DJ ID`, `Playlist Date-time`, and `Playlist Duration`. The loader asserts
-its expected columns, so a re-export in the old format fails loudly.
+Read the newest export, `Spins-search-results-12-8-19-8-7-26-for-KSER.csv`, not the
+archived `Spinssearchresults84208326forKSER.csv` or the superseded
+`Spins-search-results-12-5-19-8-4-26-for-KSER.csv`. Only the `Spins-search-results-`
+exports carry `DJ ID`, `Playlist Date-time`, and `Playlist Duration`. The loader asserts
+its expected columns, so a re-export in the old format fails loudly. Nothing in the build
+or in `verify.py` records how many rows, playlists, or broadcasts an export contains —
+those are counted at run time, so a fresh export is picked up by changing `SPINS_CSV` in
+`paths.py` and rerunning.
 
 ## Spinitron playlist IDs
 

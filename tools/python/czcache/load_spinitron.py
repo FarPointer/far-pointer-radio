@@ -1,6 +1,6 @@
 """Read the Spinitron export into Broadcast skeletons and logged Spins.
 
-This is the spine of the cache: every one of the 164 broadcasts exists here, and the
+This is the spine of the cache: every broadcast in the export exists here, and the
 other loaders only enrich what this produces.
 
 Two things in the export need care.

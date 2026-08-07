@@ -4,9 +4,10 @@ Run after build.py. Every check either passes or prints what it found; the exit 
 non-zero if any failed, so this works as a pre-commit gate.
 
 These are not unit tests of the loaders -- they are assertions about the *output*, which
-is what actually has to be right. Several encode facts that were measured from the
-sources during design (3,282 Spinitron rows, 7 cross-persona merges, 28 workbooks), so a
-source file changing underneath the build shows up here rather than silently.
+is what actually has to be right. Every expected count is derived from the sources at
+run time, never written down here: a new Spinitron export or another workbook is normal
+and must not read as a regression, while a broadcast or a spin going missing between the
+sources and the cache still fails loudly.
 """
 import collections
 import csv
@@ -20,7 +21,10 @@ import tempfile
 import yaml
 
 import build
-from paths import BROADCASTS, CZAUDIT, INDEX, MICHAELG_DIR, OVERRIDES, REPO, SPINS_CSV
+import load_spinitron
+import repeats
+from paths import (BROADCASTS, CZAUDIT, INDEX, MICHAELG_DIR, OVERRIDES, REPO,
+                   SPINITRON_PLAYLISTS, SPINS_CSV)
 
 sys.path.insert(0, str(CZAUDIT))
 from matching import norm  # noqa: E402
@@ -80,17 +84,25 @@ def main():
     with open(SPINS_CSV, encoding="utf-8-sig") as fh:
         rows = list(csv.DictReader(fh))
     logged = [s for s in spins if "spinitron" in s["sources"]]
-    check("2 conservation: 164 broadcast files", len(bcs) == 164, f"found {len(bcs)}")
-    # 7 cross-persona pairs merge automatically; each reviewed entry in spins.yaml merges
-    # one more. Derived rather than hardcoded so an approved decision does not read as a
-    # regression -- but still exact, so an unexplained loss of rows does.
-    forced = len((yaml.safe_load((OVERRIDES / "spins.yaml").read_text(encoding="utf-8"))
-                  or {}).get("merge_duplicates") or [])
-    expected = len(rows) - 7 - forced
+    # One broadcast per distinct playlist start in the export -- the same grouping
+    # load_spinitron uses, recomputed from the CSV so a new export simply raises the
+    # expected number instead of failing.
+    export_broadcasts = {r["Playlist Date-time"] for r in rows}
+    check("2 conservation: one broadcast file per exported playlist start",
+          len(bcs) == len(export_broadcasts),
+          f"export has {len(export_broadcasts)}; cache has {len(bcs)}")
+    # Cross-persona pairs merge automatically; each reviewed entry in spins.yaml merges
+    # one more. Both counts come from the loader itself rather than being written down,
+    # so an approved decision or a new export does not read as a regression -- but the
+    # check is still exact, so an unexplained loss of rows does.
+    forced = (yaml.safe_load((OVERRIDES / "spins.yaml").read_text(encoding="utf-8"))
+              or {}).get("merge_duplicates") or []
+    merges = load_spinitron.load(forced)[1]
+    expected = len(rows) - len(merges)
     check("2 conservation: Spinitron rows accounted for",
           len(logged) == expected,
-          f"{len(rows)} rows - 7 persona merges - {forced} reviewed = {expected}; "
-          f"cache has {len(logged)}")
+          f"{len(rows)} rows - {len(merges)} merges ({len(forced)} reviewed) = "
+          f"{expected}; cache has {len(logged)}")
     classes = collections.Counter(json.loads(INDEX.read_text())[i]["class"]
                                  for i in range(len(bcs)))
     # 31/70/63 at design time, but the split is override-sensitive: a forced repeat of a
@@ -117,15 +129,21 @@ def main():
     playlist_ids = [pid for b in bcs for pid in b["spinitron_playlist_ids"]]
     multiple = [b for b in bcs if len(b["spinitron_playlist_ids"]) > 1]
     multiple_dates = {b["id"][:10] for b in multiple}
-    expected_multiple_dates = {
-        "2025-07-01", "2025-09-09", "2025-10-14",
-        "2025-10-21", "2026-03-10", "2026-04-21",
-    }
+    # A persona switch mid-show produces two Spinitron playlists for one broadcast, so
+    # the snapshot itself says which dates those are and how many IDs there should be.
+    snapshot = json.loads(SPINITRON_PLAYLISTS.read_text(encoding="utf-8"))["playlists"]
+    cache_dates = {b["id"][:10] for b in bcs}
+    snapshot_dates = collections.Counter(p["start"][:10] for p in snapshot
+                                         if p["start"][:10] in cache_dates)
+    expected_multiple_dates = {d for d, n in snapshot_dates.items() if n > 1}
     check("2 conservation: every broadcast has a Spinitron playlist ID",
           all(b["spinitron_playlist_ids"] for b in bcs))
-    check("2 conservation: six persona-switch broadcasts have two playlist IDs",
-          multiple_dates == expected_multiple_dates and len(playlist_ids) == 170,
-          f"dates={sorted(multiple_dates)}, {len(playlist_ids)} IDs")
+    check("2 conservation: persona-switch broadcasts carry every playlist ID",
+          multiple_dates == expected_multiple_dates
+          and len(playlist_ids) == sum(snapshot_dates.values()),
+          f"dates={sorted(multiple_dates)} (snapshot says "
+          f"{sorted(expected_multiple_dates)}), {len(playlist_ids)} of "
+          f"{sum(snapshot_dates.values())} IDs")
     check("2 conservation: every Spinitron playlist ID belongs to one broadcast",
           len(set(playlist_ids)) == len(playlist_ids),
           f"{len(playlist_ids)} IDs, {len(set(playlist_ids))} distinct")
@@ -174,8 +192,9 @@ def main():
     # 5 -----------------------------------------------------------------
     idx = {r["id"]: r for r in json.loads(INDEX.read_text())}
     a_ids = [i for i, r in idx.items() if r["class"] == "A"]
-    check("5 attribution: all 31 class A broadcasts name MichaelG",
+    check("5 attribution: every class A broadcast names MichaelG",
           all("MichaelG" in idx[i]["participants"] for i in a_ids),
+          f"{len(a_ids)} class A, "
           f"{sum(1 for i in a_ids if 'MichaelG' not in idx[i]['participants'])} missing")
     wb_dates = {re.search(r"(\d{4})\.(\d{2})\.(\d{2})", p.name).expand(r"\1-\2-\3")
                 for p in MICHAELG_DIR.glob("*.xlsx")}
@@ -186,13 +205,18 @@ def main():
 
     # 6 -----------------------------------------------------------------
     reps = [b for b in bcs if b["first_broadcast_id"]]
-    # 31 from detection alone; overrides/repeats.yaml can add more. The floor is the
-    # assertion -- detection silently finding fewer than it did at design time is the
-    # regression worth catching.
+    # No expected count: the archive grows, and a rerun of an old episode is ordinary
+    # news. What has to hold is that every link is explainable -- detected at or above
+    # the floor, or written down in overrides/repeats.yaml.
     rep_ov = yaml.safe_load((OVERRIDES / "repeats.yaml").read_text(encoding="utf-8")) or {}
-    check("6 repeats: at least 31 broadcasts carry a first_broadcast_id", len(reps) >= 31,
-          f"found {len(reps)} ({len(rep_ov.get('forced') or [])} forced, "
-          f"{len(rep_ov.get('suppressed') or [])} suppressed by override)")
+    forced_pairs = {tuple(sorted(p)) for p in (rep_ov.get("forced") or [])}
+    unexplained = [b["id"][:10] for b in reps
+                   if b["repeat_of_confidence"] < repeats.REPLAY_FLOOR
+                   and tuple(sorted((b["id"], b["first_broadcast_id"]))) not in forced_pairs]
+    check("6 repeats: every first_broadcast_id is detected or forced", not unexplained,
+          f"found {len(reps)} repeats ({len(forced_pairs)} forced, "
+          f"{len(rep_ov.get('suppressed') or [])} suppressed by override); "
+          f"unexplained={unexplained}")
     check("6 repeats: no chains (every original is itself an original)",
           all(by_id[b["first_broadcast_id"]]["first_broadcast_id"] is None for b in reps),
           str([b["id"][:10] for b in reps

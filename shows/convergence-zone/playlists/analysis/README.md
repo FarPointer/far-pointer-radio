@@ -16,11 +16,12 @@ themselves — expect them to be superseded once the corrections are applied.
 
 | Sheet | Contents |
 |---|---|
-| `Add missing` | Tracks present in MichaelG's workbooks but absent from Spinitron, with a suggested insertion timestamp, a confidence rating, and the source sheet row. Gray rows sit in tight log windows and may not have actually aired — MichaelG confirms those. |
-| `Remove or replace` | Spins logged in Spinitron with no counterpart in the workbooks. Amber rows carry a hint naming a nearby missing track the spin may actually be; those get **edited in place** rather than removed, and the matching row on `Add missing` is skipped. |
+| `Add missing` | Tracks present in MichaelG's workbooks but absent from Spinitron, with a suggested insertion timestamp, `Release` year, `Local` flag, `Duration`, `Label`, confidence rating, and source sheet row. Gray rows sit in tight log windows and may not have actually aired — MichaelG confirms those. |
+| `Remove or replace` | Spins logged in Spinitron with no counterpart in the workbooks, plus `Release` year, `Local`, `Duration`, and `Label` for direct Spinitron import prep. Amber rows carry a hint naming a nearby missing track the spin may actually be; those get **edited in place** rather than removed, and the matching row on `Add missing` is skipped. |
 
-`cz-removal-candidates.csv` is the `Remove or replace` sheet as CSV, with the
-amber hints in the `hint` column.
+`cz-removal-candidates.csv` is the `Remove or replace` sheet as CSV, including
+`release` (year), `local`, `duration`, and `label` columns plus the amber hints
+in `hint`.
 
 ## cz-playlist-spinitron-audit.xlsx
 

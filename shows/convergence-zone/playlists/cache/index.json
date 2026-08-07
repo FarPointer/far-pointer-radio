@@ -1855,7 +1855,7 @@
     "date": "2026-05-26",
     "episode_number": null,
     "class": "A",
-    "spins": 24,
+    "spins": 25,
     "participants": [
       "MichaelG"
     ],
@@ -1966,6 +1966,18 @@
     "spins": 22,
     "participants": [
       "Jim Causey"
+    ],
+    "first_broadcast_id": null,
+    "description_status": null
+  },
+  {
+    "id": "2026-08-04T20:00:00-0700",
+    "date": "2026-08-04",
+    "episode_number": null,
+    "class": "A",
+    "spins": 30,
+    "participants": [
+      "MichaelG"
     ],
     "first_broadcast_id": null,
     "description_status": null

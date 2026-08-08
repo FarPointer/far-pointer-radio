@@ -1,0 +1,16 @@
+repeat_detection:
+  replay_floor: 0.60
+  review_band:
+    - 0.40
+    - 0.95
+
+setlist_binding:
+  corroborated_floor: 0.30
+  replay_floor: 0.60
+
+description_extraction:
+  min_words: 8
+  min_chars: 120
+
+description_gate:
+  proposed_score_floor: 0.75

@@ -17,6 +17,7 @@ date in each component as the original.
 import sys
 
 from paths import CZAUDIT
+from rules import RULES
 
 sys.path.insert(0, str(CZAUDIT))
 from matching import overlap  # noqa: E402
@@ -25,11 +26,11 @@ from matching import overlap  # noqa: E402
 # published page describes a replay rather than the week it was posted. `overlap` is
 # deliberately strict (exact normalised artist+song), and neighbouring weeks share very
 # few exact pairs, so this does not fire on merely similar programming.
-REPLAY_FLOOR = 0.60
+REPLAY_FLOOR = float(RULES["repeat_detection"]["replay_floor"])
 
 # Pairs in this band are written to the review report. Below it, nothing interesting;
 # above it, not worth a human's attention.
-REVIEW_BAND = (0.40, 0.95)
+REVIEW_BAND = tuple(RULES["repeat_detection"]["review_band"])
 
 
 def _find(parent, x):

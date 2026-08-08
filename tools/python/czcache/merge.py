@@ -19,6 +19,7 @@ import sys
 import locality
 from model import make_broadcast, make_participant, make_spin, resequence, spin_id
 from paths import CZAUDIT, HOST_JIM, HOST_MICHAELG, SHOW_NAME
+from rules import RULES
 
 sys.path.insert(0, str(CZAUDIT))
 from build_audit import match_episode  # noqa: E402
@@ -26,6 +27,9 @@ from build_audit import match_episode  # noqa: E402
 # MichaelG has a Spinitron persona even though almost none of his shows were logged under
 # it; the participant record names the person, so the ID belongs here regardless.
 PARTICIPANT_DJ_IDS = {HOST_MICHAELG: "189849", HOST_JIM: "173567"}
+DESCRIPTION_PROPOSED_SCORE_FLOOR = float(
+    RULES["description_gate"]["proposed_score_floor"]
+)
 
 
 def classify(broadcasts, workbooks, bindings, clusters):
@@ -257,7 +261,7 @@ def apply_description(bc, prose, overrides):
         if str(override).strip().lower() == "skip":
             return None, None
         return str(override).strip(), "approved"
-    if prose and prose.get("candidate") and prose["score"] >= 0.75:
+    if prose and prose.get("candidate") and prose["score"] >= DESCRIPTION_PROPOSED_SCORE_FLOOR:
         return prose["candidate"], "proposed"
     return None, None
 

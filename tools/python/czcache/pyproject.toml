@@ -1,0 +1,23 @@
+[project]
+name = "czcache"
+version = "0.1.0"
+description = "Builds the canonical Convergence Zone playlist cache from every upstream source"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "PyYAML>=6.0",
+]
+
+# The modules here are flat scripts run in place, not an importable distribution --
+# czcache reaches into czaudit via sys.path (see paths.CZAUDIT) so the two tools can never
+# disagree about what matched what. uv manages the environment and nothing else.
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -12,8 +12,6 @@ import json
 import pathlib
 import sys
 
-import yaml
-
 import emit
 import load_prose
 import load_setlists
@@ -21,6 +19,7 @@ import load_spinitron
 import load_workbooks
 import merge
 import repeats
+import yaml
 from paths import CACHE, OVERRIDES, PUBLICATION_LINKS, REPORTS
 
 

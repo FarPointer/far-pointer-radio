@@ -19,7 +19,6 @@ import datetime as dt
 import re
 
 import openpyxl
-
 from paths import MICHAELG_DIR
 
 # Column aliases -> canonical field. Header text is lowercased and stripped first.

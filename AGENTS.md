@@ -2,7 +2,16 @@
 
 **This file is the single source of agent guidance for this repository.** `CLAUDE.md` and
 `.github/copilot-instructions.md` are pointers at this file — edit this one, never the
-pointers. Path-scoped rules live in `.github/instructions/*.instructions.md`.
+pointers.
+
+| Surface | Holds |
+|---|---|
+| `AGENTS.md` (this file) | Everything general: how the repository works, how I work, what must not be touched |
+| `.github/instructions/*.instructions.md` | Path-scoped rules, applied by `applyTo` glob |
+| `.github/skills/*/SKILL.md` | Repeatable procedures — cache rebuild, override review, publishing, code review, decision records, episode prep |
+| `.claude/hooks/` | Claude Code hooks: secret scan, overrides guard, verify reminder |
+| `.github/workflows/verify-cache.yml` | The CI gate that enforces the cache invariants |
+| `CONTRIBUTING.md` · `docs/operating-procedures.md` | The same conventions and workflows, written for a person |
 
 ## Repository
 
@@ -109,3 +118,14 @@ Credentials live in `~/.czarchive.toml`, **outside** this repo. Note that `confi
 ## Secrets
 
 Never commit: `.env*`, `~/.czarchive.toml`, Spinitron API keys, Mixcloud client secrets or OAuth tokens, or session cookies. `.gitignore` covers the common cases but is not a substitute for checking `git status` before committing.
+
+## MCP servers
+
+`.mcp.json` configures two, both chosen for work that actually happens here:
+
+- **github** — this repository is worked through issues and pull requests, and CI status is
+  part of the loop. The `Authorization` header reads `$GITHUB_PERSONAL_ACCESS_TOKEN` from
+  the environment; no token is ever written into the file.
+- **playwright** — Spinitron's calendar and host display, convergencezone.fm rendering, and
+  the WordPress block pattern are visual verification problems that fetching HTML cannot
+  settle.

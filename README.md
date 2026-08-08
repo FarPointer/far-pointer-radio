@@ -73,4 +73,9 @@ individual `README.md` files within each subdirectory for setup instructions, an
 
 ## Contributing
 
-This is a personal/volunteer working repository. If you're a collaborator, please create a feature branch and open a pull request for any significant changes.
+This is a personal/volunteer working repository. If you're a collaborator, please create a feature branch and open a pull request for any significant changes. See
+[`CONTRIBUTING.md`](CONTRIBUTING.md) for the conventions and
+[`docs/operating-procedures.md`](docs/operating-procedures.md) for the recurring workflows.
+
+Agent guidance lives in [`AGENTS.md`](AGENTS.md), with path-scoped rules in
+`.github/instructions/` and repeatable procedures in `.github/skills/`.

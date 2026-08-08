@@ -11,7 +11,7 @@
 | `playlists/analysis/` | Spinitron reconciliation worksheets — missing spins, removal candidates |
 | `website/` | Design mockups from an earlier (paused) rebuild exploration; see `docs/website-rebuild-brief.md` |
 | `images/` | General show images (logos, banners, photos) |
-| `docs/` | Show notes, rundowns, standard operating procedures |
+| `docs/` | Show notes, rundowns, standard operating procedures; see `docs/dj-tagging-spec.md` for the DJ software tagging scheme |
 | `docs/press-kit/` | One sheets, bios, and other press materials |
 | `docs/press-kit/images/` | Images used in press kit materials |
 

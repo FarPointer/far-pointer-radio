@@ -21,6 +21,7 @@ import sys
 from pathlib import Path
 
 from paths import CZAUDIT, CZFM_DIR, ONENOTE_DIR
+from rules import RULES
 
 sys.path.insert(0, str(CZAUDIT))
 from extract import SPECS as CZAUDIT_SPECS  # noqa: E402
@@ -68,6 +69,9 @@ COMBINED_SPECS = {
     "2025-10-21": (f"{D2024}/Episode 073 - 01.07.2025/10.21.2025 - ARP Anniversary.md",
                    0, 1),   # (path, combined artist+song column, notes column)
 }
+
+CORROBORATED_FLOOR = float(RULES["setlist_binding"]["corroborated_floor"])
+REPLAY_FLOOR = float(RULES["setlist_binding"]["replay_floor"])
 
 CZFM_DATE_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.csv$")
 EPISODE_RE = re.compile(r"(?:episode|convergence-zone)[-.]?(\d{2,3})\b")
@@ -184,7 +188,7 @@ def load():
     return {**load_czfm(), **load_onenote()}
 
 
-def bind(setlists, broadcasts, floor=0.30, replay_floor=0.60):
+def bind(setlists, broadcasts, floor=CORROBORATED_FLOOR, replay_floor=REPLAY_FLOOR):
     """Choose one set list per broadcast. Returns {broadcast_id: binding}.
 
     Mirrors czaudit.scrape_site.bind_broadcasts: a set list whose stated date matches the

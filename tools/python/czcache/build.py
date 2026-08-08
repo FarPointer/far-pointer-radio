@@ -1,6 +1,6 @@
 """Build the whole playlist cache. One command, no arguments.
 
-    uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml python build.py
+    uv run python build.py
 
 Order matters: repeats are found first, because a repeat of a MichaelG episode is class A
 even though it has no workbook of its own, and classification depends on knowing that.

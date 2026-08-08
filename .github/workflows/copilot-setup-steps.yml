@@ -1,0 +1,38 @@
+name: "Copilot Setup Steps"
+
+# GitHub's Copilot coding agent runs the `copilot-setup-steps` job before it starts work,
+# so the environment it needs is ready instead of being re-bootstrapped every run.
+# The job name is significant — do not rename it.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python 3.11
+        run: uv python install 3.11
+
+      # Warms the caches for both tools so the first `make build` is not also a download.
+      - name: Sync tool environments
+        run: |
+          uv sync --directory tools/python/czcache
+          uv sync --directory tools/python/czaudit
+          uv sync --directory tools/python/czarchive

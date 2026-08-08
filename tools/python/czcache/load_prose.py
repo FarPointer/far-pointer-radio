@@ -19,6 +19,7 @@ import datetime as dt
 import re
 
 from paths import ONENOTE_DIR
+from rules import RULES
 
 FRONTMATTER_RE = re.compile(r"\A---\n.*?\n---\n", re.S)
 HTML_BLOCK_RE = re.compile(r"<table.*?</table>|<thead.*?</thead>|<colgroup.*?</colgroup>", re.S | re.I)
@@ -72,8 +73,8 @@ POSITIVE_RE = re.compile(
     re.I,
 )
 
-MIN_WORDS = 8
-MIN_CHARS = 120
+MIN_WORDS = int(RULES["description_extraction"]["min_words"])
+MIN_CHARS = int(RULES["description_extraction"]["min_chars"])
 
 
 def _plain_text(raw: str) -> str:

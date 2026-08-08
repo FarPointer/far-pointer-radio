@@ -57,6 +57,7 @@ what a source actually contains.
 | `load_prose.py` | OneNote prose → candidate broadcast descriptions |
 | `locality.py` | Resolves `local` and records *why* (artist, label, or DJ flag) |
 | `merge.py` | The three per-class merge strategies, plus host attribution |
+| `rules.py` + `rules.yaml` | Data-driven thresholds for repeat detection, set-list binding, and description gating |
 | `emit.py` | Writes `cache/` and `reports/` |
 | `build.py` | Entry point |
 | `verify.py` | Asserts the invariants the build guarantees; exits non-zero on failure |
@@ -95,7 +96,7 @@ build always produces a complete cache without them.
 |---|---|
 | `descriptions.yaml` | Approved description text, or `skip`. Nothing reaches `description_status: "approved"` any other way. |
 | `participants.yaml` | Host attribution where the workbook rule is wrong or a show was co-hosted |
-| `repeats.yaml` | Force or suppress a repeat pairing the 0.60 threshold got wrong |
+| `repeats.yaml` | Force or suppress a repeat pairing that the repeat-detection floor in `rules.yaml` got wrong |
 | `spins.yaml` | Merge a same-persona duplicate the build deliberately left alone |
 
 ## Reports

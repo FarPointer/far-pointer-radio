@@ -36,12 +36,16 @@ far-pointer-radio/
 ├── tools/                      # Custom scripts and forked utilities
 │   ├── python/                 # Python scripts and packages
 │   └── powershell/             # PowerShell scripts and modules
-├── config/                     # Tool and service configuration
-│   ├── spinitron/              # Spinitron API config and templates
-│   └── vscode/                 # Shared VS Code workspace settings
+├── .github/                    # Agent instructions, skills, workflows, PR template
+│   ├── instructions/           # Path-scoped agent rules (applyTo globs)
+│   ├── skills/                 # Repository-specific agent skills
+│   └── workflows/              # GitHub Actions
 ├── docs/                       # Project-wide documentation
 └── discarded/                  # Superseded prototypes retained for context, not use
 ```
+
+Editor configuration lives in `far-pointer-radio.code-workspace`, `.editorconfig`, and
+`.vscode/`. Service credentials live outside the repository — see `AGENTS.md`.
 
 ## Tools & Platforms
 
@@ -62,7 +66,10 @@ far-pointer-radio/
 ## Getting Started
 
 Clone the repo and navigate to the relevant show or tool directory.  
-Python scripts require Python 3.9+. See individual `README.md` files within each subdirectory for setup instructions.
+Python tooling requires Python 3.11+ and [`uv`](https://docs.astral.sh/uv/). Run it through
+the task runner in `tools/python/` (`make build`, `make verify`, `make all`). See
+individual `README.md` files within each subdirectory for setup instructions, and
+`CONTRIBUTING.md` for the working conventions.
 
 ## Contributing
 

@@ -11,7 +11,9 @@ Custom scripts and utilities, plus forks of third-party tools used in radio prod
 
 ## Python Requirements
 
-Python 3.9 or later is required. Individual scripts include their own `requirements.txt` where needed.
+Python 3.11 or later is required, with [`uv`](https://docs.astral.sh/uv/) managing
+environments. Each package declares its dependencies in its own `pyproject.toml`; run the
+pipelines through `tools/python/Makefile` so the required ordering lives in one place.
 
 ## PowerShell Requirements
 

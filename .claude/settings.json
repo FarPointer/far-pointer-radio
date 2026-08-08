@@ -1,5 +1,5 @@
 {
-  "enabledMcpjsonServers": ["openaiDeveloperDocs"],
+  "enabledMcpjsonServers": ["github", "playwright"],
   "permissions": {
     "allow": [
       "WebSearch",
@@ -19,9 +19,81 @@
       "WebFetch(domain:publicapi.dev)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:gist.github.com)",
+      "WebFetch(domain:docs.astral.sh)",
+      "WebFetch(domain:developer.wordpress.org)",
       "Bash(uv sync:*)",
       "Bash(uv run:*)",
-      "Bash(python3:*)"
+      "Bash(uv lock:*)",
+      "Bash(uvx ruff:*)",
+      "Bash(make:*)",
+      "Bash(python3:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(~/.czarchive.toml)",
+      "Read(./**/cookie.txt)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Bash(git push:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git filter-branch:*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/.claude/hooks/pre-commit-secret-scan.sh\""
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/.claude/hooks/overrides-guard.sh\" \"$CLAUDE_TOOL_FILE_PATH\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/.claude/hooks/format-python.sh\" \"$CLAUDE_TOOL_FILE_PATH\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/.claude/hooks/verify-reminder.sh\""
+          }
+        ]
+      }
     ]
   }
 }

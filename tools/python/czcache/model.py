@@ -31,7 +31,7 @@ def spin_id(broadcast_id: str, discriminator: str) -> str:
     Derived instead from the broadcast plus something intrinsic to the spin, which makes
     it reproducible across rebuilds without storing a counter.
     """
-    h = hashlib.sha1(f"{broadcast_id}\x00{discriminator}".encode("utf-8"))
+    h = hashlib.sha1(f"{broadcast_id}\x00{discriminator}".encode())
     return f"sp_{h.hexdigest()[:16]}"
 
 

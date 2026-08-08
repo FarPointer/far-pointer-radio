@@ -15,7 +15,6 @@ import urllib.request
 from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
-
 from paths import SPINITRON_PLAYLISTS
 
 SHOW_URL = "https://spinitron.com/KSER/show/260646/Convergence-Zone"

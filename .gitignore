@@ -24,6 +24,10 @@ cookie.txt
 
 # -----------------------------------------------------------------------------
 # Python
+#
+# The build-output names below (build/, dist/, lib/, var/, env/, ...) are ordinary
+# English words. Unscoped, they would one day silently swallow a content directory in a
+# repository where humans name folders freely, so they are confined to tools/.
 # -----------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
@@ -31,16 +35,16 @@ __pycache__/
 *.so
 *.egg
 *.egg-info/
-dist/
-build/
-eggs/
-parts/
-var/
-sdist/
-develop-eggs/
+tools/**/dist/
+tools/**/build/
+tools/**/eggs/
+tools/**/parts/
+tools/**/var/
+tools/**/sdist/
+tools/**/develop-eggs/
+tools/**/lib/
+tools/**/lib64/
 .installed.cfg
-lib/
-lib64/
 .Python
 env/
 venv/

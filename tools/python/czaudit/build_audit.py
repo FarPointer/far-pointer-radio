@@ -18,11 +18,10 @@ import json
 import re
 from pathlib import Path
 
+from matching import artist_score, norm, ratio
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
-
-from matching import artist_score, norm, ratio
 
 HERE = Path(__file__).parent
 SOURCES = (Path(__file__).resolve().parents[3]

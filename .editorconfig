@@ -1,0 +1,29 @@
+# Mirrors the rules in far-pointer-radio.code-workspace so they apply outside VS Code.
+# .gitattributes still owns what gets committed; this only governs editors.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+max_line_length = 100
+
+[*.{md,markdown}]
+# Two trailing spaces are a hard line break in Markdown.
+trim_trailing_whitespace = false
+
+[*.{json,jsonc,yaml,yml,ts,js,css,html}]
+indent_size = 2
+
+[*.{ps1,psm1,psd1}]
+end_of_line = crlf
+
+[Makefile]
+indent_style = tab
+
+[*.{csv,tsv}]
+trim_trailing_whitespace = false
+insert_final_newline = false

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from typing import Protocol
 from zoneinfo import ZoneInfo
 
@@ -172,7 +172,7 @@ def _text(tag, selector: str) -> str:
 def _to_pacific(dt: datetime) -> datetime:
     """Convert a datetime to America/Los_Angeles, attaching UTC if naive."""
     if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=timezone.utc)
+        dt = dt.replace(tzinfo=UTC)
     return dt.astimezone(PACIFIC)
 
 

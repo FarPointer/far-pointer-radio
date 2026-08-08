@@ -9,14 +9,25 @@ reimplementing them, so the two tools can never disagree about what matched what
 
 ## Running
 
-One command, no arguments, from anywhere:
+Dependencies are declared in `pyproject.toml`, so `uv run` syncs them automatically — no
+`--with` incantation. Prefer the task runner in `tools/python/`, which owns the ordering:
 
 ```sh
-uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml python build.py
-uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml python verify.py
-uv run --with openpyxl --with beautifulsoup4 --with lxml --with pyyaml \
-    python build_missing_spins.py
-uv run --with openpyxl python enrich_missing_spins.py
+make build            # rebuild the cache
+make verify           # assert the invariants; non-zero exit on failure
+make check            # build + verify + assert a zero-line cache diff (what CI runs)
+make missing-spins    # regenerate the analysis workbook and CSV
+make all              # refresh Spinitron IDs, build, verify, missing-spins
+make test             # the regression tests in tests/
+```
+
+Or directly, from this directory:
+
+```sh
+uv run python build.py
+uv run python verify.py
+uv run python build_missing_spins.py
+uv run python enrich_missing_spins.py
 ```
 
 The last two commands own
@@ -120,7 +131,7 @@ The spins export has no Playlist ID column. Refresh the checked-in public-index 
 before a cache build when new broadcasts have aired:
 
 ```sh
-uv run --with beautifulsoup4 --with lxml python fetch_spinitron_playlists.py
+uv run python fetch_spinitron_playlists.py    # or: make refresh-spinitron
 ```
 
 The script follows pagination from

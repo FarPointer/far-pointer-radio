@@ -1,0 +1,25 @@
+# Shared lint/format configuration for every Python tool in this repository.
+# Run from tools/python/: `make lint`, `make format`.
+
+target-version = "py311"
+line-length = 100
+
+exclude = [".venv", "__pycache__", "reports", "site_html"]
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = [
+    # The loaders read wide source tables; long literal column maps stay readable as-is.
+    "E501",
+    # Reviewed and correct in context: every flagged closure is called inside the same
+    # loop iteration that binds the variable (czaudit/extract.py, czcache/load_workbooks.py).
+    "B023",
+    # Reviewed: the zipped sequences are deliberately allowed to differ in length --
+    # truncation is the intended behaviour in czcache/build_missing_spins.py.
+    "B905",
+    # Reviewed: retained for the readability of the surrounding pipeline steps.
+    "F841",
+]
+
+[format]
+quote-style = "preserve"

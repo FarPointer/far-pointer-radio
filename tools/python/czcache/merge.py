@@ -16,9 +16,9 @@ origins, and his notes.
 """
 import sys
 
-from paths import CZAUDIT, HOST_JIM, HOST_MICHAELG, SHOW_NAME
-from model import make_broadcast, make_participant, make_spin, resequence, spin_id
 import locality
+from model import make_broadcast, make_participant, make_spin, resequence, spin_id
+from paths import CZAUDIT, HOST_JIM, HOST_MICHAELG, SHOW_NAME
 
 sys.path.insert(0, str(CZAUDIT))
 from build_audit import match_episode  # noqa: E402

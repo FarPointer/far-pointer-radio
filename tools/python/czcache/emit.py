@@ -12,7 +12,7 @@ schema's `broadcast_id` foreign key implicit rather than something to keep in sy
 import json
 import shutil
 
-from paths import BROADCASTS, CACHE, INDEX, REPORTS
+from paths import CACHE, REPORTS
 
 
 def write_cache(broadcasts, root=None):

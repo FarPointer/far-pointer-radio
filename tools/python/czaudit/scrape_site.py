@@ -21,7 +21,6 @@ import unicodedata
 from pathlib import Path
 
 from bs4 import BeautifulSoup
-
 from matching import overlap
 from textlist import parse_text_playlist
 

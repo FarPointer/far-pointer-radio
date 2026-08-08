@@ -26,10 +26,9 @@ import csv
 import datetime as dt
 import sys
 
+import load_workbooks
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill
-
-import load_workbooks
 from paths import CZAUDIT, SHOW, SPINS_CSV
 
 sys.path.insert(0, str(CZAUDIT))

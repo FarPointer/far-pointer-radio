@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve Convergence Zone mockups",
+      "type": "shell",
+      "command": "python3 -m http.server 8080 --directory shows/convergence-zone/website",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "czcache: build",
+      "type": "shell",
+      "command": "make build",
+      "options": { "cwd": "${workspaceFolder}/tools/python" },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "czcache: verify",
+      "type": "shell",
+      "command": "make verify",
+      "options": { "cwd": "${workspaceFolder}/tools/python" },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "czcache: check (build + verify + zero diff)",
+      "type": "shell",
+      "command": "make check",
+      "options": { "cwd": "${workspaceFolder}/tools/python" },
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Python: lint",
+      "type": "shell",
+      "command": "make lint",
+      "options": { "cwd": "${workspaceFolder}/tools/python" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Python: test",
+      "type": "shell",
+      "command": "make test",
+      "options": { "cwd": "${workspaceFolder}/tools/python" },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -18,13 +18,20 @@ import subprocess
 import sys
 import tempfile
 
-import yaml
-
 import build
 import load_spinitron
 import repeats
-from paths import (BROADCASTS, CZAUDIT, INDEX, MICHAELG_DIR, OVERRIDES, REPO,
-                   SPINITRON_PLAYLISTS, SPINS_CSV)
+import yaml
+from paths import (
+    BROADCASTS,
+    CZAUDIT,
+    INDEX,
+    MICHAELG_DIR,
+    OVERRIDES,
+    REPO,
+    SPINITRON_PLAYLISTS,
+    SPINS_CSV,
+)
 
 sys.path.insert(0, str(CZAUDIT))
 from matching import norm  # noqa: E402

@@ -5,7 +5,6 @@ from __future__ import annotations
 import webbrowser
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
-from typing import Optional
 from urllib.parse import parse_qs, urlencode, urlparse
 
 import requests
@@ -58,7 +57,7 @@ def run_oauth_flow(client_id: str, client_secret: str) -> str:
     print(f"\nOpening browser for Mixcloud authorization:\n  {auth_url}\n")
     webbrowser.open(auth_url)
 
-    code_holder: list[Optional[str]] = [None]
+    code_holder: list[str | None] = [None]
 
     class CallbackHandler(BaseHTTPRequestHandler):
         def do_GET(self):

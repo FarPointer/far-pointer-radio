@@ -123,7 +123,7 @@ def download(show_date_str: str | None):
     click.echo(f"Saved tracklist → {json_path}")
 
     # --- Find Ark stream ---
-    from czarchive.ark import find_ark_stream, download_show
+    from czarchive.ark import download_show, find_ark_stream
     m3u8_url = find_ark_stream(config.station, show_date)
     if not m3u8_url:
         click.echo(
@@ -178,8 +178,8 @@ def upload(mp3_file: Path | None):
     title = f"{config.show_name} — {show_date}"
 
     if playlist is None:
+
         from czarchive.spinitron import Playlist as PL
-        from dateutil import parser as dp
         playlist = PL(
             id="unknown",
             title=title,

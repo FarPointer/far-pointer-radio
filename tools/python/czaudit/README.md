@@ -21,8 +21,8 @@ first rows of every table in a OneNote export so a new file's column map can be
 established by eye before it is added to `extract.SPECS`.
 
 ```sh
-.venv/bin/python dump_tables.py                      # every OneNote file
-.venv/bin/python dump_tables.py <file.md> --rows 5   # one file, more rows
+uv run python dump_tables.py                      # every OneNote file
+uv run python dump_tables.py <file.md> --rows 5   # one file, more rows
 ```
 
 "the Spinitron CSV" means `Spins-search-results-12-8-19-8-7-26-for-KSER.csv` — the same
@@ -41,8 +41,8 @@ steps 1 and 3 alone — every episode then falls back to its OneNote note, and t
 published playlists stay as archived in `sources/convergencezone.fm/`.
 
 ```sh
-uv venv && uv pip install -r requirements.txt
-.venv/bin/python extract.py && .venv/bin/python build_audit.py
+# dependencies come from pyproject.toml; uv run syncs them
+uv run python extract.py && uv run python build_audit.py   # or: make audit
 ```
 
 ## Refreshing the site scrape

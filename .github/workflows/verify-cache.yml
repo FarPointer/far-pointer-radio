@@ -1,0 +1,54 @@
+name: Verify playlist cache
+
+# The cache is derived output that lives in the repository, so the only thing that makes
+# it reviewable in a pull request is the guarantee that a rebuild which changes nothing
+# produces a zero-line diff. Nothing enforced that until this workflow existed — and the
+# description review gate reported PASS for weeks while not being wired up at all.
+
+on:
+  pull_request:
+    paths:
+      - "tools/python/**"
+      - "shows/convergence-zone/playlists/**"
+      - ".github/workflows/verify-cache.yml"
+  push:
+    branches: [main]
+    paths:
+      - "tools/python/**"
+      - "shows/convergence-zone/playlists/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.11
+
+      - name: Lint
+        working-directory: tools/python
+        run: make lint
+
+      - name: Test
+        working-directory: tools/python
+        run: make test
+
+      # build + verify + `git diff --exit-code` on the cache. A non-idempotent build or an
+      # override that quietly did nothing fails here.
+      - name: Rebuild, verify, and assert the cache diff is empty
+        working-directory: tools/python
+        run: make check
+
+      - name: Show what changed if the cache diff was not empty
+        if: failure()
+        run: git --no-pager diff -- shows/convergence-zone/playlists/cache

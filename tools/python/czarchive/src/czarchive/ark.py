@@ -6,10 +6,9 @@ import shutil
 import subprocess
 from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
-from dateutil import parser as dateutil_parser
-from zoneinfo import ZoneInfo
 
 PACIFIC = ZoneInfo("America/Los_Angeles")
 ARK_AVAIL_URL = "https://ark3.spinitron.com/cgi/avail/"

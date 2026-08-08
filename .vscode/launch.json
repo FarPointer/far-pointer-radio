@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "czcache: build",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/tools/python/czcache/build.py",
+      "cwd": "${workspaceFolder}/tools/python/czcache",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "czcache: verify",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/tools/python/czcache/verify.py",
+      "cwd": "${workspaceFolder}/tools/python/czcache",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Python: current file",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}

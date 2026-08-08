@@ -24,7 +24,7 @@ from paths import CZAUDIT, CZFM_DIR, ONENOTE_DIR
 
 sys.path.insert(0, str(CZAUDIT))
 from extract import SPECS as CZAUDIT_SPECS  # noqa: E402
-from extract import extract_file
+from extract import extract_file  # noqa: E402
 from matching import overlap  # noqa: E402
 
 D2023 = "2023 Playlists - Convergence Zone"

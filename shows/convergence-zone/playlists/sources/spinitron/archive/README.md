@@ -1,7 +1,9 @@
-# Archived Spinitron exports
+# Archived Spinitron Exports
 
-Superseded Spinitron spin-search exports. The active export used by the cache build lives
-one directory up in `spinitron/` and is named in `tools/python/czcache/paths.py`.
+Superseded Spinitron `Spins-search-results-*.csv` exports, kept for history. Each export
+is a cumulative search of Spinitron plays up to its export date, so a newer export in the
+parent directory supersedes everything here — these are retained only for traceability,
+not as inputs to any build.
 
 | File | Coverage | Notes |
 |---|---|---|

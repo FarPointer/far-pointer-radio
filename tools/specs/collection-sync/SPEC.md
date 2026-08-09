@@ -104,6 +104,7 @@
 | `--format` | string | No | Audio format(s) to download (comma-separated) | `flac,mp3-v0` |
 | `--dry-run` | flag | No | Report what would change without changing anything | |
 | `--report` | flag | No | Print sync status without making changes | |
+| `--json` | flag | No | Emit JSON to stdout for machine-readable summaries | `--json` |
 | `--mode` | enum | No | `acquire`, `sync`, `tag-sync`, `ingest`, `all` | `--mode all` |
 | `--since` | date | No | Limit acquisition to items added to source after this date | `2025-01-01` |
 | `--album` | string | No | Acquire/sync a single album by URL or ID | |

@@ -32,7 +32,7 @@ SOURCES = Path(__file__).resolve().parents[3] / "shows/convergence-zone/playlist
 # The same export czcache builds from, so the audit and the cache can never disagree
 # about what Spinitron says. The archived Spinssearchresults84208326forKSER.csv lacks
 # DJ ID and Playlist Date-time, and stops earlier.
-SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-8-19-8-7-26-for-KSER.csv"
+SPINS_CSV = SOURCES / "spinitron" / "Spins-search-results-12-10-19-8-9-26-for-KSER.csv"
 OUT_CSV_DIR = SOURCES / "convergencezone.fm"
 
 ALIASES = {

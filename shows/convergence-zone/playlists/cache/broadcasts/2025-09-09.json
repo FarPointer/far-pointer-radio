@@ -18,7 +18,6 @@
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
   "dj_ids": [
-    "173567",
     "174269"
   ],
   "spinitron_playlist_ids": [
@@ -34,18 +33,18 @@
   ],
   "spins": [
     {
-      "id": "sp_e7e3c670992fae56",
+      "id": "sp_34b978c4a91757fd",
       "broadcast_id": "2025-09-09T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": "2025-09-09T20:31:42-0700",
+      "logged_at": "2025-09-09T20:32:00-0700",
       "offset_seconds": null,
       "artist": "Sea Lemon",
       "artist_key": null,
       "song": "In The Flowers",
       "release": "Diving For A Prize",
       "isrc": "QMFME2487265",
-      "upc": "0199066146996",
+      "upc": "199066146996",
       "duration_seconds": 201,
       "released_date": "2025",
       "released_precision": "year",

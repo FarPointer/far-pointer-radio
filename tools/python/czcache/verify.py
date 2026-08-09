@@ -168,8 +168,8 @@ def main():
           bool(ft and ft[0]["upc"]) and bool(bv and bv[0]["upc"]),
           f"fotoform upc={ft[0]['upc'] if ft else None}, "
           f"beach vacation upc={bv[0]['upc'] if bv else None}")
-    check("3 persona: 2025-10-14 dj_ids carries both personas",
-          b1014["dj_ids"] == ["173567", "174269"], str(b1014["dj_ids"]))
+    check("3 persona: 2025-10-14 dj_ids reflects the corrected export (174269 only)",
+          b1014["dj_ids"] == ["174269"], str(b1014["dj_ids"]))
     # Matched on the song, not the artist: in class A the artist name comes from the
     # workbook, which spells "Eydis Evensen" without the accent Spinitron uses and marks
     # the second airing "(OUTRO)" -- itself confirmation that the wide-gap duplicate is a

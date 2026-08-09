@@ -3,7 +3,7 @@
   "air_datetime": "2025-05-27T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "05.27.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_299b44e656e2fe79",
+      "id": "sp_64c8584ffa688f95",
       "broadcast_id": "2025-05-27T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2025-05-27T20:32:00-0700",
       "offset_seconds": null,
       "artist": "Pet Shop Boys",
       "artist_key": null,
@@ -56,6 +56,7 @@
       "song_note": null,
       "publish_note": "Yes is the tenth studio album by English synth-pop duo Pet Shop Boys, released on 18 March 2009 by Parlophone.[13] The album was recorded in 2008 and was produced by Brian Higgins and his production team Xenomania.[14] Xenomania also co-wrote three of the tracks. Guitarist Johnny Marr and string arranger Owen Pallett appear as well.[15] \"Love Etc.\" was released on 16 March 2009 as the album's lead single.[16] For their follow-up to Fundamental (2006), Pet Shop Boys approached the songwriting and production team Xenomania, who were among the top pop producers at the time.[17] Neil Tennant was impressed with their electropop hits, in particular \"Call the Shots\" by Girls Aloud, and Chris Lowe said he \"liked the idea of making a shiny pop record with the producers du jour\".[18]",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -118,11 +119,11 @@
       ]
     },
     {
-      "id": "sp_2b726156e10b0ab5",
+      "id": "sp_a1c62361848452d5",
       "broadcast_id": "2025-05-27T20:30:00-0700",
       "evidence": "logged",
       "sequence": 4,
-      "logged_at": null,
+      "logged_at": "2025-05-27T20:51:00-0700",
       "offset_seconds": null,
       "artist": "The Lucid Dream",
       "artist_key": null,
@@ -142,6 +143,7 @@
       "song_note": null,
       "publish_note": "Side A of Limited Edition EP Band from Carlisle, UK 'Krautrock, no-wave, psych, dub",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -295,11 +297,11 @@
       ]
     },
     {
-      "id": "sp_782c5f325e58c45e",
+      "id": "sp_7b71bc572b8ff8fc",
       "broadcast_id": "2025-05-27T20:30:00-0700",
       "evidence": "logged",
       "sequence": 10,
-      "logged_at": null,
+      "logged_at": "2025-05-27T21:21:00-0700",
       "offset_seconds": null,
       "artist": "Govinda",
       "artist_key": null,
@@ -319,6 +321,7 @@
       "song_note": null,
       "publish_note": "Govinda is the alter-ego of Austin based producer/composer Shane Madden. He began studying violin and composition at the age of eight and went on to study classical violin at the University of Texas where he fell in love with electronic music production. It was in Madden’s pursuit of his Middle-Eastern and Spanish roots that he opened his ears to music from around the world. From experiences learning violin with mysterious masters on his journeys across the globe and his passion for modern design and technology, the current sound of Govinda was born. Govinda has played with Thievery Corporation",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -528,39 +531,11 @@
       ]
     },
     {
-      "id": "sp_87a84afa5fdcb864",
+      "id": "sp_318e9e1ebe7cc8ee",
       "broadcast_id": "2025-05-27T20:30:00-0700",
       "evidence": "logged",
       "sequence": 18,
-      "logged_at": "2025-05-27T22:11:52-0700",
-      "offset_seconds": null,
-      "artist": "Mina",
-      "artist_key": null,
-      "song": "Unsung Heroes",
-      "release": "Lost And Remembered",
-      "isrc": "USMH92360762",
-      "upc": "0905428754569",
-      "duration_seconds": 266,
-      "released_date": "2023",
-      "released_precision": "year",
-      "label": "Altar Records",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
-      "id": "sp_1e4a2ef483c0b817",
-      "broadcast_id": "2025-05-27T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 19,
-      "logged_at": null,
+      "logged_at": "2025-05-27T22:03:00-0700",
       "offset_seconds": null,
       "artist": "Active Region",
       "artist_key": null,
@@ -580,15 +555,16 @@
       "song_note": null,
       "publish_note": "As the impediments of time begin to ebb We find ourselves folding space Skimming waves Along an endless ocean To seek out, yet again, another great mass Off we go... Active Region (Peter Brefini / Echo Season) launches a new exploratory endeavor into deep space frequencies using the framework of Berlin school, splashes of long form ambient and a touch of his own unique brand of Psybient for a journey into interstellar territories. Well, Active Region is his new project and HORIZON DISPATCH is his second album, only available for download this time, to be released by the Californian label Synphaera Records. Moving away from his vision of psychedelic music of the time, he offers us a beautiful album still musical but a little less cold where his downtempo and psychill styles reveal some very nice surprises to our ears. Faithful to the signature of the American label, the sound texture of HORIZON DISPATCH is very detailed with a cloud of composite tones that create this universe of fascination where visions of cinema and literature of science-fiction are welded in panoramas that challenge the greed of our ears. Into the Black kicks off this album built around the same precepts. Buzzing waves clump together in its panorama where muted clackings radiate into more or less muffled explosions, recalling the dystopian universe of the movie Blade Runner and of Vangelis music. These sound memories are moreover recurrent in the ambiences of HORIZON DISPATCH. \"Souveniers of Tangerine Dream's Flashpoint?",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_05336280efe0442c",
+      "id": "sp_d98088d30126e48a",
       "broadcast_id": "2025-05-27T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 20,
-      "logged_at": null,
+      "sequence": 19,
+      "logged_at": "2025-05-27T22:09:00-0700",
       "offset_seconds": null,
       "artist": "Terminus Void",
       "artist_key": null,
@@ -610,7 +586,36 @@
       "song_note": null,
       "publish_note": "Mina Stojiljkovic (Stoylakovich), Serbia Mina is a project focusing on chill-out, downtempo music with Altar Records / Altar Relax. She also releases techno and psychedelic trance tunes with her family label \"Celestial Symphony\". She is also a graphic artist. Mina's latest album \"Lost and Remembered\" takes the listener on a journey of introspection and discovery through her ethereal ambient soundscapes. Across its 8 tracks, the album explores themes of memory, loss, and emotional awakening. Founded in 2021, Terminus Void is the creative outlet of J. Ronald Smith, an award-winning Seattle based recording artist. The project focuses on ambient and electronic music, drawing inspiration from the vastness of space and the ethereal qualities of sound. Smith's work is characterized by its cinematic and atmospheric nature, aiming to take listeners on a journey through interstellar landscapes.",
       "sources": [
+        "spinitron",
         "michaelg"
+      ]
+    },
+    {
+      "id": "sp_87a84afa5fdcb864",
+      "broadcast_id": "2025-05-27T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 20,
+      "logged_at": "2025-05-27T22:11:52-0700",
+      "offset_seconds": null,
+      "artist": "Mina",
+      "artist_key": null,
+      "song": "Unsung Heroes",
+      "release": "Lost And Remembered",
+      "isrc": "USMH92360762",
+      "upc": "0905428754569",
+      "duration_seconds": 266,
+      "released_date": "2023",
+      "released_precision": "year",
+      "label": "Altar Records",
+      "local": null,
+      "local_basis": [],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
       ]
     },
     {
@@ -643,11 +648,11 @@
       ]
     },
     {
-      "id": "sp_2537e3ac2bce0e5e",
+      "id": "sp_58cabe382f593451",
       "broadcast_id": "2025-05-27T20:30:00-0700",
       "evidence": "logged",
       "sequence": 22,
-      "logged_at": null,
+      "logged_at": "2025-05-27T22:22:00-0700",
       "offset_seconds": null,
       "artist": "Slow Dancing Society",
       "artist_key": null,
@@ -669,6 +674,7 @@
       "song_note": null,
       "publish_note": "Project by Washington State (Richland & Spokane) based musician/producer Drew Sullivan. \"It is not the limit. It’s a fragile shield against the infinitely expanding freeze; it’s a network of invisible rivers that connects every continent and every creature, forever confronting science with its caprices; its psychic soot falls to rest on each of us. With all the reverence that terrestrial awe can afford, the latest work from Washington’s Slow Dancing Society (aka Drew Sullivan) gazes up and asks, Do We Become Sky? Best experienced front-to-back in its 86-minute entirety, Do We Become Sky? is – by the artist’s description – a spiritual successor to 2008’s Priest Lake, circa ‘88, whose namesake location harbors visions of childhood freedom and innocence, of family road trips through northern Idaho and a yearning for something simpler that once existed under the same sun. Channeling the inevitably complicated feelings around loss and entropy through the years since, Sullivan relied on the unique, nostalgic tonality of the Korg Wavestation as the backbone of this set. Many of its tracks arrived nearly fully-formed, inspired by “dusty and blurred memories of sounds from youth that seemed to transcend time”. As a result there is a skillful arc of tension and resolution across the album’s four sides, sustained by a distinct balance of rhythm and drift. “The Past is Always Following Close Behind” pairs graceful, melancholy arpeggiations with rich beds of swelling harmony, accented by guitar plucks that strike like distant lightning and unfurl across the stereo field. The looser, cascading composition of “Retrograde” creates a transitional moment as the dial of a disused radio scans crackling signals through storm and static. There is a quiet unease, but the center holds itself reassuringly; this too shall pass. “Time Won’t Forget What You Meant to Me” is perhaps the most direct nod to the artist’s main inspirations here; a lucid, evocative synth progression is wrapped in panning whispers, like the maundering conversations that arise and fall away by the lakeside or along trillium-lined forest trails. The final side succinctly collects the themes of all that came before; “The Return” hums with angelic sweetness and a sense of light emerging beyond the greyscale roil, while “Coda” closes the suite with towering guitars, warbling piano and a kinetic rush toward an unreachable horizon. In considering the onset of adulthood realities and the attendant passing of friends and family members over the years, Sullivan cited this quote from Clive Barker’s Imajica as particularly resonant: “Remember that everything you learn is already part of you, even to the Godhead Itself. Study nothing except in the knowledge that you already knew it. Worship nothing except in adoration of your true self. And fear nothing except in the certainty that you are your enemy’s begetter and its only hope for healing, for everything that does evil is in pain.”​",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     }

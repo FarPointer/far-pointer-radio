@@ -3,7 +3,7 @@
   "air_datetime": "2026-04-28T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "04.28.2026 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -239,11 +239,11 @@
       ]
     },
     {
-      "id": "sp_a095139b1a655af1",
+      "id": "sp_0cde343b03358eb1",
       "broadcast_id": "2026-04-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 8,
-      "logged_at": null,
+      "logged_at": "2026-04-28T21:05:00-0700",
       "offset_seconds": null,
       "artist": "Thundercat",
       "artist_key": null,
@@ -263,6 +263,7 @@
       "song_note": null,
       "publish_note": "Stephen Lee Bruner (born October 19, 1984),[4] better known by his stage name Thundercat, is an American musician, singer, record producer, songwriter, and bassist from Los Angeles, California. First coming to prominence as a member of crossover thrash band Suicidal Tendencies, he radically changed his musical style, placing a strong focus on funk, soul, progressive R&B, psychedelia and jazz-fusion. He has since released four solo studio albums and is noted for his work with producer Flying Lotus and his appearances on Kendrick Lamar's 2015 album To Pimp a Butterfly.[5] In 2016, Thundercat won a Grammy for Best Rap/Sung Performance for his work on the track \"These Walls\" from To Pimp a Butterfly. In 2020, Thundercat released his fourth studio album, It Is What It Is, which earned him a Grammy Award for Best Progressive R&B Album. Rolling Stone has ranked him as one of the greatest bass players of all time.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -296,11 +297,11 @@
       ]
     },
     {
-      "id": "sp_6becad65f6f79c71",
+      "id": "sp_f4b9073258aaa90d",
       "broadcast_id": "2026-04-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 10,
-      "logged_at": null,
+      "logged_at": "2026-04-28T21:14:00-0700",
       "offset_seconds": null,
       "artist": "Afrocop",
       "artist_key": null,
@@ -322,15 +323,16 @@
       "song_note": null,
       "publish_note": "Seattle trio Afrocop performs improvised soundscapes of soul, afrobeat, breakbeat, sci-fi and jazz. Smooth telepathists, Seattle trio Afrocop have delivered their debut LP—just in time to score the most exciting moments of the Summer Olympics. Stitched together with flamboyant precision from myriad sessions in various studios, Afrocop extrapolates on the nonchalantly cosmic jams that the group has laid down in live performance and earlier, digital-only releases, including 2020’s Moondust. Afrocop enters the musical underground poised to be heard by true heads worldwide.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_3ff71779cd7c5c28",
+      "id": "sp_19f2f6ae37687a12",
       "broadcast_id": "2026-04-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 11,
-      "logged_at": null,
+      "logged_at": "2026-04-28T21:18:00-0700",
       "offset_seconds": null,
       "artist": "Death Devoir",
       "artist_key": null,
@@ -352,6 +354,7 @@
       "song_note": null,
       "publish_note": "DEATH DEVOIR is a music group associated with the Seattle area, known for their Barber Beats genre.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -743,11 +746,11 @@
       ]
     },
     {
-      "id": "sp_7d9ed34a7a6070a9",
+      "id": "sp_c81641cd7cc5f1d4",
       "broadcast_id": "2026-04-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 25,
-      "logged_at": null,
+      "logged_at": "2026-04-28T22:13:00-0700",
       "offset_seconds": null,
       "artist": "All India Radio",
       "artist_key": null,
@@ -767,15 +770,16 @@
       "song_note": null,
       "publish_note": "Recorded live at the Northcote Social Club, Melbourne in November 2025. It was the launch for our latest album The Unified Field and to say it was a long awaited return show is an understatement. We last played live six years ago in 2020 just before covid, and before that, we hadn't played since 2013. Just to add to the milestones, it was Ben the drummer's first show with us in sixteen years! It's not the most perfect of performances - my memory was glitching and Ben had broken his leg three days before the show, so there's that. But we gave it our all.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_37edf5751684cc84",
+      "id": "sp_1086275c796743c8",
       "broadcast_id": "2026-04-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 26,
-      "logged_at": null,
+      "logged_at": "2026-04-28T22:21:00-0700",
       "offset_seconds": null,
       "artist": "Bluetech",
       "artist_key": null,
@@ -797,6 +801,7 @@
       "song_note": null,
       "publish_note": "Bluetech, is a widely respected figure in the electronic music world. His work spans a broad spectrum, from deeply atmospheric ambient and downtempo to progressive, groove-oriented dance music. Bluetech's sound is characterized by rich emotional texture, intricate sound design, and a unique atmospheric quality that blends organic elements with cutting-edge digital production techniques. Driftworks Archives III: Null Cycle continues the Driftworks series which was born from a personal need to calm the mind — music shaped as a sanctuary of solace, stillness, and gentle healing. Null Cycle is a long-form ambient work built from deep analog synthesis, spectral processing, and slowly evolving harmonic vistas, delicate arpeggios and warm saturation. Expansive drift, crystalline arpeggios, warm washes and slowly evolving analog tides, rhythmic geometric synth spirals that spin and shimmer. A one hour immersion for exploring inner vistas, deep focus and healing.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     }

@@ -3,7 +3,7 @@
   "air_datetime": "2025-08-05T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "08.05.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -61,11 +61,11 @@
       ]
     },
     {
-      "id": "sp_b711dafa970fcaf1",
+      "id": "sp_907b7f3386df360e",
       "broadcast_id": "2025-08-05T20:30:00-0700",
       "evidence": "logged",
       "sequence": 2,
-      "logged_at": null,
+      "logged_at": "2025-08-05T20:36:00-0700",
       "offset_seconds": null,
       "artist": "Frantic Chant",
       "artist_key": null,
@@ -85,6 +85,7 @@
       "song_note": null,
       "publish_note": "Frantic Chant is a four-piece rock 'n' roll band from Edinburgh, Scotland, known for their psychedelicious sound and eclectic musical style. The band's members include Darren Chant on bass, Stazy Chant on voice and guitar, Nick Du Chant on guitar, and Col Chant on drums. They have released seven albums and numerous singles, with their latest single \"Let In The Sound\" available for download and streaming. The band has performed at various festivals and gigs, sharing stages with artists like The Charlatans, Mark Ronson, and Space. Frantic Chant's music is characterized by its energetic and vibrant sound, making them a unique and engaging band in the rock 'n' roll genre.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -476,11 +477,11 @@
       ]
     },
     {
-      "id": "sp_8ade0ea21ebd1842",
+      "id": "sp_f0bed486afcebc7c",
       "broadcast_id": "2025-08-05T20:30:00-0700",
       "evidence": "logged",
       "sequence": 16,
-      "logged_at": null,
+      "logged_at": "2025-08-05T21:49:00-0700",
       "offset_seconds": null,
       "artist": "Summit Dub",
       "artist_key": null,
@@ -502,6 +503,7 @@
       "song_note": null,
       "publish_note": "Michito Iwata, DJ/Producer living in Seattle, WA.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },

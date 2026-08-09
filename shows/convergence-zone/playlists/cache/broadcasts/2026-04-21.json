@@ -18,7 +18,6 @@
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
   "dj_ids": [
-    "173567",
     "174269"
   ],
   "spinitron_playlist_ids": [
@@ -33,18 +32,18 @@
   ],
   "spins": [
     {
-      "id": "sp_c8a3e63ba5886d7c",
+      "id": "sp_ad7b2a95a62dd2e5",
       "broadcast_id": "2026-04-21T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": "2026-04-21T20:30:13-0700",
+      "logged_at": "2026-04-21T20:30:22-0700",
       "offset_seconds": null,
       "artist": "Hello Meteor",
       "artist_key": null,
       "song": "The Second Door Problem",
       "release": "On-World Ordinary Nights",
       "isrc": "QZMEM2615784",
-      "upc": "0821311891442",
+      "upc": null,
       "duration_seconds": 232,
       "released_date": "2026",
       "released_precision": "year",

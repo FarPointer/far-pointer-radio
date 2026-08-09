@@ -3,7 +3,7 @@
   "air_datetime": "2025-06-24T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "06.24.2026 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -237,11 +237,11 @@
       ]
     },
     {
-      "id": "sp_d72f38ec36424215",
+      "id": "sp_e493eab0eecde270",
       "broadcast_id": "2025-06-24T20:30:00-0700",
       "evidence": "logged",
       "sequence": 8,
-      "logged_at": null,
+      "logged_at": "2025-06-24T21:05:00-0700",
       "offset_seconds": null,
       "artist": "Sundial Aeon",
       "artist_key": null,
@@ -261,6 +261,7 @@
       "song_note": null,
       "publish_note": "Musical project Sundial Aeon (Eon), formed in Autumn of 2005 in Poland, and consisting of a variety of electronic musical artist from Eastern Europe.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -294,11 +295,11 @@
       ]
     },
     {
-      "id": "sp_a3a05b8ceaaad463",
+      "id": "sp_62d087af6a58ea6a",
       "broadcast_id": "2025-06-24T20:30:00-0700",
       "evidence": "logged",
       "sequence": 10,
-      "logged_at": null,
+      "logged_at": "2025-06-24T21:19:00-0700",
       "offset_seconds": null,
       "artist": "Andain",
       "artist_key": null,
@@ -318,6 +319,7 @@
       "song_note": null,
       "publish_note": "Now-defunct San Francisco musical project Andain, consisting of producer Josh Gabriel (of Gabriel & Dresden), singer & songwriter Mavie Marcos, and guitarist David Penner.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -351,39 +353,11 @@
       ]
     },
     {
-      "id": "sp_121158a59ad55c3d",
+      "id": "sp_911768bb43bf2ead",
       "broadcast_id": "2025-06-24T20:30:00-0700",
       "evidence": "logged",
       "sequence": 12,
-      "logged_at": "2025-06-24T21:34:02-0700",
-      "offset_seconds": null,
-      "artist": "Dead Can Dance",
-      "artist_key": null,
-      "song": "Compassion - Live from Paramount Theatre, Seattle, WA. September 17th, 2005",
-      "release": "Live from Paramount Theatre, Seattle, WA. September 17th, 2005",
-      "isrc": "UK3XT2100423",
-      "upc": "5056495329558",
-      "duration_seconds": 314,
-      "released_date": "2005",
-      "released_precision": "year",
-      "label": "The Show",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
-      "id": "sp_33afe0bc1e211e09",
-      "broadcast_id": "2025-06-24T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 13,
-      "logged_at": null,
+      "logged_at": "2025-06-24T21:30:00-0700",
       "offset_seconds": null,
       "artist": "Carolyn Cruso and Robert Almblade",
       "artist_key": null,
@@ -405,15 +379,16 @@
       "song_note": null,
       "publish_note": "Seattle multi-instrumentalist and composer Carolyn Cruso and her late partner Robert Almblade.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_0945402d4fb7a4a5",
+      "id": "sp_193b908d2eb8efe1",
       "broadcast_id": "2025-06-24T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 14,
-      "logged_at": null,
+      "sequence": 13,
+      "logged_at": "2025-06-24T21:34:00-0700",
       "offset_seconds": null,
       "artist": "Dead Can Dance",
       "artist_key": null,
@@ -433,7 +408,36 @@
       "song_note": null,
       "publish_note": "British-Australian duo. Recorded Live at the Paramount Theatre in Seattle on September 17th, 2005, and later released in April 2021 on Holy Tongue Records, we heard the song Compassion. As a side note, that song appeared in the 2004 crime drama film “Layer Cake” with Daniel Craig, but was never released on a studio album, which I believe makes this live recording the only released version of this incredible piece. As an additional side note, Craig’s performance in the film has been cited as a major factor in his casting as James Bond in 2005, so at least two good things came out of the film.",
       "sources": [
+        "spinitron",
         "michaelg"
+      ]
+    },
+    {
+      "id": "sp_121158a59ad55c3d",
+      "broadcast_id": "2025-06-24T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 14,
+      "logged_at": "2025-06-24T21:34:02-0700",
+      "offset_seconds": null,
+      "artist": "Dead Can Dance",
+      "artist_key": null,
+      "song": "Compassion - Live from Paramount Theatre, Seattle, WA. September 17th, 2005",
+      "release": "Live from Paramount Theatre, Seattle, WA. September 17th, 2005",
+      "isrc": "UK3XT2100423",
+      "upc": "5056495329558",
+      "duration_seconds": 314,
+      "released_date": "2005",
+      "released_precision": "year",
+      "label": "The Show",
+      "local": null,
+      "local_basis": [],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
       ]
     },
     {
@@ -466,11 +470,11 @@
       ]
     },
     {
-      "id": "sp_e2680ff2e075bc59",
+      "id": "sp_dea236591d2008b9",
       "broadcast_id": "2025-06-24T20:30:00-0700",
       "evidence": "logged",
       "sequence": 16,
-      "logged_at": null,
+      "logged_at": "2025-06-24T21:46:00-0700",
       "offset_seconds": null,
       "artist": "Junip",
       "artist_key": null,
@@ -490,6 +494,7 @@
       "song_note": null,
       "publish_note": "José González on vocals and guitars, and Tobias Winterkorn on organ and Moog synthesizer, along with various accompanying musicians in recordings and in live gigs. Line of Fire, which one source called “a meditation on the precipice of change, and the choices we face when confronted with life’s relentless waves.”",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -523,11 +528,11 @@
       ]
     },
     {
-      "id": "sp_bccebb41a13f65a1",
+      "id": "sp_97ae564ba9c282cd",
       "broadcast_id": "2025-06-24T20:30:00-0700",
       "evidence": "logged",
       "sequence": 18,
-      "logged_at": null,
+      "logged_at": "2025-06-24T21:58:00-0700",
       "offset_seconds": null,
       "artist": "Saloop",
       "artist_key": null,
@@ -547,15 +552,16 @@
       "song_note": null,
       "publish_note": "The album was, according to the album notes, “Written in small bursts of activity when the rain came hammering down during September.”",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_ceb823ea98242d6d",
+      "id": "sp_722fa8a8d9d68fa6",
       "broadcast_id": "2025-06-24T20:30:00-0700",
       "evidence": "logged",
       "sequence": 19,
-      "logged_at": null,
+      "logged_at": "2025-06-24T22:04:00-0700",
       "offset_seconds": null,
       "artist": "Siren And The Sea",
       "artist_key": null,
@@ -575,6 +581,7 @@
       "song_note": null,
       "publish_note": "Songwriter, and producer, Siren and the Sea (Cristina Cano) is no stranger to lush composition, mesmerizing vocals, and bold lyrical songwriting. Siren and the Sea’s emphasis on textural synth work shines in a seemingly underwater realm.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -670,10 +677,39 @@
       ]
     },
     {
-      "id": "sp_48fe779925945e0d",
+      "id": "sp_91f1aaef094e2e35",
       "broadcast_id": "2025-06-24T20:30:00-0700",
       "evidence": "logged",
       "sequence": 23,
+      "logged_at": "2025-06-24T22:24:00-0700",
+      "offset_seconds": null,
+      "artist": "Popol Vuh",
+      "artist_key": null,
+      "song": "Hosianna Mantra",
+      "release": "Hosianna Mantra",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "1972",
+      "released_precision": "year",
+      "label": "Pilz",
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "Germany",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "German musical collective Popol Vuh (like “duh”), founded by keyboardist Florian Fricke in 1969",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_48fe779925945e0d",
+      "broadcast_id": "2025-06-24T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 24,
       "logged_at": "2025-06-24T22:26:31-0700",
       "offset_seconds": null,
       "artist": "Dredkid",
@@ -695,34 +731,6 @@
       "publish_note": null,
       "sources": [
         "spinitron"
-      ]
-    },
-    {
-      "id": "sp_c10e7cf8ca49d86b",
-      "broadcast_id": "2025-06-24T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 24,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Popol Vuh",
-      "artist_key": null,
-      "song": "Hosianna Mantra",
-      "release": "Hosianna Mantra",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "1972",
-      "released_precision": "year",
-      "label": "Pilz",
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "Germany",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "German musical collective Popol Vuh (like “duh”), founded by keyboardist Florian Fricke in 1969",
-      "sources": [
-        "michaelg"
       ]
     }
   ]

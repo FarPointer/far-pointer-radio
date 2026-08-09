@@ -3,7 +3,7 @@
   "air_datetime": "2026-08-04T20:00:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "Convergence Zone (Michael G)",
   "participants": [
     {
       "name": "MichaelG",
@@ -409,11 +409,11 @@
       ]
     },
     {
-      "id": "sp_39b5379302cdbb19",
+      "id": "sp_c2f4fac4408cdca6",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
       "sequence": 14,
-      "logged_at": null,
+      "logged_at": "2026-08-04T21:00:00-0700",
       "offset_seconds": null,
       "artist": "Death Devoir",
       "artist_key": null,
@@ -435,6 +435,7 @@
       "song_note": null,
       "publish_note": "Death Devoir is an experimental music project from Seattle, Washington, known for blending barber beats with dark, industrial, and post‑punk influences. Their work is described by the artist as “art is recycled, music is plundered, tunes meant to be drowned out”",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -468,38 +469,10 @@
       ]
     },
     {
-      "id": "sp_8dc711c5eaf2f1c9",
-      "broadcast_id": "2026-08-04T20:00:00-0700",
-      "evidence": "logged",
-      "sequence": 16,
-      "logged_at": "2026-08-04T21:08:04-0700",
-      "offset_seconds": null,
-      "artist": "Mr. Tac",
-      "artist_key": null,
-      "song": "Rhyme",
-      "release": "Rap extraordinaire",
-      "isrc": "FRX761554828",
-      "upc": "3614593513365",
-      "duration_seconds": 207,
-      "released_date": "2015",
-      "released_precision": "year",
-      "label": "Zone Platinum Entertainment",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
       "id": "sp_03e56336dd29e5c5",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 17,
+      "sequence": 16,
       "logged_at": "2026-08-04T21:08:14-0700",
       "offset_seconds": null,
       "artist": "Emancipator",
@@ -530,7 +503,7 @@
       "id": "sp_6a5f311c438e3516",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 18,
+      "sequence": 17,
       "logged_at": "2026-08-04T21:12:33-0700",
       "offset_seconds": null,
       "artist": "Tourist Activities",
@@ -558,39 +531,11 @@
       ]
     },
     {
-      "id": "sp_e8ea121c72fbe812",
+      "id": "sp_d10e909fe0120398",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 19,
-      "logged_at": "2026-08-04T21:17:05-0700",
-      "offset_seconds": null,
-      "artist": "Tyson Hull",
-      "artist_key": null,
-      "song": "Nobody Knows Who I Am",
-      "release": "Spiral Rounds",
-      "isrc": "QZDA61952186",
-      "upc": "0194271028723",
-      "duration_seconds": 259,
-      "released_date": "2019",
-      "released_precision": "year",
-      "label": "BlackLight Paradise",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
-      "id": "sp_75dab049b97e054a",
-      "broadcast_id": "2026-08-04T20:00:00-0700",
-      "evidence": "logged",
-      "sequence": 20,
-      "logged_at": null,
+      "sequence": 18,
+      "logged_at": "2026-08-04T21:16:00-0700",
       "offset_seconds": null,
       "artist": "tonicSky",
       "artist_key": null,
@@ -612,6 +557,7 @@
       "song_note": null,
       "publish_note": "tonicSky is a music project setup to raise awareness about mental illness through art.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -619,7 +565,7 @@
       "id": "sp_795e8ca006ed041e",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 21,
+      "sequence": 19,
       "logged_at": "2026-08-04T21:21:20-0700",
       "offset_seconds": null,
       "artist": "Ladytron",
@@ -645,11 +591,11 @@
       ]
     },
     {
-      "id": "sp_4a13d39246c3089c",
+      "id": "sp_cd57a6022c4f3ec6",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 22,
-      "logged_at": null,
+      "sequence": 20,
+      "logged_at": "2026-08-04T21:25:00-0700",
       "offset_seconds": null,
       "artist": "Russell Carlsson Coe",
       "artist_key": null,
@@ -671,6 +617,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -678,7 +625,7 @@
       "id": "sp_3258688da2761549",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 23,
+      "sequence": 21,
       "logged_at": "2026-08-04T21:29:45-0700",
       "offset_seconds": null,
       "artist": "If These Trees Could Talk",
@@ -707,7 +654,7 @@
       "id": "sp_5adb5f811b4b764b",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 24,
+      "sequence": 22,
       "logged_at": "2026-08-04T21:31:36-0700",
       "offset_seconds": null,
       "artist": "If These Trees Could Talk",
@@ -735,7 +682,7 @@
       "id": "sp_d0ae0648bdec5662",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 25,
+      "sequence": 23,
       "logged_at": "2026-08-04T21:39:13-0700",
       "offset_seconds": null,
       "artist": "Tears Run Rings",
@@ -763,11 +710,11 @@
       ]
     },
     {
-      "id": "sp_f84b9fd35f1c79e1",
+      "id": "sp_cd87a8ca451a2a24",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 26,
-      "logged_at": null,
+      "sequence": 24,
+      "logged_at": "2026-08-04T21:43:00-0700",
       "offset_seconds": null,
       "artist": "Plurel (Jeremy Blake)",
       "artist_key": null,
@@ -789,6 +736,7 @@
       "song_note": null,
       "publish_note": "This was my live set for Velocity 2022 in Seattle, performed on Syntakt, Digitakt, and Hologram Microcosm. The Digitakt and Syntakt patterns are included as a bonus.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -796,7 +744,7 @@
       "id": "sp_1373acbb89fba98f",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 27,
+      "sequence": 25,
       "logged_at": "2026-08-04T21:48:28-0700",
       "offset_seconds": null,
       "artist": "Hello Meteor",
@@ -824,67 +772,11 @@
       ]
     },
     {
-      "id": "sp_0d54956398734f7e",
+      "id": "sp_e751872626e872eb",
       "broadcast_id": "2026-08-04T20:00:00-0700",
       "evidence": "logged",
-      "sequence": 28,
-      "logged_at": "2026-08-04T21:53:32-0700",
-      "offset_seconds": null,
-      "artist": "Steven Wilson",
-      "artist_key": null,
-      "song": "Harmony Korine - David A. Sitek Magentzied Nebula Mix",
-      "release": "NSRGNTS RMXS",
-      "isrc": "GBCQV0900633",
-      "upc": "0884385830991",
-      "duration_seconds": 310,
-      "released_date": "2009",
-      "released_precision": "year",
-      "label": "The Orchard",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
-      "id": "sp_e3cc19665e50d95b",
-      "broadcast_id": "2026-08-04T20:00:00-0700",
-      "evidence": "logged",
-      "sequence": 29,
-      "logged_at": "2026-08-04T21:59:25-0700",
-      "offset_seconds": null,
-      "artist": "Big Big Train",
-      "artist_key": null,
-      "song": "Hedgerow (Live)",
-      "release": "Empire (Live)",
-      "isrc": "UKKW92000025",
-      "upc": "0793618545925",
-      "duration_seconds": 540,
-      "released_date": "2020",
-      "released_precision": "year",
-      "label": "English Electric Recordings",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
-      "id": "sp_50bb6085bc23c98e",
-      "broadcast_id": "2026-08-04T20:00:00-0700",
-      "evidence": "logged",
-      "sequence": 30,
-      "logged_at": null,
+      "sequence": 26,
+      "logged_at": "2026-08-04T21:54:00-0700",
       "offset_seconds": null,
       "artist": "Steven Wilson",
       "artist_key": null,
@@ -892,7 +784,7 @@
       "release": "Insurgentes",
       "isrc": null,
       "upc": null,
-      "duration_seconds": null,
+      "duration_seconds": 310,
       "released_date": "2008-11-26",
       "released_precision": "day",
       "label": "Headphone Dust",
@@ -904,6 +796,7 @@
       "song_note": null,
       "publish_note": "Steven John Wilson (born 3 November 1967) is an English musician, composer and multi-instrumentalist. He is the founder, guitarist, lead vocalist, and songwriter of the progressive rock band Porcupine Tree, as well as being a member of several other bands, including Blackfield, Storm Corrosion and No-Man. He is also a solo artist, having released eight solo albums since his solo debut Insurgentes in 2008. In a career spanning more than 30 years, Wilson has made music prolifically and earned critical acclaim.[4] His honours include six nominations for Grammy Awards: twice with Porcupine Tree, once with his collaborative band Storm Corrosion and three times as a solo artist. In 2017, The Daily Telegraph described him as \"a resolutely independent artist\" and \"probably the most successful British artist you've never heard of\".[5] Wilson is a self-taught composer, producer, audio engineer, guitar and keyboard player, and plays other instruments as needed, including bass guitar, autoharp, hammered dulcimer and flute. His influences and work have encompassed a diverse range of genres including pop, psychedelia, progressive rock and electronic, among others, shifting his musical direction through his albums. Insurgentes is the debut full-length solo album released by British musician and record producer Steven Wilson, known for being the founder and frontman of progressive rock band Porcupine Tree. The album was recorded all over the world in studios from Mexico City to Japan and Israel, between January and August 2008, and released in November 2008 as a special deluxe multi disc mail order version, with retail release to follow in February 2009.[3] According to Wilson himself, the album contained \"the most experimental song-based music [he had] made.\"[4] The album is named after the Avenida de los Insurgentes, the longest avenue in Mexico City near which part of it was recorded.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     }

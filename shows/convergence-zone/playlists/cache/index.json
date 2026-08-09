@@ -1445,7 +1445,7 @@
     "date": "2025-09-30",
     "episode_number": null,
     "class": "A",
-    "spins": 30,
+    "spins": 32,
     "participants": [
       "MichaelG"
     ],
@@ -1495,7 +1495,7 @@
     "date": "2025-10-28",
     "episode_number": null,
     "class": "A",
-    "spins": 27,
+    "spins": 26,
     "participants": [
       "MichaelG"
     ],
@@ -1519,7 +1519,7 @@
     "date": "2025-11-11",
     "episode_number": null,
     "class": "A",
-    "spins": 27,
+    "spins": 26,
     "participants": [
       "MichaelG"
     ],
@@ -1543,7 +1543,7 @@
     "date": "2025-11-25",
     "episode_number": null,
     "class": "A",
-    "spins": 26,
+    "spins": 25,
     "participants": [
       "MichaelG"
     ],
@@ -1711,7 +1711,7 @@
     "date": "2026-03-03",
     "episode_number": null,
     "class": "A",
-    "spins": 26,
+    "spins": 27,
     "participants": [
       "MichaelG"
     ],
@@ -1855,7 +1855,7 @@
     "date": "2026-05-26",
     "episode_number": null,
     "class": "A",
-    "spins": 25,
+    "spins": 23,
     "participants": [
       "MichaelG"
     ],
@@ -1927,7 +1927,7 @@
     "date": "2026-07-07",
     "episode_number": null,
     "class": "A",
-    "spins": 26,
+    "spins": 24,
     "participants": [
       "MichaelG"
     ],
@@ -1951,7 +1951,7 @@
     "date": "2026-07-21",
     "episode_number": null,
     "class": "A",
-    "spins": 27,
+    "spins": 26,
     "participants": [
       "MichaelG"
     ],
@@ -1975,7 +1975,7 @@
     "date": "2026-08-04",
     "episode_number": null,
     "class": "A",
-    "spins": 30,
+    "spins": 26,
     "participants": [
       "MichaelG"
     ],

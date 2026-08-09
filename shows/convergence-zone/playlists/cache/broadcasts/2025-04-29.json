@@ -3,7 +3,7 @@
   "air_datetime": "2025-04-29T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "04.29.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_f583cc217ffb7e3a",
+      "id": "sp_751ead2eeb56d20c",
       "broadcast_id": "2025-04-29T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2025-04-29T20:32:00-0700",
       "offset_seconds": null,
       "artist": "Shearwater",
       "artist_key": null,
@@ -56,15 +56,16 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_2dde923969eed1c1",
+      "id": "sp_44e066b2dabcb0fd",
       "broadcast_id": "2025-04-29T20:30:00-0700",
       "evidence": "logged",
       "sequence": 2,
-      "logged_at": null,
+      "logged_at": "2025-04-29T20:35:00-0700",
       "offset_seconds": null,
       "artist": "The Soft Cavelry",
       "artist_key": null,
@@ -84,6 +85,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -260,11 +262,11 @@
       ]
     },
     {
-      "id": "sp_9d5aa09c1b4603f5",
+      "id": "sp_80b0ee675cf3222e",
       "broadcast_id": "2025-04-29T20:30:00-0700",
       "evidence": "logged",
       "sequence": 9,
-      "logged_at": null,
+      "logged_at": "2025-04-29T20:59:00-0700",
       "offset_seconds": null,
       "artist": "DJ Shadow",
       "artist_key": null,
@@ -284,6 +286,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -346,11 +349,11 @@
       ]
     },
     {
-      "id": "sp_aa65b22b1d77b7a6",
+      "id": "sp_b8525b7ecb532f24",
       "broadcast_id": "2025-04-29T20:30:00-0700",
       "evidence": "logged",
       "sequence": 12,
-      "logged_at": null,
+      "logged_at": "2025-04-29T21:14:00-0700",
       "offset_seconds": null,
       "artist": "Pink Floyd",
       "artist_key": null,
@@ -370,15 +373,16 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_d99187d28d6fba39",
+      "id": "sp_68a46635922aac6f",
       "broadcast_id": "2025-04-29T20:30:00-0700",
       "evidence": "logged",
       "sequence": 13,
-      "logged_at": null,
+      "logged_at": "2025-04-29T21:19:00-0700",
       "offset_seconds": null,
       "artist": "FFORTRESS",
       "artist_key": null,
@@ -400,15 +404,16 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_a9c4de7e82515c74",
+      "id": "sp_da5ea4c5fa9187dd",
       "broadcast_id": "2025-04-29T20:30:00-0700",
       "evidence": "logged",
       "sequence": 14,
-      "logged_at": null,
+      "logged_at": "2025-04-29T21:24:00-0700",
       "offset_seconds": null,
       "artist": "King Crimson",
       "artist_key": null,
@@ -428,6 +433,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -490,10 +496,39 @@
       ]
     },
     {
-      "id": "sp_15351f271747d0a5",
+      "id": "sp_61df5eefe576de80",
       "broadcast_id": "2025-04-29T20:30:00-0700",
       "evidence": "logged",
       "sequence": 17,
+      "logged_at": "2025-04-29T21:40:00-0700",
+      "offset_seconds": null,
+      "artist": "Biosphere",
+      "artist_key": null,
+      "song": "Genkai-1",
+      "release": "N-Plants",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2011",
+      "released_precision": "year",
+      "label": null,
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "Norway",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "aka Geir Jennsen",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_15351f271747d0a5",
+      "broadcast_id": "2025-04-29T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 18,
       "logged_at": "2025-04-29T21:44:09-0700",
       "offset_seconds": null,
       "artist": "Schiller",
@@ -515,34 +550,6 @@
       "publish_note": null,
       "sources": [
         "spinitron"
-      ]
-    },
-    {
-      "id": "sp_2206a60ab0450f93",
-      "broadcast_id": "2025-04-29T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 18,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Biosphere",
-      "artist_key": null,
-      "song": "Genkai-1",
-      "release": "N-Plants",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2011",
-      "released_precision": "year",
-      "label": null,
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "Norway",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "aka Geir Jennsen",
-      "sources": [
-        "michaelg"
       ]
     },
     {
@@ -633,11 +640,11 @@
       ]
     },
     {
-      "id": "sp_2f2bad14774a19ff",
+      "id": "sp_0f1f4b473739e920",
       "broadcast_id": "2025-04-29T20:30:00-0700",
       "evidence": "logged",
       "sequence": 22,
-      "logged_at": null,
+      "logged_at": "2025-04-29T21:58:00-0700",
       "offset_seconds": null,
       "artist": "Fin",
       "artist_key": null,
@@ -657,6 +664,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },

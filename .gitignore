@@ -20,6 +20,8 @@ api_keys.txt
 credentials.json
 .czarchive.toml
 !**/.czarchive.toml.example
+.czspinitron.toml
+!**/.czspinitron.toml.example
 cookie.txt
 
 # -----------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+# Spinitron login credentials for automated playlist editing.
+# Copy this file to ~/.czspinitron.toml and fill in your credentials.
+# Never commit ~/.czspinitron.toml — keep it outside the repo at ~/.czspinitron.toml.
+# Recommended: restrict permissions (e.g. `chmod 600 ~/.czspinitron.toml`).
+# Used by the cz-spinitron-edit skill (Playwright MCP browser automation).
+[spinitron]
+username = ""
+password = ""

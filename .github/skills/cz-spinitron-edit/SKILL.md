@@ -10,7 +10,7 @@ show-level metadata on Spinitron's management interface. It covers two scopes:
 
 | Scope | Spinitron page | Examples |
 |---|---|---|
-| **Playlist** | `spinitron.com/m/pl/edit/<id>` (one per broadcast) | Rename playlists, update per-episode descriptions |
+| **Playlist** | `spinitron.com/m/playlist/edit/<id>` (one per broadcast) | Rename playlists, update per-episode descriptions |
 | **Show** | `spinitron.com/m/show/edit/<id>` (one record for the whole show) | Update the show's title, description, DJ listing |
 
 The skill does not touch spins, song data, or DJ persona records.
@@ -106,14 +106,27 @@ Navigate to the target page. Confirm expected landmarks (heading, table or form 
 Complete login from `~/.czspinitron.toml` if a login wall appears. Re-confirm landmarks
 after login.
 
-### Step 2 — edit form access
-Playlist edits: click the pencil on the first editable row (Aut ✓).
-Show edits: the show edit form is the target page.
-Confirm title input, description textarea, and submit button are all present.
-**Do not fill in or submit anything.**
+### Step 2 — direct edit form access
+Navigate directly to the known edit URL for the target item.
+- Playlist edits: `/m/playlist/edit/<playlist-id>`
+- Show edits: `/m/show/edit/<show-id>`
 
-### Step 3 — pagination (playlist edits only)
-Click next page. Confirm same layout, different dates. Navigate back to page 1.
+Use the page itself as the editability check; do not discover editability from the browse
+page first. Confirm the captured source cues are present:
+- Playlist page title: `Reopen Playlist`
+- Playlist canonical path: `/m/playlist/edit/<id>`
+- Playlist submit control label: `Submit`
+- Show page title: `Edit show "<show name>"`
+- Show canonical path: `/m/show/edit/<id>`
+- Show submit control label: `Save`
+
+Also confirm title input and description field are present. **Do not fill in or submit
+anything.**
+
+### Step 3 — pagination (optional browse-page check)
+If the task starts from the browse page, pagination may still be tested as a separate
+read-only confidence check. It is no longer part of the core editability path because the
+skill loads edit pages directly by known ID.
 
 ### Step 4 — description field type
 Read the current description field content on one example form. Determine whether it is
@@ -129,7 +142,10 @@ For each item in the confirmed edit list:
 1. Navigate to the edit form.
 2. Confirm URL pattern and presence of title field. If wrong: **stop and explain**.
 3. Clear and fill target fields with the approved values.
-4. Click Submit. Wait for redirect or confirmation.
+4. Submit the form using the correct control for the page type.
+   - Playlist page → `Submit`
+   - Show page → `Save`
+   Wait for redirect or confirmation.
 5. Confirm the updated value is visible. If not: **stop and explain**.
 6. Log the result.
 7. Rate-limit before the next item:
@@ -144,15 +160,14 @@ For each item in the confirmed edit list:
 
 Session log at `~/.copilot/session-state/<session-id>/execution-log.md`:
 
-| Page | Date / ID | Aut ✓/– | Previous value | Target value | Submitted | Verified |
-|---|---|---|---|---|---|---|
+| Object | Date / ID | Previous value | Target value | Submitted | Verified |
+|---|---|---|---|---|---|
 
-Log skipped rows (Aut not checked) as skipped — they are evidence the agent saw the row
-and made a deliberate decision not to act.
+Log every attempted item, including read-only dry-run checks and any direct-edit page that
+fails to load as expected.
 
 ## Safety boundaries
 
-- Act only on rows where `Aut` is checked.
 - Confirm URL and form on every edit before writing.
 - Unrecognised page → **stop immediately and explain**.
 - Post-submit verification failure → **stop immediately and explain**.
@@ -165,4 +180,5 @@ and made a deliberate decision not to act.
 - Infer host from anything other than the cache `participants` field.
 - Guess a Spinitron ID — use the snapshot JSON.
 - Parallelise or open multiple tabs.
-- Edit a date not in the confirmed edit list, even if the row is editable.
+- Fall back to browse-table discovery when the direct edit URL is known.
+- Edit a date not in the confirmed edit list.

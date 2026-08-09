@@ -13,6 +13,7 @@ These target the recurring loops in this repository, not generic coding.
 | `cz-code-review/` | Reviewing a change before or during a pull request, against this repository's specific failure modes |
 | `decision-record/` | A session settled a question and the outcome needs to be checked in |
 | `episode-prep/` | Assembling the show-night packet — repeat avoidance, local coverage, outstanding gaps |
+| `cz-spinitron-edit/` | Bulk or targeted edits to Spinitron playlist or show metadata via Playwright MCP |
 
 ## Boundaries between them
 

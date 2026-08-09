@@ -10,3 +10,4 @@ not as inputs to any build.
 | `Spinssearchresults84208326forKSER.csv` | Through 2026-08-03 | Earliest export; lacks `DJ ID`, `Playlist Date-time`, and `Playlist Duration` columns — cannot distinguish the two Jim Causey personas. |
 | `Spins-search-results-12-5-19-8-4-26-for-KSER.csv` | Through 2026-08-04 | Full-column export; superseded when the Aug 7 export was added. |
 | `Spins-search-results-12-8-19-8-7-26-for-KSER.csv` | Through 2026-08-07 | Superseded by the Aug 9 export. |
+| `Spins-search-results-12-10-19-8-9-26-for-KSER.csv` | Through 2026-08-09 | First Aug 9 export; superseded by a corrected Aug 9 export after the automated cleanup pass. |

@@ -18,7 +18,6 @@
   "webpage_url": null,
   "scheduled_duration_minutes": 120,
   "dj_ids": [
-    "173567",
     "174269"
   ],
   "spinitron_playlist_ids": [
@@ -74,7 +73,7 @@
       "song": "I'm Not Ready for the Change",
       "release": "Dance Called Memory",
       "isrc": "USSUB2570005",
-      "upc": "0098787170061",
+      "upc": null,
       "duration_seconds": 285,
       "released_date": "2025",
       "released_precision": "year",

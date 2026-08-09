@@ -3,7 +3,7 @@
   "air_datetime": "2025-10-28T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "10.28.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_ef425aff839251af",
+      "id": "sp_f980a495fa24e375",
       "broadcast_id": "2025-10-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2025-10-28T20:32:00-0700",
       "offset_seconds": null,
       "artist": "Marvyn Gaye",
       "artist_key": null,
@@ -56,15 +56,16 @@
       "song_note": null,
       "publish_note": "Title track from his eleventh studio album. Considered to be one of the greatest singers of all time.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_8f6088485dd66b6a",
+      "id": "sp_54254ac72a8c2c1b",
       "broadcast_id": "2025-10-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 2,
-      "logged_at": null,
+      "logged_at": "2025-10-28T20:34:00-0700",
       "offset_seconds": null,
       "artist": "Talk Talk",
       "artist_key": null,
@@ -84,6 +85,7 @@
       "song_note": null,
       "publish_note": "Talk Talk were an English band formed in 1981 by Mark Hollis (vocals, guitar, piano), Lee Harris (drums), Paul Webb (bass), and Simon Brenner (keyboards). The Colour of Spring, third studio album. Organ on the song is guest appearance by Steve Winwood of the Spencer Davis Group (1964–1967), Traffic (1967–1969 and 1970–1974), and Blind Faith (1969).",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -351,11 +353,11 @@
       ]
     },
     {
-      "id": "sp_df7b827773cccd77",
+      "id": "sp_7cc3a420031906a5",
       "broadcast_id": "2025-10-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 12,
-      "logged_at": null,
+      "logged_at": "2025-10-28T21:19:00-0700",
       "offset_seconds": null,
       "artist": "Dead Vibrations",
       "artist_key": null,
@@ -375,15 +377,16 @@
       "song_note": null,
       "publish_note": "Performed and recorded at Debaser Strand in Stokholm, Sweden during an event celebrating The Cure's 40th anniversary.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_708e59dfa60e0dbc",
+      "id": "sp_3feaedcc16c5bfb7",
       "broadcast_id": "2025-10-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 13,
-      "logged_at": null,
+      "logged_at": "2025-10-28T21:24:00-0700",
       "offset_seconds": null,
       "artist": "Fleksor",
       "artist_key": null,
@@ -405,15 +408,16 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_58699af68a15a940",
+      "id": "sp_7ec2e6cd65d7273f",
       "broadcast_id": "2025-10-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 14,
-      "logged_at": null,
+      "logged_at": "2025-10-28T21:29:00-0700",
       "offset_seconds": null,
       "artist": "Kaito",
       "artist_key": null,
@@ -433,15 +437,16 @@
       "song_note": null,
       "publish_note": "Real name Hiroshi Watanabe. Born to musical parents; his father was a composer and his mother a jazz pianist, Watanabe studied at the Berklee College of Music, where he also earned a degree in composition.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_50b07c577bea2c2c",
+      "id": "sp_deeb7d1ec90a2b1f",
       "broadcast_id": "2025-10-28T20:30:00-0700",
       "evidence": "logged",
       "sequence": 15,
-      "logged_at": null,
+      "logged_at": "2025-10-28T21:33:00-0700",
       "offset_seconds": null,
       "artist": "Mount Maxwell",
       "artist_key": null,
@@ -463,6 +468,7 @@
       "song_note": null,
       "publish_note": "An analog tribute to the utopian promise of the original BC Ferries fleet and the island communities it served. Forty hypnotic minutes of abstract oceanics, 70's string machines, and pulsing PSA arps.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -771,38 +777,10 @@
       ]
     },
     {
-      "id": "sp_4bbbb8711ed27a06",
-      "broadcast_id": "2025-10-28T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 26,
-      "logged_at": "2025-10-28T22:29:35-0700",
-      "offset_seconds": null,
-      "artist": "Wendy Carlos",
-      "artist_key": null,
-      "song": "Main Title (The Shining)",
-      "release": "The Shining (Selections from the Original Motion Picture Soundtrack)",
-      "isrc": "USNLR2001474",
-      "upc": "0794043206030",
-      "duration_seconds": 204,
-      "released_date": "2020",
-      "released_precision": "year",
-      "label": "WaterTower Music",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
       "id": "sp_9ce968f11b0782cd",
       "broadcast_id": "2025-10-28T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 27,
+      "sequence": 26,
       "logged_at": "2025-10-28T22:17:12-0700",
       "offset_seconds": null,
       "artist": "Dead Can Dance",

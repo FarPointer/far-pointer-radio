@@ -3,7 +3,7 @@
   "air_datetime": "2025-07-08T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "07.08.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_8b4f9c908217fcad",
+      "id": "sp_72937b23bbc391f7",
       "broadcast_id": "2025-07-08T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2025-07-08T20:32:00-0700",
       "offset_seconds": null,
       "artist": "Lord Huron",
       "artist_key": null,
@@ -56,6 +56,7 @@
       "song_note": null,
       "publish_note": "Lord Huron is a Los Angeles-based American indie rock band composed of Mark Barry (drums, percussion), Miguel Briseño (bass, keyboard, theremin), Tom Renaud (guitar), and founder Ben Schneider (guitar, lead vocals). They released their debut album Lonesome Dreams in 2012, their second album Strange Trails in 2015, their third album Vide Noir in 2018, their fourth album Long Lost in 2021, and their fifth album The Cosmic Selector Vol. 1 in 2025. Lord Huron combines country, western, folk rock, rock and roll, pop melodies, and surf rock with soundtrack and new age influences to produce a sound The Wall Street Journal described as having \"a decidedly cinematic flair, heavy on mood and evocative imagery. Lord Huron brings to mind the high-lonesome sound of antecedents like the Band, Neil Young, My Morning Jacket and Fleet Foxes\". Schneider began writing music in his hometown of Okemos, Michigan before studying visual arts at the University of Michigan and in France then moving to New York City where he worked as an artist.[6] After relocating to Los Angeles, in 2010 Schneider formed Lord Huron as a solo project, recording a few EPs on his own and enlisting musicians to play in live shows. The band's name was inspired by Lake Huron, which Schneider grew up visiting.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -147,11 +148,11 @@
       ]
     },
     {
-      "id": "sp_07e95e441d5a6e26",
+      "id": "sp_7adc19ebbf56d101",
       "broadcast_id": "2025-07-08T20:30:00-0700",
       "evidence": "logged",
       "sequence": 5,
-      "logged_at": null,
+      "logged_at": "2025-07-08T20:50:00-0700",
       "offset_seconds": null,
       "artist": "Yaeji",
       "artist_key": null,
@@ -171,6 +172,7 @@
       "song_note": null,
       "publish_note": "Korean American, Brooklyn based DJ and producer Yaeji (Yay-Gee), who does a kind of interesting blend of mellow house and hip-hop along with her unique vocals.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -320,11 +322,11 @@
       ]
     },
     {
-      "id": "sp_97314328aebde39c",
+      "id": "sp_2a674706710fe3e0",
       "broadcast_id": "2025-07-08T20:30:00-0700",
       "evidence": "logged",
       "sequence": 11,
-      "logged_at": null,
+      "logged_at": "2025-07-08T21:21:00-0700",
       "offset_seconds": null,
       "artist": "Mount Fog",
       "artist_key": null,
@@ -346,6 +348,7 @@
       "song_note": null,
       "publish_note": "Musical project of Seattle singer and classically-trained violinist Carolyn B. Spells of Silence, a self-described collection of haunted house songs",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -526,11 +529,11 @@
       ]
     },
     {
-      "id": "sp_c2d0462a79ff1178",
+      "id": "sp_9fc7a3f06b4c91ff",
       "broadcast_id": "2025-07-08T20:30:00-0700",
       "evidence": "logged",
       "sequence": 18,
-      "logged_at": null,
+      "logged_at": "2025-07-08T21:56:00-0700",
       "offset_seconds": null,
       "artist": "Suzanne Ciani",
       "artist_key": null,
@@ -550,15 +553,16 @@
       "song_note": null,
       "publish_note": "Suzanne Ciani (born June 4, 1946) is an American musician, sound designer, composer, and record label executive who found early success in the 1970s, with her electronic music and sound effects for films and television commercials. Her career has included works with quadraphonic sound. She has been nominated for a Grammy Award for Best New Age Album five times. Her success with electronic music has her dubbed \"Diva of the Diode\" and \"America's first female synth hero\"",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_ea633318044b4e66",
+      "id": "sp_4af2c93e16e8db63",
       "broadcast_id": "2025-07-08T20:30:00-0700",
       "evidence": "logged",
       "sequence": 19,
-      "logged_at": null,
+      "logged_at": "2025-07-08T22:01:00-0700",
       "offset_seconds": null,
       "artist": "Karaffa Sound",
       "artist_key": null,
@@ -578,15 +582,16 @@
       "song_note": null,
       "publish_note": "Ambient composer and guitarist Gabriel Karaffa",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_250b78eb6c5a5376",
+      "id": "sp_d439d93f28085568",
       "broadcast_id": "2025-07-08T20:30:00-0700",
       "evidence": "logged",
       "sequence": 20,
-      "logged_at": null,
+      "logged_at": "2025-07-08T22:07:00-0700",
       "offset_seconds": null,
       "artist": "Transponder",
       "artist_key": null,
@@ -606,6 +611,7 @@
       "song_note": null,
       "publish_note": "Musical collaboration between musicians Steve Pierce of Extraworld, and Don Tyler of Remote Vision.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -639,11 +645,11 @@
       ]
     },
     {
-      "id": "sp_b82b2b0154d9c435",
+      "id": "sp_7040482af09038a8",
       "broadcast_id": "2025-07-08T20:30:00-0700",
       "evidence": "logged",
       "sequence": 22,
-      "logged_at": null,
+      "logged_at": "2025-07-08T22:17:00-0700",
       "offset_seconds": null,
       "artist": "O Yuki Conjugate",
       "artist_key": null,
@@ -663,6 +669,7 @@
       "song_note": null,
       "publish_note": "London based musical project O Yuki Conjugate, which was born out of the Covid pandemic where both OYC members were working in isolation. The album, the two thousand twenty one A Tension of Opposites Vol 1&2 on World of Echo Music, is described as 'Dirty Ambient', a phrase coined by OYC for the process of working quickly and instinctively, embracing errors and honouring imperfections…akin to the Japanese philosophy of Wabi Sabi",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },

@@ -3,7 +3,7 @@
   "air_datetime": "2025-09-02T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "09.02.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_28f4634bd2440c98",
+      "id": "sp_001f2decca902b45",
       "broadcast_id": "2025-09-02T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2025-09-02T20:32:00-0700",
       "offset_seconds": null,
       "artist": "Geographer",
       "artist_key": null,
@@ -56,6 +56,7 @@
       "song_note": null,
       "publish_note": "Synth-pop/indie rock project of Mike Deni",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -233,11 +234,11 @@
       ]
     },
     {
-      "id": "sp_58d80427289c2761",
+      "id": "sp_b8834a2e3890b692",
       "broadcast_id": "2025-09-02T20:30:00-0700",
       "evidence": "logged",
       "sequence": 8,
-      "logged_at": null,
+      "logged_at": "2025-09-02T20:59:00-0700",
       "offset_seconds": null,
       "artist": "Simic",
       "artist_key": null,
@@ -259,6 +260,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -438,11 +440,11 @@
       ]
     },
     {
-      "id": "sp_0ca01bfa0c2876b6",
+      "id": "sp_14620c1cee4e643b",
       "broadcast_id": "2025-09-02T20:30:00-0700",
       "evidence": "logged",
       "sequence": 15,
-      "logged_at": null,
+      "logged_at": "2025-09-02T21:26:00-0700",
       "offset_seconds": null,
       "artist": "yu-more",
       "artist_key": null,
@@ -462,6 +464,7 @@
       "song_note": null,
       "publish_note": "House & Drum'n'Bass DJ",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -554,11 +557,11 @@
       ]
     },
     {
-      "id": "sp_3f680af2af90294f",
+      "id": "sp_d1b42c968dfb562a",
       "broadcast_id": "2025-09-02T20:30:00-0700",
       "evidence": "logged",
       "sequence": 19,
-      "logged_at": null,
+      "logged_at": "2025-09-02T21:45:00-0700",
       "offset_seconds": null,
       "artist": "Bluetech and Steve Hillage",
       "artist_key": null,
@@ -580,6 +583,7 @@
       "song_note": null,
       "publish_note": "Collaboration between Seattle electronic musician and producer Marc Evan, who performs as Bluetech, and legendary British guitarist Steve Hillage who, as a sidenote, participated in the 1973 debut live performance of Mike Oldfield's Tubular Bells at Queen Elizabeth Hall. From the two thousand eight album Dreamtime Submersible on Evan’s Bluetech label, I played the track Hypnagogue which, for context, describes something that elicits or aids in the Hypnagogic states, which are the transitional experiences between wakefulness and sleep.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -673,11 +677,11 @@
       ]
     },
     {
-      "id": "sp_cfae9a4330692c04",
+      "id": "sp_b36b08f4fbe1f9c5",
       "broadcast_id": "2025-09-02T20:30:00-0700",
       "evidence": "logged",
       "sequence": 23,
-      "logged_at": null,
+      "logged_at": "2025-09-02T22:06:00-0700",
       "offset_seconds": null,
       "artist": "Haunted Computer",
       "artist_key": null,
@@ -699,6 +703,7 @@
       "song_note": null,
       "publish_note": "the electronic synth-based ambient project of Seattle musician Bobby Malvestuto",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -761,10 +766,39 @@
       ]
     },
     {
-      "id": "sp_db4ed557f934b369",
+      "id": "sp_a27ae6ad366186c6",
       "broadcast_id": "2025-09-02T20:30:00-0700",
       "evidence": "logged",
       "sequence": 26,
+      "logged_at": "2025-09-02T22:22:00-0700",
+      "offset_seconds": null,
+      "artist": "Deepspace",
+      "artist_key": null,
+      "song": "ApproachingTheBlue",
+      "release": "Water Planets",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2025",
+      "released_precision": "year",
+      "label": "Projekt Records",
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "Brisbane, Australia",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "Mirko Ruckels is an Australian musician of German/French origin who creates ambient music under the name of deepspace. Drawing from ambient influences as well as art music influences such as Maurice Ravel and Claude Debussy. A total of 17 albums have been released, independently and currently on on Projekt Records. Water Planets is his latest release on Projekt Bandcamp and other platforms. Projekt Records, Portland, OR based label",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_db4ed557f934b369",
+      "broadcast_id": "2025-09-02T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 27,
       "logged_at": "2025-09-02T22:24:22-0700",
       "offset_seconds": null,
       "artist": "Laurel Halo",
@@ -786,34 +820,6 @@
       "publish_note": null,
       "sources": [
         "spinitron"
-      ]
-    },
-    {
-      "id": "sp_c201d61d628884fa",
-      "broadcast_id": "2025-09-02T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 27,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Deepspace",
-      "artist_key": null,
-      "song": "ApproachingTheBlue",
-      "release": "Water Planets",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2025",
-      "released_precision": "year",
-      "label": "Projekt Records",
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "Brisbane, Australia",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "Mirko Ruckels is an Australian musician of German/French origin who creates ambient music under the name of deepspace. Drawing from ambient influences as well as art music influences such as Maurice Ravel and Claude Debussy. A total of 17 albums have been released, independently and currently on on Projekt Records. Water Planets is his latest release on Projekt Bandcamp and other platforms. Projekt Records, Portland, OR based label",
-      "sources": [
-        "michaelg"
       ]
     }
   ]

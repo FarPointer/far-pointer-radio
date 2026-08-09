@@ -353,11 +353,11 @@
       ]
     },
     {
-      "id": "sp_71d27ee3cea43273",
+      "id": "sp_0b401081748d202d",
       "broadcast_id": "2026-07-21T20:30:00-0700",
       "evidence": "logged",
       "sequence": 12,
-      "logged_at": null,
+      "logged_at": "2026-07-21T21:27:00-0700",
       "offset_seconds": null,
       "artist": "Sky Cries Mary",
       "artist_key": null,
@@ -379,6 +379,7 @@
       "song_note": null,
       "publish_note": "Sky Cries Mary is an American psychedelic rock/trance musical group from Seattle, Washington, formed in the late 1980s by Roderick Wolgamott. Early band influences included European industrial music bands such as Einstürzende Neubauten, Coil, and Test Department, and 1970s glam/punk artists including Lou Reed, Iggy Pop, and David Bowie. Notable band alumni include Jon Auer and Ken Stringfellow of The Posies, vocalist Anisa Romero, Michael Cozzi of Shriekback, Jon ‘Juano’ Davison (later of Yes and Glass Hammer), Ron Nine (Love Battery) on guitar, Kurt Danielson (TAD on bass) and Gordon Raphael (producer for The Strokes). New Sky Cries Mary album was recorded in a period 2025-2026. Recorded and mixed by Bubba Jones at Contact Create Studios, Seattle, WA. Mastered by Jack Endino in Grays River, WA",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -565,11 +566,11 @@
       ]
     },
     {
-      "id": "sp_b5305c0a546b5e8a",
+      "id": "sp_f619ae883f6581c1",
       "broadcast_id": "2026-07-21T20:30:00-0700",
       "evidence": "logged",
       "sequence": 19,
-      "logged_at": null,
+      "logged_at": "2026-07-21T21:52:00-0700",
       "offset_seconds": null,
       "artist": "Fallen",
       "artist_key": null,
@@ -589,6 +590,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -799,34 +801,6 @@
       "sources": [
         "spinitron",
         "michaelg"
-      ]
-    },
-    {
-      "id": "sp_0d6500864ecda4c3",
-      "broadcast_id": "2026-07-21T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 27,
-      "logged_at": "2026-07-21T22:29:51-0700",
-      "offset_seconds": null,
-      "artist": "Love",
-      "artist_key": null,
-      "song": "Alone Again Or - 2015 Remastered Version",
-      "release": "Forever Changes (2015 Remastered Version)",
-      "isrc": "USEE10609244",
-      "upc": "0081227418427",
-      "duration_seconds": 197,
-      "released_date": "2018",
-      "released_precision": "year",
-      "label": "Elektra",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
       ]
     }
   ]

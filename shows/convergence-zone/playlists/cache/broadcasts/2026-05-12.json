@@ -3,7 +3,7 @@
   "air_datetime": "2026-05-12T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "05.12.2026 - (MichaelG)",
   "participants": [
     {
       "name": "MichaelG",
@@ -269,11 +269,11 @@
       ]
     },
     {
-      "id": "sp_ac45fa3499a04fe2",
+      "id": "sp_1d811c90cdab82b4",
       "broadcast_id": "2026-05-12T20:30:00-0700",
       "evidence": "logged",
       "sequence": 9,
-      "logged_at": null,
+      "logged_at": "2026-05-12T21:06:00-0700",
       "offset_seconds": null,
       "artist": "Trigona",
       "artist_key": null,
@@ -293,6 +293,7 @@
       "song_note": null,
       "publish_note": "Psych rock recordings featuring lots of fuzz, delay, swirly effects and that motorik beat all the kids are talking about. Trigona, the one-man band space rock project from Rob Shiels, returns with Radiant Point, a new 6 track full length album. With an arpeggiated synth bass locking in the groove, Speed Light Alpha kicks things off with its fast paced drums and melodic ebow guitar lines. We have lift off folks. Cruising speed is achieved with Return to Infinity. Multiple tremolo-spinning guitar lines weave throughout the track, eventually building up to a soaring solo at the back end.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -477,11 +478,11 @@
       ]
     },
     {
-      "id": "sp_d1015d420d2d2f54",
+      "id": "sp_4ad46c6d2b3fbd15",
       "broadcast_id": "2026-05-12T20:30:00-0700",
       "evidence": "logged",
       "sequence": 16,
-      "logged_at": null,
+      "logged_at": "2026-05-12T21:41:00-0700",
       "offset_seconds": null,
       "artist": "Sam Rosenzweig",
       "artist_key": null,
@@ -503,6 +504,7 @@
       "song_note": null,
       "publish_note": "musician and producer living in the pacific northwest",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -567,11 +569,11 @@
       ]
     },
     {
-      "id": "sp_2c701a1272176ae3",
+      "id": "sp_1ac92235419f68c6",
       "broadcast_id": "2026-05-12T20:30:00-0700",
       "evidence": "logged",
       "sequence": 19,
-      "logged_at": null,
+      "logged_at": "2026-05-12T21:50:00-0700",
       "offset_seconds": null,
       "artist": "Exit Exile",
       "artist_key": null,
@@ -593,6 +595,7 @@
       "song_note": null,
       "publish_note": "Inspired by the eclectic sound of late 80's & early 90's midnight college radio | an indie spirit blending dark & moody electronic experiments | with pop sometimes | bringing out what has been hidden away | introspective struggles | harsh emotional truths | grief & regrets | a mostly solo project of mostly solo vintage synth fantasies",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -688,39 +691,11 @@
       ]
     },
     {
-      "id": "sp_a7052cc0f87d0adf",
+      "id": "sp_3a801c4f3c0496f6",
       "broadcast_id": "2026-05-12T20:30:00-0700",
       "evidence": "logged",
       "sequence": 23,
-      "logged_at": "2026-05-12T22:13:10-0700",
-      "offset_seconds": null,
-      "artist": "aetheres",
-      "artist_key": null,
-      "song": "mist",
-      "release": "seasons of wither",
-      "isrc": "QZWFJ2677651",
-      "upc": "0825393738978",
-      "duration_seconds": 256,
-      "released_date": "2026",
-      "released_precision": "year",
-      "label": "ARCHAEA",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
-      "id": "sp_a4c2cc0d1d3f94d5",
-      "broadcast_id": "2026-05-12T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 24,
-      "logged_at": null,
+      "logged_at": "2026-05-12T22:07:00-0700",
       "offset_seconds": null,
       "artist": "TERRACE",
       "artist_key": null,
@@ -742,15 +717,16 @@
       "song_note": null,
       "publish_note": "TERRACE is a Seattle-based electronic music project by LES1ON, known for experimental and hardware-driven sound design. TERRACE is not a single person but a hardware experimentation project created by LES1ON, a musician and producer from Seattle, Washington terrorace. The project is part of LES1ON’s broader creative output, which also includes the band LES1ON and other musical endeavors. LES1ON is a multi-instrumentalist and producer active in the Seattle music scene, often blending electronic, experimental, and improvisational elements. The TERRACE project is one of their side ventures, distinct from their main band work.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_4ebb8137a742dc95",
+      "id": "sp_04863872251a1b5d",
       "broadcast_id": "2026-05-12T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 25,
-      "logged_at": null,
+      "sequence": 24,
+      "logged_at": "2026-05-12T22:12:00-0700",
       "offset_seconds": null,
       "artist": "Russell Coe",
       "artist_key": null,
@@ -772,7 +748,36 @@
       "song_note": null,
       "publish_note": "Russell Carlsson Coe",
       "sources": [
+        "spinitron",
         "michaelg"
+      ]
+    },
+    {
+      "id": "sp_a7052cc0f87d0adf",
+      "broadcast_id": "2026-05-12T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 25,
+      "logged_at": "2026-05-12T22:13:10-0700",
+      "offset_seconds": null,
+      "artist": "aetheres",
+      "artist_key": null,
+      "song": "mist",
+      "release": "seasons of wither",
+      "isrc": "QZWFJ2677651",
+      "upc": "0825393738978",
+      "duration_seconds": 256,
+      "released_date": "2026",
+      "released_precision": "year",
+      "label": "ARCHAEA",
+      "local": null,
+      "local_basis": [],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
       ]
     },
     {
@@ -807,11 +812,11 @@
       ]
     },
     {
-      "id": "sp_e7f00db7cbb5f909",
+      "id": "sp_60dd5b9a381a29af",
       "broadcast_id": "2026-05-12T20:30:00-0700",
       "evidence": "logged",
       "sequence": 27,
-      "logged_at": null,
+      "logged_at": "2026-05-12T22:23:00-0700",
       "offset_seconds": null,
       "artist": "Steve Layton",
       "artist_key": null,
@@ -833,6 +838,7 @@
       "song_note": null,
       "publish_note": "Composer, performer, recordist, connector, facilitator. Editor of Sequenza21.com, a long-running website reporting on contemporary classical music. Collaborator at ImprovFriday/Sound-In, a weekly web gathering of musicians from around the globe. NiwoSound is an umbrella for innovative art music / art sound. Tracks created in January, 2026. Seventy years... My body says one thing, my music says many other things. If I've done my job well, the music never ages.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     }

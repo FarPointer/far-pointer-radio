@@ -3,7 +3,7 @@
   "air_datetime": "2025-12-23T20:30:00-0800",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "12.23.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -353,11 +353,11 @@
       ]
     },
     {
-      "id": "sp_09bdf45740f2c854",
+      "id": "sp_67791bf1536f434d",
       "broadcast_id": "2025-12-23T20:30:00-0800",
       "evidence": "logged",
       "sequence": 12,
-      "logged_at": null,
+      "logged_at": "2025-12-23T21:27:00-0800",
       "offset_seconds": null,
       "artist": "Blue Six",
       "artist_key": null,
@@ -377,6 +377,7 @@
       "song_note": null,
       "publish_note": "Musician, producer and remixer Jay Denes, better known as Blue Six, was born in Newark, NJ. After moving to N.Y.C., the newcomer failed to get seriously involved in the local music scene until hip-hop producer Bob Power hooked him up with Dave Boonshoff. Jay Denes began working on his own freestyle project soon after naming himself Blue Six. Released by Naked Music, his debut full-length record called Beautiful Tomorrow delivered a mix of electronic music, soulful pop, and smooth jazz, featuring contributions from multi-instrumentalist Marc Anthony Jones.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -441,11 +442,11 @@
       ]
     },
     {
-      "id": "sp_d48ac8667d49e231",
+      "id": "sp_efc8835132f05d7d",
       "broadcast_id": "2025-12-23T20:30:00-0800",
       "evidence": "logged",
       "sequence": 15,
-      "logged_at": null,
+      "logged_at": "2025-12-23T21:41:00-0800",
       "offset_seconds": null,
       "artist": "LIGHTSPEAR",
       "artist_key": null,
@@ -467,15 +468,16 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_525b695c2dcbd413",
+      "id": "sp_878646d68900f07b",
       "broadcast_id": "2025-12-23T20:30:00-0800",
       "evidence": "logged",
       "sequence": 16,
-      "logged_at": null,
+      "logged_at": "2025-12-23T21:47:00-0800",
       "offset_seconds": null,
       "artist": "The Midnight",
       "artist_key": null,
@@ -495,6 +497,7 @@
       "song_note": null,
       "publish_note": "There is a Japanese term: Mono no aware. It means basically, the sad beauty of seeing time pass - the aching awareness of impermanence. These are the days that we will return to one day in the future only in memories. The Midnight consists of Tyler Lyle (a songwriter from the Deep South) and Tim McEwan (a producer from Denmark).",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -617,11 +620,11 @@
       ]
     },
     {
-      "id": "sp_7b138161c0bdb6ec",
+      "id": "sp_d18b3ee1dd281363",
       "broadcast_id": "2025-12-23T20:30:00-0800",
       "evidence": "logged",
       "sequence": 21,
-      "logged_at": null,
+      "logged_at": "2025-12-23T22:14:00-0800",
       "offset_seconds": null,
       "artist": "Michael Bell",
       "artist_key": null,
@@ -643,6 +646,7 @@
       "song_note": null,
       "publish_note": "A Loose-Fish and a Fast-Fish, too. Some of this is music for video games. The rest is a fairly raw document of my ongoing attempt to find something new among the blinking lights in my studio at home.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },

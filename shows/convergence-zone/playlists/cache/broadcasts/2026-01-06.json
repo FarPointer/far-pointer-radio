@@ -3,7 +3,7 @@
   "air_datetime": "2026-01-06T20:30:00-0800",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "01.06.2026 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -239,11 +239,11 @@
       ]
     },
     {
-      "id": "sp_c9b003218cccb8be",
+      "id": "sp_2018231a2c6ab695",
       "broadcast_id": "2026-01-06T20:30:00-0800",
       "evidence": "logged",
       "sequence": 8,
-      "logged_at": null,
+      "logged_at": "2026-01-06T21:07:00-0800",
       "offset_seconds": null,
       "artist": "Selene (Kayla Waldorf)",
       "artist_key": null,
@@ -265,6 +265,7 @@
       "song_note": null,
       "publish_note": "This EP was written during a period of personal creative renaissance. While the past few years have been horribly isolating, I have been reminded that cultivating creativity is an active task and that requires both building an internal, private creative space and an external, communally-built one. There is a lot of noise we must filter through to connect with genuine self-expression, so I have found the metaphor of the secret garden helpful in centering my own creativity.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -356,11 +357,11 @@
       ]
     },
     {
-      "id": "sp_b6743d1e1b4b492d",
+      "id": "sp_0d1c713e51c76a35",
       "broadcast_id": "2026-01-06T20:30:00-0800",
       "evidence": "logged",
       "sequence": 12,
-      "logged_at": null,
+      "logged_at": "2026-01-06T21:31:00-0800",
       "offset_seconds": null,
       "artist": "8circuit",
       "artist_key": null,
@@ -382,6 +383,7 @@
       "song_note": null,
       "publish_note": "SecondNature is a Seattle based artist collective and label focused on bringing expansive electronic music to the Pacific NW. We're thrilled to announce a brand new EP from our resident 8circuit (formerly known as Archivist (Alex Markey)), a secondnature cofounder and our resident sound engineer. Liquid Link is a set of kinetic, intricately crafted tracks built on deep rhythmic foundations and enriched with his signature atmospheres. 8circuit represents a new engagement with the dance floor after a few years of pandemic hibernation.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -444,10 +446,39 @@
       ]
     },
     {
-      "id": "sp_e336cb49446081a0",
+      "id": "sp_069281405f1ef822",
       "broadcast_id": "2026-01-06T20:30:00-0800",
       "evidence": "logged",
       "sequence": 15,
+      "logged_at": "2026-01-06T21:50:00-0800",
+      "offset_seconds": null,
+      "artist": "Petalpusher (aka Miguel Migs)",
+      "artist_key": null,
+      "song": "Breakin' It Down",
+      "release": "12\" Single",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "1999",
+      "released_precision": "year",
+      "label": "Naked Music Recordings",
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "San Francisco",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "Miguel Sundance Steward Deep House, Downtempo Miguel Steward (born December 6, 1972) better known by his stage name Miguel Migs, is an American deep house DJ and producer and the founder of Salted Music, an independent electronic dance music record label based in San Francisco, California. Migs began his music career at 18 years old, as a lead guitarist and songwriter for a Santa Cruz local band called Zion Sounds.[1] The band split up in the mid-1990s, however Zion Sounds' African and Jamaican style is said to have been a major influence in Migs' personal career. After the band dissolved, Migs went on to explore electronic music production thus creating his unique and soulful sound.",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_e336cb49446081a0",
+      "broadcast_id": "2026-01-06T20:30:00-0800",
+      "evidence": "logged",
+      "sequence": 16,
       "logged_at": "2026-01-06T21:50:07-0800",
       "offset_seconds": null,
       "artist": "Miguel Migs",
@@ -469,34 +500,6 @@
       "publish_note": null,
       "sources": [
         "spinitron"
-      ]
-    },
-    {
-      "id": "sp_a1cd21a2f572339d",
-      "broadcast_id": "2026-01-06T20:30:00-0800",
-      "evidence": "logged",
-      "sequence": 16,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Petalpusher (aka Miguel Migs)",
-      "artist_key": null,
-      "song": "Breakin' It Down",
-      "release": "12\" Single",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "1999",
-      "released_precision": "year",
-      "label": "Naked Music Recordings",
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "San Francisco",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "Miguel Sundance Steward Deep House, Downtempo Miguel Steward (born December 6, 1972) better known by his stage name Miguel Migs, is an American deep house DJ and producer and the founder of Salted Music, an independent electronic dance music record label based in San Francisco, California. Migs began his music career at 18 years old, as a lead guitarist and songwriter for a Santa Cruz local band called Zion Sounds.[1] The band split up in the mid-1990s, however Zion Sounds' African and Jamaican style is said to have been a major influence in Migs' personal career. After the band dissolved, Migs went on to explore electronic music production thus creating his unique and soulful sound.",
-      "sources": [
-        "michaelg"
       ]
     },
     {
@@ -529,11 +532,11 @@
       ]
     },
     {
-      "id": "sp_d76cfd5fce73d130",
+      "id": "sp_0a2e48eb79b943c1",
       "broadcast_id": "2026-01-06T20:30:00-0800",
       "evidence": "logged",
       "sequence": 18,
-      "logged_at": null,
+      "logged_at": "2026-01-06T21:59:00-0800",
       "offset_seconds": null,
       "artist": "Matthew Seiji Burns",
       "artist_key": null,
@@ -555,6 +558,7 @@
       "song_note": null,
       "publish_note": "Matthew Seiji Burns uses synthesizers in the Seattle area. Fragments, created long ago for a game that was never made. They remain unfinished, but hint at a larger world. If you like, use your imagination and take a journey into the ocean…",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },

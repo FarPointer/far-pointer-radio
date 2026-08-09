@@ -3,7 +3,7 @@
   "air_datetime": "2025-06-10T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "06.10.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_36291631caff869a",
+      "id": "sp_0a4994e62a322cba",
       "broadcast_id": "2025-06-10T20:30:00-0700",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2025-06-10T20:32:00-0700",
       "offset_seconds": null,
       "artist": "Florence And The Machine",
       "artist_key": null,
@@ -56,6 +56,7 @@
       "song_note": null,
       "publish_note": "English songwriter and singer extraordinaire Florence Welsh, and Emmy-nominated film composer, songwriter, producer, and musician Isabella Summers, collectively known as Florence and the Machine. That was off their second studio album Ceremonials",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -89,11 +90,11 @@
       ]
     },
     {
-      "id": "sp_cbd892471d973f10",
+      "id": "sp_cd44449f478d2483",
       "broadcast_id": "2025-06-10T20:30:00-0700",
       "evidence": "logged",
       "sequence": 3,
-      "logged_at": null,
+      "logged_at": "2025-06-10T20:40:00-0700",
       "offset_seconds": null,
       "artist": "Detroit Escalator Company",
       "artist_key": null,
@@ -113,6 +114,7 @@
       "song_note": null,
       "publish_note": "Detroit born electronic music producer and musician Neil Ollivierra, AKA The Detroit Escalator Company",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -413,10 +415,41 @@
       ]
     },
     {
-      "id": "sp_f87ce5b6ccd59c69",
+      "id": "sp_419d834a54544436",
       "broadcast_id": "2025-06-10T20:30:00-0700",
       "evidence": "logged",
       "sequence": 14,
+      "logged_at": "2025-06-10T21:36:00-0700",
+      "offset_seconds": null,
+      "artist": "Haunted Computer",
+      "artist_key": null,
+      "song": "Escape From Beach Drive",
+      "release": "Castle Waves",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2022",
+      "released_precision": "year",
+      "label": null,
+      "local": true,
+      "local_basis": [
+        "artist"
+      ],
+      "artist_origin_raw": "Seattle, WA",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "Seattle musician Bobby Malvestuto and his electronic synth-based ambient project Haunted Computer",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_f87ce5b6ccd59c69",
+      "broadcast_id": "2025-06-10T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 15,
       "logged_at": "2025-06-10T21:40:35-0700",
       "offset_seconds": null,
       "artist": "Jon Jenkins",
@@ -441,41 +474,11 @@
       ]
     },
     {
-      "id": "sp_9a0057aea6ed6687",
-      "broadcast_id": "2025-06-10T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 15,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Haunted Computer",
-      "artist_key": null,
-      "song": "Escape From Beach Drive",
-      "release": "Castle Waves",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2022",
-      "released_precision": "year",
-      "label": null,
-      "local": true,
-      "local_basis": [
-        "artist"
-      ],
-      "artist_origin_raw": "Seattle, WA",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "Seattle musician Bobby Malvestuto and his electronic synth-based ambient project Haunted Computer",
-      "sources": [
-        "michaelg"
-      ]
-    },
-    {
-      "id": "sp_c27737db4c96ceb3",
+      "id": "sp_5880a5beb12815d6",
       "broadcast_id": "2025-06-10T20:30:00-0700",
       "evidence": "logged",
       "sequence": 16,
-      "logged_at": null,
+      "logged_at": "2025-06-10T21:41:00-0700",
       "offset_seconds": null,
       "artist": "Jon Jenkins and Paul Lackey",
       "artist_key": null,
@@ -495,6 +498,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -617,10 +621,39 @@
       ]
     },
     {
-      "id": "sp_6c4cf0024ee73a13",
+      "id": "sp_8a93234ac3177204",
       "broadcast_id": "2025-06-10T20:30:00-0700",
       "evidence": "logged",
       "sequence": 21,
+      "logged_at": "2025-06-10T22:05:00-0700",
+      "offset_seconds": null,
+      "artist": "Nitechord",
+      "artist_key": null,
+      "song": "Near",
+      "release": "Lume",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2024",
+      "released_precision": "year",
+      "label": "Past Inside The Present",
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "Intercontinental",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "Anonymous, intercontinental ambient-tech duo",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_6c4cf0024ee73a13",
+      "broadcast_id": "2025-06-10T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 22,
       "logged_at": "2025-06-10T22:08:33-0700",
       "offset_seconds": null,
       "artist": "Ray Lynch",
@@ -642,34 +675,6 @@
       "publish_note": null,
       "sources": [
         "spinitron"
-      ]
-    },
-    {
-      "id": "sp_d31815f44c171fb6",
-      "broadcast_id": "2025-06-10T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 22,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Nitechord",
-      "artist_key": null,
-      "song": "Near",
-      "release": "Lume",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2024",
-      "released_precision": "year",
-      "label": "Past Inside The Present",
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "Intercontinental",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "Anonymous, intercontinental ambient-tech duo",
-      "sources": [
-        "michaelg"
       ]
     },
     {
@@ -731,11 +736,11 @@
       ]
     },
     {
-      "id": "sp_77216473d75fe9b3",
+      "id": "sp_b85bde1ff723b7f8",
       "broadcast_id": "2025-06-10T20:30:00-0700",
       "evidence": "logged",
       "sequence": 25,
-      "logged_at": null,
+      "logged_at": "2025-06-10T22:23:00-0700",
       "offset_seconds": null,
       "artist": "Lucia Hwong",
       "artist_key": null,
@@ -755,15 +760,16 @@
       "song_note": null,
       "publish_note": "American ambient, Chinese classical composer and instrumentalist Lucia Hwong. The name Sakya, which means “pale earth”, is a Buddhist monastery situated west of Shigatse in the Tibet Autonomous Region of China, and is one of four major schools of Tibetan Buddhism.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_be00967194a8ef50",
+      "id": "sp_0c03ec68ff85a49b",
       "broadcast_id": "2025-06-10T20:30:00-0700",
       "evidence": "logged",
       "sequence": 26,
-      "logged_at": null,
+      "logged_at": "2025-06-10T22:26:00-0700",
       "offset_seconds": null,
       "artist": "Ruth Davidson",
       "artist_key": null,
@@ -785,6 +791,7 @@
       "song_note": null,
       "publish_note": "Recorded live as part of the Wayward Music Series at the Good Shepherd Chapel in Wallingford",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     }

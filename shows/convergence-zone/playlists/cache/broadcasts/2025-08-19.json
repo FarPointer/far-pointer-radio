@@ -3,7 +3,7 @@
   "air_datetime": "2025-08-19T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "08.19.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -121,11 +121,11 @@
       ]
     },
     {
-      "id": "sp_7f5b56203cf783bc",
+      "id": "sp_f74eb2ed3e6b9b15",
       "broadcast_id": "2025-08-19T20:30:00-0700",
       "evidence": "logged",
       "sequence": 4,
-      "logged_at": null,
+      "logged_at": "2025-08-19T20:48:00-0700",
       "offset_seconds": null,
       "artist": "Eric Random",
       "artist_key": null,
@@ -145,6 +145,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -561,11 +562,11 @@
       ]
     },
     {
-      "id": "sp_916d1be873b33cdd",
+      "id": "sp_c01d58cc4264774b",
       "broadcast_id": "2025-08-19T20:30:00-0700",
       "evidence": "logged",
       "sequence": 19,
-      "logged_at": null,
+      "logged_at": "2025-08-19T22:00:00-0700",
       "offset_seconds": null,
       "artist": "Marc Vallée Trio",
       "artist_key": null,
@@ -585,6 +586,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -647,10 +649,39 @@
       ]
     },
     {
-      "id": "sp_dd7b23b809620eb4",
+      "id": "sp_af7ccd3454499f23",
       "broadcast_id": "2025-08-19T20:30:00-0700",
       "evidence": "logged",
       "sequence": 22,
+      "logged_at": "2025-08-19T22:13:00-0700",
+      "offset_seconds": null,
+      "artist": "Boygenius",
+      "artist_key": null,
+      "song": "Me And My Dog",
+      "release": "Me And My Dog",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2018",
+      "released_precision": "year",
+      "label": "Matador Records",
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "USA (Various)",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_dd7b23b809620eb4",
+      "broadcast_id": "2025-08-19T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 23,
       "logged_at": "2025-08-19T22:13:08-0700",
       "offset_seconds": null,
       "artist": "Julien Baker",
@@ -672,34 +703,6 @@
       "publish_note": null,
       "sources": [
         "spinitron"
-      ]
-    },
-    {
-      "id": "sp_de477d5c68d30e41",
-      "broadcast_id": "2025-08-19T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 23,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Boygenius",
-      "artist_key": null,
-      "song": "Me And My Dog",
-      "release": "Me And My Dog",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2018",
-      "released_precision": "year",
-      "label": "Matador Records",
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "USA (Various)",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "michaelg"
       ]
     },
     {

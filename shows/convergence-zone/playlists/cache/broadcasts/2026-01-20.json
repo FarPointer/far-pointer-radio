@@ -3,7 +3,7 @@
   "air_datetime": "2026-01-20T20:30:00-0800",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "01.20.2026 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -208,11 +208,11 @@
       ]
     },
     {
-      "id": "sp_9139e5e5370707b8",
+      "id": "sp_0980a14d11604f87",
       "broadcast_id": "2026-01-20T20:30:00-0800",
       "evidence": "logged",
       "sequence": 7,
-      "logged_at": null,
+      "logged_at": "2026-01-20T20:56:00-0800",
       "offset_seconds": null,
       "artist": "OK EG",
       "artist_key": null,
@@ -232,6 +232,7 @@
       "song_note": null,
       "publish_note": "OK EG’s strident sound melds rhythm, bass and analogue synth. Known for their hardware-based live sets, the pair spiral around unpredictable patterns and interlocking grooves, encapsulating the unhinged energy of the Melbourne underground. Following a string of cult releases on labels including Naff, Animalia, Midgar and Kalahari Oyster Cult, OK EG have emerged as one of the most exciting voices in techno today. This voice speaks most boldly to audiences within the immersive environment of their hypnotic live shows. These constantly evolving performances demonstrate the endless possibilities hardware based synthesis has to offer, and the adroit command that OK EG have of their instruments. Combined with an infectious on-stage energy, OK EG live embodies the power of collective experience and the role of music within it. OK EG’s expansive sound is deep and diverse. Their compositions display a sonic range that oscillates between delicate, textural soundscapes and spiralling, mesmeric, mind-trip techno. Their work exhibits a profound understanding of sound design - every element in its place, with space and minimalism utilised for maximum impact. The breadth of their practice also demonstrates a sense of deep introspection of two minds that triangulates and intertwines with inspiration from the stark and beautiful landscapes of Australia.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -383,11 +384,11 @@
       ]
     },
     {
-      "id": "sp_8e0c4cf4578b6568",
+      "id": "sp_682bffc8618071b4",
       "broadcast_id": "2026-01-20T20:30:00-0800",
       "evidence": "logged",
       "sequence": 13,
-      "logged_at": null,
+      "logged_at": "2026-01-20T21:26:00-0800",
       "offset_seconds": null,
       "artist": "Michael Bell",
       "artist_key": null,
@@ -409,6 +410,7 @@
       "song_note": null,
       "publish_note": "A Loose-Fish and a Fast-Fish, too. Some of this is music for video games. The rest is a fairly raw document of my ongoing attempt to find something new among the blinking lights in my studio at home.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -620,11 +622,11 @@
       ]
     },
     {
-      "id": "sp_91572e09495cb497",
+      "id": "sp_b26e4e6817ffc355",
       "broadcast_id": "2026-01-20T20:30:00-0800",
       "evidence": "logged",
       "sequence": 21,
-      "logged_at": null,
+      "logged_at": "2026-01-20T22:06:00-0800",
       "offset_seconds": null,
       "artist": "Ice Cream Cult",
       "artist_key": null,
@@ -646,6 +648,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -739,11 +742,11 @@
       ]
     },
     {
-      "id": "sp_a17560df06dcd0df",
+      "id": "sp_889cbcea0231807a",
       "broadcast_id": "2026-01-20T20:30:00-0800",
       "evidence": "logged",
       "sequence": 25,
-      "logged_at": null,
+      "logged_at": "2026-01-20T22:23:00-0800",
       "offset_seconds": null,
       "artist": "tondiue, Lori Goldston, Sue Ann Harkey",
       "artist_key": null,
@@ -765,6 +768,7 @@
       "song_note": null,
       "publish_note": "Recorded live on April 15th 2023 at the Chapel Performance Space in the Good Shepherd Center, Wallingford, Seattle. tondiue - electronics, sampler, effects Lori Goldston - cello Sue Ann Harkey - prepared 12-string electric guitar Room and Line recording captured by Mell Dettmer Mixed and Mastered by IVVY aka Madi Levine Flyer and Album Artwork by Bug Bus Piano \"It's an honor to call Lori and Sue Ann my friends and collaborators, and a great pleasure to present this recording of our first performance in trio at the lovely Chapel Performance Space in Wallingford. Lori and I met on Galiano Island BC after sharing a bill at the wonderful Active / Passive festival in 2022, and quickly got to discussing potential collaborations. I have been a fan of Lori's work for years; growing up as a drone-obsessed noise-head, my everyday life on the grey eastside of Lake Washington was heavily soundtracked by Earth- most notably the 'Angels of Darkness' records featuring Lori, which catalyzed my fascination for the expansive and historic essence of Puget Sound music, to which Lori certainly is no stranger, as a key player on Nirvana's Unplugged sessions and many other storied and up-and-coming Seattle acts. Performing alongside Lori and witnessing her solo performances has been nothing short of musically enlightening, opening my mind and ear to the resonant truths found within improvised music. While Lori and I discussed our current inspirations and musical draws, I couldn't help but express my love for the musical and spiritual work of Don Cherry, to which Lori said, 'oh! well, if you like Don's music, you should really meet my friend Sue Ann, she was in a band with him'.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     }

@@ -532,7 +532,7 @@ Native Python install or WSL2. No platform-specific code paths required — all 
 - **Bandcamp API:** Bandcamp does not publish an official public API. The tool relies on the undocumented fan collection JSON endpoints (e.g. `bandcamp.com/api/fancollection/1/collection_items`) that are called by Bandcamp's own web UI, and on the [`bandcamp-downloader`](https://pypi.org/project/bandcamp-downloader/) PyPI package which wraps them. These endpoints are not guaranteed stable. Mitigation: abstract the Bandcamp client behind a narrow interface (`BandcampClient`) so the implementation can be swapped without touching the rest of the tool. Integration tests should flag breakage quickly.
 - **Qobuz / Amazon Music:** These services have more restrictive APIs. Qobuz is feasible with an API key; Amazon Music is likely infeasible programmatically and may require manual export. Scope for v1 is Bandcamp only.
 - **WeTransfer:** No persistent API for monitoring incoming transfers. Label drops via WeTransfer require manual download to the label inbox; the tool handles everything after that.
-- **Dropbox delta:** Dropbox API v2 supports delta/longpoll, but v1 uses full listing for simplicity. Large collections may be slow on first run; subsequent runs use the State DB cache.
+- **Dropbox delta:** Dropbox API v2 supports delta/longpoll, but an initial implementation can use full listings (e.g. `files/list_folder`) for simplicity. Large collections may be slow on first run; subsequent runs use the State DB cache.
 - **LMS rescan:** After new files land on the NAS, LMS must be triggered to rescan. The tool can optionally call the LMS JSON-RPC API to trigger a library rescan, but this is not in v1 scope.
 
 ### Future Enhancements

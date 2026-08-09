@@ -49,7 +49,7 @@ def _parse_ts(raw):
         except ValueError:
             pass
     try:
-        return dt.datetime.fromtimestamp(int(s), tz=dt.timezone.utc)
+        return dt.datetime.fromtimestamp(int(s), tz=dt.UTC)
     except (TypeError, ValueError, OSError):
         return None
 

@@ -22,7 +22,7 @@ def _iso(ts):
     if isinstance(ts, str):
         return ts
     try:
-        return dt.datetime.fromtimestamp(int(ts), tz=dt.timezone.utc).isoformat()
+        return dt.datetime.fromtimestamp(int(ts), tz=dt.UTC).isoformat()
     except (TypeError, ValueError, OSError):
         return ""
 
@@ -176,7 +176,7 @@ def main():
     posts = sorted(dedupe(merged), key=lambda p: (p.get("timestamp") or "", p.get("id") or ""))
 
     payload = {
-        "generated_at": dt.datetime.now(tz=dt.timezone.utc).isoformat(),
+        "generated_at": dt.datetime.now(tz=dt.UTC).isoformat(),
         "source": "mixed" if len(feeds) > 1 else feeds[0][0],
         "posts": posts,
     }

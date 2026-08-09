@@ -3,7 +3,7 @@
   "air_datetime": "2025-11-25T20:30:00-0800",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "11.25.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_78803803fc7f7565",
+      "id": "sp_005d777d3e04113a",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2025-11-25T20:31:00-0800",
       "offset_seconds": null,
       "artist": "The Cheebacabra",
       "artist_key": null,
@@ -58,6 +58,7 @@
       "song_note": null,
       "publish_note": "The Cheebacabra is the recording project of Seattle-based producer, photographer, and preschool teacher Paul Cheever (aka Cheeba). At 18 years old, Cheever was pulled into the inner circle of the legendary Dust Brothers production team who redefined the art of sampling with artists such as Beck and Beastie Boys. After three years with them, doing everything from cleaning bongs to editing tracks for the Fight Club score, Cheever began to focus on his own recordings. The first Cheebacabra album, Metamorphosis, was released in 2003. Drawing on influences such as Herbie Hancock, DJ Premier, and Weather Report, The Cheebacabra attempts to combine the organic and soulful instrumentation of ‘70s jazz-funk and fusion with the crisp drums and head-bobbing production of ‘90s hip-hop.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -91,11 +92,11 @@
       ]
     },
     {
-      "id": "sp_271f68d89ee665d5",
+      "id": "sp_e8ce637981f8bbb4",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
       "sequence": 3,
-      "logged_at": null,
+      "logged_at": "2025-11-25T20:36:00-0800",
       "offset_seconds": null,
       "artist": "Cannons",
       "artist_key": null,
@@ -115,6 +116,7 @@
       "song_note": null,
       "publish_note": "Cannons are an American indie pop band formed in 2013 in Los Angeles. The band consists of lead vocalist Michelle Joy, lead guitarist Ryan Clapham, and keyboardist and bass guitarist Paul Davis.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -241,38 +243,10 @@
       ]
     },
     {
-      "id": "sp_71a167b75e354562",
-      "broadcast_id": "2025-11-25T20:30:00-0800",
-      "evidence": "logged",
-      "sequence": 8,
-      "logged_at": "2025-11-25T20:57:14-0800",
-      "offset_seconds": null,
-      "artist": "The Ronettes",
-      "artist_key": null,
-      "song": "Sleigh Ride",
-      "release": "Christmas Party",
-      "isrc": "USA176330050",
-      "upc": "0093624989523",
-      "duration_seconds": 186,
-      "released_date": "1900",
-      "released_precision": "year",
-      "label": "London-Sire",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
       "id": "sp_8623320aa320b0ee",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 9,
+      "sequence": 8,
       "logged_at": "2025-11-25T20:59:52-0800",
       "offset_seconds": null,
       "artist": "Peter Murphy",
@@ -301,7 +275,7 @@
       "id": "sp_993f240328f3bb75",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 10,
+      "sequence": 9,
       "logged_at": "2025-11-25T21:03:56-0800",
       "offset_seconds": null,
       "artist": "Black Swan Lane",
@@ -330,7 +304,7 @@
       "id": "sp_91bdda8273356cc1",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 11,
+      "sequence": 10,
       "logged_at": "2025-11-25T21:10:17-0800",
       "offset_seconds": null,
       "artist": "The Mermen",
@@ -359,7 +333,7 @@
       "id": "sp_59387a453f7f3ba1",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 12,
+      "sequence": 11,
       "logged_at": "2025-11-25T21:14:32-0800",
       "offset_seconds": null,
       "artist": "BALTHVS",
@@ -388,7 +362,7 @@
       "id": "sp_d71d4a6e988d2d93",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 13,
+      "sequence": 12,
       "logged_at": "2025-11-25T21:18:07-0800",
       "offset_seconds": null,
       "artist": "Soft Machine",
@@ -417,7 +391,7 @@
       "id": "sp_0a20942c0de44b6e",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 14,
+      "sequence": 13,
       "logged_at": "2025-11-25T21:23:08-0800",
       "offset_seconds": null,
       "artist": "Leftfield",
@@ -446,7 +420,7 @@
       "id": "sp_30c4908bc5770969",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 15,
+      "sequence": 14,
       "logged_at": "2025-11-25T21:28:52-0800",
       "offset_seconds": null,
       "artist": "October Project",
@@ -475,7 +449,7 @@
       "id": "sp_0c86ff9ed1afdaef",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 16,
+      "sequence": 15,
       "logged_at": "2025-11-25T21:33:03-0800",
       "offset_seconds": null,
       "artist": "Maire Brennan",
@@ -501,11 +475,11 @@
       ]
     },
     {
-      "id": "sp_0e04e4d744dcb4f8",
+      "id": "sp_b8fdce6f0c33d50e",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 17,
-      "logged_at": null,
+      "sequence": 16,
+      "logged_at": "2025-11-25T21:39:00-0800",
       "offset_seconds": null,
       "artist": "Afrocop",
       "artist_key": null,
@@ -527,6 +501,7 @@
       "song_note": null,
       "publish_note": "Seattle trio Afrocop performs improvised soundscapes of soul, afrobeat, breakbeat, sci-fi and jazz.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -534,7 +509,7 @@
       "id": "sp_be855830817e7712",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 18,
+      "sequence": 17,
       "logged_at": "2025-11-25T21:44:59-0800",
       "offset_seconds": null,
       "artist": "Ausklang",
@@ -563,7 +538,7 @@
       "id": "sp_1ffaab187b81cab5",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 19,
+      "sequence": 18,
       "logged_at": "2025-11-25T21:49:44-0800",
       "offset_seconds": null,
       "artist": "Manatee Commune",
@@ -585,6 +560,35 @@
       "request": false,
       "song_note": null,
       "publish_note": "Seattle's own Manatee Commune (aka Grant Eadie) makes his long-awaited return to Bastard Jazz with his fourth album, 'Simultaneity'. Lush and vibrant production is familiar to his previous works, though Eadie has significantly matured in the activation of space and character. A step away from standard songwriting, and a total disassociation from lyrics at all, has made this record closer to the ambient genre than anything Manatee Commune has released, all the while keeping one solid foot in the realm of dance music.",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_78896b1615ef1fa4",
+      "broadcast_id": "2025-11-25T20:30:00-0800",
+      "evidence": "logged",
+      "sequence": 19,
+      "logged_at": "2025-11-25T21:54:00-0800",
+      "offset_seconds": null,
+      "artist": "ramp",
+      "artist_key": null,
+      "song": "The Deep Well",
+      "release": "caverna larvarum",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2009",
+      "released_precision": "year",
+      "label": "Doombient Music",
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "Germany",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "Originally founded in the spring of 1996. The name refers to the Dutch word \"de ramp\" which means \"disaster\" or \"catastrophe\". Between 1997 and 2003, ['ramp] released a string of albums and played a couple of concerts in the Netherlands, the UK, and Germany before Parsick went entirely solo in 2009. the album presented here was assembled from roughly two hours worth of music, recorded live in concert at dechenhöhle iserlohn, a grotto in the south-west of germany's industrial heartland, the ruhr district. markus reuter was invited to join ['ramp] for the concert that was to take place on 26th october 2002 but had to cancel his performance at the very last minute due to other commitments. Performed and recorded live in concert at Dechenhöhle Iserlohn on 26th October 2002. Mastered in December 2008 some of the music turned out to be oppressive to an extent that quite a few people decided to walk out of the cave after the first set, never to be seen again.",
       "sources": [
         "spinitron",
         "michaelg"
@@ -619,38 +623,10 @@
       ]
     },
     {
-      "id": "sp_4367b657832b6061",
-      "broadcast_id": "2025-11-25T20:30:00-0800",
-      "evidence": "logged",
-      "sequence": 21,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "ramp",
-      "artist_key": null,
-      "song": "The Deep Well",
-      "release": "caverna larvarum",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2009",
-      "released_precision": "year",
-      "label": "Doombient Music",
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "Germany",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "Originally founded in the spring of 1996. The name refers to the Dutch word \"de ramp\" which means \"disaster\" or \"catastrophe\". Between 1997 and 2003, ['ramp] released a string of albums and played a couple of concerts in the Netherlands, the UK, and Germany before Parsick went entirely solo in 2009. the album presented here was assembled from roughly two hours worth of music, recorded live in concert at dechenhöhle iserlohn, a grotto in the south-west of germany's industrial heartland, the ruhr district. markus reuter was invited to join ['ramp] for the concert that was to take place on 26th october 2002 but had to cancel his performance at the very last minute due to other commitments. Performed and recorded live in concert at Dechenhöhle Iserlohn on 26th October 2002. Mastered in December 2008 some of the music turned out to be oppressive to an extent that quite a few people decided to walk out of the cave after the first set, never to be seen again.",
-      "sources": [
-        "michaelg"
-      ]
-    },
-    {
       "id": "sp_7bc4d9a1a01bd630",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 22,
+      "sequence": 21,
       "logged_at": "2025-11-25T21:59:27-0800",
       "offset_seconds": null,
       "artist": "Tor",
@@ -678,11 +654,11 @@
       ]
     },
     {
-      "id": "sp_791e96c5cbc18a84",
+      "id": "sp_ba691bd1374ec8f5",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 23,
-      "logged_at": null,
+      "sequence": 22,
+      "logged_at": "2025-11-25T22:05:00-0800",
       "offset_seconds": null,
       "artist": "AV Flowers",
       "artist_key": null,
@@ -704,15 +680,16 @@
       "song_note": null,
       "publish_note": "No Information",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_239e16fda184a212",
+      "id": "sp_7578eef9e4a014db",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 24,
-      "logged_at": null,
+      "sequence": 23,
+      "logged_at": "2025-11-25T22:10:00-0800",
       "offset_seconds": null,
       "artist": "Soft Mirage",
       "artist_key": null,
@@ -734,6 +711,7 @@
       "song_note": null,
       "publish_note": "Musical collaboration project of the late Seattle electronic music artist Norm Chambers, and Montréal, Québec musician Christian Richer.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -741,7 +719,7 @@
       "id": "sp_173f63e935a62458",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 25,
+      "sequence": 24,
       "logged_at": "2025-11-25T22:16:44-0800",
       "offset_seconds": null,
       "artist": "Aksumi (Pascal Bideau)",
@@ -770,7 +748,7 @@
       "id": "sp_dc28337de490e8f9",
       "broadcast_id": "2025-11-25T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 26,
+      "sequence": 25,
       "logged_at": "2025-11-25T22:21:05-0800",
       "offset_seconds": null,
       "artist": "Steve Roach",

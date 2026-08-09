@@ -247,6 +247,12 @@ def load(forced_merges=None):
     `raw_spins` list, sorted by logged_at. Converting those into schema Spins is
     merge.py's job, because class A and B reorder and annotate them first.
     """
+    if not SPINS_CSV.exists():
+        raise SystemExit(
+            f"{SPINS_CSV} is missing. Re-export the Spinitron CSV or restore it "
+            "before building the cache."
+        )
+
     with open(SPINS_CSV, encoding="utf-8-sig") as fh:
         reader = csv.DictReader(fh)
         missing = [c for c in EXPECTED_COLUMNS if c not in (reader.fieldnames or [])]

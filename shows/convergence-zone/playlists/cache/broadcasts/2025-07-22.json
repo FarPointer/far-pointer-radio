@@ -3,7 +3,7 @@
   "air_datetime": "2025-07-22T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "07.22.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -148,11 +148,11 @@
       ]
     },
     {
-      "id": "sp_04489937cee75d50",
+      "id": "sp_c3e37cc1d51e603e",
       "broadcast_id": "2025-07-22T20:30:00-0700",
       "evidence": "logged",
       "sequence": 5,
-      "logged_at": null,
+      "logged_at": "2025-07-22T20:44:00-0700",
       "offset_seconds": null,
       "artist": "My Favorite Band",
       "artist_key": null,
@@ -172,15 +172,16 @@
       "song_note": null,
       "publish_note": "My Favourite Band were an enigmatic alt-synth-pop duo from Penarth, Wales. They spanned numerous strands of alternative music. Their musical influences included Stereolab, XTC, High Llamas, Orbital, Air, Pixies, Deer Hunter, STRFKR and Solar Bears to name but a few. They had a penchant for interesting chord progressions, plaintive melodies, luscious arrangements and grooving bass lines. \"All good things come to an end. Thanks to everyone who has listened and supported My Favourite Band over the years. Some journeys are longer than others, but we'll all get there sooner or later.\"",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_688a0a0c4548bd97",
+      "id": "sp_87a84b88b80ce448",
       "broadcast_id": "2025-07-22T20:30:00-0700",
       "evidence": "logged",
       "sequence": 6,
-      "logged_at": null,
+      "logged_at": "2025-07-22T20:49:00-0700",
       "offset_seconds": null,
       "artist": "Lush",
       "artist_key": null,
@@ -200,6 +201,7 @@
       "song_note": null,
       "publish_note": "EP produced by Talk Talk producer Tim Friese-Greene",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -408,11 +410,11 @@
       ]
     },
     {
-      "id": "sp_df594c428783515e",
+      "id": "sp_86f4393530aef9ee",
       "broadcast_id": "2025-07-22T20:30:00-0700",
       "evidence": "logged",
       "sequence": 14,
-      "logged_at": null,
+      "logged_at": "2025-07-22T21:28:00-0700",
       "offset_seconds": null,
       "artist": "Roy Ayers",
       "artist_key": null,
@@ -432,6 +434,7 @@
       "song_note": null,
       "publish_note": "The Godfather of Neo-Soul, the late vibraphonist, composer, and record producer Roy Ayers, and the song Reaching the Highest Pleasure. Originally recorded in 1977, for reasons unknown the track was never released. It wasn’t until years later that the recording was re-discovered among the storied Roy Ayers ‘Virgin Ubiquity’ studio session tapes, remastered, and released in 2020 on BBE Music.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -580,11 +583,11 @@
       ]
     },
     {
-      "id": "sp_643e8436595706d0",
+      "id": "sp_95774baad36b82a1",
       "broadcast_id": "2025-07-22T20:30:00-0700",
       "evidence": "logged",
       "sequence": 20,
-      "logged_at": null,
+      "logged_at": "2025-07-22T21:58:00-0700",
       "offset_seconds": null,
       "artist": "Brendan Perry (Dead Can Dance)",
       "artist_key": null,
@@ -604,6 +607,7 @@
       "song_note": null,
       "publish_note": "Perry's debut solo album. Reissue includes a bonus live set recorded at The Institute of Contemporary Arts in London.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -637,39 +641,11 @@
       ]
     },
     {
-      "id": "sp_f366abdad9d0b72c",
+      "id": "sp_30cc2b1d2762347f",
       "broadcast_id": "2025-07-22T20:30:00-0700",
       "evidence": "logged",
       "sequence": 22,
-      "logged_at": "2025-07-22T22:08:17-0700",
-      "offset_seconds": null,
-      "artist": "HeatleyBros",
-      "artist_key": null,
-      "song": "Alien Imposter",
-      "release": "HeatleyBros VI",
-      "isrc": "QM3DF2295425",
-      "upc": "1963621633172",
-      "duration_seconds": 200,
-      "released_date": "2023",
-      "released_precision": "year",
-      "label": "Kyzen Music",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
-      "id": "sp_45f396847442685c",
-      "broadcast_id": "2025-07-22T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 23,
-      "logged_at": null,
+      "logged_at": "2025-07-22T22:08:00-0700",
       "offset_seconds": null,
       "artist": "DadHatTony",
       "artist_key": null,
@@ -691,7 +667,36 @@
       "song_note": null,
       "publish_note": "The Global Game Jam 2022 Seattle Music event featured a collection of music tracks created by the Seattle Indies community. These tracks were part of the album organized by Tye Hastings and organized by Andrew McPherson, Tim Cullings, and Scott Jonske. The album was released on February 24, 2022.",
       "sources": [
+        "spinitron",
         "michaelg"
+      ]
+    },
+    {
+      "id": "sp_f366abdad9d0b72c",
+      "broadcast_id": "2025-07-22T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 23,
+      "logged_at": "2025-07-22T22:08:17-0700",
+      "offset_seconds": null,
+      "artist": "HeatleyBros",
+      "artist_key": null,
+      "song": "Alien Imposter",
+      "release": "HeatleyBros VI",
+      "isrc": "QM3DF2295425",
+      "upc": "1963621633172",
+      "duration_seconds": 200,
+      "released_date": "2023",
+      "released_precision": "year",
+      "label": "Kyzen Music",
+      "local": null,
+      "local_basis": [],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
       ]
     },
     {
@@ -724,11 +729,11 @@
       ]
     },
     {
-      "id": "sp_9463a2f1caf21869",
+      "id": "sp_00a974dc74a69c0a",
       "broadcast_id": "2025-07-22T20:30:00-0700",
       "evidence": "logged",
       "sequence": 25,
-      "logged_at": null,
+      "logged_at": "2025-07-22T22:17:00-0700",
       "offset_seconds": null,
       "artist": "LIGHTSPEAR",
       "artist_key": null,
@@ -750,6 +755,7 @@
       "song_note": null,
       "publish_note": "Seattle synthwave project LIGHTSPEAR",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },

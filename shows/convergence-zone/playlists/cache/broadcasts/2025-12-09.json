@@ -3,7 +3,7 @@
   "air_datetime": "2025-12-09T20:30:00-0800",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "12.09.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -60,11 +60,11 @@
       ]
     },
     {
-      "id": "sp_4875f855de3086ef",
+      "id": "sp_411f39ac0148db25",
       "broadcast_id": "2025-12-09T20:30:00-0800",
       "evidence": "logged",
       "sequence": 2,
-      "logged_at": null,
+      "logged_at": "2025-12-09T20:33:00-0800",
       "offset_seconds": null,
       "artist": "Depeche Mode",
       "artist_key": null,
@@ -84,6 +84,7 @@
       "song_note": null,
       "publish_note": "Black Celebration is the fifth studio album by the English electronic music band Depeche Mode, released on 17 March 1986 by Mute Records in the UK and Sire Records in the US. Recorded in London and West Berlin, it was produced by Depeche Mode, Daniel Miller and Gareth Jones. At the prompting of Miller, the band recorded the album using the \"live the album\" ethos inspired by the film director Werner Herzog, which led to considerable tension between the band and both Miller and Jones, resulting in neither being involved in the production of subsequent Depeche Mode albums.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -149,32 +150,34 @@
       ]
     },
     {
-      "id": "sp_3b03315d7239d73e",
+      "id": "sp_12f28043a40d9722",
       "broadcast_id": "2025-12-09T20:30:00-0800",
       "evidence": "logged",
       "sequence": 5,
-      "logged_at": null,
+      "logged_at": "2025-12-09T20:46:00-0800",
       "offset_seconds": null,
       "artist": "Mt Fog",
       "artist_key": null,
       "song": "Look Inside",
       "release": "Early single from the album \"Every Stone is Green\" to be released in March of 2026.",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
+      "isrc": "QT6EY2593038",
+      "upc": "199953146924",
+      "duration_seconds": 219,
       "released_date": "2025-12-12",
       "released_precision": "day",
       "label": "Presumably Ghost Mountain Records (as with past releases).",
       "local": true,
       "local_basis": [
-        "artist"
+        "artist",
+        "dj_flag"
       ],
       "artist_origin_raw": "Seattle, WA",
       "label_origin_raw": null,
       "request": false,
-      "song_note": null,
+      "song_note": "Early single from the album \"Every Stone is Green\" to be released in March of 2026.",
       "publish_note": "Mt Fog will be be doing a release show for the single \"Look Inside\" at the Sunset Tavern in Ballard this Thursday, December 11th starting 8 PM. Mt Fog began as the project of singer and classically-trained violinist Carolyn B. and has been \"expanded now to large, euphoric dimensions and laced with connective tissues of drum and bass\" (dusted mag) with Andy Sells (Afrocop, Select Level) and Casey Rosebridge (Swanderer, Crazy Eyes). Mt Fog's new album (out March 13, 2026) Every Stone is Green is a Gothic tale (in the Brontë sisters' sense) about finding happiness, which is human-ness. Channeling art rock a la CAN and Kate Bush, Mt Fog takes inspiration from the1970s mystics of jazz and prog, while unhurriedly exploring the particular sounds and textures emerging from the trio's ever-morphing musical symbiosis. \"Look Inside\" is Mt Fog's first single from the new record. Featuring a driving kraut-rock-esque beat and enchanted forest synth sounds, the song urges us to love ourselves as a first step to making the world a better place. Carolyn intimately talk-sings \"I think I'll carry love and understanding/ I think I'll have affection for me.\" A fantastical music video in which Carolyn is a giant in an illustrated landscape accompanies the release. Written, performed, produced and mixed by Mt Fog. Mastered by Chuck Johnson. Artist photo by Kelly O. Album artwork by Nico Lund.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -358,11 +361,11 @@
       ]
     },
     {
-      "id": "sp_e591730d13b500d3",
+      "id": "sp_2a0e08cc3c93d7cb",
       "broadcast_id": "2025-12-09T20:30:00-0800",
       "evidence": "logged",
       "sequence": 12,
-      "logged_at": null,
+      "logged_at": "2025-12-09T21:13:00-0800",
       "offset_seconds": null,
       "artist": "Hexagonopus",
       "artist_key": null,
@@ -384,6 +387,7 @@
       "song_note": null,
       "publish_note": "exploring themes of hope, yearning and nostalgia, \"time was leaves were\" is a brief but dense musical journey into my own story of growth, both as an artist and a person. i hope the tones here (from steady but energetic electronic beats, to spacious, relaxing lullabies) can uplift, comfort or resonate with any listeners.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -446,11 +450,11 @@
       ]
     },
     {
-      "id": "sp_64243c0824b2c26f",
+      "id": "sp_e690f41c03e1cf5b",
       "broadcast_id": "2025-12-09T20:30:00-0800",
       "evidence": "logged",
       "sequence": 15,
-      "logged_at": null,
+      "logged_at": "2025-12-09T21:28:00-0800",
       "offset_seconds": null,
       "artist": "Market Research Music",
       "artist_key": null,
@@ -472,6 +476,7 @@
       "song_note": null,
       "publish_note": "No Info",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -536,11 +541,11 @@
       ]
     },
     {
-      "id": "sp_fa2b98505ff82052",
+      "id": "sp_29cfdee85a6e3bb8",
       "broadcast_id": "2025-12-09T20:30:00-0800",
       "evidence": "logged",
       "sequence": 18,
-      "logged_at": null,
+      "logged_at": "2025-12-09T21:41:00-0800",
       "offset_seconds": null,
       "artist": "Psychic Ills",
       "artist_key": null,
@@ -560,6 +565,7 @@
       "song_note": null,
       "publish_note": "Psychic Ills are an American experimental rock/psychedelic rock band from New York City, consisting of Tres Warren (vocals/guitar; 1978-2020), Elizabeth Hart (vocals/bass), Adam Amram, Jon Catfish Delorme, and Brent Cordero. They formed in 2003, and have released five albums, one compilation, four EPs and a number of singles.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },

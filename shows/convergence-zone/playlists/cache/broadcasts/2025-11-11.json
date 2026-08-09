@@ -3,7 +3,7 @@
   "air_datetime": "2025-11-11T20:30:00-0800",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "11.11.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -32,11 +32,11 @@
   ],
   "spins": [
     {
-      "id": "sp_30ac49af5ea51e9b",
+      "id": "sp_f8d22cecf2892e70",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
       "sequence": 1,
-      "logged_at": null,
+      "logged_at": "2025-11-11T20:31:00-0800",
       "offset_seconds": null,
       "artist": "Peter Murphy",
       "artist_key": null,
@@ -56,6 +56,7 @@
       "song_note": null,
       "publish_note": null,
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -151,11 +152,11 @@
       ]
     },
     {
-      "id": "sp_671a9c6eb5932e10",
+      "id": "sp_d5b5ba0020d3a572",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
       "sequence": 5,
-      "logged_at": null,
+      "logged_at": "2025-11-11T20:45:00-0800",
       "offset_seconds": null,
       "artist": "Meridian Arc (Andrew Crawshaw)",
       "artist_key": null,
@@ -177,6 +178,7 @@
       "song_note": null,
       "publish_note": "Meridian Arc guides you through the celestial dimensions of beyond our space and time through the textural waves of sound and distant planetary pulses. Cosmic excursions that bend the spectrum of colors to create a bridge to sonic temples in the galaxy far far away.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -241,39 +243,11 @@
       ]
     },
     {
-      "id": "sp_e159618b4c8957a5",
+      "id": "sp_4540b666435fc6bf",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
       "sequence": 8,
-      "logged_at": "2025-11-11T20:59:28-0800",
-      "offset_seconds": null,
-      "artist": "Rainbow The Ghost",
-      "artist_key": null,
-      "song": "Glitter and Bone",
-      "release": "Rainbow the Ghost",
-      "isrc": "QZAMM2213274",
-      "upc": "8720357512774",
-      "duration_seconds": 222,
-      "released_date": "2023",
-      "released_precision": "year",
-      "label": "Rainbow the Ghost Music",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
-      "id": "sp_84898af9919c88c6",
-      "broadcast_id": "2025-11-11T20:30:00-0800",
-      "evidence": "logged",
-      "sequence": 9,
-      "logged_at": null,
+      "logged_at": "2025-11-11T20:58:00-0800",
       "offset_seconds": null,
       "artist": "Mama Noodles",
       "artist_key": null,
@@ -295,7 +269,36 @@
       "song_note": null,
       "publish_note": "mama noodles is a jamacian, scottish, egyptian- with words that can polish the finest apple and smart as a box of hair. Mama Noodles has shared his new music project “Rainbow The Ghost”, perfect to disconnect from our daily routine. The vibrant 8-track project is a great sonic journey where creativity and authenticity reign. Eclectic and intense, “Rainbow The Ghost” offers a cosmic recipe between experimental rock, electronic sounds and melodies coming from another planet. The artist will make you travel through the mysterious synthesizers, the airy vocals and the mystical rhythms. Be ready to explore a new world",
       "sources": [
+        "spinitron",
         "michaelg"
+      ]
+    },
+    {
+      "id": "sp_e159618b4c8957a5",
+      "broadcast_id": "2025-11-11T20:30:00-0800",
+      "evidence": "logged",
+      "sequence": 9,
+      "logged_at": "2025-11-11T20:59:28-0800",
+      "offset_seconds": null,
+      "artist": "Rainbow The Ghost",
+      "artist_key": null,
+      "song": "Glitter and Bone",
+      "release": "Rainbow the Ghost",
+      "isrc": "QZAMM2213274",
+      "upc": "8720357512774",
+      "duration_seconds": 222,
+      "released_date": "2023",
+      "released_precision": "year",
+      "label": "Rainbow the Ghost Music",
+      "local": null,
+      "local_basis": [],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
       ]
     },
     {
@@ -452,38 +455,10 @@
       ]
     },
     {
-      "id": "sp_fb4257cd178e6c58",
-      "broadcast_id": "2025-11-11T20:30:00-0800",
-      "evidence": "logged",
-      "sequence": 15,
-      "logged_at": "2025-11-11T21:28:01-0800",
-      "offset_seconds": null,
-      "artist": "Maryam Mursal",
-      "artist_key": null,
-      "song": "Sodewou",
-      "release": "The Journey (Real World Gold)",
-      "isrc": "GBCPA9800098",
-      "upc": "0884108001240",
-      "duration_seconds": 353,
-      "released_date": "2012",
-      "released_precision": "year",
-      "label": "Real World Records",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
       "id": "sp_030647340e80d61a",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 16,
+      "sequence": 15,
       "logged_at": "2025-11-11T21:29:28-0800",
       "offset_seconds": null,
       "artist": "Subaqueous",
@@ -505,6 +480,37 @@
       "request": false,
       "song_note": null,
       "publish_note": "Isaac Cotec, aka Subaqueous, started making electronic based music in the summer of 2005 working with a project called Psyche Sonics. As of March 12th 2011 the unique character and sound of Subaqueous was born. The music has incorporated beat science to create progressive mid tempo and dance music. Using melodic techniques and musical theory to add layers to the experience.",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_dae80da6b939bb64",
+      "broadcast_id": "2025-11-11T20:30:00-0800",
+      "evidence": "logged",
+      "sequence": 16,
+      "logged_at": "2025-11-11T21:33:00-0800",
+      "offset_seconds": null,
+      "artist": "DropLab",
+      "artist_key": null,
+      "song": "OMRI. - Nothing Wrong (Love Mix)",
+      "release": "Nothing Wrong",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2025-09",
+      "released_precision": "month",
+      "label": "Self Released",
+      "local": true,
+      "local_basis": [
+        "artist"
+      ],
+      "artist_origin_raw": "Seattle, WA",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
       "sources": [
         "spinitron",
         "michaelg"
@@ -539,40 +545,10 @@
       ]
     },
     {
-      "id": "sp_2e2b85f2600ffa91",
-      "broadcast_id": "2025-11-11T20:30:00-0800",
-      "evidence": "logged",
-      "sequence": 18,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "DropLab",
-      "artist_key": null,
-      "song": "OMRI. - Nothing Wrong (Love Mix)",
-      "release": "Nothing Wrong",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2025-09",
-      "released_precision": "month",
-      "label": "Self Released",
-      "local": true,
-      "local_basis": [
-        "artist"
-      ],
-      "artist_origin_raw": "Seattle, WA",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "michaelg"
-      ]
-    },
-    {
       "id": "sp_1f10ec554457cd75",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 19,
+      "sequence": 18,
       "logged_at": "2025-11-11T21:37:55-0800",
       "offset_seconds": null,
       "artist": "Pleasure Corporation",
@@ -601,7 +577,7 @@
       "id": "sp_ee3b5de46f77b316",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 20,
+      "sequence": 19,
       "logged_at": "2025-11-11T21:44:31-0800",
       "offset_seconds": null,
       "artist": "Ceilla",
@@ -632,7 +608,7 @@
       "id": "sp_e76301e4ce5a6f22",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 21,
+      "sequence": 20,
       "logged_at": "2025-11-11T21:49:24-0800",
       "offset_seconds": null,
       "artist": "Mathew S Burns",
@@ -663,7 +639,7 @@
       "id": "sp_e79e0a75ca7d566c",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 22,
+      "sequence": 21,
       "logged_at": "2025-11-11T21:55:40-0800",
       "offset_seconds": null,
       "artist": "Flying Lotus",
@@ -692,7 +668,7 @@
       "id": "sp_86d4238956cb8c4b",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 23,
+      "sequence": 22,
       "logged_at": "2025-11-11T21:59:39-0800",
       "offset_seconds": null,
       "artist": "The Detroit Escalator Company",
@@ -721,7 +697,7 @@
       "id": "sp_340c4a1cf12ed130",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 24,
+      "sequence": 23,
       "logged_at": "2025-11-11T22:03:30-0800",
       "offset_seconds": null,
       "artist": "The Identity Matrix",
@@ -752,7 +728,7 @@
       "id": "sp_685c0ce85aaca5e6",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 25,
+      "sequence": 24,
       "logged_at": "2025-11-11T22:09:21-0800",
       "offset_seconds": null,
       "artist": "Black Swan Lane",
@@ -781,7 +757,7 @@
       "id": "sp_fa0f8818aab9031e",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 26,
+      "sequence": 25,
       "logged_at": "2025-11-11T22:16:01-0800",
       "offset_seconds": null,
       "artist": "Alex Henry Foster",
@@ -807,11 +783,11 @@
       ]
     },
     {
-      "id": "sp_4e86cea2e810441b",
+      "id": "sp_8f778b7d107ea9c8",
       "broadcast_id": "2025-11-11T20:30:00-0800",
       "evidence": "logged",
-      "sequence": 27,
-      "logged_at": null,
+      "sequence": 26,
+      "logged_at": "2025-11-11T22:23:00-0800",
       "offset_seconds": null,
       "artist": "The Sound of Unknowing (Fred Epps)",
       "artist_key": null,
@@ -833,6 +809,7 @@
       "song_note": null,
       "publish_note": "Fred Epps (1953-2025) was an electronic musician. He left hundreds of finished tracks when he died. I, his daughter, am slowly curating them into albums. All purchases benefit his widow, Lanthe. The artist wrote near the end of his life: \"Although I come from an experimental music background, I've come to focus on creating the most beautiful music I can.\" This music is from that period.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     }

@@ -3,7 +3,7 @@
   "air_datetime": "2025-05-13T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": null,
+  "title": "05.13.2025 - MichaelG",
   "participants": [
     {
       "name": "MichaelG",
@@ -293,38 +293,10 @@
       ]
     },
     {
-      "id": "sp_4f19d2259d718603",
-      "broadcast_id": "2025-05-13T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 10,
-      "logged_at": "2025-05-13T21:28:28-0700",
-      "offset_seconds": null,
-      "artist": "Andreas Vollenweider",
-      "artist_key": null,
-      "song": "The Stone (Close Up)",
-      "release": "White Winds (Seeker's Journey)",
-      "isrc": "FR96X2094207",
-      "upc": "3616406550741",
-      "duration_seconds": 182,
-      "released_date": "1984",
-      "released_precision": "year",
-      "label": "AVAF Music",
-      "local": null,
-      "local_basis": [],
-      "artist_origin_raw": null,
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": null,
-      "sources": [
-        "spinitron"
-      ]
-    },
-    {
       "id": "sp_cbff8cc181d73bd9",
       "broadcast_id": "2025-05-13T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 11,
+      "sequence": 10,
       "logged_at": "2025-05-13T21:18:44-0700",
       "offset_seconds": null,
       "artist": "Midlife",
@@ -350,11 +322,11 @@
       ]
     },
     {
-      "id": "sp_222a940308028937",
+      "id": "sp_cef98a0a61d3e60b",
       "broadcast_id": "2025-05-13T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 12,
-      "logged_at": null,
+      "sequence": 11,
+      "logged_at": "2025-05-13T21:23:00-0700",
       "offset_seconds": null,
       "artist": "Rubaja And Hernandez",
       "artist_key": null,
@@ -374,15 +346,16 @@
       "song_note": null,
       "publish_note": "Produced by Mark Isham at more or less the commercial peak for the new age genre and its flagship Windham Hill label, \"High Plateaux\" is something of a different entity. While Windham Hill did tend to focus on solo or duo work, most of it represented a somewhat homogenized Americanized representation of the spiritual search, devoid of any aspect that might offer clues as to the inner nature of the artists. Fans purported to reject of the vapidity of this golden economic era while accumulating all its toys and trappings as enthusiastically as any population before or since. Rubaja and Hernandez hailed from Latin cultures or countries, and were not shy about expressing that connection. It is true that at times they submit to Osterization on this instrumental offering, but fine writing, playing and arranging emerge with sufficient regularity to save this one from ignominy. As expected, pan flutes are a common part of the mellow blend, and they more than once can't help but suggest \"El Condor Pasa\" for better or worse, but both of these gentlemen play a variety of keys, chiefly pianos and synthesizers, and Isham's brass contributions add profundity to almost every track, played more for atmospherics than as lead instruments. Harp, acoustic guitar and more traditional charango also weave in and out of the highly visual soundscape. Even the titles conjure nature, color, and fantasy, from the absolutely stunning opener \"Puerto Del Sol\" to the noble \"Indian Woman\", the hypnotic \"Icebird\" and the reflective \"Child's Dream\". The rhythm section is more than capable and always tasteful. This may not be the most challenging of albums, but don't let that new age label put you off. In \"High Plateaux\", sadly the only combined effort by these two gentlemen, we have a first class instrumental prog folk album that is quite on another plain.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
     {
-      "id": "sp_5f2457d9d076bdb9",
+      "id": "sp_b651febf5df37aef",
       "broadcast_id": "2025-05-13T20:30:00-0700",
       "evidence": "logged",
-      "sequence": 13,
-      "logged_at": null,
+      "sequence": 12,
+      "logged_at": "2025-05-13T21:28:00-0700",
       "offset_seconds": null,
       "artist": "Marconi Union",
       "artist_key": null,
@@ -402,7 +375,36 @@
       "song_note": null,
       "publish_note": "Marconi Union are an English ambient music band formed in Manchester in 2003 by Richard Talbot and Jamie Crossley. In 2011, their live keyboardist Duncan Meadows became a full time member.[ After fourteen years of writing and performing, the trio - founder members Richard Talbot and Jamie Crossley with keyboard player Duncan Meadows - are thought to be “amongst today's most talented musicians” (The Sunday Times). They have steadily developed and refined a unique musical identity; evoking emotions from gracefully blending elements of dub, jazz, ambience and electronica within their richly melodic compositions. With ‘Ghost Stations’, Marconi Union’s music continues to straddle the worlds of artistic credibility and musical accessibility. They were not afraid to accept the challenge of making new music rather than just repeating their earlier work and were well aware of the risk of trying new things. “People who have bought our previous records may think we've gone too far in this direction or that direction or that we don't do enough of some particular aspect anymore, but we've already done those things in our previous work and we have to keep pushing our boundaries otherwise what is the point? We want people to hear Ghost Stations and say “'What the f**k is that' either in a good or bad way!” Before making a record Marconi Union usually have a clear idea about its ultimate direction, but this time they decided to set aside any preconceptions. They spent the last two years experimenting with playing, programming, editing, re-editing, (agreeing and disagreeing) until ‘Ghost Stations’ naturally evolved. Once the title was decided upon, everything fell into place connecting ideas of abandonment, empty spaces and dereliction.",
       "sources": [
+        "spinitron",
         "michaelg"
+      ]
+    },
+    {
+      "id": "sp_4f19d2259d718603",
+      "broadcast_id": "2025-05-13T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 13,
+      "logged_at": "2025-05-13T21:28:28-0700",
+      "offset_seconds": null,
+      "artist": "Andreas Vollenweider",
+      "artist_key": null,
+      "song": "The Stone (Close Up)",
+      "release": "White Winds (Seeker's Journey)",
+      "isrc": "FR96X2094207",
+      "upc": "3616406550741",
+      "duration_seconds": 182,
+      "released_date": "1984",
+      "released_precision": "year",
+      "label": "AVAF Music",
+      "local": null,
+      "local_basis": [],
+      "artist_origin_raw": null,
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": null,
+      "sources": [
+        "spinitron"
       ]
     },
     {
@@ -435,11 +437,11 @@
       ]
     },
     {
-      "id": "sp_4b742c585c9009b0",
+      "id": "sp_f7d472084437639f",
       "broadcast_id": "2025-05-13T20:30:00-0700",
       "evidence": "logged",
       "sequence": 15,
-      "logged_at": null,
+      "logged_at": "2025-05-13T21:34:00-0700",
       "offset_seconds": null,
       "artist": "Active Dark Filament",
       "artist_key": null,
@@ -461,6 +463,7 @@
       "song_note": null,
       "publish_note": "Active dark filament: Immense streams of plasma suspended above the sun slowly evolving and undergoing cycles of destruction and rebirth. From Earth, they appear as regions of metamorphosis on the otherwise placid surface of the sun. The music of Active Dark Filament is in the same spirit, exploring melodies and themes which coalesce gradually and evolve over a bed of electronic rhythms. Active dark filament: Immense streams of plasma suspended above the sun slowly evolving and undergoing cycles of destruction and rebirth. From Earth, they appear as regions of metamorphosis on the otherwise placid surface of the sun. The music of Active Dark Filament is in the same spirit, exploring melodies and themes which coalesce gradually and evolve over a bed of electronic rhythms. In the language of geology, Terranes are pieces of crust, sometimes transported thousands of kilometers from distant latitudes, to be fused together by enormous forces to create new and different landmasses. Terranes exist along the western margins of the Americas giving rise to unique and exotic formations. The seven new compositions featured on \"Terranes\" are impressions of these immense tectonic processes which shaped the west coast. The panoramic moods swing from dark and subterranean to fractious and hyper. Musically, the compositions often employ ideas and progressions gleaned from octatonic (symmetrical) scales. The Glow of Distant Lights Harpsichord type timbres float over slowly sweeping chords before settling into a minor-sounding phrase. This quickly jumps into a stark ostinato and a militaristic melody. This is contrasted by an unhurried series of chords which eventually come to resolution. In the middle, there is a nod to Charles Ives in that two dissimilar musical ideas are intertwined to create a sense of cacophony.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -522,10 +525,39 @@
       ]
     },
     {
-      "id": "sp_32654b583e1e4a44",
+      "id": "sp_03c42a04198dbb9b",
       "broadcast_id": "2025-05-13T20:30:00-0700",
       "evidence": "logged",
       "sequence": 18,
+      "logged_at": "2025-05-13T21:42:00-0700",
+      "offset_seconds": null,
+      "artist": "Blank & Jones",
+      "artist_key": null,
+      "song": "Desire (Ambient Album Mix)",
+      "release": "Desire",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2002",
+      "released_precision": "year",
+      "label": "Soundcolours Gmbh",
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "Cologne, Germany",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "Blank & Jones are a German electronic music group, consisting of Jan Pieter Blank (born June 15, 1971), known as Piet Blank; René Runge (born June 27, 1968), better known as DJ Jaspa Jones; and the producer Andy Kaufhold (N*D*K) (born December 17, 1969). They have released twelve albums and more than two dozen singles since their first single release \"Sunrise\" in 1997. Piet Blank, who became interested in music after purchasing his first record \"Kids in America\" by Kim Wilde, had his first experience spinning a record on a turntable at age 16. René Runge, who resides in Düsseldorf and who is better known as Jaspa Jones, had his first experience as a DJ at age 19.[1] Together with help from Andy Kaufhold, they formed the trance production team Piet Blank & Jaspa Jones (which would later become simply Blank & Jones) after meeting at the Popkomm music conference.[2]",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_32654b583e1e4a44",
+      "broadcast_id": "2025-05-13T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 19,
       "logged_at": "2025-05-13T21:42:12-0700",
       "offset_seconds": null,
       "artist": "AeTopus",
@@ -550,39 +582,11 @@
       ]
     },
     {
-      "id": "sp_28ddb4d9a8c6ab19",
-      "broadcast_id": "2025-05-13T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 19,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Blank & Jones",
-      "artist_key": null,
-      "song": "Desire (Ambient Album Mix)",
-      "release": "Desire",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2002",
-      "released_precision": "year",
-      "label": "Soundcolours Gmbh",
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "Cologne, Germany",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "Blank & Jones are a German electronic music group, consisting of Jan Pieter Blank (born June 15, 1971), known as Piet Blank; René Runge (born June 27, 1968), better known as DJ Jaspa Jones; and the producer Andy Kaufhold (N*D*K) (born December 17, 1969). They have released twelve albums and more than two dozen singles since their first single release \"Sunrise\" in 1997. Piet Blank, who became interested in music after purchasing his first record \"Kids in America\" by Kim Wilde, had his first experience spinning a record on a turntable at age 16. René Runge, who resides in Düsseldorf and who is better known as Jaspa Jones, had his first experience as a DJ at age 19.[1] Together with help from Andy Kaufhold, they formed the trance production team Piet Blank & Jaspa Jones (which would later become simply Blank & Jones) after meeting at the Popkomm music conference.[2]",
-      "sources": [
-        "michaelg"
-      ]
-    },
-    {
-      "id": "sp_c32f37259bb5e731",
+      "id": "sp_90146a988ac42e76",
       "broadcast_id": "2025-05-13T20:30:00-0700",
       "evidence": "logged",
       "sequence": 20,
-      "logged_at": null,
+      "logged_at": "2025-05-13T21:49:00-0700",
       "offset_seconds": null,
       "artist": "darungara",
       "artist_key": null,
@@ -604,6 +608,7 @@
       "song_note": null,
       "publish_note": "From Vancouver British Columbia. Exploring the beauty found in the light and shadow of the soul.",
       "sources": [
+        "spinitron",
         "michaelg"
       ]
     },
@@ -779,10 +784,39 @@
       ]
     },
     {
-      "id": "sp_ed785721641298c7",
+      "id": "sp_6c3481e5488151d5",
       "broadcast_id": "2025-05-13T20:30:00-0700",
       "evidence": "logged",
       "sequence": 27,
+      "logged_at": "2025-05-13T22:23:00-0700",
+      "offset_seconds": null,
+      "artist": "Yes",
+      "artist_key": null,
+      "song": "Soon",
+      "release": "Symphonic Live",
+      "isrc": null,
+      "upc": null,
+      "duration_seconds": null,
+      "released_date": "2003",
+      "released_precision": "year",
+      "label": "Eagle Rock Entertainment",
+      "local": false,
+      "local_basis": [],
+      "artist_origin_raw": "London, England",
+      "label_origin_raw": null,
+      "request": false,
+      "song_note": null,
+      "publish_note": "Yes Symphonic Live Tour, Performance at the SOON in Amsterdam 2001",
+      "sources": [
+        "spinitron",
+        "michaelg"
+      ]
+    },
+    {
+      "id": "sp_ed785721641298c7",
+      "broadcast_id": "2025-05-13T20:30:00-0700",
+      "evidence": "logged",
+      "sequence": 28,
       "logged_at": "2025-05-13T22:26:16-0700",
       "offset_seconds": null,
       "artist": "Pink Floyd",
@@ -804,34 +838,6 @@
       "publish_note": null,
       "sources": [
         "spinitron"
-      ]
-    },
-    {
-      "id": "sp_50bb189e56125e01",
-      "broadcast_id": "2025-05-13T20:30:00-0700",
-      "evidence": "logged",
-      "sequence": 28,
-      "logged_at": null,
-      "offset_seconds": null,
-      "artist": "Yes",
-      "artist_key": null,
-      "song": "Soon",
-      "release": "Symphonic Live",
-      "isrc": null,
-      "upc": null,
-      "duration_seconds": null,
-      "released_date": "2003",
-      "released_precision": "year",
-      "label": "Eagle Rock Entertainment",
-      "local": false,
-      "local_basis": [],
-      "artist_origin_raw": "London, England",
-      "label_origin_raw": null,
-      "request": false,
-      "song_note": null,
-      "publish_note": "Yes Symphonic Live Tour, Performance at the SOON in Amsterdam 2001",
-      "sources": [
-        "michaelg"
       ]
     }
   ]

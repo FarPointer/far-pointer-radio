@@ -11,7 +11,7 @@ dependencies = [
     "click>=8.4.2",
     "requests>=2.31",
     "beautifulsoup4>=4.15.0",
-    "lxml>=5.0",
+    "lxml>=6.1.1",
     "python-dateutil>=2.9",
 ]
 

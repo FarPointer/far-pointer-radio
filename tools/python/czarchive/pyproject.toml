@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Archive tool for Convergence Zone on KSER 90.7"
 requires-python = ">=3.11"
 dependencies = [
-    "click>=8.0",
+    "click>=8.4.2",
     "requests>=2.31",
     "beautifulsoup4>=4.12",
     "lxml>=5.0",

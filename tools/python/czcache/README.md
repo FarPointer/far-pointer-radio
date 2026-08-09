@@ -55,6 +55,8 @@ what a source actually contains.
 | `load_workbooks.py` | MichaelG's `.xlsx` workbooks across five header layouts |
 | `load_setlists.py` | convergencezone.fm CSVs and OneNote tables, bound to broadcasts by content |
 | `load_prose.py` | OneNote prose → candidate broadcast descriptions |
+| `fetch_instagram_promos.py` | Reuse-first Instagram caption ingest (`instaloader`, Graph API, or JSON dump) → `sources/instagram/promos.json` |
+| `load_instagram.py` | Instagram captions → candidate broadcast descriptions |
 | `locality.py` | Resolves `local` and records *why* (artist, label, or DJ flag) |
 | `merge.py` | The three per-class merge strategies, plus host attribution |
 | `rules.py` + `rules.yaml` | Data-driven thresholds for repeat detection, set-list binding, and description gating |
@@ -173,3 +175,19 @@ the publishing script's idempotent updates but is not part of `schema.ts`. Missi
 null Mixcloud URLs are expected: the WordPress page simply omits the embed until a
 recording becomes available. Adding the URL later, rebuilding the cache, and updating
 the post backfills the embed without changing the post identity or URL.
+
+## Instagram promo recovery (reuse-first)
+
+To avoid building a standalone app, ingest captions with an existing export tool and
+normalize them:
+
+```sh
+# Instaloader output directory -> normalized promos.json
+uv run python fetch_instagram_promos.py --instaloader-dir /path/to/instaloader-output
+
+# or Graph API -> normalized promos.json
+uv run python fetch_instagram_promos.py --graph-token "$IG_TOKEN" --ig-user-id "$IG_USER_ID"
+```
+
+Then run the normal build/verify flow. Instagram text is treated exactly like OneNote
+prose: a candidate only, never auto-approved.

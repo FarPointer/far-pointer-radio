@@ -304,7 +304,8 @@ def build_broadcast(bid, broadcast, klass, workbook, setlist, prose, ov, report)
         repeat_of_source=broadcast.get("repeat_of_source"),
         repeat_of_confidence=broadcast.get("repeat_of_confidence"),
         participants=derive_participants(broadcast, klass, ov["participants"]),
-        sources=sources | ({"onenote"} if prose and prose.get("candidate") else set()),
+        sources=sources | ({prose.get("source")} if prose and prose.get("candidate")
+                           and prose.get("source") else set()),
         spins=spins,
     )
     desc, status = apply_description(bc, prose, ov["descriptions"])

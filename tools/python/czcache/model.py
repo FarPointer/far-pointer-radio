@@ -10,7 +10,7 @@ strings into None, so no loader has to remember to do it.
 """
 import hashlib
 
-SOURCE_NAMES = ("spinitron", "michaelg", "wordpress", "onenote")
+SOURCE_NAMES = ("spinitron", "michaelg", "wordpress", "onenote", "instagram")
 
 
 def clean(v):

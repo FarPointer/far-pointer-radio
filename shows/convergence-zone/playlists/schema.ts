@@ -2,7 +2,7 @@
 // Canonical data store for broadcasts and spins, derived from Spinitron
 // and other sources (Michael G's spreadsheets, OneNote, WordPress) as useful.
 
-type SourceName = "spinitron" | "michaelg" | "wordpress" | "onenote";
+type SourceName = "spinitron" | "michaelg" | "wordpress" | "onenote" | "instagram";
 
 interface Broadcast {
   id: string;                    // derived from full air_datetime, e.g. "2026-04-21T20:30:00-0700"
@@ -25,13 +25,13 @@ interface Broadcast {
   participants: Participant[];   // who actually hosted — NOT derivable from dj_ids
 
   is_prerecorded: boolean;
-  description: string | null;    // the on-air/promo blurb; OneNote notes carry this
-                                  // for most of 2023–2025
+  description: string | null;    // the on-air/promo blurb; sourced from OneNote prose
+                                  // and/or Instagram captions, then human-reviewed
   description_status: "approved" | "proposed" | null;
                                   // "approved" — a human signed off on this text in
                                   //              overrides/descriptions.yaml
-                                  // "proposed" — extracted from OneNote prose by the
-                                  //              build and NOT yet reviewed
+                                  // "proposed" — extracted from OneNote/Instagram by
+                                  //              the build and NOT yet reviewed
                                   // null       — description is null
                                   // The prose notes mix genuine promo copy with scratch
                                   // ideas and open questions, so extraction is a guess.

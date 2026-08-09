@@ -12,6 +12,7 @@ Files keep the names their originating system gave them, so the usual kebab-case
 | Directory | Contents |
 |---|---|
 | `farpointer-onenote/` | Markdown exports of the OneNote playlist notebooks, 2023–2025 — show prep notes, set lists, and on-air rundowns |
+| `instagram/` | Normalized Instagram promo captions from `@converge.fm`, used to recover missing description copy |
 | `michaelg/` | MichaelG's per-episode playlist workbooks (`.xlsx`), 2025-04-29 through 2026-06-23 |
 | `spinitron/` | Spinitron exports plus the public show-history snapshot used to recover playlist IDs |
 | `convergencezone.fm/` | Playlists published on the WordPress site, scraped and flattened to CSV — 47 episodes, March 2023 – June 2024 |

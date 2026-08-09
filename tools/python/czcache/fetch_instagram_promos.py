@@ -157,6 +157,9 @@ def main():
                     help="Existing JSON post dump to normalize")
     args = ap.parse_args()
 
+    if bool(args.graph_token) ^ bool(args.ig_user_id):
+        raise SystemExit("Graph API ingestion requires both --graph-token and --ig-user-id.")
+
     feeds = []
     if args.instaloader_dir:
         feeds.append(("instaloader", from_instaloader(args.instaloader_dir)))

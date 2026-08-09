@@ -33,7 +33,7 @@ This skill is an executor, not a planner.
 to log in, navigate, fill forms, and verify results with you watching.
 
 If you find yourself running this skill more than a few times per month without
-supervision, that is the signal to invest in Option B: a `czspintron` Python CLI wrapping
+supervision, that is the signal to invest in Option B: a `czspinitron` Python CLI wrapping
 Playwright Python for unattended execution. The credential and edit-list conventions below
 are designed to be compatible with that future migration.
 

@@ -59,6 +59,29 @@ sessions.
   `shows/convergence-zone/docs/playlist-cache-review-session.md` is the model.
 - **Ask item by item** when reviewing a list of human decisions. Do not batch-apply.
 - **Prefer an issue for multi-step work**, then let the coding agent pick it up.
+- **Configuration and workflow recommendations start with the guidance surfaces.** If the
+  request is about repo setup, agent behavior, skills, hooks, prompts, or instructions,
+  read `AGENTS.md`, relevant `.github/instructions/*.instructions.md`, `.github/skills/`,
+  `.github/agents/`, and the checked-in operating docs before recommending changes.
+- **Recommendation-only requests stay recommendation-only until told otherwise.** If the
+  user asks for advice, an audit, or a `[[PLAN]]`, do not edit repo files until they ask
+  for implementation.
+- **Permission denials are a stop sign, not a puzzle.** If a tool or command is denied,
+  explain the blocked action and why it matters; do not keep retrying the same action
+  through adjacent tools unless the alternative is clearly within the original intent.
+
+## Repo-level instructions and skills
+
+Repository-level instructions should carry the doctrine that applies across this monorepo;
+path-scoped instruction files narrow it for specific trees. If a recurring behavior needs
+to happen before any code changes in this repo, put it in `AGENTS.md` or a path-scoped
+instruction, not in an ad-hoc prompt.
+
+Repository-specific skills live in `.github/skills/` and exist to encode repeatable work
+loops that are unique to this repo. Prefer tightening a skill description or trigger when
+the same session shape keeps reappearing over adding another generic agent. A new skill is
+justified when it can name the exact repo surfaces it must read, the actions it must not
+take, and the deliverable it must produce.
 
 ## Data safety
 

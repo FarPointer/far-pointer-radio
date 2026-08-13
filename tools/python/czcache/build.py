@@ -125,10 +125,14 @@ def main(cache_root=None, quiet=False):
         b = broadcasts[bid]
         klass = classes[bid]
         p = prose.get(b["date"])
+        setlist = setlists.get(bindings[bid]["setlist"]) if klass == "B" else None
+        onenote = (
+            setlist
+            if setlist and setlist["source"] == "onenote"
+            else prose_onenote.get(b["date"])
+        )
         bc = merge.build_broadcast(
-            bid, b, klass, workbook_for.get(bid),
-            setlists.get(bindings[bid]["setlist"]) if klass == "B" else None,
-            p, prose_onenote.get(b["date"]), ov, report,
+            bid, b, klass, workbook_for.get(bid), setlist, p, onenote, ov, report,
         )
         bc["_class"] = klass
         out[bid] = bc

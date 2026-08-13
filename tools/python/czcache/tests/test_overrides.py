@@ -166,6 +166,7 @@ def test_prose_extraction_does_not_stop_on_the_exported_title_line():
         ("07.15.2025 - heat advisory", "Heat Advisory"),
         ("09.09.2025 - End of Summer 2025", "End of Summer"),
         ("07.29.25", None),
+        ("2025.11.04", None),
         ("Feb 2025", None),
     ],
 )
@@ -211,3 +212,16 @@ def test_matching_onenote_note_replaces_spinitron_title(onenote_title, expected)
 
     assert result["title"] == expected
     assert "onenote" in result["sources"]
+
+
+def test_onenote_collection_page_is_not_linked_as_an_episode(tmp_path, monkeypatch):
+    monkeypatch.setattr(load_prose, "ONENOTE_DIR", tmp_path)
+    (tmp_path / "2023 Playlists - Convergence Zone.md").write_text(
+        "---\n"
+        "title: 2023 Playlists - Convergence Zone\n"
+        "created: 2023-12-20\n"
+        "---\n",
+        encoding="utf-8",
+    )
+
+    assert load_prose.load({"2023-12-26"}) == {}

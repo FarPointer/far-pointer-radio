@@ -43,10 +43,15 @@ TITLE_LINE_RE = re.compile(
     re.I,
 )
 FRONTMATTER_TITLE_RE = re.compile(r"^title:\s*(.*?)\s*$", re.M)
+COLLECTION_TITLE_RE = re.compile(
+    r"^title:\s*['\"]?\d{4}\s+Playlists\s*-\s*Convergence Zone['\"]?\s*$",
+    re.I | re.M,
+)
 EPISODE_PREFIX_RE = re.compile(
     r"\A(?:convergence\s*zone|episode)\b[\s.\-–—#]*\d*", re.I
 )
 NUMERIC_DATE_RE = re.compile(r"\A\d{1,2}[./]\d{1,2}[./]\d{2,4}\b")
+YEAR_FIRST_DATE_RE = re.compile(r"\A\d{4}[./]\d{1,2}[./]\d{1,2}\b")
 MONTH_DATE_RE = re.compile(
     r"\A(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|"
     r"aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)"
@@ -112,7 +117,7 @@ def extract_episode_title(raw: str):
         return None
 
     title = EPISODE_PREFIX_RE.sub("", title, count=1).lstrip(" .:-–—")
-    for date_re in (NUMERIC_DATE_RE, MONTH_DATE_RE, MONTH_YEAR_RE):
+    for date_re in (NUMERIC_DATE_RE, YEAR_FIRST_DATE_RE, MONTH_DATE_RE, MONTH_YEAR_RE):
         title = date_re.sub("", title, count=1).lstrip(" .:-–—")
 
     title = re.sub(r"\s+\d{4}\s*\Z", "", title)
@@ -322,6 +327,8 @@ def load(broadcast_dates):
 
     for path in sorted(ONENOTE_DIR.rglob("*.md")):
         raw = path.read_text(encoding="utf-8")
+        if COLLECTION_TITLE_RE.search(raw):
+            continue
         target = None
         named = _dates_from_name(path.name)
         for cand in named:

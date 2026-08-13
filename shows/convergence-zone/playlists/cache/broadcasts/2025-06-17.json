@@ -3,7 +3,7 @@
   "air_datetime": "2025-06-17T20:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": null,
-  "title": "06.17.2025 - Jim Causey",
+  "title": "Summer Fund Drive",
   "participants": [
     {
       "name": "Jim Causey",
@@ -27,7 +27,8 @@
   "repeat_of_source": null,
   "repeat_of_confidence": null,
   "sources": [
-    "spinitron"
+    "spinitron",
+    "onenote"
   ],
   "spins": [
     {

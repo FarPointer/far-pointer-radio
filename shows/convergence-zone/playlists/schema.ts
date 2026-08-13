@@ -18,9 +18,9 @@ interface Broadcast {
                                   // (96% of spins carry the bare title "Convergence
                                   // Zone"), so this is a cross-source join key that
                                   // cannot be derived from the export alone.
-  title: string | null;          // e.g. "Ep. 53" — whatever suffix got concatenated
-                                  // onto the show name in source data, verbatim and
-                                  // unparsed; null if untitled
+  title: string | null;          // meaningful episode title words from OneNote when a
+                                  // matching note exists; otherwise the Spinitron title;
+                                  // null if untitled
 
   participants: Participant[];   // who actually hosted — NOT derivable from dj_ids
 

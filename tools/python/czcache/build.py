@@ -128,7 +128,7 @@ def main(cache_root=None, quiet=False):
         bc = merge.build_broadcast(
             bid, b, klass, workbook_for.get(bid),
             setlists.get(bindings[bid]["setlist"]) if klass == "B" else None,
-            p, ov, report,
+            p, prose_onenote.get(b["date"]), ov, report,
         )
         bc["_class"] = klass
         out[bid] = bc

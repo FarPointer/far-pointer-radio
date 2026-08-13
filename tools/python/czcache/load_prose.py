@@ -42,6 +42,23 @@ TITLE_LINE_RE = re.compile(
     r"(?:[A-Za-z]+\s+\d{1,2},?\s*\d{0,4}|\d{1,2}[./]\d{1,2}[./]\d{2,4})?\s*\Z",
     re.I,
 )
+FRONTMATTER_TITLE_RE = re.compile(r"^title:\s*(.*?)\s*$", re.M)
+EPISODE_PREFIX_RE = re.compile(
+    r"\A(?:convergence\s*zone|episode)\b[\s.\-–—#]*\d*", re.I
+)
+NUMERIC_DATE_RE = re.compile(r"\A\d{1,2}[./]\d{1,2}[./]\d{2,4}\b")
+MONTH_DATE_RE = re.compile(
+    r"\A(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|"
+    r"aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)"
+    r"\s+\d{1,2},?\s+\d{2,4}\b",
+    re.I,
+)
+MONTH_YEAR_RE = re.compile(
+    r"\A(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|"
+    r"aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)"
+    r"\s+\d{4}\b",
+    re.I,
+)
 
 # Checkbox and bullet markers OneNote leaves inline ("- [ ] This week ...").
 BULLET_RE = re.compile(r"\A(?:-\s*\[[ xX]?\]|[-*•]|\d+[.)])\s+")
@@ -83,6 +100,28 @@ def _plain_text(raw: str) -> str:
     body = TAG_RE.sub("", body)
     body = body.replace("\\[", "[").replace("\\]", "]").replace("\xa0", " ")
     return body
+
+
+def extract_episode_title(raw: str):
+    """Return the meaningful words from a OneNote note title, if it has any."""
+    match = FRONTMATTER_TITLE_RE.search(raw)
+    if not match:
+        return None
+    title = match.group(1).strip().strip("'\"")
+    if re.fullmatch(r"\d{4}\s+Playlists\s*-\s*Convergence Zone", title, re.I):
+        return None
+
+    title = EPISODE_PREFIX_RE.sub("", title, count=1).lstrip(" .:-–—")
+    for date_re in (NUMERIC_DATE_RE, MONTH_DATE_RE, MONTH_YEAR_RE):
+        title = date_re.sub("", title, count=1).lstrip(" .:-–—")
+
+    title = re.sub(r"\s+\d{4}\s*\Z", "", title)
+    title = re.sub(r"\A\d+\s+(?:yr|year)\s+", "", title, flags=re.I)
+    title = re.sub(r"\s+pt\.?\s*\d+\s*\Z", "", title, flags=re.I)
+    title = re.sub(r"\s+", " ", title).strip(" .:-–—")
+    if not title:
+        return None
+    return title.title() if title.islower() else title
 
 
 def _is_scratch(line: str) -> bool:
@@ -323,6 +362,7 @@ def load(broadcast_dates):
             continue
         out[target] = {
             "file": str(path.relative_to(ONENOTE_DIR)),
+            "episode_title": extract_episode_title(raw),
             "candidate": candidate,
             "rejected": rejected[:2000],
             "score": score,

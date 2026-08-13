@@ -10,6 +10,8 @@ import datetime as dt
 import build
 import load_prose
 import load_spinitron
+import merge
+import pytest
 
 
 def _write(overrides_dir, name, text):
@@ -150,3 +152,62 @@ def test_prose_extraction_does_not_stop_on_the_exported_title_line():
     assert "Structures from Silence" in rejected, (
         "the track listing must land in `rejected`, not vanish")
     assert score > 0
+
+
+@pytest.mark.parametrize(
+    ("title", "expected"),
+    [
+        ("Convergence Zone.012 - May 30 2023", None),
+        ("Episode 049 - 03.19.2024 - Spring Equinox", "Spring Equinox"),
+        ("Episode.048 - 03.12.2024 - 1 Yr Anniversary", "Anniversary"),
+        ("Episode 059 - 06.20.2024 - Summer Solstice 2024", "Summer Solstice"),
+        ("Episode 062 - 07.23.24 - video games pledge drive", "Video Games Pledge Drive"),
+        ("03.18.2025 - Spring Fund Drive Pt2", "Spring Fund Drive"),
+        ("07.15.2025 - heat advisory", "Heat Advisory"),
+        ("09.09.2025 - End of Summer 2025", "End of Summer"),
+        ("07.29.25", None),
+        ("Feb 2025", None),
+    ],
+)
+def test_onenote_episode_titles_keep_only_meaningful_words(title, expected):
+    raw = f"---\ntitle: {title}\n---\n"
+
+    assert load_prose.extract_episode_title(raw) == expected
+
+
+@pytest.mark.parametrize(
+    ("onenote_title", "expected"),
+    [("Spring Equinox", "Spring Equinox"), (None, None)],
+)
+def test_matching_onenote_note_replaces_spinitron_title(onenote_title, expected):
+    bid = "2024-03-19T22:30:00-0700"
+    broadcast = {
+        "id": bid,
+        "date": "2024-03-19",
+        "air_datetime": bid,
+        "title": "03.19.2024 - Jim Causey",
+        "scheduled_duration_minutes": 120,
+        "dj_ids": ["173567"],
+        "spinitron_playlist_ids": [],
+        "raw_spins": [],
+    }
+    overrides = {
+        "descriptions": {},
+        "participants": {},
+        "publication_links": {},
+    }
+
+    result = merge.build_broadcast(
+        bid,
+        broadcast,
+        "C",
+        None,
+        None,
+        None,
+        {"episode_title": onenote_title},
+        overrides,
+        {},
+    )
+
+    assert result["title"] == expected
+    assert "onenote" in result["sources"]

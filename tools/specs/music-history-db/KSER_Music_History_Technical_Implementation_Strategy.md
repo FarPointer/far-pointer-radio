@@ -80,13 +80,84 @@ Recommended fields include:
 
 ### Places
 
+- Stable place identifier
+- Canonical name, type, and aliases
 - City
 - State or province
 - Country
 - Latitude and longitude
-- Metro area
-- PNW inclusion flag
+- Metro-area identifier
+- PNW status and reason (`inside`, `outside`, or `review_required`)
 - Place authority identifiers
+
+### Pacific Northwest Geographic Scope
+
+#### Boundary
+
+For this project, the Pacific Northwest is the complete present-day administrative
+territory of Washington, Oregon, Idaho, and British Columbia. This is an editorial
+boundary, not a claim that it is the only cultural definition of the region. Alaska,
+Yukon, Alberta, Montana, California, and other neighboring jurisdictions are out of
+scope even when a source calls them Pacific Northwest or Cascadian.
+
+Classify a normalized place by its current state or province. Preserve a source's
+historical place name and jurisdiction on its assertion, but use the place's current
+location for its PNW status. Do not add distance buffers or infer inclusion
+from proximity to the border. An unresolved place, an ambiguous name such as
+`Vancouver` or `Washington`, or a feature that crosses the boundary is
+`review_required`, not automatically included or excluded.
+
+#### Metro areas
+
+A metro area is a search and display grouping, and can also express the precision of a
+source claim such as “Seattle metro.” It does not enlarge the PNW boundary or imply that
+an entity is connected to the metro's principal city.
+
+- Give each metro a stable identifier, canonical name, common aliases, authority
+  identifier, and authority edition or effective date.
+- Use current US Office of Management and Budget metropolitan statistical areas and
+  Statistics Canada census metropolitan areas or census agglomerations where available.
+- Assign metro membership explicitly on normalized place records. Do not calculate it
+  with radii, coordinates, population thresholds, or custom polygons.
+- When a source names only a metro, retain metro-level precision rather than guessing a
+  city. When a source names a locality, retain that locality and attach its metro
+  identifier for filtering.
+- Determine PNW inclusion for each locality independently. A metro alias may find a
+  candidate, but metro membership never turns an out-of-scope locality into an in-scope
+  one.
+
+Once source context resolves a locality, its metro identifier records the distinction:
+Vancouver, Washington belongs to the Portland-Vancouver-Hillsboro metro, while
+Vancouver, British Columbia belongs to the Vancouver metro. A bare `Vancouver` remains
+unresolved.
+
+#### Geographic reference vocabulary
+
+Keep a small, reviewed vocabulary in the proposed `config/pnw.yml`; do not introduce a
+gazetteer or GIS service. Each entry should contain:
+
+- A stable identifier and kind: `place_alias`, `metro`, `region`, or `feature`
+- A canonical name and exact-match aliases
+- Links to normalized place or metro identifiers when the reference is specific enough
+- Boundary status: `inside`, `partial`, or `ambiguous`
+- A provenance source, effective date when applicable, and a short review note
+
+Vocabulary boundary status is descriptive metadata for routing review. It never sets a
+place's PNW status; that decision follows the normalized place and boundary rule above.
+
+Seed it with useful, attributable terms rather than every possible nickname. Examples
+include `Emerald City` and `Jet City` for Seattle; `PDX` and `Rose City` for Portland;
+Puget Sound, the Willamette Valley, the Lower Mainland, the Palouse, and the Treasure
+Valley as regions; and the Salish Sea, Columbia River, Olympic Peninsula, and Cascade
+Range as features. Broad or overlapping terms such as `Cascadia`, `Inland Northwest`,
+`Northwest`, area codes, and nicknames shared by multiple cities require context and
+should remain review hints.
+
+For every vocabulary match, retain the source's raw geographic text and the matched
+vocabulary identifier on the candidate assertion. Matching may normalize case,
+punctuation, and whitespace, but must use whole aliases rather than substrings or fuzzy
+similarity. A hint can prioritize research and suggest normalization; it cannot invent a
+place relationship or satisfy the PNW publication gate without source evidence.
 
 ### Entity-to-Place Relationships
 
@@ -459,7 +530,9 @@ Stable historical facts should not be fetched repeatedly. Refresh changed upstre
 - February 29 behavior
 - Territory-specific release dates
 - Entity and event deduplication
-- PNW place classification
+- PNW boundary classification, including exclusions and historical place names
+- Metro membership, metro-level precision, and non-expansion of the PNW boundary
+- Ambiguous and cross-boundary geographic references entering review
 - Time-bounded entity-to-place relationships
 - PNW relevance explanations
 

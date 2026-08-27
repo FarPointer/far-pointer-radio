@@ -156,7 +156,8 @@ Conflicting dates must remain visible as separate assertions until reviewed.
 - [MusicBrainz](https://musicbrainz.org/doc/MusicBrainz_Database) for artists, releases, recordings, labels, events, relationships, and stable identifiers.
 - [Discogs monthly dumps](https://data.discogs.com/) for releases, artists, labels, and master releases.
 - [Wikimedia APIs](https://www.mediawiki.org/wiki/Wikimedia_APIs) for discovery and linked supporting material.
-Wikidata and MusicBrainz core data are available under CC0; Discogs dumps are governed by Discogs’ Data Usage Policy (not CC0). MusicBrainz API clients must use a meaningful User-Agent and remain at or below one request per second.
+Wikidata and MusicBrainz core data are available under CC0; Discogs dumps are governed by Discogs’ Data Usage Policy (not CC0). MusicBrainz API clients must use a meaningful User-Agent and remain at or below one request per second.
+
 Wikidata, MusicBrainz core data, and Discogs dumps are available under CC0. MusicBrainz API clients must use a meaningful User-Agent and remain at or below one request per second.
 
 ### Specialist and Archival Sources
@@ -269,7 +270,7 @@ Runs schema, provenance, deduplication, geographic, licensing, and publication-r
 Generates SQLite, daily pages, weekly packets, machine-readable JSON, and optional DOCX or PDF exports.
 
 ## GitHub Copilot Cloud Configuration
-
+Ensure `.github/workflows/copilot-setup-steps.yml` exists on the default branch with a single `copilot-setup-steps` job (this repository already includes this workflow; extend it as needed for music-history work).
 Add `.github/workflows/copilot-setup-steps.yml` to the default branch with a single `copilot-setup-steps` job.
 
 The setup should:

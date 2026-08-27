@@ -20,7 +20,8 @@
 
 ## Architectural Approach
 
-Use Python 3.11+, source-controlled JSONL records, and a generated SQLite database.
+Use Python 3.11+, source-controlled JSONL records, and a generated SQLite database.
+
 
 ```text
 source connectors
@@ -155,7 +156,7 @@ Conflicting dates must remain visible as separate assertions until reviewed.
 - [MusicBrainz](https://musicbrainz.org/doc/MusicBrainz_Database) for artists, releases, recordings, labels, events, relationships, and stable identifiers.
 - [Discogs monthly dumps](https://data.discogs.com/) for releases, artists, labels, and master releases.
 - [Wikimedia APIs](https://www.mediawiki.org/wiki/Wikimedia_APIs) for discovery and linked supporting material.
-
+Wikidata and MusicBrainz core data are available under CC0; Discogs dumps are governed by Discogs’ Data Usage Policy (not CC0). MusicBrainz API clients must use a meaningful User-Agent and remain at or below one request per second.
 Wikidata, MusicBrainz core data, and Discogs dumps are available under CC0. MusicBrainz API clients must use a meaningful User-Agent and remain at or below one request per second.
 
 ### Specialist and Archival Sources

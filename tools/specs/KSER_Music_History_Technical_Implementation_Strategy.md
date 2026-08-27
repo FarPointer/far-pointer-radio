@@ -20,7 +20,7 @@
 
 ## Architectural Approach
 
-Use Python 3.12, source-controlled JSONL records, and a generated SQLite database.
+Use Python 3.11+, source-controlled JSONL records, and a generated SQLite database.
 
 ```text
 source connectors

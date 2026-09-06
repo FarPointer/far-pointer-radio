@@ -268,7 +268,7 @@ def apply_description(bc, prose, overrides):
 
 # ------------------------------------------------------------------ top level
 
-def build_broadcast(bid, broadcast, klass, workbook, setlist, prose, ov, report):
+def build_broadcast(bid, broadcast, klass, workbook, setlist, prose, onenote, ov, report):
     if klass == "A":
         spins = merge_class_a(bid, broadcast, workbook, report)
         sources = {"spinitron", "michaelg"}
@@ -290,7 +290,7 @@ def build_broadcast(bid, broadcast, klass, workbook, setlist, prose, ov, report)
         air_datetime=broadcast["air_datetime"],
         show_name=SHOW_NAME,
         episode_number=episode,
-        title=broadcast["title"],
+        title=onenote["episode_title"] if onenote is not None else broadcast["title"],
         scheduled_duration_minutes=broadcast["scheduled_duration_minutes"],
         dj_ids=broadcast["dj_ids"],
         spinitron_playlist_ids=broadcast["spinitron_playlist_ids"],
@@ -304,8 +304,9 @@ def build_broadcast(bid, broadcast, klass, workbook, setlist, prose, ov, report)
         repeat_of_source=broadcast.get("repeat_of_source"),
         repeat_of_confidence=broadcast.get("repeat_of_confidence"),
         participants=derive_participants(broadcast, klass, ov["participants"]),
-        sources=sources | ({prose.get("source")} if prose and prose.get("candidate")
-                           and prose.get("source") else set()),
+        sources=sources | ({"onenote"} if onenote is not None else set())
+        | ({prose.get("source")} if prose and prose.get("candidate")
+           and prose.get("source") else set()),
         spins=spins,
     )
     desc, status = apply_description(bc, prose, ov["descriptions"])

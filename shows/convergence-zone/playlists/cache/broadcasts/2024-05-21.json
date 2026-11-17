@@ -3,7 +3,7 @@
   "air_datetime": "2024-05-21T22:30:00-0700",
   "show_name": "Convergence Zone",
   "episode_number": 56,
-  "title": "05.21.2024 - Jim Causey",
+  "title": null,
   "participants": [
     {
       "name": "Jim Causey",
@@ -28,7 +28,8 @@
   "repeat_of_confidence": null,
   "sources": [
     "spinitron",
-    "wordpress"
+    "wordpress",
+    "onenote"
   ],
   "spins": [
     {

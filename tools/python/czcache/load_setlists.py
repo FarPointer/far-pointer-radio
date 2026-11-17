@@ -20,6 +20,7 @@ import re
 import sys
 from pathlib import Path
 
+import load_prose
 from paths import CZAUDIT, CZFM_DIR, ONENOTE_DIR
 from rules import RULES
 
@@ -170,7 +171,11 @@ def load_onenote():
         ep = EPISODE_RE.search(Path(rel).name.lower().replace(" ", ""))
         out[f"onenote:{date}"] = {
             "source": "onenote", "first_aired": date, "file": Path(rel).name,
-            "episode_number": int(ep.group(1)) if ep else None, "tracks": tracks,
+            "episode_number": int(ep.group(1)) if ep else None,
+            "episode_title": load_prose.extract_episode_title(
+                (ONENOTE_DIR / rel).read_text(encoding="utf-8")
+            ),
+            "tracks": tracks,
         }
 
     for date, (rel, cc, nc) in sorted(COMBINED_SPECS.items()):
@@ -178,7 +183,11 @@ def load_onenote():
         if tracks:
             out[f"onenote:{date}"] = {
                 "source": "onenote", "first_aired": date, "file": Path(rel).name,
-                "episode_number": None, "tracks": tracks,
+                "episode_number": None,
+                "episode_title": load_prose.extract_episode_title(
+                    (ONENOTE_DIR / rel).read_text(encoding="utf-8")
+                ),
+                "tracks": tracks,
             }
     return out
 

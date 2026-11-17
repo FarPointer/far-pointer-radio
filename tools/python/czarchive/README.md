@@ -14,7 +14,7 @@ Archive tool for **Convergence Zone** on KSER 90.7. Pulls the episode playlist f
 
 ## Requirements
 
-- Python 3.11+
+- Python 3.11.5+ (required by the Beautiful Soup / SoupSieve dependency chain)
 - [`uv`](https://docs.astral.sh/uv/)
 - `ffmpeg` on `PATH` (for stream capture)
 

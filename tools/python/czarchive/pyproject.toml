@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "czarchive"
 version = "0.1.0"
 description = "Archive tool for Convergence Zone on KSER 90.7"
-requires-python = ">=3.11"
+requires-python = ">=3.11.5"
 dependencies = [
     "click>=8.4.2",
     "requests>=2.34.2",

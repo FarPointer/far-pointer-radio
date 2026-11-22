@@ -2,7 +2,7 @@
 name = "czcache"
 version = "0.1.0"
 description = "Builds the canonical Convergence Zone playlist cache from every upstream source"
-requires-python = ">=3.11"
+requires-python = ">=3.11.5"
 dependencies = [
     "openpyxl>=3.1",
     "beautifulsoup4>=4.12",
